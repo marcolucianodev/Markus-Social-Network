@@ -4,6 +4,7 @@ export const MenuList = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 
     ul.list-menu {
         list-style: none;
@@ -12,6 +13,12 @@ export const MenuList = styled.nav`
         align-items: flex-start;
         gap: 2.5rem;
         margin-top: 2rem;
+        margin-bottom: 10rem;
+        overflow: auto;
+    }
+
+    @media (min-width) {
+
     }
 
     span {
