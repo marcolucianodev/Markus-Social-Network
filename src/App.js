@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from "./components/_global/GlobalStyles";
+import "./App.css"
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Feed from "./pages/Feed";
+import Menu from "./components/Menu";
+import { MainContainer } from "./components/MainContainer";
+import Header from "./components/Header";
+import { FixedHeader } from "./components/FixedHeader";
+import MainBanner from "./components/MainBanner";
+import { Footer } from "./components/Footer";
+import AnotherPage from "./pages/AnotherPage";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <BrowserRouter>
+      <Menu />
+      <MainContainer>
+        <Header />
+        <FixedHeader />
+        <MainBanner />
+          <Routes>
+            <Route path="/" element={<Feed /> } />
+            <Route path="/outra-pagina" element={<AnotherPage /> } />
+          </Routes>
+        <Footer />
+        </MainContainer>
+      </BrowserRouter>
+
+      <GlobalStyle />
     </div>
   );
 }
