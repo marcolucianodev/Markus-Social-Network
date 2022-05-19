@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Markus Social Network
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Preview Image](https://github.com/marcolucianodev/markus-social-network/blob/master/public/markus-img01.png)](https://markus-social-network.netlify.app/)
 
-## Available Scripts
+[![Preview Image](https://github.com/marcolucianodev/markus-social-network/blob/master/public/markus-img02.png)](https://markus-social-network.netlify.app/)
 
-In the project directory, you can run:
+Projeto front-end de uma rede social desenvolvido com React, Styled-components, React Router, React Hooks.
 
-### `npm start`
+Nesse projeto (EM ANDAMENTO) foi desenvolvido a interface de uma aplicação de uma rede social, onde contém página de feed de usuários, páginas de perfil, grupos, fotos, eventos, fórum e demais funcionalidades que compõe uma interface de uma rede social.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As demais páginas estão em processo de desenvolvimento e as rotas serão criadas através do React Router.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Link do Projeto Online](https://markus-social-network.netlify.app/)
 
-### `npm test`
+### Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para rodar o projeto, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Npm](https://www.npmjs.com/). 
 
-### `npm run build`
+### 🎲 Rodando a aplicação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Clone este repositório
+$ git clone https://github.com/marcolucianodev/Markus-Social-Network.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Acesse a pasta do projeto no terminal/cmd
+$ cd markus-social-network
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Instale as dependências
+$ npm install
 
-### `npm run eject`
+# Execute a aplicação
+$ npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🛠 Tecnologias
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [React](https://pt-br.reactjs.org/)
+- [Styled-components](https://styled-components.com/)
