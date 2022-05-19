@@ -11,14 +11,18 @@ export const MenuList = styled.nav`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
+        padding: 2rem;
         gap: 2.5rem;
         margin-top: 2rem;
         margin-bottom: 10rem;
         overflow: auto;
     }
 
-    @media (min-width) {
-
+    ul.list-menu li a {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
     }
 
     span {
@@ -54,7 +58,7 @@ export const MenuList = styled.nav`
 
     }
 
-    &.primary-menu {
+    /* &.primary-menu {
         left: 0;
         transition: all 0.5s;
 
@@ -255,5 +259,5 @@ export const MenuList = styled.nav`
         span {
             display: none;
         }
-    }
+    } */
 `;

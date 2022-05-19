@@ -41,6 +41,10 @@ export const Container = styled.section`
         text-transform: uppercase;
     }
 
+    @media (min-width: 769px) {
+        display: none;
+    }
+
     @media (max-width: 768px) {
         top: 0;
     }

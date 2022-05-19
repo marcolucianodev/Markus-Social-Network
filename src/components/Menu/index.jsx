@@ -14,6 +14,8 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import ForumIcon from '@mui/icons-material/Forum';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import  Logo  from "../_assets/img/logo.png";
+
 
 const Menu = () => {
 
@@ -25,9 +27,24 @@ const Menu = () => {
 
     return (
         <Container>
-            <Button onClick={openMenu}>
+            {/* <Button onClick={openMenu}>
                 {activeMenu ? <CloseIcon className="icon-main-menu" /> : <MenuOpenIcon className="icon-main-menu" />}
-            </Button>
+            </Button> */}
+            <div className="logo-content">
+                <a href="#">
+                    <div className="logo">
+                        <img src={Logo} alt="Logo Markus" />
+                        <div className="title-box">
+                            <div className="title-logo">
+                                <h2>Markus</h2>
+                            </div>
+                            <div className="desc-logo">
+                                <h3>Social Network</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
             <MenuList className={activeMenu ? 'secondary-menu' : 'primary-menu'}>
                 <ul className="list-menu">
                     <li><a href="#"><FeedIcon className="menu-icons" /><span>Feed</span></a></li>
