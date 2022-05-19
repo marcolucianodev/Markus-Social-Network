@@ -1,9 +1,10 @@
-
+import FeedContainer from "../../components/FeedContainer"
 
 const Feed = () => {
     return (
         <div>
-            Página do Feed
+            <FeedContainer />
+            {/* Hello there */}
         </div>
     );
 }
