@@ -8,7 +8,7 @@ export const  HeaderContainer = styled.section`
      height: 7rem;
      background-color: #3f4257;
      position: fixed;
-     width: calc(100% - 7rem);
+     width: calc(100% - 17rem);
      z-index: 2;
 
      .icon-login {

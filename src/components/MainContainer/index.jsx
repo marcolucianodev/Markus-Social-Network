@@ -7,7 +7,7 @@ export const MainContainer = styled.main`
     height: 100vh;
     left: 7rem;
     right: 0;
-    margin-left: 7rem;
+    margin-left: 17rem;
 
     @media (max-width: 768px) {
         margin-left: 0;
