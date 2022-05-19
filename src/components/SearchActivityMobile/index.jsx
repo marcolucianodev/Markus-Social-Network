@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Button } from "../Button";
-import { SearchActivity } from "../SearchActivity";
+import { Container } from "../SearchActivity/styles";
 
 
-export const SearchActivityMobile = styled(SearchActivity)`
+export const SearchActivityMobile = styled(Container)`
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
