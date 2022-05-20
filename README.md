@@ -4,11 +4,13 @@
 
 [![Preview Image](https://github.com/marcolucianodev/markus-social-network/blob/master/public/markus-img02.png)](https://markus-social-network.netlify.app/)
 
-Projeto front-end de uma rede social desenvolvido com React, Styled-components, React Router, React Hooks.
+Projeto front-end de uma rede social desenvolvido com React e Styled-components.
 
-Nesse projeto (EM ANDAMENTO) foi desenvolvido a interface de uma aplicação de uma rede social, onde contém página de feed de usuários, páginas de perfil, grupos, fotos, eventos, fórum e demais funcionalidades que compõe uma interface de uma rede social.
+Nesse projeto (EM ANDAMENTO) está sendo desenvolvido a interface de uma aplicação de uma rede social, onde contém página de feed de usuários, páginas de perfil, grupos, fotos, eventos, fórum e demais funcionalidades que compõe uma interface de uma rede social.
 
-As demais páginas estão em processo de desenvolvimento e as rotas serão criadas através do React Router.
+As demais páginas estão em processo de desenvolvimento e as rotas serão criadas com React Router.
+
+Esse projeto vem me desafiando muito, onde venho aplicando tudo aquilo que venho aprendendo em react. Vou aplicar ainda gerenciamento de estados e consumir API dentro desse projeto, aos poucos vou implementando mais funcionalidades e usando mais ferramentas. Logo mais estará todo finalizado com todas funcionalidades.
 
 [Link do Projeto Online](https://markus-social-network.netlify.app/)
 
