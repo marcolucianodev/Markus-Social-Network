@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import { FixedHeader } from "./components/FixedHeader";
 import MainBanner from "./components/MainBanner";
 import { Footer } from "./components/Footer";
-import AnotherPage from "./pages/AnotherPage";
+import MembersPage from "./pages/MembersPage";
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
         <MainBanner />
           <Routes>
             <Route path="/" element={<Feed /> } />
-            <Route path="/outra-pagina" element={<AnotherPage /> } />
+            <Route path="/membros" element={<MembersPage /> } />
           </Routes>
         <Footer />
         </MainContainer>

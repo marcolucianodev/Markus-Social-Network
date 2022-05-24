@@ -4,7 +4,6 @@ const Feed = () => {
     return (
         <div>
             <FeedContainer />
-            {/* Hello there */}
         </div>
     );
 }

@@ -1,6 +1,6 @@
 
 
-const AnotherPage = () => {
+const MembersPage = () => {
     return (
         <div>
             Mais Outra Página
@@ -8,4 +8,4 @@ const AnotherPage = () => {
     );
 }
 
-export default AnotherPage;
+export default MembersPage;
