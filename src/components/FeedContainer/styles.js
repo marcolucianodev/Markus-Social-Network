@@ -151,6 +151,7 @@ export const Container = styled.section`
         transition: all ease 0.5s;
         max-height: 400px;
         overflow: auto;
+        z-index: 2;
     }
 
     ul.activity-select-options-none {
