@@ -1,9 +1,12 @@
+import MainBanner from "../../components/MainBanner";
 
-
-const MembersPage = () => {
+const MembersPage = ({props}) => {
     return (
         <div>
-            Mais Outra Página
+            <MainBanner
+                titlePage="Membros" 
+                pageDescription="EDITAR"
+            />
         </div>
     );
 }
