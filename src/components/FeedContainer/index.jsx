@@ -68,10 +68,10 @@ const FeedContainer = () => {
             </div>
             <div className="feed-content-search-activity-mobile">
                 <SearchActivityMobile>
-                    <BoxActivityMobile onClick={openActivityMenuMobile}>
+                    {/* <BoxActivityMobile onClick={openActivityMenuMobile}>
                         <MenuIcon />
                         <p>Menu</p>
-                    </BoxActivityMobile>
+                    </BoxActivityMobile> */}
                     <BoxActivityMobile onClick={openActivitySearchMobile}>
                         <SearchIcon />
                         <p>Pesquisar</p>
