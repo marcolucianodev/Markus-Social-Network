@@ -5,7 +5,8 @@ export const Container = styled.section`
     width: 100%;
     height: 50rem;
     background-color: #eeeeee;
-    background-image: url(${banner});
+    /* background-image: url(${banner}); */
+    background-image: url(${props => props.bgPropsBanner});
     background-position: center;
     background-size: cover;
     padding: 3rem 3rem 0;
