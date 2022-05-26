@@ -56,6 +56,7 @@ export const OptionsBar = styled.div`
             padding: 1rem;
             border-radius: 0.3rem;
             cursor: pointer;
+            position: relative;
         }
 
         .mebers-select-headline {
@@ -65,13 +66,33 @@ export const OptionsBar = styled.div`
             align-items: center;
        
             span.select-headline-text {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+
+            span.select-headline-icon {
+                font-size: 2rem;
+                font-weight: 700;
+                transform: rotate(270deg);
             }
         }
 
         ul.list-options {
             list-style: none;
             position: absolute;
+            top: 4.5rem;
+            left: 0;
+            width: 100%;
+            border: 1px solid #e6ecf5;
+            background-color: #FFFFFF;
+
+            li {
+                padding: 1rem;
+                font-size: 1.2rem;
+
+                &:hover {
+                    background-color: #edf2f6;
+                } 
+            }
         }
 
     }

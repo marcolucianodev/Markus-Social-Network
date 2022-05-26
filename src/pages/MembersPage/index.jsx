@@ -28,12 +28,9 @@ const MembersPage = ({props}) => {
                         <div className="activity-members">
                             <span className="order-by">Ordenar por:</span>
                             <div className="members-select">
-                                {/* <div className="last-activity">...</div>
-                                <div className="newest">...</div>
-                                <div className="alphabetical">...</div> */}
                                 <div className="mebers-select-headline">
                                     <span className="select-headline-text">Últimas Atividades</span>
-                                    <span className="select-headline-icon">-</span>
+                                    <span className="select-headline-icon">‹</span>
                                 </div>
                                 <ul className="list-options">
                                     <li>Últimas Atividades</li>
