@@ -37,6 +37,7 @@ export const OptionsBar = styled.div`
     .members-page-options-search-content {
         display: flex;
         align-items: center;
+        gap: 2rem;
     }
 
     .activity-members {
