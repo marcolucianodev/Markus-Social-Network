@@ -37,7 +37,7 @@ export const OptionsBar = styled.div`
     .members-page-options-search-content {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .activity-members {
@@ -47,14 +47,14 @@ export const OptionsBar = styled.div`
 
         span.order-by {
             flex: 1;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .members-select {
             display: flex;
             flex: 2;
             border: 1px solid #e6ecf5;
-            padding: 1rem;
+            padding: 0.7rem;
             border-radius: 0.3rem;
             cursor: pointer;
             position: relative;
@@ -63,11 +63,11 @@ export const OptionsBar = styled.div`
         .mebers-select-headline {
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
        
             span.select-headline-text {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
 
             span.select-headline-icon {
@@ -80,7 +80,7 @@ export const OptionsBar = styled.div`
         ul.list-options {
             list-style: none;
             position: absolute;
-            top: 4.5rem;
+            top: 3.8rem;
             left: 0;
             width: 100%;
             border: 1px solid #e6ecf5;
@@ -100,6 +100,35 @@ export const OptionsBar = styled.div`
 
     .search-members {
         flex: 1;
+
+        form {
+            display: flex;
+            width: 100%;
+
+            label {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+            }
+
+            input {
+                padding: 1.15rem;
+                border-radius: 0.3rem;
+            }
+
+            input[type= "text"]{
+                border: 1px solid #e6ecf5;
+                outline: none;
+                width: 100%;
+                color: #515365;
+            }
+
+            input[type= "submit"] {
+                border: none;
+                background-color: #f75d52;
+                color: #FFFFFF;
+            }
+        }
     }
 
 `;
