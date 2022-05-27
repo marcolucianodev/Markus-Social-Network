@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MainBanner from "../../components/MainBanner";
 import { MainPagesContainer } from "../../components/MainPagesContainer/styles";
@@ -6,6 +7,13 @@ import PublicIcon from '@mui/icons-material/Public';
 
 
 const MembersPage = ({props}) => {
+
+    const [activeMembers, setActiveMembers] = useState(false);
+
+    const handleActiveMembers = () => {
+        setActiveMembers(!activeMembers)
+    }
+
     return (
         <div>
             <MainBanner
@@ -27,12 +35,12 @@ const MembersPage = ({props}) => {
                     <div className="members-page-options-search-content">
                         <div className="activity-members">
                             <span className="order-by">Ordenar por:</span>
-                            <div className="members-select">
+                            <div className="members-select" onClick={handleActiveMembers}>
                                 <div className="mebers-select-headline">
                                     <span className="select-headline-text">Últimas Atividades</span>
-                                    <span className="select-headline-icon">‹</span>
+                                    <span className={activeMembers ? "select-headline-icon" : "select-headline-icon-active"} >‹</span>
                                 </div>
-                                <ul className="list-options">
+                                <ul className={activeMembers ? "list-options" : "list-options-none"}>
                                     <li>Últimas Atividades</li>
                                     <li>Registro Recente</li>
                                     <li>Alfabético</li>

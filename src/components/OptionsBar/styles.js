@@ -73,7 +73,17 @@ export const OptionsBar = styled.div`
             span.select-headline-icon {
                 font-size: 2rem;
                 font-weight: 700;
+                transform: rotate(90deg);
+                transition: all ease 0.3s;
+                user-select: none;
+            }
+
+            span.select-headline-icon-active {
+                font-size: 2rem;
+                font-weight: 700;
                 transform: rotate(270deg);
+                transition: all ease 0.3s;
+                user-select: none;
             }
         }
 
@@ -85,6 +95,8 @@ export const OptionsBar = styled.div`
             width: 100%;
             border: 1px solid #e6ecf5;
             background-color: #FFFFFF;
+            opacity: 1;
+            transition: all ease 0.5s;
 
             li {
                 padding: 1rem;
@@ -93,6 +105,23 @@ export const OptionsBar = styled.div`
                 &:hover {
                     background-color: #edf2f6;
                 } 
+            }
+        }
+
+        ul.list-options-none {
+            list-style: none;
+            position: absolute;
+            top: 3.8rem;
+            left: 0;
+            width: 100%;
+            border: 1px solid #e6ecf5;
+            background-color: #FFFFFF;
+            opacity: 0;
+            transition: all ease 0.5s;
+
+            li {
+                padding: 1rem;
+                font-size: 1.2rem;
             }
         }
 
