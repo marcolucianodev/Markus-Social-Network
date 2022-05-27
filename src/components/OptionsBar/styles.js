@@ -63,6 +63,15 @@ export const OptionsBar = styled.div`
         span.order-by {
             flex: 1;
             font-size: 1rem;
+
+            @media (max-width: 768px) {
+                background-color: #f75d52;
+                color: #FFFFFF;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                font-size: 1.2rem;
+                border-radius: 0.3rem;
+            }
         }
 
         .members-select {
@@ -73,6 +82,11 @@ export const OptionsBar = styled.div`
             border-radius: 0.3rem;
             cursor: pointer;
             position: relative;
+            
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+            
         }
 
         .mebers-select-headline {
@@ -83,6 +97,11 @@ export const OptionsBar = styled.div`
        
             span.select-headline-text {
                 font-size: 1.2rem;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    text-align: center;
+                }
             }
 
             span.select-headline-icon {
@@ -91,6 +110,10 @@ export const OptionsBar = styled.div`
                 transform: rotate(90deg);
                 transition: all ease 0.3s;
                 user-select: none;
+
+                @media (max-width: 768px) {
+                    margin-right: 1rem;
+                }
             }
 
             span.select-headline-icon-active {
@@ -99,6 +122,10 @@ export const OptionsBar = styled.div`
                 transform: rotate(270deg);
                 transition: all ease 0.3s;
                 user-select: none;
+
+                @media (max-width: 768px) {
+                    margin-right: 1rem;
+                }
             }
         }
 
@@ -175,6 +202,10 @@ export const OptionsBar = styled.div`
                 border: none;
                 background-color: #f75d52;
                 color: #FFFFFF;
+
+                @media (max-width: 768px) {
+                    width: 20%;
+                }
             }
         }
     }
@@ -185,6 +216,10 @@ export const OptionsBar = styled.div`
     &.show-filter-members-mobile {
         display: flex;
         margin-bottom: 1rem;
+    }
+
+    &.show-filter-members-mobile {
+        height: auto;
     }
 
     &.show-search-members-mobile-none,
