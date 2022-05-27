@@ -12,6 +12,17 @@ export const OptionsBar = styled.div`
     color: #515365;
     position: relative;
 
+    @media (min-width: 769px) and (max-width: 999px) {
+       height: auto;
+       flex-direction: column;
+       padding: 2rem 0px;
+       gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
     .display-menbers-number {
         display: flex;
         align-items: center;
@@ -38,6 +49,10 @@ export const OptionsBar = styled.div`
         display: flex;
         align-items: center;
         gap: 1rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     .activity-members {
@@ -125,6 +140,10 @@ export const OptionsBar = styled.div`
             }
         }
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
     }
 
     .search-members {
@@ -158,6 +177,19 @@ export const OptionsBar = styled.div`
                 color: #FFFFFF;
             }
         }
+    }
+
+    /*Mobile Styles*/
+
+    &.show-search-members-mobile,
+    &.show-filter-members-mobile {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    &.show-search-members-mobile-none,
+    &.show-filter-members-mobile-none {
+        display: none;
     }
 
 `;
