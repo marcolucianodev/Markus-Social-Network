@@ -7,6 +7,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchActivityMobile, BoxActivityMobile } from "../../components/SearchActivityMobile";
+import { MembersContainer, MembersContent } from "../../components/MembersContent";
 
 
 const MembersPage = ({props}) => {
@@ -142,6 +143,51 @@ const MembersPage = ({props}) => {
                         </div>
                     </OptionsBar>
                 </div>
+
+                <MembersContent>
+                    <MembersContainer>
+                        <div className="member-cover-image">
+                            ...
+                        </div>
+                        <div className="member-profile-image">
+                            ...
+                        </div>
+                        <div className="member-info">
+                            <div className="info-user-name">
+                                name
+                            </div>
+                            <div className="info-user-nickname">
+                                nickname
+                            </div>
+                            <div className="info-user-badges">
+                                <ul className="badges-list">
+                                    <li>nova amizade</li>
+                                    <li>convidar para grupo</li>
+                                    <li>enviar mensagem</li>
+                                </ul>
+                            </div>
+                            <div className="info-user-ratings-datails">
+                                <div className="user-stars">
+                                    stars
+                                </div>
+                                <div className="user-rate">
+                                    rate
+                                </div>
+                                <div className="user-total-rate">
+                                    total rate
+                                </div>
+                            </div>
+                        </div>
+                        <div className="member-statistics">
+                            <ul className="list-user-statistics">
+                                <li>Posts</li>
+                                <li>Comentários</li>
+                                <li>Vizualizações</li>
+                                <li>Amigos</li>
+                            </ul>
+                        </div>
+                    </MembersContainer>
+                </MembersContent>
 
             </MainPagesContainer>
         </div>
