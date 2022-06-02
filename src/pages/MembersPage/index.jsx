@@ -7,10 +7,20 @@ import PublicIcon from '@mui/icons-material/Public';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchActivityMobile, BoxActivityMobile } from "../../components/SearchActivityMobile";
-import { MembersContainer, MembersContent } from "../../components/MembersContent";
+import { MembersContent } from "../../components/MembersContent";
+// import friendshipImage from "../../components/_assets/img/amizade.png";
+// import newGroupImage from "../../components/_assets/img/novo-grupo.png";
+// import sendMessage from "../../components/_assets/img/nova-mensagem.png";
+// import PostAddIcon from '@mui/icons-material/PostAdd';
+// import CommentIcon from '@mui/icons-material/Comment';
+// import VisibilityIcon from '@mui/icons-material/Visibility';
+// import MoodIcon from '@mui/icons-material/Mood';
+import ImgUser1 from "../../components/_assets/img/user-1.jpg"
+import MembersCard from "../../components/MembersCard";
+import CoverUser1 from "../../components/_assets/img/user-cover3.jpg"
 
 
-const MembersPage = ({props}) => {
+const MembersPage = () => {
 
     const [activeMembers, setActiveMembers] = useState(false);
 
@@ -106,32 +116,10 @@ const MembersPage = ({props}) => {
                                     </ul>
                                 </div>
                             </div>
-                            {/* <div className="search-members">
-                                <form action="post">
-                                    <label htmlFor="members-search">
-                                        <input type="text" name="members-search" id="members-search" placeholder="Pesquisar Membros" />
-                                    </label>
-                                    <input type="submit" value="Pesquisar" />
-                                </form>
-                            </div> */}
                         </div>
                     </OptionsBar>
                     <OptionsBar className={searchMobile ? "show-search-members-mobile" : "show-search-members-mobile-none"}>
                         <div className="members-page-options-search-content">
-                            {/* <div className="activity-members">
-                                <span className="order-by">Ordenar por:</span>
-                                <div className="members-select" onClick={handleActiveMembers}>
-                                    <div className="mebers-select-headline">
-                                        <span className="select-headline-text">Últimas Atividades</span>
-                                        <span className={activeMembers ? "select-headline-icon" : "select-headline-icon-active"} >‹</span>
-                                    </div>
-                                    <ul className={activeMembers ? "list-options" : "list-options-none"}>
-                                        <li>Últimas Atividades</li>
-                                        <li>Registro Recente</li>
-                                        <li>Alfabético</li>
-                                    </ul>
-                                </div>
-                            </div> */}
                             <div className="search-members">
                                 <form action="post">
                                     <label htmlFor="members-search">
@@ -145,48 +133,20 @@ const MembersPage = ({props}) => {
                 </div>
 
                 <MembersContent>
-                    <MembersContainer>
-                        <div className="member-cover-image">
-                            ...
-                        </div>
-                        <div className="member-profile-image">
-                            ...
-                        </div>
-                        <div className="member-info">
-                            <div className="info-user-name">
-                                name
-                            </div>
-                            <div className="info-user-nickname">
-                                nickname
-                            </div>
-                            <div className="info-user-badges">
-                                <ul className="badges-list">
-                                    <li>nova amizade</li>
-                                    <li>convidar para grupo</li>
-                                    <li>enviar mensagem</li>
-                                </ul>
-                            </div>
-                            <div className="info-user-ratings-datails">
-                                <div className="user-stars">
-                                    stars
-                                </div>
-                                <div className="user-rate">
-                                    rate
-                                </div>
-                                <div className="user-total-rate">
-                                    total rate
-                                </div>
-                            </div>
-                        </div>
-                        <div className="member-statistics">
-                            <ul className="list-user-statistics">
-                                <li>Posts</li>
-                                <li>Comentários</li>
-                                <li>Vizualizações</li>
-                                <li>Amigos</li>
-                            </ul>
-                        </div>
-                    </MembersContainer>
+                    <MembersCard
+                        MemberCoverImg={CoverUser1} 
+                        MemberProfileImg={ImgUser1} 
+                        UserName="User1" 
+                        UserNickName="@user1"
+                    />
+                    <MembersCard
+                        // MemberCoverImg={CoverUser1} 
+                        MemberProfileImg={ImgUser1}
+                    />
+                    <MembersCard
+                        // MemberCoverImg={CoverUser1} 
+                        MemberProfileImg={ImgUser1}
+                    />
                 </MembersContent>
 
             </MainPagesContainer>
