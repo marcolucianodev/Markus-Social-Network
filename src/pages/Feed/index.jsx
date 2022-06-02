@@ -1,3 +1,4 @@
+import React from "react";
 import FeedContainer from "../../components/FeedContainer";
 import MainBanner from "../../components/MainBanner";
 
