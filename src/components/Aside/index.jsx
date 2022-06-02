@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 import { Sidebar, WidgetTitle } from "../Sidebar";
 import { WidgetUserInfo, UserStatus } from "../WidgetUserInfo";
@@ -22,7 +23,7 @@ export const Aside = () => {
         <Container>
             <aside>
                 <Sidebar>
-                  <WidgetTitle><PeopleAltIcon /> <a href="#"><span>Membros</span></a></WidgetTitle>
+                  <WidgetTitle><PeopleAltIcon /><Link to="/membros"><span>Membros</span></Link></WidgetTitle>
                   <WidgetUserInfo>
                     <div class="user-status-container">
                       <UserStatus userStatusColor="#ff5e3a">

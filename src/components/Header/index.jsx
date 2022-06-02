@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { HeaderContainer } from "./styles"
 import SearchHeader from "../SearchHeader";
 import FormSearch from "../FormSearch";
@@ -51,9 +52,9 @@ const Header = () => {
             </LoginButton>
             <MenuMobile className={activeMenu ? 'open-menu-mobile' : 'close-menu-mobile'}>
                 <ul className="list-menu">
-                    <li><a href="#"><FeedIcon className="menu-icons" /><span>Feed</span></a></li>
+                    <li><Link to="/"><FeedIcon className="menu-icons" /><span>Feed</span></Link></li>
                     <li><a href="#"><GradingIcon className="menu-icons" /><span>Atividade</span></a></li>
-                    <li><a href="#"><PeopleAltIcon className="menu-icons" /><span>Membros</span></a></li>
+                    <li><Link to="/membros"><PeopleAltIcon className="menu-icons" /><span>Membros</span></Link></li>
                     <li><a href="#"><GroupsIcon className="menu-icons" /><span>Grupos</span></a></li>
                     <li><a href="#"><PhotoLibraryIcon className="menu-icons" /><span>Fotos</span></a></li>
                     <li><a href="#"><HeadphonesIcon className="menu-icons" /><span>Músicas</span></a></li>
