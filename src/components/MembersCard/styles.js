@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: blue;
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,8 +65,10 @@ export const Container = styled.div`
 
         .info-user-nickname {
             margin-bottom: 2rem;
+            margin-top: 0.5rem;
             width: 100%;
             text-align: center;
+            font-size: 1.2rem;
         }
 
         .info-user-badges {
@@ -100,6 +102,12 @@ export const Container = styled.div`
                 width: 100%;
                 display: flex;
                 justify-content: center;
+                gap: 0.4rem;
+
+                .star-rate-icon {
+                    color: yellow;
+                    font-size: 1.8rem;
+                }
             }
 
             .ratings {
@@ -115,7 +123,7 @@ export const Container = styled.div`
 
     .member-statistics {
         display: flex;
-        padding: 1rem 1rem 2rem;
+        padding: 1rem 1rem 4rem;
 
         ul.list-user-statistics {
             list-style: none;
@@ -139,7 +147,7 @@ export const Container = styled.div`
                 font-size: 3rem;
                 box-sizing: content-box;
                 padding: 0.5rem;
-                border-radius: 0.5rem;
+                border-radius: 0.3rem;
                 color: #FFFFFF;
             }
 
@@ -156,7 +164,7 @@ export const Container = styled.div`
             }
 
             .statistics-user-friendship-icon {
-                background-color: #38a9ff;
+                background-color: #f76697;
             }
         }
     }

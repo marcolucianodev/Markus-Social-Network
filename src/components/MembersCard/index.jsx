@@ -9,6 +9,7 @@ import CommentIcon from '@mui/icons-material/Comment';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import MoodIcon from '@mui/icons-material/Mood';
 import CheckIcon from '@mui/icons-material/Check';
+import StarIcon from '@mui/icons-material/Star';
 
 
 
@@ -44,7 +45,11 @@ const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName, 
               </div>
               <div className="info-user-ratings-datails">
                   <div className="user-stars">
-                      stars
+                    <StarIcon className="star-rate-icon" />
+                    <StarIcon className="star-rate-icon" />
+                    <StarIcon className="star-rate-icon" />
+                    <StarIcon className="star-rate-icon" />
+                    <StarIcon className="star-rate-icon" />
                   </div>
                   <div className="ratings">
                       <div className="user-rate">

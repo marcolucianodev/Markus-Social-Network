@@ -53,7 +53,7 @@ export const Aside = () => {
                     />     
                     <MembersInfo 
                       imgProfile={ImgUser2}
-                      userName="Daniel" 
+                      userName="Thalles" 
                       postYear="1 mês atrás"
                     />    
                      <MembersInfo 
