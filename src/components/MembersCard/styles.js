@@ -38,6 +38,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding: 1rem;
 
         .info-user-name {
             display: flex;
@@ -105,6 +106,57 @@ export const Container = styled.div`
                 display: flex;
                 justify-content: center;
                 width: 100%;
+                margin-top: 1.5rem;
+                gap: 0.5rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .member-statistics {
+        display: flex;
+        padding: 1rem 1rem 2rem;
+
+        ul.list-user-statistics {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 4rem;
+                height: 4rem;
+            }
+
+            .statistics-user-post-icon,
+            .statistics-user-comment-icon,
+            .statistics-user-views-icon,
+            .statistics-user-friendship-icon {
+                font-size: 3rem;
+                box-sizing: content-box;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                color: #FFFFFF;
+            }
+
+            .statistics-user-post-icon {
+                background-color: #ff5e3a;
+            }
+
+            .statistics-user-comment-icon {
+                background-color: #38a9ff;
+            }
+
+            .statistics-user-views-icon {
+                background-color: #7c5ac2;
+            }
+
+            .statistics-user-friendship-icon {
+                background-color: #38a9ff;
             }
         }
     }

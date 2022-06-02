@@ -8,13 +8,6 @@ import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchActivityMobile, BoxActivityMobile } from "../../components/SearchActivityMobile";
 import { MembersContent } from "../../components/MembersContent";
-// import friendshipImage from "../../components/_assets/img/amizade.png";
-// import newGroupImage from "../../components/_assets/img/novo-grupo.png";
-// import sendMessage from "../../components/_assets/img/nova-mensagem.png";
-// import PostAddIcon from '@mui/icons-material/PostAdd';
-// import CommentIcon from '@mui/icons-material/Comment';
-// import VisibilityIcon from '@mui/icons-material/Visibility';
-// import MoodIcon from '@mui/icons-material/Mood';
 import ImgUser1 from "../../components/_assets/img/user-1.jpg"
 import MembersCard from "../../components/MembersCard";
 import CoverUser1 from "../../components/_assets/img/user-cover3.jpg"
@@ -137,7 +130,9 @@ const MembersPage = () => {
                         MemberCoverImg={CoverUser1} 
                         MemberProfileImg={ImgUser1} 
                         UserName="User1" 
-                        UserNickName="@user1"
+                        UserNickName="@user1" 
+                        userRate="4.7" 
+                        totalRatings="3"
                     />
                     <MembersCard
                         // MemberCoverImg={CoverUser1} 

@@ -12,7 +12,7 @@ import CheckIcon from '@mui/icons-material/Check';
 
 
 
-const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName}) => {
+const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName, userRate, totalRatings}) => {
     return (
         <Container>
             <div className="member-cover-image">
@@ -48,10 +48,11 @@ const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName})
                   </div>
                   <div className="ratings">
                       <div className="user-rate">
-                          rate
+                        {userRate} de 5
                       </div>
+                      <span className="rating-separator">•</span>
                       <div className="user-total-rate">
-                          total rate
+                        {totalRatings} classificações
                       </div>
                   </div>
               </div>
