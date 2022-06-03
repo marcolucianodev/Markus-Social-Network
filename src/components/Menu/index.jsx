@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom"
 import { Container } from "./styles";
 // import { Button } from "../Button";
@@ -20,7 +20,7 @@ import  Logo  from "../_assets/img/logo.png";
 
 const Menu = () => {
 
-    const [activeMenu, setActiveMenu] = useState(false); 
+    // const [activeMenu, setActiveMenu] = useState(false); 
 
     // const openMenu = () => {
     //     setActiveMenu(!activeMenu)
@@ -46,7 +46,8 @@ const Menu = () => {
                     </div>
                 </a>
             </div>
-            <MenuList className={activeMenu ? 'secondary-menu' : 'primary-menu'}>
+            {/* <MenuList className={activeMenu ? 'secondary-menu' : 'primary-menu'}> */}
+            <MenuList className='primary-menu'>
                 <ul className="list-menu">
                     <li><Link to="/"><FeedIcon className="menu-icons" /><span>Feed</span></Link></li>
                     <li><a href="/"><GradingIcon className="menu-icons" /><span>Atividade</span></a></li>
