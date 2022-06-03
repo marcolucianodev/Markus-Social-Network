@@ -12,13 +12,13 @@ import ImgUser7 from '../_assets/img/user-7.jpg';
 export const AvatarMembers = () => {
     return (
         <Container>
-            <div className="avatar-item"><a href="#"><img src={ImgUser1} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="#"><img src={ImgUser2} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="#"><img src={ImgUser3} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="#"><img src={ImgUser4} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="#"><img src={ImgUser5} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="#"><img src={ImgUser6} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="#"><img src={ImgUser7} alt="User Avatar"></img></a></div>
+            <div className="avatar-item"><a href="/membros"><img src={ImgUser1} alt="User Avatar"></img></a></div>
+            <div className="avatar-item"><a href="/membros"><img src={ImgUser2} alt="User Avatar"></img></a></div>
+            <div className="avatar-item"><a href="/membros"><img src={ImgUser3} alt="User Avatar"></img></a></div>
+            <div className="avatar-item"><a href="/membros"><img src={ImgUser4} alt="User Avatar"></img></a></div>
+            <div className="avatar-item"><a href="/membros"><img src={ImgUser5} alt="User Avatar"></img></a></div>
+            <div className="avatar-item"><a href="/membros"><img src={ImgUser6} alt="User Avatar"></img></a></div>
+            <div className="avatar-item"><a href="/membros"><img src={ImgUser7} alt="User Avatar"></img></a></div>
         </Container>
     )
 }

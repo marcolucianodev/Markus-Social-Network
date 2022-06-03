@@ -53,6 +53,7 @@ const Header = () => {
             <MenuMobile className={activeMenu ? 'open-menu-mobile' : 'close-menu-mobile'}>
                 <ul className="list-menu">
                     <li><Link to="/"><FeedIcon className="menu-icons" /><span>Feed</span></Link></li>
+{/* <<<<<<< HEAD
                     <li><a href="#"><GradingIcon className="menu-icons" /><span>Atividade</span></a></li>
                     <li><Link to="/membros"><PeopleAltIcon className="menu-icons" /><span>Membros</span></Link></li>
                     <li><a href="#"><GroupsIcon className="menu-icons" /><span>Grupos</span></a></li>
@@ -62,6 +63,17 @@ const Header = () => {
                     <li><a href="#"><EventNoteIcon className="menu-icons" /><span>Eventos</span></a></li>
                     <li><a href="#"><ForumIcon className="menu-icons" /><span>Fórum</span></a></li>
                     <li><a href="#"><ShoppingBagIcon className="menu-icons" /><span>Loja</span></a></li>
+======= */}
+                    <li><a href="/"><GradingIcon className="menu-icons" /><span>Atividade</span></a></li>
+                    <li><Link to="/membros"><PeopleAltIcon className="menu-icons" /><span>Membros</span></Link></li>
+                    <li><a href="/"><GroupsIcon className="menu-icons" /><span>Grupos</span></a></li>
+                    <li><a href="/"><PhotoLibraryIcon className="menu-icons" /><span>Fotos</span></a></li>
+                    <li><a href="/"><HeadphonesIcon className="menu-icons" /><span>Músicas</span></a></li>
+                    <li><a href="/"><VideoLibraryIcon className="menu-icons" /><span>Vídeos</span></a></li>
+                    <li><a href="/"><EventNoteIcon className="menu-icons" /><span>Eventos</span></a></li>
+                    <li><a href="/"><ForumIcon className="menu-icons" /><span>Fórum</span></a></li>
+                    <li><a href="/"><ShoppingBagIcon className="menu-icons" /><span>Loja</span></a></li>
+{/* >>>>>>> members-page */}
                 </ul>
             </MenuMobile>
         </HeaderContainer>

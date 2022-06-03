@@ -1,7 +1,10 @@
 // <<<<<<< HEAD
-// import React from "react";
-// import FeedContainer from "../../components/FeedContainer"
+// // <<<<<<< HEAD
+// // import React from "react";
+// // import FeedContainer from "../../components/FeedContainer"
+// // =======
 // =======
+// >>>>>>> members-page
 import React from "react";
 import FeedContainer from "../../components/FeedContainer";
 import MainBanner from "../../components/MainBanner";

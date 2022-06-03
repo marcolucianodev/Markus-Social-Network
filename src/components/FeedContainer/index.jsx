@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Container } from "./styles"
 import { SearchActivity } from "../SearchActivity";
 import { SearchActivityMobile, BoxActivityMobile } from "../SearchActivityMobile";
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import TuneIcon from '@mui/icons-material/Tune';
-import PublicIcon from '@mui/icons-material/Public';
+// import PublicIcon from '@mui/icons-material/Public';
 import { ActivityOptions } from "../ActivityOptions";
 import FormSearch from "../FormSearch";
 import { FeedPost } from "../FeedPost";
@@ -36,7 +36,7 @@ import { Aside } from "../Aside";
 
 const FeedContainer = () => {
 
-    const [openMenuMobile, setOpenMenuMobile] = useState(false);
+    // const [openMenuMobile, setOpenMenuMobile] = useState(false);
 
     const [openSearchMobile, setOpenSearchMobile] = useState(false);
 
@@ -45,9 +45,9 @@ const FeedContainer = () => {
     const [selectOption, setSelectOption] = useState(false);
 
 
-    const openActivityMenuMobile = () => {
-        setOpenMenuMobile(!openMenuMobile)
-    }
+    // const openActivityMenuMobile = () => {
+    //     setOpenMenuMobile(!openMenuMobile)
+    // }
 
     const openActivitySearchMobile = () => {
         setOpenSearchMobile(!openSearchMobile)
@@ -84,7 +84,7 @@ const FeedContainer = () => {
             </div>
 
             {/*Menu Activity Options*/}
-            <div className={openMenuMobile ? 'content-activity-menu' : 'content-activity-menu-none'}>
+            {/* <div className={openMenuMobile ? 'content-activity-menu' : 'content-activity-menu-none'}>
                 <div className="content-options-mobile">
                 <div className="display-menbers-number">
                     <PublicIcon />
@@ -92,7 +92,7 @@ const FeedContainer = () => {
                     <span className="number-of-members">7</span>
                 </div>
                 </div>
-            </div>
+            </div> */}
 
             {/*Settings Activity Options*/}
             <div className={openSettingsMobile ? 'content-activity-settings' : 'content-activity-settings-none'}>

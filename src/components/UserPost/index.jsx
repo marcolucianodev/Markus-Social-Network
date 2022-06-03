@@ -16,20 +16,20 @@ export const UserPost = (props) => {
                     <div className="first-headline">
                         <p>
                             <span className="user-name">
-                                <a href="">{props.userName}
+                                <a href="/membros">{props.userName}
                                     <span><CheckIcon className="user-check-icon" /></span>
                                 </a>
                             </span>
                             postou no grupo &nbsp;
                             <span className="group-name">
-                                <a href="">{props.groupName}</a>
+                                <a href="/">{props.groupName}</a>
                             </span>
                         </p>
                     </div>
                     <div className="second-headline">
                         <PublicIcon className="second-headline-icon" />
                         <span className="activity-year">
-                            <a href="">{props.postYear}</a>
+                            <a href="/">{props.postYear}</a>
                         </span>
                     </div>
                 </div>
@@ -39,15 +39,15 @@ export const UserPost = (props) => {
                     {props.textPost}
                 </PostText>
                 <PostCover>
-                    <img src={props.coverPost} alt="Imagem Post" />
+                    <img src={props.coverPost} alt="Post" />
                 </PostCover>
             </PostArea>
             <ActivityAreaPost>
                 <div className="activity-area-liked">
                     <div>
-                        <a href=""><img src={props.imgLikedUser1} alt="" /></a>
-                        <a href=""><img src={props.imgLikedUser2} alt="" /></a>
-                        <a href=""><img src={props.imgLikedUser3} alt="" /></a>
+                        <a href="/membros"><img src={props.imgLikedUser1} alt="" /></a>
+                        <a href="/membros"><img src={props.imgLikedUser2} alt="" /></a>
+                        <a href="/membros"><img src={props.imgLikedUser3} alt="" /></a>
                     </div>
                     <div>
                         <span>

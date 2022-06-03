@@ -11,7 +11,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 export const Footer = () => {
     return (
         <Container>
-            <a href="#" className="link-logo-footer">
+            <a href="/" className="link-logo-footer">
                 <div className="footer-logo">
                     <img src={Logo} alt="Logo Markus" />
                     <div className="title-box">
@@ -28,19 +28,19 @@ export const Footer = () => {
             <p>Conecte-se com amigos e o mundo ao seu redor no Markus Social Network.</p>
           </div>
           <div className="footer-social-icons">
-            <a href="">
+            <a href="/">
               <FacebookIcon />
             </a>
-            <a href="">
+            <a href="/">
               <TwitterIcon />
             </a>
-            <a href="">
+            <a href="/">
               <PinterestIcon />
             </a>
-            <a href="">
+            <a href="/">
               <YouTubeIcon />
             </a>
-            <a href="">
+            <a href="/">
               <InstagramIcon />
             </a>
           </div>

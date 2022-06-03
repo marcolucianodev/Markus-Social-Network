@@ -5,7 +5,7 @@ import { HeadlineMembersInfo } from "../WidgetUserInfo";
 export const MembersInfo = (props) => {
     return (
         <HeadlineMembersInfo>
-            <a href="">
+            <a href="/membros">
                 <div className="user-headline-image">
                     <img src={props.imgProfile} alt="Img Profile" />
                 </div>
@@ -14,7 +14,7 @@ export const MembersInfo = (props) => {
                 <div className="first-headline">
                     <p>
                         <span className="user-name">
-                            <a href="">{props.userName} <span className="icon">{! props.notdisplay && <CheckIcon className="user-check-icon" />}</span></a>
+                            <a href="/membros">{props.userName} <span className="icon">{! props.notdisplay && <CheckIcon className="user-check-icon" />}</span></a>
                         </span>
                     </p>
                 </div>
