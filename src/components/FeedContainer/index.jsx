@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container } from "./styles"
 import { SearchActivity } from "../SearchActivity";
 import { SearchActivityMobile, BoxActivityMobile } from "../SearchActivityMobile";
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import TuneIcon from '@mui/icons-material/Tune';
 import PublicIcon from '@mui/icons-material/Public';
@@ -45,9 +45,9 @@ const FeedContainer = () => {
     const [selectOption, setSelectOption] = useState(false);
 
 
-    const openActivityMenuMobile = () => {
-        setOpenMenuMobile(!openMenuMobile)
-    }
+    // const openActivityMenuMobile = () => {
+    //     setOpenMenuMobile(!openMenuMobile)
+    // }
 
     const openActivitySearchMobile = () => {
         setOpenSearchMobile(!openSearchMobile)

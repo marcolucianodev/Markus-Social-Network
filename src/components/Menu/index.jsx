@@ -22,9 +22,9 @@ const Menu = () => {
 
     const [activeMenu, setActiveMenu] = useState(false); 
 
-    const openMenu = () => {
-        setActiveMenu(!activeMenu)
-    }
+    // const openMenu = () => {
+    //     setActiveMenu(!activeMenu)
+    // }
 
     return (
         <Container>
@@ -32,7 +32,7 @@ const Menu = () => {
                 {activeMenu ? <CloseIcon className="icon-main-menu" /> : <MenuOpenIcon className="icon-main-menu" />}
             </Button> */}
             <div className="logo-content">
-                <a href="#">
+                <a href="/">
                     <div className="logo">
                         <img src={Logo} alt="Logo Markus" />
                         <div className="title-box">
@@ -49,15 +49,15 @@ const Menu = () => {
             <MenuList className={activeMenu ? 'secondary-menu' : 'primary-menu'}>
                 <ul className="list-menu">
                     <li><Link to="/"><FeedIcon className="menu-icons" /><span>Feed</span></Link></li>
-                    <li><a href="#"><GradingIcon className="menu-icons" /><span>Atividade</span></a></li>
+                    <li><a href="/"><GradingIcon className="menu-icons" /><span>Atividade</span></a></li>
                     <li><Link to="/membros"><PeopleAltIcon className="menu-icons" /><span>Membros</span></Link></li>
-                    <li><a href="#"><GroupsIcon className="menu-icons" /><span>Grupos</span></a></li>
-                    <li><a href="#"><PhotoLibraryIcon className="menu-icons" /><span>Fotos</span></a></li>
-                    <li><a href="#"><HeadphonesIcon className="menu-icons" /><span>Músicas</span></a></li>
-                    <li><a href="#"><VideoLibraryIcon className="menu-icons" /><span>Vídeos</span></a></li>
-                    <li><a href="#"><EventNoteIcon className="menu-icons" /><span>Eventos</span></a></li>
-                    <li><a href="#"><ForumIcon className="menu-icons" /><span>Fórum</span></a></li>
-                    <li><a href="#"><ShoppingBagIcon className="menu-icons" /><span>Loja</span></a></li>
+                    <li><a href="/"><GroupsIcon className="menu-icons" /><span>Grupos</span></a></li>
+                    <li><a href="/"><PhotoLibraryIcon className="menu-icons" /><span>Fotos</span></a></li>
+                    <li><a href="/"><HeadphonesIcon className="menu-icons" /><span>Músicas</span></a></li>
+                    <li><a href="/"><VideoLibraryIcon className="menu-icons" /><span>Vídeos</span></a></li>
+                    <li><a href="/"><EventNoteIcon className="menu-icons" /><span>Eventos</span></a></li>
+                    <li><a href="/"><ForumIcon className="menu-icons" /><span>Fórum</span></a></li>
+                    <li><a href="/"><ShoppingBagIcon className="menu-icons" /><span>Loja</span></a></li>
                 </ul>  
             </MenuList>
         </Container>

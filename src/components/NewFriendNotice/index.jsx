@@ -7,7 +7,7 @@ export const NewFriendNotice = (props) => {
     return (
         <FeedUserContent>
             <UserHeadline>
-                <a href="">
+                <a href="/membros">
                     <div className="user-headline-image">
                         <img src={props.imgProfile} alt="Img Profile" />
                     </div>
@@ -16,11 +16,11 @@ export const NewFriendNotice = (props) => {
                     <div className="first-headline">
                         <p>
                             <span className="user-name">
-                                <a href="">{props.userName} <span><CheckIcon className="user-check-icon" /></span></a>
+                                <a href="/membros">{props.userName} <span><CheckIcon className="user-check-icon" /></span></a>
                             </span>
                              e &nbsp;
                             <span className="user-friend">
-                                <a href="">{props.friend}
+                                <a href="/membros">{props.friend}
                                 <span><CheckIcon className="user-check-icon" /></span>
                                 </a>
                             </span>
@@ -30,21 +30,21 @@ export const NewFriendNotice = (props) => {
                     <div className="second-headline">
                         <PublicIcon className="second-headline-icon" />
                         <span className="activity-year">
-                            <a href="">{props.postYear}</a>
+                            <a href="/">{props.postYear}</a>
                         </span>
                     </div>
                 </div>
             </UserHeadline>
             <UserCover>
-                    <img src={props.ImgUserCover} alt="User Cover Image" />
+                    <img src={props.ImgUserCover} alt="User Cover Img" />
             </UserCover>
             <UserInfo>
                     <div className="user-friends-profile">
-                        <a href=""><img src={props.ImgFriendsProfile} alt="Img Friends Profile" /></a>
+                        <a href="/membros"><img src={props.ImgFriendsProfile} alt="Img Friends Profile" /></a>
                     </div>
                     <div className="user-friend-headline">
                         <span className="user-friend">
-                            <a href="">{props.friend}
+                            <a href="/membros">{props.friend}
                             </a>
                         </span>
                         <span className="nickname">

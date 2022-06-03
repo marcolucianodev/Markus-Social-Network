@@ -64,7 +64,7 @@ export const Aside = () => {
                   </WidgetUserInfo>
                 </Sidebar>
                 <Sidebar>
-                  <WidgetTitle><GroupsIcon /> <a href="#"><span>Grupos</span></a></WidgetTitle>
+                  <WidgetTitle><GroupsIcon /> <a href="/"><span>Grupos</span></a></WidgetTitle>
                   <WidgetUserInfo>
                       <div class="user-status-container">
                         <UserStatus userStatusColor="#ff5e3a">
@@ -101,11 +101,11 @@ export const Aside = () => {
                   </WidgetUserInfo>
                 </Sidebar>
                 <Sidebar>
-                  <WidgetTitle><PeopleAltIcon /> <a href="#"><span>Quem está online</span></a></WidgetTitle>
+                  <WidgetTitle><PeopleAltIcon /> <a href="/membros"><span>Quem está online</span></a></WidgetTitle>
                   <div style={{padding:'2rem 2rem 0', fontSize: "1.6rem",}}>Não há usuários online agora</div>
                 </Sidebar>
                 <Sidebar>
-                  <WidgetTitle><GroupsIcon /> <a href=""><span>Membros Ativos Recentemente</span></a></WidgetTitle>
+                  <WidgetTitle><GroupsIcon /> <a href="/membros"><span>Membros Ativos Recentemente</span></a></WidgetTitle>
                   <AvatarMembers />
                 </Sidebar>
             </aside>

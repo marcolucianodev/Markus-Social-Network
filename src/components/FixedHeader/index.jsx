@@ -5,7 +5,7 @@ import  Logo  from "../_assets/img/logo.png";
 export const FixedHeader = () => {
     return (
         <Container>
-            <a href="#">
+            <a href="/">
                 <div className="logo">
                     <img src={Logo} alt="Logo Markus" />
                     <div className="title-box">
