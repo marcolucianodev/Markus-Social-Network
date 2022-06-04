@@ -206,6 +206,10 @@ export const OptionsBar = styled.div`
                 @media (max-width: 768px) {
                     width: 20%;
                 }
+
+                @media (max-width: 520px) {
+                    width: auto;
+                }
             }
         }
     }
