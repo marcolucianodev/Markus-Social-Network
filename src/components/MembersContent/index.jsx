@@ -8,4 +8,8 @@ export const MembersContent = styled.section`
     @media (max-width: 950px) {
         grid-template-columns: 1fr 1fr;
     }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
 `;
