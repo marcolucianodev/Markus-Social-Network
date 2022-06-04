@@ -4,6 +4,8 @@
 
 [![Preview Image](https://github.com/marcolucianodev/markus-social-network/blob/master/public/markus-img02.png)](https://markus-social-network.netlify.app/)
 
+[![Preview Image](https://github.com/marcolucianodev/markus-social-network/blob/master/public/markus-img03.png)](https://markus-social-network.netlify.app/)
+
 Projeto front-end de uma rede social desenvolvido com React e Styled-components.
 
 Nesse projeto (EM ANDAMENTO) está sendo desenvolvido a interface de uma aplicação de uma rede social, onde contém página de feed de usuários, páginas de perfil, grupos, fotos, eventos, fórum e demais funcionalidades que compõe uma interface de uma rede social.
