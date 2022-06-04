@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, MaskBanner } from "./styles";
-import upBanner from "../_assets/img/up-main-banner.png"
+import { Container } from "./styles";
 
 const MainBanner = ({ children, titlePage, pageDescription }) => {
     return (

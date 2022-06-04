@@ -24,7 +24,7 @@ import CoverUser5 from "../../components/_assets/img/user-cover5.jpg";
 import CoverUser6 from "../../components/_assets/img/user-cover6.jpeg";
 import CoverUser7 from "../../components/_assets/img/user-cover7.jpeg";
 import CounterViews from "../../components/CounterViews";
-import { MaskBanner, ImageUpperBanner } from "../../components/MainBanner/styles";
+import { ImageUpperBanner } from "../../components/MainBanner/styles";
 import MembersUpperBanner from "../../components/_assets/img/members-upper-banner.png"
 
 
