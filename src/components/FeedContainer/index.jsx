@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { Container } from "./styles"
 import { SearchActivity } from "../SearchActivity";
 import { SearchActivityMobile, BoxActivityMobile } from "../SearchActivityMobile";
-// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import TuneIcon from '@mui/icons-material/Tune';
-// import PublicIcon from '@mui/icons-material/Public';
 import { ActivityOptions } from "../ActivityOptions";
 import FormSearch from "../FormSearch";
 import { FeedPost } from "../FeedPost";
@@ -36,18 +34,11 @@ import { Aside } from "../Aside";
 
 const FeedContainer = () => {
 
-    // const [openMenuMobile, setOpenMenuMobile] = useState(false);
-
     const [openSearchMobile, setOpenSearchMobile] = useState(false);
 
     const [openSettingsMobile, setOpenSettingsMobile] = useState(false);
 
     const [selectOption, setSelectOption] = useState(false);
-
-
-    // const openActivityMenuMobile = () => {
-    //     setOpenMenuMobile(!openMenuMobile)
-    // }
 
     const openActivitySearchMobile = () => {
         setOpenSearchMobile(!openSearchMobile)
@@ -68,10 +59,6 @@ const FeedContainer = () => {
             </div>
             <div className="feed-content-search-activity-mobile">
                 <SearchActivityMobile>
-                    {/* <BoxActivityMobile onClick={openActivityMenuMobile}>
-                        <MenuIcon />
-                        <p>Menu</p>
-                    </BoxActivityMobile> */}
                     <BoxActivityMobile onClick={openActivitySearchMobile}>
                         <SearchIcon />
                         <p>Pesquisar</p>
@@ -82,17 +69,6 @@ const FeedContainer = () => {
                     </BoxActivityMobile>
                 </SearchActivityMobile>
             </div>
-
-            {/*Menu Activity Options*/}
-            {/* <div className={openMenuMobile ? 'content-activity-menu' : 'content-activity-menu-none'}>
-                <div className="content-options-mobile">
-                <div className="display-menbers-number">
-                    <PublicIcon />
-                    <span>Total de Usuários</span>
-                    <span className="number-of-members">7</span>
-                </div>
-                </div>
-            </div> */}
 
             {/*Settings Activity Options*/}
             <div className={openSettingsMobile ? 'content-activity-settings' : 'content-activity-settings-none'}>

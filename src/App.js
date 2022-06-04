@@ -7,7 +7,6 @@ import Menu from "./components/Menu";
 import { MainContainer } from "./components/MainContainer";
 import Header from "./components/Header";
 import { FixedHeader } from "./components/FixedHeader";
-// import MainBanner from "./components/MainBanner";
 import { Footer } from "./components/Footer";
 import MembersPage from "./pages/MembersPage";
 
@@ -20,7 +19,6 @@ const App = () => {
       <MainContainer>
         <Header />
         <FixedHeader />
-        {/* <MainBanner /> */}
           <Routes>
             <Route path="/" element={<Feed /> } />
             <Route path="/membros" element={<MembersPage /> } />

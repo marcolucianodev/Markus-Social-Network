@@ -1,15 +1,8 @@
-// <<<<<<< HEAD
-// // <<<<<<< HEAD
-// // import React from "react";
-// // import FeedContainer from "../../components/FeedContainer"
-// // =======
-// =======
-// >>>>>>> members-page
 import React from "react";
 import FeedContainer from "../../components/FeedContainer";
 import MainBanner from "../../components/MainBanner";
 
-const Feed = ({props}) => {
+const Feed = () => {
     return (
         <div>
             <MainBanner 

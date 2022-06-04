@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-/* <<<<<<< HEAD
-    background-color: blue;
-======= */
     background-color: #FFFFFF;
-/* >>>>>>> members-page */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,10 +38,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         width: 100%;
-/* <<<<<<< HEAD
-======= */
         padding: 1rem;
-/* >>>>>>> members-page */
 
         .info-user-name {
             display: flex;
@@ -72,15 +65,10 @@ export const Container = styled.div`
 
         .info-user-nickname {
             margin-bottom: 2rem;
-/* <<<<<<< HEAD
-            width: 100%;
-            text-align: center;
-======= */
             margin-top: 0.5rem;
             width: 100%;
             text-align: center;
             font-size: 1.2rem;
-/* >>>>>>> members-page */
         }
 
         .info-user-badges {
@@ -114,23 +102,18 @@ export const Container = styled.div`
                 width: 100%;
                 display: flex;
                 justify-content: center;
-/* <<<<<<< HEAD
-======= */
                 gap: 0.4rem;
 
                 .star-rate-icon {
                     color: yellow;
                     font-size: 1.8rem;
                 }
-/* >>>>>>> members-page */
             }
 
             .ratings {
                 display: flex;
                 justify-content: center;
                 width: 100%;
-/* <<<<<<< HEAD
-======= */
                 margin-top: 1.5rem;
                 gap: 0.5rem;
                 text-transform: uppercase;
@@ -182,7 +165,6 @@ export const Container = styled.div`
 
             .statistics-user-friendship-icon {
                 background-color: #f76697;
-/* >>>>>>> members-page */
             }
         }
     }

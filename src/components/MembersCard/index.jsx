@@ -9,18 +9,11 @@ import CommentIcon from '@mui/icons-material/Comment';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import MoodIcon from '@mui/icons-material/Mood';
 import CheckIcon from '@mui/icons-material/Check';
-// <<<<<<< HEAD
-
-
-
-// const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName}) => {
-// =======
 import StarIcon from '@mui/icons-material/Star';
 
 
 
 const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName, userRate, totalRatings}) => {
-// >>>>>>> members-page
     return (
         <Container>
             <div className="member-cover-image">
@@ -52,16 +45,6 @@ const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName, 
               </div>
               <div className="info-user-ratings-datails">
                   <div className="user-stars">
-{/* <<<<<<< HEAD
-                      stars
-                  </div>
-                  <div className="ratings">
-                      <div className="user-rate">
-                          rate
-                      </div>
-                      <div className="user-total-rate">
-                          total rate
-======= */}
                     <StarIcon className="star-rate-icon" />
                     <StarIcon className="star-rate-icon" />
                     <StarIcon className="star-rate-icon" />
@@ -75,7 +58,6 @@ const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName, 
                       <span className="rating-separator">•</span>
                       <div className="user-total-rate">
                         {totalRatings} classificações
-{/* >>>>>>> members-page */}
                       </div>
                   </div>
               </div>

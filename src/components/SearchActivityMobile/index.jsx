@@ -5,8 +5,6 @@ import { Container } from "../SearchActivity/styles";
 
 export const SearchActivityMobile = styled(Container)`
     height: auto;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
     gap: 1rem;
     background-color: transparent;
     display: flex;

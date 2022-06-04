@@ -8,18 +8,6 @@ import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchActivityMobile, BoxActivityMobile } from "../../components/SearchActivityMobile";
 import { MembersContent } from "../../components/MembersContent";
-// <<<<<<< HEAD
-// // import friendshipImage from "../../components/_assets/img/amizade.png";
-// // import newGroupImage from "../../components/_assets/img/novo-grupo.png";
-// // import sendMessage from "../../components/_assets/img/nova-mensagem.png";
-// // import PostAddIcon from '@mui/icons-material/PostAdd';
-// // import CommentIcon from '@mui/icons-material/Comment';
-// // import VisibilityIcon from '@mui/icons-material/Visibility';
-// // import MoodIcon from '@mui/icons-material/Mood';
-// import ImgUser1 from "../../components/_assets/img/user-1.jpg"
-// import MembersCard from "../../components/MembersCard";
-// import CoverUser1 from "../../components/_assets/img/user-cover3.jpg"
-// =======
 import ImgUser1 from "../../components/_assets/img/user-1.jpg";
 import ImgUser2 from "../../components/_assets/img/user-2.jpg";
 import ImgUser3 from "../../components/_assets/img/user-3.jpg";
@@ -36,7 +24,6 @@ import CoverUser5 from "../../components/_assets/img/user-cover5.jpg";
 import CoverUser6 from "../../components/_assets/img/user-cover6.jpeg";
 import CoverUser7 from "../../components/_assets/img/user-cover7.jpeg";
 import CounterViews from "../../components/CounterViews";
-// >>>>>>> members-page
 
 
 const MembersPage = () => {
@@ -153,22 +140,6 @@ const MembersPage = () => {
 
                 <MembersContent>
                     <MembersCard
-// <<<<<<< HEAD
-//                         MemberCoverImg={CoverUser1} 
-//                         MemberProfileImg={ImgUser1} 
-//                         UserName="User1" 
-//                         UserNickName="@user1"
-//                     />
-//                     <MembersCard
-//                         // MemberCoverImg={CoverUser1} 
-//                         MemberProfileImg={ImgUser1}
-//                     />
-//                     <MembersCard
-//                         // MemberCoverImg={CoverUser1} 
-//                         MemberProfileImg={ImgUser1}
-//                     />
-//                 </MembersContent>
-// =======
                         MemberCoverImg={CoverUser3} 
                         MemberProfileImg={ImgUser1} 
                         UserName="Carlos" 
@@ -226,7 +197,6 @@ const MembersPage = () => {
                     />
                 </MembersContent>
                 <CounterViews counterType="membros" />
-{/* >>>>>>> members-page */}
 
             </MainPagesContainer>
         </div>
