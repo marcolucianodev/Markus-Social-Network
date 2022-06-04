@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import banner from "../_assets/img/background-banner.jpg";
+import banner from "../_assets/img/banner-background.jpg";
+// import banner from "../_assets/img/background-social-network.jpg";
+
 
 export const Container = styled.section`
     width: 100%;
     height: 50rem;
     background-color: #eeeeee;
-    /* background-image: url(${banner}); */
-    background-image: url(${props => props.bgPropsBanner});
+    background-image: url(${banner});
     background-position: center;
     background-size: cover;
     padding: 3rem 3rem 0;
@@ -17,11 +18,13 @@ export const Container = styled.section`
     flex-direction: column;
     z-index: -2;
     margin-top: 7rem;
+    position: relative;
 
     .desc-banner {
         display: flex;
         flex-direction: column;
         align-items: center;
+        z-index: 2;
     }
 
     h1 {
@@ -43,7 +46,7 @@ export const Container = styled.section`
         font-weight: 300;
     }
 
-    .img-up-banner-area {
+    /* .img-up-banner-area {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -52,7 +55,7 @@ export const Container = styled.section`
         img {
             width: inherit;
         }
-    }
+    } */
 
     @media (max-width: 351px) {
         p {
@@ -72,9 +75,44 @@ export const Container = styled.section`
         margin-top: 0;
     }
 
-    @media (min-width: 1200px) {
+    /* @media (min-width: 1200px) {
             .img-up-banner-area img {
                 width: auto;
             }
+        } */
+`;
+
+export const MaskBanner = styled.div `
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: ${props => props.maskBg ?'blue':'darkmagenta'};
+    z-index: -1;
+    opacity: 0.4;
+`;
+
+export const ImageUpperBanner = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0 2rem;
+
+    img {
+        width: inherit;
+    }
+
+    @media (min-width: 1200px) {
+        img {
+            width: auto;
         }
+    }
 `;

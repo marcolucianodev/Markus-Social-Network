@@ -24,6 +24,8 @@ import CoverUser5 from "../../components/_assets/img/user-cover5.jpg";
 import CoverUser6 from "../../components/_assets/img/user-cover6.jpeg";
 import CoverUser7 from "../../components/_assets/img/user-cover7.jpeg";
 import CounterViews from "../../components/CounterViews";
+import { MaskBanner, ImageUpperBanner } from "../../components/MainBanner/styles";
+import MembersUpperBanner from "../../components/_assets/img/members-upper-banner.png"
 
 
 const MembersPage = () => {
@@ -49,11 +51,15 @@ const MembersPage = () => {
 
     return (
         <div>
-            <MainBanner
+            <MainBanner 
                 titlePage="Membros" 
-                pageDescription="EDITAR"
-                bgPropsBanner="../../_assets/img/background-banner.jpg"
-            />
+                pageDescription="Dê uma olhada em todos os membros registrados na Markus! Encontre todos os seus amigos aqui ou faça novos. Pesquise-os facilmente por nome e gerencie-os rapidamente em ordem alfabética ou por data de registro!"
+            >
+                {/* <MaskBanner /> */}
+                <ImageUpperBanner>
+                    <img src={MembersUpperBanner} alt="Feer Upper Banner" />
+                </ImageUpperBanner>
+            </MainBanner>
             <MainPagesContainer>
                 <OptionsBar>
                     <div className="members-user-info">
