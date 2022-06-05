@@ -53,7 +53,7 @@ const MembersPage = () => {
         <div>
             <MainBanner 
                 titlePage="Membros" 
-                pageDescription="Dê uma olhada em todos os membros registrados na Markus! Encontre todos os seus amigos aqui ou faça novos. Pesquise-os facilmente por nome e gerencie-os rapidamente em ordem alfabética ou por data de registro!"
+                pageDescription="Dê uma olhada em todos os membros registrados no Markus! Encontre todos os seus amigos aqui ou faça novos. Pesquise-os facilmente por nome e gerencie-os rapidamente em ordem alfabética ou por data de registro!"
             >
                 {/* <MaskBanner /> */}
                 <ImageUpperBanner>
