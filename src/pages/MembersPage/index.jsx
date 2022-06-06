@@ -57,7 +57,7 @@ const MembersPage = () => {
             >
                 {/* <MaskBanner /> */}
                 <ImageUpperBanner>
-                    <img src={MembersUpperBanner} alt="Feer Upper Banner" />
+                    <img src={MembersUpperBanner} alt="Members Upper Banner" />
                 </ImageUpperBanner>
             </MainBanner>
             <MainPagesContainer>

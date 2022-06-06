@@ -14,7 +14,7 @@ const Feed = () => {
             >
                 {/* <MaskBanner /> */}
                 <ImageUpperBanner>
-                    <img src={feedUpperBanner} alt="Feer Upper Banner" />
+                    <img src={feedUpperBanner} alt="Feed Upper Banner" />
                 </ImageUpperBanner>
             </MainBanner>
             <FeedContainer />

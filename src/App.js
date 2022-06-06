@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import { FixedHeader } from "./components/FixedHeader";
 import { Footer } from "./components/Footer";
 import MembersPage from "./pages/MembersPage";
+import GroupsPage from "./pages/GroupsPage";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Feed /> } />
             <Route path="/membros" element={<MembersPage /> } />
+            <Route path="/grupos" element={<GroupsPage />} />
           </Routes>
         <Footer />
         </MainContainer>
