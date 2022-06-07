@@ -62,20 +62,20 @@ const MembersPage = () => {
             </MainBanner>
             <MainPagesContainer>
                 <OptionsBar>
-                    <div className="members-user-info">
+                    <div className="options_bar-info">
                         <Link to="/membros">
-                            <div className="display-menbers-number">
+                            <div className="display-options_bar-number">
                                 <PublicIcon />
                                 <span>Total de Usuários</span>
-                                <span className="number-of-members">7</span>
+                                <span className="options_bar-number">7</span>
                             </div>
                         </Link>
                     </div>
-                    <div className="members-page-options-search-content">
-                        <div className="activity-members">
+                    <div className="options_bar-search-content">
+                        <div className="options_bar-activity">
                             <span className="order-by">Ordenar por:</span>
-                            <div className="members-select" onClick={handleActiveMembers}>
-                                <div className="mebers-select-headline">
+                            <div className="options_bar-select" onClick={handleActiveMembers}>
+                                <div className="options_bar-select-headline">
                                     <span className="select-headline-text">Últimas Atividades</span>
                                     <span className={activeMembers ? "select-headline-icon" : "select-headline-icon-active"} >‹</span>
                                 </div>
@@ -86,10 +86,10 @@ const MembersPage = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="search-members">
+                        <div className="options_bar-search">
                             <form action="post">
-                                <label htmlFor="members-search">
-                                    <input type="text" name="members-search" id="members-search" placeholder="Pesquisar Membros" />
+                                <label htmlFor="search-options_bar">
+                                    <input type="text" name="search-options_bar" id="search-options_bar" placeholder="Pesquisar Membros" />
                                 </label>
                                 <input type="submit" value="Pesquisar" />
                             </form>
@@ -112,12 +112,12 @@ const MembersPage = () => {
                             </BoxActivityMobile>
                         </SearchActivityMobile>
                     </div>
-                    <OptionsBar className={filterMobile ? "show-filter-members-mobile" : "show-filter-members-mobile-none"}>
-                        <div className="members-page-options-search-content">
-                            <div className="activity-members">
+                    <OptionsBar className={filterMobile ? "show-filter-options_bar-mobile" : "show-filter-options_bar-mobile-none"}>
+                        <div className="options_bar-search-content">
+                            <div className="options_bar-activity">
                                 <span className="order-by">Ordenar por:</span>
-                                <div className="members-select" onClick={handleActiveMembers}>
-                                    <div className="mebers-select-headline">
+                                <div className="options_bar-select" onClick={handleActiveMembers}>
+                                    <div className="options_bar-select-headline">
                                         <span className="select-headline-text">Últimas Atividades</span>
                                         <span className={activeMembers ? "select-headline-icon" : "select-headline-icon-active"} >‹</span>
                                     </div>
@@ -130,12 +130,12 @@ const MembersPage = () => {
                             </div>
                         </div>
                     </OptionsBar>
-                    <OptionsBar className={searchMobile ? "show-search-members-mobile" : "show-search-members-mobile-none"}>
-                        <div className="members-page-options-search-content">
-                            <div className="search-members">
+                    <OptionsBar className={searchMobile ? "show-search-options_bar-mobile" : "show-search-options_bar-mobile-none"}>
+                        <div className="options_bar-search-content">
+                            <div className="options_bar-search">
                                 <form action="post">
-                                    <label htmlFor="members-search">
-                                        <input type="text" name="members-search" id="members-search" placeholder="Pesquisar Membros..." />
+                                    <label htmlFor="search-options_bar">
+                                        <input type="text" name="search-options_bar" id="search-options_bar" placeholder="Pesquisar Membros..." />
                                     </label>
                                     <input type="submit" value="Pesquisar" />
                                 </form>
@@ -202,7 +202,7 @@ const MembersPage = () => {
                         totalRatings="2"
                     />
                 </MembersContent>
-                <CounterViews counterType="membros" />
+                <CounterViews counterNumber="7" counterType="membros ativos" />
 
             </MainPagesContainer>
         </div>
