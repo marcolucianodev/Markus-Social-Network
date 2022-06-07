@@ -7,7 +7,6 @@ import PublicIcon from '@mui/icons-material/Public';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchActivityMobile, BoxActivityMobile } from "../../components/SearchActivityMobile";
-import { MembersContent } from "../../components/MembersContent";
 import ImgUser1 from "../../components/_assets/img/user-1.jpg";
 import ImgUser2 from "../../components/_assets/img/user-2.jpg";
 import ImgUser3 from "../../components/_assets/img/user-3.jpg";
@@ -26,6 +25,7 @@ import CoverUser7 from "../../components/_assets/img/user-cover7.jpeg";
 import CounterViews from "../../components/CounterViews";
 import { ImageUpperBanner } from "../../components/MainBanner/styles";
 import MembersUpperBanner from "../../components/_assets/img/members-upper-banner.png"
+import { PagesContainer } from "../../components/PagesContainer";
 
 
 const MembersPage = () => {
@@ -143,8 +143,8 @@ const MembersPage = () => {
                         </div>
                     </OptionsBar>
                 </div>
-
-                <MembersContent>
+                
+                <PagesContainer>
                     <MembersCard
                         MemberCoverImg={CoverUser3} 
                         MemberProfileImg={ImgUser1} 
@@ -201,7 +201,7 @@ const MembersPage = () => {
                         userRate="4" 
                         totalRatings="2"
                     />
-                </MembersContent>
+                </PagesContainer>
                 <CounterViews counterNumber="7" counterType="membros ativos" />
 
             </MainPagesContainer>

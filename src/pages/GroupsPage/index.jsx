@@ -10,6 +10,26 @@ import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchActivityMobile, BoxActivityMobile } from "../../components/SearchActivityMobile";
 import CounterViews from "../../components/CounterViews";
+import { PagesContainer } from "../../components/PagesContainer";
+import GroupsCard from "../../components/GroupsCard";
+import CoverGroup1 from "../../components/_assets/img/cover-destinos-turisticos.jpeg";
+import CoverGroup2 from "../../components/_assets/img/cover-clube-da-leitura.jpeg";
+import CoverGroup3 from "../../components/_assets/img/cover-rotas-de-trilhas.jpeg";
+import CoverGroup4 from "../../components/_assets/img/cover-portal-de-musicas.jpeg";
+import CoverGroup5 from "../../components/_assets/img/cover-ideias-de-webdesign.jpeg";
+import CoverGroup6 from "../../components/_assets/img/cover-melhores-series.jpg";
+import ImgGroup1 from "../../components/_assets/img/destinos-turisticos.jpg";
+import ImgGroup2 from "../../components/_assets/img/clube-da-leitura.jpg";
+import ImgGroup3 from "../../components/_assets/img/rotas-de-trilhas.jpg";
+import ImgGroup4 from "../../components/_assets/img/portal-de-musicas.jpg";
+import ImgGroup5 from "../../components/_assets/img/ideias-de-webdesign.jpg";
+import ImgGroup6 from "../../components/_assets/img/series.jpg";
+
+
+
+
+
+
 
 export const GroupsPage = () => {
 
@@ -125,6 +145,48 @@ export const GroupsPage = () => {
                 </div>
             </OptionsBar>
         </div>
+
+        <PagesContainer>
+            <GroupsCard 
+            GroupCoverImg={CoverGroup1} 
+            GroupProfileImg={ImgGroup1} 
+            GroupName="Destinos Turísticos" 
+            GroupSpecification="Grupo Público" 
+            />
+            <GroupsCard 
+            GroupCoverImg={CoverGroup2} 
+            GroupProfileImg={ImgGroup2} 
+            GroupName="Clube da Leitura" 
+            GroupSpecification="Grupo Privado" 
+            PrivateGroup
+            />
+            <GroupsCard 
+            GroupCoverImg={CoverGroup3} 
+            GroupProfileImg={ImgGroup3} 
+            GroupName="Rotas de Trilhas" 
+            GroupSpecification="Grupo Público" 
+            />
+            <GroupsCard 
+            GroupCoverImg={CoverGroup4} 
+            GroupProfileImg={ImgGroup4} 
+            GroupName="Portal de Músicas" 
+            GroupSpecification="Grupo Privado" 
+            PrivateGroup
+            />
+            <GroupsCard 
+            GroupCoverImg={CoverGroup5} 
+            GroupProfileImg={ImgGroup5} 
+            GroupName="Idéias de Web Design" 
+            GroupSpecification="Grupo Privado" 
+            PrivateGroup
+            />
+            <GroupsCard 
+            GroupCoverImg={CoverGroup6} 
+            GroupProfileImg={ImgGroup6} 
+            GroupName="Melhores Séries" 
+            GroupSpecification="Grupo Público" 
+            />
+        </PagesContainer>
 
         <CounterViews counterNumber="6" counterType="grupos" />
       </MainPagesContainer>
