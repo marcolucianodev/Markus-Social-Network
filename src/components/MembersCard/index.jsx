@@ -20,11 +20,11 @@ const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName, 
               <img src={MemberCoverImg} alt="Member Cover" />
             </div>
             <div className="member-profile-image">
-              <img src={MemberProfileImg} alt="Member Profile" />
+              <Link to="/membros"><img src={MemberProfileImg} alt="Member Profile" /></Link>
             </div>
             <div className="member-info">
               <div className="info-user-name">
-                  <Link to="#">
+                  <Link to="/membros">
                     <span className="user-name">
                         {UserName}
                     </span>
