@@ -202,6 +202,7 @@ export const OptionsBar = styled.div`
                 border: none;
                 background-color: #f75d52;
                 color: #FFFFFF;
+                cursor: pointer;
 
                 @media (max-width: 768px) {
                     width: 20%;
