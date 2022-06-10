@@ -81,7 +81,7 @@ export const FormLogin = styled.div`
         }
 
         .visibility-password-icon {
-          color: #515365;
+          color: #888da8;
           position: absolute;
           right: 1rem;
           top: -0.5rem;
