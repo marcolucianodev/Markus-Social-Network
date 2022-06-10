@@ -10,12 +10,14 @@ import { FixedHeader } from "./components/FixedHeader";
 import { Footer } from "./components/Footer";
 import MembersPage from "./pages/MembersPage";
 import GroupsPage from "./pages/GroupsPage";
+import LoginPopup from "./components/LoginPopup";
 
 const App = () => {
   return (
     <div className="App">
       
       <BrowserRouter>
+      <LoginPopup />
       <Menu />
       <MainContainer>
         <Header />
