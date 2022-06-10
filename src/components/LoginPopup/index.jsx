@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, FormLogin } from "./styles";
 import CloseIcon from '@mui/icons-material/Close';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 const LoginPopup = () => {
   return (
@@ -25,6 +26,7 @@ const LoginPopup = () => {
             <div className="login-password">
               <label htmlFor="user-password">
                 <input type="password" name="user-password" id="user-password" placeholder="Senha" />
+                <VisibilityIcon className="visibility-password-icon" />
               </label>
             </div>
             <div className="remember-login">

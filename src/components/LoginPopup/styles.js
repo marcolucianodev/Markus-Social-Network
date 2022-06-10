@@ -75,6 +75,19 @@ export const FormLogin = styled.div`
             border-color: #ff5e3a;
           }
         }
+
+         label {
+          position: relative;
+        }
+
+        .visibility-password-icon {
+          color: #515365;
+          position: absolute;
+          right: 1rem;
+          top: -0.5rem;
+          font-size: 2rem;
+          cursor: pointer;
+        }
       }
     }
   }
