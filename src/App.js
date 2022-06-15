@@ -10,14 +10,13 @@ import { FixedHeader } from "./components/FixedHeader";
 import { Footer } from "./components/Footer";
 import MembersPage from "./pages/MembersPage";
 import GroupsPage from "./pages/GroupsPage";
-import LoginPopup from "./components/LoginPopup";
+import Login from "./pages/Login";
 
 const App = () => {
+
   return (
     <div className="App">
-      
       <BrowserRouter>
-      <LoginPopup />
       <Menu />
       <MainContainer>
         <Header />
@@ -26,6 +25,7 @@ const App = () => {
             <Route path="/" element={<Feed /> } />
             <Route path="/membros" element={<MembersPage /> } />
             <Route path="/grupos" element={<GroupsPage />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         <Footer />
         </MainContainer>

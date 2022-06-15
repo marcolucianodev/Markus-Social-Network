@@ -1,19 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, FormLogin } from "./styles";
-import CloseIcon from '@mui/icons-material/Close';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import Logo from "../_assets/img/logo.png"
 
 const LoginPopup = () => {
+
   return (
     <Container>
+      <Link to="/" className="logo-login-link">
+        <div className="logo">
+          <img src={Logo} alt="Logo Markus Social Network" />
+          <div className="title-box">
+            <div className="title-logo">
+                <h2>Markus</h2>
+            </div>
+            <div className="desc-logo">
+                <h3>Social Network</h3>
+            </div>
+          </div>
+        </div>
+      </Link>
       <FormLogin>
         <div className="login-headline">
           <div className="login-headline-description">
             Faça login na sua conta
-          </div>
-          <div className="close-button">
-            <CloseIcon className="close-icon-login" />
           </div>
         </div>
         <div className="form-login">
@@ -44,6 +55,9 @@ const LoginPopup = () => {
               <input type="submit" value="Login" />
             </div>
           </form>
+        </div>
+        <div className="create-new-account">
+          <p>Não tem uma conta? <span><Link to="/">Inscreva-se</Link></span></p>
         </div>
       </FormLogin>
     </Container>
