@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, FormLogin } from "./styles";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Logo from "../_assets/img/logo.png"
 
 const LoginPopup = () => {
+
+  const [ showPassword, setShowPassword] = useState(false);
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword)
+  }
 
   return (
     <Container>
@@ -36,8 +42,8 @@ const LoginPopup = () => {
             </div>
             <div className="login-password">
               <label htmlFor="user-password">
-                <input type="password" name="user-password" id="user-password" placeholder="Senha" />
-                <VisibilityIcon className="visibility-password-icon" />
+                <input type={showPassword ? "text" : "password"} name="user-password" id="user-password" placeholder="Senha" />
+                <VisibilityIcon className="visibility-password-icon" onClick={handleShowPassword} />
               </label>
             </div>
             <div className="remember-login">
