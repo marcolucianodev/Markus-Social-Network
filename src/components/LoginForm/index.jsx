@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, FormLogin } from "./styles";
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Logo from "../_assets/img/logo.png"
 
 const LoginPopup = () => {
@@ -43,7 +44,7 @@ const LoginPopup = () => {
             <div className="login-password">
               <label htmlFor="user-password">
                 <input type={showPassword ? "text" : "password"} name="user-password" id="user-password" placeholder="Senha" />
-                <VisibilityIcon className="visibility-password-icon" onClick={handleShowPassword} />
+                {showPassword ? <VisibilityOffIcon className="visibility-password-icon" onClick={handleShowPassword} /> :  <VisibilityIcon className="visibility-password-icon" onClick={handleShowPassword} />}
               </label>
             </div>
             <div className="remember-login">
