@@ -1,40 +1,46 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const LoginContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: 100vh;
+`;
 
-  .logo-login-link:hover {
-    color: #515365;
-  }
+export const Logo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
 
-  .logo {
+  a {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 3rem;
-
-    img {
-      height: 8rem;
+    
+    &:hover {
+      color: #515365;
     }
+  }
 
-    .title-box {
-      text-transform: uppercase;
-    }
+  img {
+    height: 8rem;
+  }
 
-    .title-logo h2 {
-      font-size: 2.8rem;
-    }
+  .title-box {
+    text-transform: uppercase;
+  }
 
-    .desc-logo h3 {
-      font-size: 1.88rem;
-      font-weight: 300;
-    }
+  .title-logo h2 {
+    font-size: 2.8rem;
+  }
+
+  .desc-logo h3 {
+    font-weight: 300;
+    font-size: 1.88rem;
   }
 `;
 
@@ -51,21 +57,6 @@ export const FormLogin = styled.div`
 
   @media (max-width: 600px) {
     min-width: 60%;
-  }
-
-  .login-headline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5rem;
-    border-bottom: 1px solid #e6ecf5;
-
-    .login-headline-description {
-      font-weight: 500;
-      color: #515365;
-      font-size: 1.4rem;
-    }
-    
   }
 
   .form-login {
@@ -214,4 +205,38 @@ export const FormLogin = styled.div`
       }
     }
   }
+`;
+
+
+export const FormHeadline = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+  border-bottom: 1px solid #e6ecf5;
+`;
+
+export const FormHeadlineDescription = styled.div`
+  font-weight: 500;
+  color: #515365;
+  font-size: ${props => props.fontSize};
+`;
+
+export const FormContainer = styled.section`
+  padding: 5rem 2.5rem 2.5rem;
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+`;
+
+export const UserNameInput = styled.div`
+  width: ${props => props.inputTextWidth};
+`;
+
+export const PasswordImput = styled.div`
+  width: ${props => props.inputPasswordWidth};
 `;

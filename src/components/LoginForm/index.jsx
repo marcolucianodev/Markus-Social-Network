@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, FormLogin } from "./styles";
+import { 
+  LoginContainer, 
+  Logo, 
+  FormLogin, 
+  FormHeadline, 
+  FormHeadlineDescription,
+  FormContainer,
+  UserNameInput,
+  PasswordImput
+} from "./styles";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import Logo from "../_assets/img/logo.png"
+import LogoImage from "../_assets/img/logo.png"
 
 const LoginPopup = () => {
 
@@ -14,39 +23,44 @@ const LoginPopup = () => {
   }
 
   return (
-    <Container>
-      <Link to="/" className="logo-login-link">
-        <div className="logo">
-          <img src={Logo} alt="Logo Markus Social Network" />
-          <div className="title-box">
-            <div className="title-logo">
-                <h2>Markus</h2>
+    <LoginContainer>
+      
+        <Logo>
+          <Link to="/" className="logo-login-link">
+            <img src={LogoImage} alt="Logo Markus Social Network" />
+            <div className="title-box">
+              <div className="title-logo">
+                  <h2>Markus</h2>
+              </div>
+              <div className="desc-logo">
+                  <h3>Social Network</h3>
+              </div>
             </div>
-            <div className="desc-logo">
-                <h3>Social Network</h3>
-            </div>
-          </div>
-        </div>
-      </Link>
+          </Link>
+        </Logo>
       <FormLogin>
-        <div className="login-headline">
-          <div className="login-headline-description">
+        <FormHeadline>
+          <FormHeadlineDescription fontSize="1.4rem">
             Faça login na sua conta
-          </div>
-        </div>
-        <div className="form-login">
-          <form action="POST">
-            <div className="login-username">
+          </FormHeadlineDescription>
+        </FormHeadline>
+        <FormContainer>        
+          <form>
+            <UserNameInput>
               <label htmlFor="username">
                 <input type="text" name="username" id="username" placeholder="Usuário" />
               </label>
-            </div>
-            <div className="login-password">
+            </UserNameInput>
+            <PasswordImput>
               <label htmlFor="user-password">
-                <input type={showPassword ? "text" : "password"} name="user-password" id="user-password" placeholder="Senha" />
+                <input 
+                  type={showPassword ? "text" : "password"} 
+                  name="user-password" id="user-password" 
+                  placeholder="Senha"
+                 />
                 {showPassword ? <VisibilityOffIcon className="visibility-password-icon" onClick={handleShowPassword} /> :  <VisibilityIcon className="visibility-password-icon" onClick={handleShowPassword} />}
               </label>
-            </div>
+            </PasswordImput>
             <div className="remember-login">
               <div className="remember-credentials">
                 <label htmlFor="remember-password">
@@ -62,12 +76,12 @@ const LoginPopup = () => {
               <input type="submit" value="Login" />
             </div>
           </form>
-        </div>
+        </FormContainer>
         <div className="create-new-account">
           <p>Não tem uma conta? <span><Link to="/">Inscreva-se</Link></span></p>
         </div>
       </FormLogin>
-    </Container>
+    </LoginContainer>
   )
 };
 

@@ -11,6 +11,7 @@ import { Footer } from "./components/Footer";
 import MembersPage from "./pages/MembersPage";
 import GroupsPage from "./pages/GroupsPage";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/membros" element={<MembersPage /> } />
             <Route path="/grupos" element={<GroupsPage />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         <Footer />
         </MainContainer>
