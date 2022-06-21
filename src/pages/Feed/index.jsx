@@ -9,7 +9,7 @@ const Feed = () => {
         <div>
             <MainBanner 
                 titlePage="Feed de Notícias" 
-                pageDescription="Bem-vindo à página do feed de notícias do Markus! Aqui você encontrará tudo de novo em sua rede social, desde os próximos eventos,atualizações de atividades, novos membros, grupos, tópicos e postagens do fórum e muito mais informações!"
+                pageDescription="Bem-vindo à página do feed de notícias do Markus! Aqui você encontrará tudo de novo em sua rede social, desde os próximos eventos, atualizações de atividades, novos membros, grupos, tópicos e postagens do fórum e muito mais informações!"
             >
                 {/* <MaskBanner /> */}
                 <ImageUpperBanner>
