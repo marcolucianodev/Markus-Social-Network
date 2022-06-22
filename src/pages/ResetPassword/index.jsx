@@ -36,7 +36,7 @@ const ResetPassword = () => {
           </FormHeadlineDescription>
         </FormHeadline>
         <DescriptionResetPassword>
-          Digite seu endereço de e-mail e nós enviaremos um link para que você possa usar para escolher uma nova senha.
+          <span>Digite seu endereço de e-mail e nós enviaremos um link para que você possa usar para escolher uma nova senha.</span>
         </DescriptionResetPassword>
         <FormContainer>
           <form>

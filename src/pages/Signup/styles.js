@@ -1,7 +1,17 @@
 import styled from 'styled-components';
 import { FormLogin, LoginContainer } from '../Login/styles';
 
-export const SignupContainer = styled(LoginContainer)``;
+export const SignupContainer = styled(LoginContainer)`
+  margin: 15rem 0;
+
+  @media (min-width: 601px) and (max-width: 768px){
+    margin: 7rem 0;
+  }
+
+  @media (max-width: 511px) {
+    margin: 20rem 0;
+  }
+`;
 
 export const SignupForm = styled(FormLogin)``;
 

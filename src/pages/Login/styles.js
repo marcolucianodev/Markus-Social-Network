@@ -7,10 +7,10 @@ export const LoginContainer = styled.section`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  margin: 10rem 0;
+  margin: 15rem 0;
 
-  @media(max-width: 600px) {
-    margin: 20rem 0;
+  @media (max-width: 768px){
+    margin: 10rem 0;
   }
 `;
 
