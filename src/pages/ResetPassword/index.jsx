@@ -3,13 +3,17 @@ import {
   Logo,
   FormHeadline, 
   FormHeadlineDescription,
-  FormContainer,
   UserNameInputContainer,
   UserNameInput,
   FormButtomContainer,
   FormButton
 } from "../Login/styles";
-import { DescriptionResetPassword, ResetPasswordContainer, ResetPasswordForm } from "./styles";
+import { 
+  DescriptionResetPassword, 
+  ResetPasswordContainer, 
+  ResetPasswordForm, 
+  ResetPasswordFormContainer
+} from "./styles";
 import LogoImage from "../../components/_assets/img/logo.png";
 import { Legend } from "../Signup/styles";
 
@@ -38,7 +42,7 @@ const ResetPassword = () => {
         <DescriptionResetPassword>
           <span>Digite seu endereço de e-mail e nós enviaremos um link para que você possa usar para escolher uma nova senha.</span>
         </DescriptionResetPassword>
-        <FormContainer>
+        <ResetPasswordFormContainer>
           <form>
             <UserNameInputContainer>
             <Legend fontSizeLegend="1.4rem">E-mail</Legend>
@@ -62,7 +66,7 @@ const ResetPassword = () => {
                 />
             </FormButtomContainer>
           </form>
-        </FormContainer>
+        </ResetPasswordFormContainer>
       </ResetPasswordForm>
     </ResetPasswordContainer>
   )

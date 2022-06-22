@@ -62,6 +62,7 @@ export const FormLogin = styled.div`
 
   @media (max-width: 600px) {
     min-width: 60%;
+    margin: 0 1rem;
   }
 `;
 
