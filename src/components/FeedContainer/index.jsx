@@ -30,7 +30,12 @@ import UserLikedImg7 from '../_assets/img/user-7.jpg';
 import { Comments } from "../Comments";
 import { Aside } from "../Aside";
 
+//ARRAY COM OS USUÁRIOS
+{/*
 
+  
+
+*/}
 
 const FeedContainer = () => {
 
