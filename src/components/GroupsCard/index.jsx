@@ -57,7 +57,7 @@ const GroupsCard = ({GroupCoverImg, GroupProfileImg, GroupName, GroupType, Priva
             </Link>
         </div>
         <div className="info-group-specification">
-            <span><PublicIcon className="group-specification-icon"/></span>{GroupType} {PrivateGroup == true ? <LockIcon className="lock-group-icon"/> : ''}
+            <span><PublicIcon className="group-specification-icon"/></span>{GroupType} {PrivateGroup === true ? <LockIcon className="lock-group-icon"/> : ''}
         </div>
       </div>
       <div className="group-statistics">
