@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import MainBanner from "../../components/MainBanner";
 import { ImageUpperBanner, MaskBanner } from "../../components/MainBanner/styles";
@@ -25,9 +25,7 @@ import ImgGroup4 from "../../components/_assets/img/portal-de-musicas.jpg";
 import ImgGroup5 from "../../components/_assets/img/ideias-de-webdesign.jpg";
 import ImgGroup6 from "../../components/_assets/img/series.jpg";
 
-
-
-
+import { GroupContext } from "../../contexts/groupContext";
 
 
 
@@ -49,6 +47,8 @@ export const GroupsPage = () => {
       setFilterMobile(!filterMobile)
   }
 
+  const {group} = useContext(GroupContext)
+
   return (
     <div>
       <MainBanner
@@ -67,7 +67,7 @@ export const GroupsPage = () => {
                   <div className="display-options_bar-number">
                       <PublicIcon />
                       <span>Total de Grupos</span>
-                      <span className="options_bar-number">7</span>
+                      <span className="options_bar-number">{group.length}</span>
                   </div>
               </Link>
           </div>
@@ -147,7 +147,7 @@ export const GroupsPage = () => {
         </div>
 
         <PagesContainer>
-            <GroupsCard 
+            {/* <GroupsCard 
             GroupCoverImg={CoverGroup1} 
             GroupProfileImg={ImgGroup1} 
             GroupName="Destinos Turísticos" 
@@ -185,10 +185,21 @@ export const GroupsPage = () => {
             GroupProfileImg={ImgGroup6} 
             GroupName="Melhores Séries" 
             GroupSpecification="Grupo Público" 
-            />
+            /> */}
+            {group.map((group) => {
+                return (
+                    <GroupsCard 
+                        GroupCoverImg={group.image_cover}
+                        GroupProfileImg={group.image_group}
+                        GroupName={group.name}
+                        GroupType={group.group_type}
+                        PrivateGroup={group.private}
+                    />
+                )
+            })}
         </PagesContainer>
-
-        <CounterViews counterNumber="6" counterType="grupos" />
+ 
+        <CounterViews counterNumber={group.length} counterType="grupos" />
       </MainPagesContainer>
     </div>
   )

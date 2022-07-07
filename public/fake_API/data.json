@@ -63,42 +63,48 @@
       "name": "Destinos Turísticos",
       "group_type": "Grupo Público",
       "image_cover": "/fake_API/images/groups-images/cover-destinos-turisticos.jpeg",
-      "image_group": "/fake_API/images/groups-images/destinos-turisticos.jpg"
+      "image_group": "/fake_API/images/groups-images/destinos-turisticos.jpg",
+      "private": false
     },
     {
       "id": 2,
       "name": "Clube da Leitura",
       "group_type": "Grupo Privado",
       "image_cover": "/fake_API/images/groups-images/cover-clube-da-leitura.jpeg",
-      "image_group": "/fake_API/images/groups-images/clube-da-leitura.jpg"
+      "image_group": "/fake_API/images/groups-images/clube-da-leitura.jpg",
+      "private": true
     },
     {
       "id": 3,
       "name": "Rotas de Trilhas",
       "group_type": "Grupo Público",
       "image_cover": "/fake_API/images/groups-images/cover-rotas-de-trilhas.jpeg",
-      "image_group": "/fake_API/images/groups-images/rotas-de-trilhas.jpg"
+      "image_group": "/fake_API/images/groups-images/rotas-de-trilhas.jpg",
+      "private": false
     },
     {
       "id": 4,
       "name": "Portal de Músicas",
       "group_type": "Grupo Privado",
       "image_cover": "/fake_API/images/groups-images/cover-portal-de-musicas.jpeg",
-      "image_group": "/fake_API/images/groups-images/portal-de-musicas.jpg"
+      "image_group": "/fake_API/images/groups-images/portal-de-musicas.jpg",
+      "private": true
     },
     {
       "id": 5,
       "name": "Idéias de Web Design",
       "group_type": "Grupo Privado",
       "image_cover": "/fake_API/images/groups-images/cover-ideias-de-webdesign.jpeg",
-      "image_group": "/fake_API/images/groups-images/ideias-de-webdesign.jpg"
+      "image_group": "/fake_API/images/groups-images/ideias-de-webdesign.jpg",
+      "private": true
     },
     {
       "id": 6,
       "name": "Melhores Séries",
       "group_type": "Grupo Público",
       "image_cover": "/fake_API/images/groups-images/cover-melhores-series.jpg",
-      "image_group": "/fake_API/images/groups-images/melhores-series.jpg"
+      "image_group": "/fake_API/images/groups-images/melhores-series.jpg",
+      "private": false
     }
   ]
 }
