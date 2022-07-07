@@ -1,0 +1,104 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Carlos",
+      "nickname": "@carlos",
+      "rating": "4.6",
+      "image_cover": "/fake_API/images/users-images/user-cover1.jpg",
+      "image_profile": "/fake_API/images/users-images/user-1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Daniel",
+      "nickname": "@daniel",
+      "rating": "4.5",
+      "image_cover": "/fake_API/images/users-images/user-cover2.jpeg",
+      "image_profile": "/fake_API/images/users-images/user-2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Michelle",
+      "nickname": "@michelle",
+      "rating": "4.3",
+      "image_cover": "/fake_API/images/users-images/user-cover3.png",
+      "image_profile": "/fake_API/images/users-images/user-3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Thalles",
+      "nickname": "@thalles",
+      "rating": "5.0",
+      "image_cover": "/fake_API/images/users-images/user-cover4.jpg",
+      "image_profile": "/fake_API/images/users-images/user-4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Cíntia",
+      "nickname": "@cintia",
+      "rating": "4.0",
+      "image_cover": "/fake_API/images/users-images/user-cover5.jpg",
+      "image_profile": "/fake_API/images/users-images/user-5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Antônio",
+      "nickname": "@antonio",
+      "rating": "4.5",
+      "image_cover": "/fake_API/images/users-images/user-cover6.jpeg",
+      "image_profile": "/fake_API/images/users-images/user-6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Ricardo",
+      "nickname": "@ricardo",
+      "rating": "4.0",
+      "image_cover": "/fake_API/images/users-images/user-cover7.jpeg",
+      "image_profile": "/fake_API/images/users-images/user-7.jpg"
+    }
+  ],
+  "group": [
+    {
+      "id": 1,
+      "name": "Destinos Turísticos",
+      "group_type": "Grupo Público",
+      "image_cover": "/fake_API/images/groups-images/cover-destinos-turisticos.jpeg",
+      "image_group": "/fake_API/images/groups-images/destinos-turisticos.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Clube da Leitura",
+      "group_type": "Grupo Privado",
+      "image_cover": "/fake_API/images/groups-images/cover-clube-da-leitura.jpeg",
+      "image_group": "/fake_API/images/groups-images/clube-da-leitura.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Rotas de Trilhas",
+      "group_type": "Grupo Público",
+      "image_cover": "/fake_API/images/groups-images/cover-rotas-de-trilhas.jpeg",
+      "image_group": "/fake_API/images/groups-images/rotas-de-trilhas.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Portal de Músicas",
+      "group_type": "Grupo Privado",
+      "image_cover": "/fake_API/images/groups-images/cover-portal-de-musicas.jpeg",
+      "image_group": "/fake_API/images/groups-images/portal-de-musicas.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Idéias de Web Design",
+      "group_type": "Grupo Privado",
+      "image_cover": "/fake_API/images/groups-images/cover-ideias-de-webdesign.jpeg",
+      "image_group": "/fake_API/images/groups-images/ideias-de-webdesign.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Melhores Séries",
+      "group_type": "Grupo Público",
+      "image_cover": "/fake_API/images/groups-images/cover-melhores-series.jpg",
+      "image_group": "/fake_API/images/groups-images/melhores-series.jpg"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 export const Comments = (props) => {
     return (
         <CommentsContainer>
-            <div class="comment-box">
+            <div className="comment-box">
                 <div className="comment-headline">
                     <div className="user-comment-headline-info">
                         <a href="/membros"><img src={props.userImg} alt="User Post Img" /></a>
