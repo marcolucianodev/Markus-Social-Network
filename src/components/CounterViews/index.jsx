@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "./styles";
 
-const CounterViews = ({counterNumber, counterType}) => {
+const CounterViews = ({counterNumber, counterCategory}) => {
   return (
     <Container>
       <div className="member-count-view">
-        <span>Vizualizando 1 - {counterNumber} de {counterNumber} {counterType}</span>
+        <span>Vizualizando 1 - {counterNumber} de {counterNumber} {counterCategory}</span>
       </div>
     </Container>
   )
