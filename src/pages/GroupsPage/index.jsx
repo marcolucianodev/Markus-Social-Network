@@ -137,6 +137,7 @@ export const GroupsPage = () => {
             {group.map((group) => {
                 return (
                     <GroupsCard 
+                        key={group.id}
                         GroupCoverImg={group.image_cover}
                         GroupProfileImg={group.image_group}
                         GroupName={group.name}
