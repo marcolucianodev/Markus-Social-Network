@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import MainBanner from "../../components/MainBanner";
 import { MainPagesContainer } from "../../components/MainPagesContainer/styles";
@@ -7,28 +7,17 @@ import PublicIcon from '@mui/icons-material/Public';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import { SearchActivityMobile, BoxActivityMobile } from "../../components/SearchActivityMobile";
-import ImgUser1 from "../../components/_assets/img/user-1.jpg";
-import ImgUser2 from "../../components/_assets/img/user-2.jpg";
-import ImgUser3 from "../../components/_assets/img/user-3.jpg";
-import ImgUser4 from "../../components/_assets/img/user-4.jpg";
-import ImgUser5 from "../../components/_assets/img/user-5.jpg";
-import ImgUser6 from "../../components/_assets/img/user-6.jpg";
-import ImgUser7 from "../../components/_assets/img/user-7.jpg";
 import MembersCard from "../../components/MembersCard";
-import CoverUser1 from "../../components/_assets/img/user-cover.jpg";
-import CoverUser3 from "../../components/_assets/img/user-cover3.jpg";
-import CoverUser2 from "../../components/_assets/img/user-cover2.png";
-import CoverUser4 from "../../components/_assets/img/user-cover4.jpeg";
-import CoverUser5 from "../../components/_assets/img/user-cover5.jpg";
-import CoverUser6 from "../../components/_assets/img/user-cover6.jpeg";
-import CoverUser7 from "../../components/_assets/img/user-cover7.jpeg";
 import CounterViews from "../../components/CounterViews";
 import { ImageUpperBanner } from "../../components/MainBanner/styles";
 import MembersUpperBanner from "../../components/_assets/img/members-upper-banner.png"
 import { PagesContainer } from "../../components/PagesContainer";
+import { UserContext } from "../../contexts/userContext";
 
 
 const MembersPage = () => {
+
+    const { user } = useContext(UserContext);
 
     const [activeMembers, setActiveMembers] = useState(false);
 
@@ -67,7 +56,7 @@ const MembersPage = () => {
                             <div className="display-options_bar-number">
                                 <PublicIcon />
                                 <span>Total de Usuários</span>
-                                <span className="options_bar-number">7</span>
+                                <span className="options_bar-number">{user.length}</span>
                             </div>
                         </Link>
                     </div>
@@ -145,64 +134,21 @@ const MembersPage = () => {
                 </div>
                 
                 <PagesContainer>
-                    <MembersCard
-                        MemberCoverImg={CoverUser3} 
-                        MemberProfileImg={ImgUser1} 
-                        UserName="Carlos" 
-                        UserNickName="@carlos" 
-                        userRate="4.6" 
-                        totalRatings="3"
-                    />
-                    <MembersCard
-                        MemberCoverImg={CoverUser4} 
-                        MemberProfileImg={ImgUser7}
-                        UserName="Daniel" 
-                        UserNickName="@daniel" 
-                        userRate="4.5" 
-                        totalRatings="2"
-                    />
-                    <MembersCard
-                        MemberCoverImg={CoverUser2} 
-                        MemberProfileImg={ImgUser3} 
-                        UserName="Michelle" 
-                        UserNickName="@michelle" 
-                        userRate="4.3" 
-                        totalRatings="3"
-                    />
-                    <MembersCard
-                        MemberCoverImg={CoverUser1} 
-                        MemberProfileImg={ImgUser2} 
-                        UserName="Thalles" 
-                        UserNickName="@thalles" 
-                        userRate="5" 
-                        totalRatings="2"
-                    />
-                    <MembersCard
-                        MemberCoverImg={CoverUser5} 
-                        MemberProfileImg={ImgUser6} 
-                        UserName="Cíntia" 
-                        UserNickName="@cintia" 
-                        userRate="4" 
-                        totalRatings="2"
-                    />
-                    <MembersCard
-                        MemberCoverImg={CoverUser6} 
-                        MemberProfileImg={ImgUser4} 
-                        UserName="Antônio" 
-                        UserNickName="@antonio" 
-                        userRate="4.5" 
-                        totalRatings="2"
-                    />
-                    <MembersCard
-                        MemberCoverImg={CoverUser7} 
-                        MemberProfileImg={ImgUser5} 
-                        UserName="Ricardo" 
-                        UserNickName="@ricardo" 
-                        userRate="4" 
-                        totalRatings="2"
-                    />
+                    {user.map((user) => {
+                        return (
+                            <MembersCard 
+                                key={user.id}
+                                MemberCover={user.image_cover}
+                                MemberProfile={user.image_profile}
+                                UserName={user.name}
+                                UserNickName={user.nickname}
+                                userRate={user.rating}
+                                totalRatings={user.total_ratings}
+                            />
+                        )
+                    })}
                 </PagesContainer>
-                <CounterViews counterNumber="7" counterType="membros ativos" />
+                <CounterViews counterNumber={user.length} counterCategory="membros ativos" />
 
             </MainPagesContainer>
         </div>

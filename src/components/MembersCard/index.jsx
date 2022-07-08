@@ -13,14 +13,14 @@ import StarIcon from '@mui/icons-material/Star';
 
 
 
-const MembersCard = ({MemberCoverImg, MemberProfileImg, UserName, UserNickName, userRate, totalRatings}) => {
+const MembersCard = ({MemberCover, MemberProfile, UserName, UserNickName, userRate, totalRatings}) => {
     return (
         <Container>
             <div className="member-cover-image">
-              <img src={MemberCoverImg} alt="Member Cover" />
+              <img src={MemberCover} alt="Member Cover" />
             </div>
             <div className="member-profile-image">
-              <Link to="/membros"><img src={MemberProfileImg} alt="Member Profile" /></Link>
+              <Link to="/membros"><img src={MemberProfile} alt="Member Profile" /></Link>
             </div>
             <div className="member-info">
               <div className="info-user-name">
