@@ -5,7 +5,7 @@
       "name": "Carlos",
       "nickname": "@carlos",
       "rating": "4.6",
-      "total_ratings": "2",
+      "total_ratings": "3",
       "image_cover": "/fake_API/images/users-images/user-cover1.jpg",
       "image_profile": "/fake_API/images/users-images/user-1.jpg"
     },
@@ -23,7 +23,7 @@
       "name": "Michelle",
       "nickname": "@michelle",
       "rating": "4.3",
-      "total_ratings": "2",
+      "total_ratings": "3",
       "image_cover": "/fake_API/images/users-images/user-cover3.png",
       "image_profile": "/fake_API/images/users-images/user-3.jpg"
     },
@@ -59,7 +59,7 @@
       "name": "Ricardo",
       "nickname": "@ricardo",
       "rating": "4.0",
-      "total_ratings": "2",
+      "total_ratings": "3",
       "image_cover": "/fake_API/images/users-images/user-cover7.jpeg",
       "image_profile": "/fake_API/images/users-images/user-7.jpg"
     }
