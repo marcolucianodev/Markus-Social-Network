@@ -9,7 +9,7 @@ export const NewFriendNotice = (props) => {
             <UserHeadline>
                 <a href="/membros">
                     <div className="user-headline-image">
-                        <img src={props.imgProfile} alt="Img Profile" />
+                        <img src={props.imgProfile} alt={`Usuário ${props.altTitle}`} />
                     </div>
                 </a>
                 <div className="user-headline-info">
@@ -30,7 +30,7 @@ export const NewFriendNotice = (props) => {
                     <div className="second-headline">
                         <PublicIcon className="second-headline-icon" />
                         <span className="activity-year">
-                            <a href="/">{props.postYear}</a>
+                            <a href="/">{props.postDate}</a>
                         </span>
                     </div>
                 </div>

@@ -29,7 +29,7 @@ export const UserPost = (props) => {
                     <div className="second-headline">
                         <PublicIcon className="second-headline-icon" />
                         <span className="activity-year">
-                            <a href="/">{props.postYear}</a>
+                            <a href="/">{props.postDate}</a>
                         </span>
                     </div>
                 </div>

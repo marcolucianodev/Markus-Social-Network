@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Buttom } from "../SearchActivity/styles";
 import PublicIcon from '@mui/icons-material/Public';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import FormSearch from "../FormSearch"
-
-
+import { UserContext } from '../../contexts/userContext';
 
 
 export const SearchActivity = () => {
+
+    const { user } = useContext(UserContext)
 
     const [openSettings, setOpenSettings] = useState(false);
 
@@ -34,7 +35,7 @@ export const SearchActivity = () => {
             <div className="display-menbers-number">
                 <PublicIcon />
                 <span>Total de Usuários</span>
-                <span className="number-of-members">7</span>
+                <span className="number-of-members">{user.length}</span>
             </div>
             <div className="activity-buttons">
                 <Buttom bgButton="#7c5ac2"  sizeButton="2.5rem" onClick={openActivitySettings}>

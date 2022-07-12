@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container } from "./styles"
 import { SearchActivity } from "../SearchActivity";
 import { SearchActivityMobile, BoxActivityMobile } from "../SearchActivityMobile";
@@ -9,28 +9,27 @@ import FormSearch from "../FormSearch";
 import { FeedPost } from "../FeedPost";
 import { NewFriendNotice } from "../NewFriendNotice";
 import { UserPost } from "../UserPost";
-import ImgUser1  from '../_assets/img/user-1.jpg';
-import ImgUser2 from '../_assets/img/user-2.jpg';
-import ImgUser3 from '../_assets/img/user-3.jpg';
-import ImgUser4 from '../_assets/img/user-4.jpg';
-import ImgUser5 from '../_assets/img/user-5.jpg';
-import ImgUser6 from '../_assets/img/user-6.jpg';
-import ImgUser7 from '../_assets/img/user-7.jpg';
-import CoverNewFriend1 from '../_assets/img/user-cover.jpg';
-import CoverNewFriend2 from '../_assets/img/user-cover2.png';
-import CoverPost from '../_assets/img/bg-paris.jpg';
-import CoverPost2 from '../_assets/img/bg-LaCasaDePapel.png';
-import CoverPost3 from '../_assets/img/bg-trilhas.jpg';
-import UserLikedImg1 from '../_assets/img/user-1.jpg';
-import UserLikedImg2 from '../_assets/img/user-2.jpg';
-import UserLikedImg3 from '../_assets/img/user-3.jpg';
-import UserLikedImg4 from '../_assets/img/user-4.jpg';
-import UserLikedImg5 from '../_assets/img/user-5.jpg';
-import UserLikedImg7 from '../_assets/img/user-7.jpg';
 import { Comments } from "../Comments";
 import { Aside } from "../Aside";
+import { UserContext } from '../../contexts/userContext';
+import { GroupContext } from '../../contexts/groupContext';
+
 
 const FeedContainer = () => {
+
+    const { user } = useContext(UserContext);
+    const { group } = useContext(GroupContext)
+
+    //Constantes for users data
+    const userName = user.map(user => user.name);
+    const userImageProfile = user.map(user => user.image_profile);
+    const userImageCover = user.map(user => user.image_cover);
+    const userPostImage = user.map(user => user.post_image);
+    //End Constantes user data
+
+    //Constantes for group data
+    const groupName = group.map(group => group.name);
+    //End Constantes group data
 
     const [openSearchMobile, setOpenSearchMobile] = useState(false);
 
@@ -110,86 +109,87 @@ const FeedContainer = () => {
             <div className="feed-content-container">
               <FeedPost>
                   <NewFriendNotice 
-                    imgProfile={ImgUser1} 
-                    userName="Carlos" 
-                    friend="Thalles" 
-                    ImgUserCover={CoverNewFriend1}
-                    ImgFriendsProfile={ImgUser2}
-                    postYear="Ontem"
+                    imgProfile={userImageProfile[0]} 
+                    altTitle={userName[0]}
+                    userName={userName[0]} 
+                    friend={userName[3]}
+                    ImgUserCover={userImageCover[3]}
+                    ImgFriendsProfile={userImageProfile[3]}
+                    postDate="Ontem"
                   />
                   <UserPost 
-                    imgProfile={ImgUser3} 
-                    userName="Michelle" 
-                    groupName="Destinos Turísticos"
+                    imgProfile={userImageProfile[2]} 
+                    userName={userName[2]} 
+                    groupName={groupName[0]}
                     textPost="Paris é maravilhosa não importa o que aconteça 😃"
-                    coverPost={CoverPost}
-                    imgLikedUser1={UserLikedImg1}
-                    imgLikedUser2={UserLikedImg7}
-                    imgLikedUser3={UserLikedImg5} 
-                    postYear="10 dias atrás"
+                    coverPost={userPostImage[2]}
+                    imgLikedUser1={userImageProfile[0]}
+                    imgLikedUser2={userImageProfile[1]}
+                    imgLikedUser3={userImageProfile[6]} 
+                    postDate="10 dias atrás"
                     commentsNumber="2 comentários"
                     comment={<Comments 
-                      userImg={ImgUser1} 
-                      userName="Carlos" 
+                      userImg={userImageProfile[0]} 
+                      userName={userName[0]} 
                       postDate="8 dias atrás" 
                       textComment="Muito lindo 😍"  
                     />}
                     comment2={<Comments 
-                      userImg={ImgUser5} 
-                      userName="Ricardo" 
+                      userImg={userImageProfile[6]} 
+                      userName={userName[6]} 
                       postDate="5 dias atrás" 
                       textComment="É realmente uma dos melhores lugares que já vi. Muito bom!"  
                     />}
                   />
                   <UserPost 
-                    imgProfile={ImgUser6}
-                    userName="Cíntia" 
-                    groupName="Melhores Séries"
+                    imgProfile={userImageProfile[4]}
+                    userName={userName[4]} 
+                    groupName={groupName[5]}
                     textPost="Clássicos imortais - é disso que eu gosto 🤩" 
-                    coverPost={CoverPost2}
-                    imgLikedUser1={UserLikedImg2}
-                    imgLikedUser2={UserLikedImg3}
-                    imgLikedUser3={UserLikedImg5} 
-                    postYear="1 mês atrás"
+                    coverPost={userPostImage[4]}
+                    imgLikedUser1={userImageProfile[3]}
+                    imgLikedUser2={userImageProfile[2]}
+                    imgLikedUser3={userImageProfile[6]} 
+                    postDate="1 mês atrás"
                     commentsNumber="2 comentários"
                     comment={<Comments 
-                      userImg={ImgUser3} 
-                      userName="Michelle" 
+                      userImg={userImageProfile[2]} 
+                      userName={userName[2]} 
                       postDate="1 mês atrás" 
                       textComment="Melhor série!!!"  
                     />}
                     comment2={<Comments 
-                      userImg={ImgUser7} 
-                      userName="Daniel" 
+                      userImg={userImageProfile[1]} 
+                      userName={userName[1]} 
                       postDate="20 dias atrás" 
                       textComment="Bora maratonar. Top d+"  
                     />}
                   />
                   <UserPost 
-                    imgProfile={ImgUser5}
-                    userName="Ricardo" 
-                    groupName="Rotas de Trilhas"
+                    imgProfile={userImageProfile[6]}
+                    userName={userName[6]} 
+                    groupName={groupName[2]}
                     textPost="As melhores trilhas - é disso que eu gosto 🏃🏻" 
-                    coverPost={CoverPost3}
-                    imgLikedUser1={UserLikedImg2}
-                    imgLikedUser2={UserLikedImg4}
-                    imgLikedUser3={UserLikedImg1} 
-                    postYear="3 meses atrás"
+                    coverPost={userPostImage[6]}
+                    imgLikedUser1={userImageProfile[3]}
+                    imgLikedUser2={userImageProfile[5]}
+                    imgLikedUser3={userImageProfile[0]} 
+                    postDate="3 meses atrás"
                     commentsNumber="1 comentário"
                     comment={<Comments 
-                      userImg={ImgUser4} 
-                      userName="Antônio" 
+                      userImg={userImageProfile[5]} 
+                      userName={userName[5]} 
                       postDate="3 meses atrás" 
                       textComment="Que visão hein... Lugar Top!!!"  
                     />}
                   />
                   <NewFriendNotice 
-                    imgProfile={ImgUser4} 
-                    userName="Antônio" 
-                    friend="Michelle" 
-                    ImgUserCover={CoverNewFriend2}
-                    ImgFriendsProfile={ImgUser3}
-                    postYear="3 meses atrás" 
+                    imgProfile={userImageProfile[5]} 
+                    userName={userName[5]}
+                    friend={userName[2]} 
+                    ImgUserCover={userImageCover[2]}
+                    ImgFriendsProfile={userImageProfile[2]}
+                    postDate="3 meses atrás" 
                   />
               </FeedPost>
               <Aside />
