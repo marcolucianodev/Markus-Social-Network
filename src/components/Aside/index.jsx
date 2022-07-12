@@ -1,24 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Container } from "./styles";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Container, AsideButton } from "./styles";
 import { Sidebar, WidgetTitle } from "../Sidebar";
 import { WidgetUserInfo, UserStatus } from "../WidgetUserInfo";
 import { MembersInfo } from "../MembersInfo";
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import GroupsIcon from '@mui/icons-material/Groups';
-import ImgUser1  from '../_assets/img/user-1.jpg';
-import ImgUser2 from '../_assets/img/user-2.jpg';
-import ImgUser3 from '../_assets/img/user-3.jpg';
-import ImgUser6 from '../_assets/img/user-6.jpg';
-import ImgUser7 from '../_assets/img/user-7.jpg';
-import imgGroup1 from "../_assets/img/destinos-turisticos.jpg";
-import imgGroup2 from "../_assets/img/rotas-de-trilhas.jpg";
-import imgGroup3 from "../_assets/img/series.jpg";
 import { AvatarMembers } from "../AvatarMembers";
-
+import { GroupContext } from '../../contexts/groupContext';
+import { UserContext } from '../../contexts/userContext';
 
 
 export const Aside = () => {
+
+    const { user } = useContext(UserContext);
+    const { group } = useContext(GroupContext);
+
+    //Constantes for users data
+    const userName = user.map(user => user.name);
+    const userImageProfile = user.map(user => user.image_profile);
+    //End Constantes user data
+
+    //Constantes for group data
+    const groupName = group.map(group => group.name);
+    const groupImage = group.map(group => group.image_group);
+    //End Constantes group data
+
+    const navigate = useNavigate();
+
+    const handleUserButton = () => {
+      navigate('/membros');
+    }
+
+    const handleGroupButton = () => {
+      navigate('/grupos');
+    }
+
     return (
         <Container>
             <aside>
@@ -37,31 +54,32 @@ export const Aside = () => {
                       </UserStatus>
                     </div>
                     <MembersInfo 
-                      imgProfile={ImgUser1}
-                      userName="Carlos" 
+                      imgProfile={userImageProfile[0]}
+                      userName={userName[0]} 
                       postYear="2 meses atrás"
                     />
                      <MembersInfo 
-                      imgProfile={ImgUser7}
-                      userName="Daniel" 
+                      imgProfile={userImageProfile[1]}
+                      userName={userName[1]} 
                       postYear="3 meses atrás"
                     />     
                     <MembersInfo 
-                      imgProfile={ImgUser3}
-                      userName="Michelle" 
+                      imgProfile={userImageProfile[2]}
+                      userName={userName[2]}
                       postYear="3 meses atrás"
                     />     
                     <MembersInfo 
-                      imgProfile={ImgUser2}
-                      userName="Thalles" 
+                      imgProfile={userImageProfile[3]}
+                      userName={userName[3]} 
                       postYear="1 mês atrás"
                     />    
                      <MembersInfo 
-                      imgProfile={ImgUser6}
-                      userName="Cíntia" 
+                      imgProfile={userImageProfile[4]}
+                      userName={userName[4]} 
                       postYear="1 mês atrás"
-                    />                          
+                    />
                   </WidgetUserInfo>
+                  <AsideButton onClick={handleUserButton}>Ver todos os membros</AsideButton>
                 </Sidebar>
                 <Sidebar>
                   <WidgetTitle><GroupsIcon /> <a href="/"><span>Grupos</span></a></WidgetTitle>
@@ -81,24 +99,25 @@ export const Aside = () => {
                         </UserStatus>
                       </div>
                       <MembersInfo 
-                      imgProfile={imgGroup1}
-                      userName="Destinos Turísticos" 
+                      imgProfile={groupImage[0]}
+                      userName={groupName[0]} 
                       postYear="Ativo 2 meses atrás" 
                       notdisplay
                       />
                        <MembersInfo 
-                      imgProfile={imgGroup2}
-                      userName="Rotas de Trilhas" 
+                      imgProfile={groupImage[2]}
+                      userName={groupName[2]} 
                       postYear="Ativo 3 meses atrás" 
                       notdisplay
                       />
                        <MembersInfo 
-                      imgProfile={imgGroup3}
-                      userName="Melhores Séries" 
+                      imgProfile={groupImage[5]}
+                      userName={groupName[5]} 
                       postYear="Ativo 1 mês atrás" 
                       notdisplay
                       />
                   </WidgetUserInfo>
+                  <AsideButton onClick={handleGroupButton}>Ver todos os grupos</AsideButton>
                 </Sidebar>
                 <Sidebar>
                   <WidgetTitle><PeopleAltIcon /> <a href="/membros"><span>Quem está online</span></a></WidgetTitle>

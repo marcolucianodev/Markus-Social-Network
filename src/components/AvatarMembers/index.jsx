@@ -1,24 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Container } from "./styles";
-import ImgUser1  from '../_assets/img/user-1.jpg';
-import ImgUser2 from '../_assets/img/user-2.jpg';
-import ImgUser3 from '../_assets/img/user-3.jpg';
-import ImgUser4 from '../_assets/img/user-4.jpg';
-import ImgUser5 from '../_assets/img/user-5.jpg';
-import ImgUser6 from '../_assets/img/user-6.jpg';
-import ImgUser7 from '../_assets/img/user-7.jpg';
+import { UserContext } from '../../contexts/userContext'
 
 
 export const AvatarMembers = () => {
+
+    const { user } = useContext(UserContext);
+
+    const params = useParams();
+
     return (
         <Container>
-            <div className="avatar-item"><a href="/membros"><img src={ImgUser1} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="/membros"><img src={ImgUser2} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="/membros"><img src={ImgUser3} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="/membros"><img src={ImgUser4} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="/membros"><img src={ImgUser5} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="/membros"><img src={ImgUser6} alt="User Avatar"></img></a></div>
-            <div className="avatar-item"><a href="/membros"><img src={ImgUser7} alt="User Avatar"></img></a></div>
+            {user.map((user) => {
+                return (
+                    <div className="avatar-item" key={user.id}>
+                        <Link to="/membros">
+                            <img src={user.image_profile} alt={user.name} />
+                        </Link>
+                    </div>
+                )
+            })}
         </Container>
     )
 }
