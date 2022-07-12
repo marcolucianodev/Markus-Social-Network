@@ -6,13 +6,17 @@
 
 [![Preview Image](https://github.com/marcolucianodev/markus-social-network/blob/master/public/markus-img03.png)](https://markus-social-network.netlify.app/)
 
-Projeto front-end de uma rede social desenvolvido com React e Styled-components.
+Projeto front-end de uma rede social desenvolvido com React, Styled-components, Axios.
 
-Nesse projeto (EM ANDAMENTO) está sendo desenvolvido a interface de uma aplicação de uma rede social, onde contém página de feed de usuários, páginas de perfil, grupos, fotos, eventos, fórum e demais funcionalidades que compõe uma interface de uma rede social.
+Nesse projeto (EM ANDAMENTO) está sendo desenvolvido a interface de uma aplicação de uma rede social, onde contém página de feed de usuários, páginas de perfil, grupos, fotos, eventos, fórum e demais funcionalidades que compõe uma rede social.
 
-As demais páginas estão em processo de desenvolvimento e as rotas serão criadas com React Router.
+Esse projeto pessoal foi inspirado no template wordpress do [https://olympus.crumina.net/activity/](https://olympus.crumina.net/activity/). Porém com algumas modificações pessoais que venho alterando.
 
-Esse projeto vem me desafiando muito, onde venho aplicando tudo aquilo que venho aprendendo em react. Vou aplicar ainda gerenciamento de estados e consumir API dentro desse projeto, aos poucos vou implementando mais funcionalidades e usando mais ferramentas. Logo mais estará todo finalizado com todas funcionalidades.
+As demais páginas estão em processo de desenvolvimento e as rotas criadas com React Router Dom.
+
+Esse projeto vem me desafiando muito, onde venho aplicando tudo aquilo que estou aprendendo em react. Como gerenciamento de estado, onde estou utilizando o Context API. E também estou consumindo uma API fake, onde criei um arquivo json, com os dados que faço a integração. Utilizo o Axios para consumir essa API fake.
+
+Aos poucos vou implementando mais funcionalidades e usando mais ferramentas. Logo mais o projeto estará todo finalizado com todas funcionalidades.
 
 [Link do Projeto Online](https://markus-social-network.netlify.app/)
 
@@ -28,7 +32,7 @@ Para rodar o projeto, você vai precisar ter instalado em sua máquina as seguin
 $ git clone https://github.com/marcolucianodev/Markus-Social-Network.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd markus-social-network
+$ cd Markus-Social-Network
 
 # Instale as dependências
 $ npm install
