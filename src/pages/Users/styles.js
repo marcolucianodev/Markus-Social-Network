@@ -4,7 +4,7 @@ export const Container = styled.main`
 	display: grid;
 	grid-template-columns: 1fr;
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 `
 
 //USER HEADER (criar estilo aqui)
@@ -40,11 +40,24 @@ export const MenuList = styled.ul`
 
 	li {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		width: 10rem;
+		height: 10rem;
 		background-color: darkred;
-		border: 1px solid ;
+		border: 1px solid;
+		gap: 1rem;
+		cursor: pointer;
+
+		.user-menu-icon {
+			font-size: 2.5rem;
+		}
+
+		span {
+			font-size: 1.4rem;
+			font-weight: 700;
+		}
 	}
 `;
 
