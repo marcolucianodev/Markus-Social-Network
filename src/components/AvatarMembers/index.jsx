@@ -8,14 +8,12 @@ export const AvatarMembers = () => {
 
     const { user } = useContext(UserContext);
 
-    const params = useParams();
-
     return (
         <Container>
             {user.map((user) => {
                 return (
                     <div className="avatar-item" key={user.id}>
-                        <Link to="/membros">
+                        <Link to={`/user/${user.id}`} title={user.name}>
                             <img src={user.image_profile} alt={user.name} />
                         </Link>
                     </div>
