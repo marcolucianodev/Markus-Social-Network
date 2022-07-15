@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/userContext";
 import { 
   Container, 
+  MenuList, 
   UserContent, 
   UserHeader, 
   UserMenu, 
@@ -22,7 +23,16 @@ const User1 = () => {
       </UserHeader>
       <UserMenu>
         <UserMenuList>
-          USER MENU
+          <MenuList>
+            <li>Visão Geral</li>
+            <li>Sobre</li>
+            <li>Atividade</li>
+            <li>Posts</li>
+            <li>Comentários</li>
+            <li>Amizades</li>
+            <li>Grupos</li>
+            <li>Avaliações</li>
+          </MenuList>
         </UserMenuList>
       </UserMenu>
       <UserContent>
