@@ -61,7 +61,7 @@ export const MenuList = styled.ul`
 	}
 `;
 
-export const UserContent = styled.section`
+export const UserContent = styled.article`
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	width: 100%;
@@ -69,9 +69,190 @@ export const UserContent = styled.section`
 	padding: 3.5rem;
 	background-color: #edf2f6;
 	color: #888da8;
+	gap: 3rem;
 `;
+
+export const UserMainContent = styled.section`
+	display: grid;
+	grid-template-columns: 1fr;
+`;
+
+
+
+
+
+//Inicio estilização do Slider
+
+export const Slider = styled.section`
+	margin: 0 auto;
+  width: 800px;
+	width: 100%;
+  height: 250px;
+  overflow: hidden;
+	position: relative;
+	border-radius: 0.5rem;
+`;
+
+export const Slides = styled.div`
+	/* width: 400%; */
+	width: 400%;
+  height: 250px;
+  display: flex;
+
+	input {
+		display: none;
+	}
+
+	#radio1:checked ~ .first {
+		margin-left: 0;
+	}
+
+	#radio2:checked ~ .first {
+		margin-left: -25%;
+	}
+
+	#radio3:checked ~ .first {
+		margin-left: -50%;
+	}
+
+	#radio4:checked ~ .first {
+		margin-left: -75%;
+	}
+
+	#radio1:checked ~ .first {
+		background-color: #FFFFFF;
+	}
+`;
+
+// export const InputSlides = styled.input`
+// 	display: none;
+
+// 	#radio1:checked ~ .first {
+// 		margin-left: 0;
+// 	}
+
+// 	#radio2:checked ~ .first {
+// 		margin-left: -25%;
+// 	}
+
+// 	#radio3:checked ~ .first {
+// 		margin-left: -50%;
+// }
+
+// 	#radio4:checked ~ .first {
+// 		margin-left: -75%;
+// 	}
+
+// 	#radio1:checked ~, 
+// 	#radio2:checked ~, 
+// 	#radio3:checked ~,
+// 	#radio4:checked ~ {
+//   	background-color: #fff;
+// 	}
+
+// 	#radio1 {
+// 		:checked {
+// 			background-color: blue;
+// 		}
+// 	}
+
+// `;
+
+export const SlideItems = styled.div`
+	width: 25%;
+  position: relative;
+  transition: 1s;
+
+	img {
+		/* width: 800px; */
+		/* width: 100%; */
+		object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+	}
+`;
+
+export const AutoNavigation = styled.div`
+	display: flex;
+  justify-content: center;
+  width: 800px;
+  width: 100%;
+	position: absolute;
+  margin-top: 360px;
+
+	div {
+		border: 2px solid red;
+		padding: 5px;
+		border-radius: 10px;
+
+		:not(:last-child) {
+			margin-right: 30px;
+		}
+
+		:checked {
+			background-color: #FFFFFF;
+		}
+	}
+`;
+
+export const ManualNavigation = styled.div`
+	position: absolute;
+  /* width: 800px;
+	width: 100%; */
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+	left: 50%;
+	right: 50%;
+
+	.btn-manual {
+		border: 2px solid #fff;
+		padding: 5px;
+		border-radius: 10px;
+		cursor: pointer;
+
+		:not(:last-child){
+			margin-right: 30px;
+		}
+
+		:hover {
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+
+	}
+`
+
+//FIM da área do slider
+
+export const Project = styled.section`
+
+`;
+
+export const Skills = styled.section`
+
+`;
+
+export const Portfolio = styled.section`
+
+`;
+
+export const Services = styled.section`
+
+`;
+
+export const Reviews = styled.section`
+
+`;
+
+//USER SIDEBAR (criar estilo aqui)
 
 export const UserSidebar = styled.aside`
 		display: grid;
-    grid-gap: 3rem;
+		grid-template-columns: 1fr;
 `
