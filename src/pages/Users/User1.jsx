@@ -6,6 +6,18 @@ import {
   InputSlides, 
   ManualNavigation, 
   MenuList, 
+  Project, 
+  ProjectCategory, 
+  ProjectContent, 
+  ProjectData, 
+  ProjectDescription, 
+  ProjectHead, 
+  ProjectInfo, 
+  ProjectLink, 
+  ProjectTags, 
+  ProjectTemplate, 
+  ProjectTitle, 
+  ProjectType, 
   SlideItems, 
   Slider, 
   Slides, 
@@ -14,6 +26,7 @@ import {
   UserMainContent, 
   UserMenu, 
   UserMenuList, 
+  UserSectionTitle, 
   UserSidebar 
 } from "./styles";
 import PublicIcon from '@mui/icons-material/Public';
@@ -27,7 +40,8 @@ import ReviewsIcon from '@mui/icons-material/Reviews';
 
 import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
 import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
-import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg"
+import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg";
+import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg"
 
 
 
@@ -112,41 +126,41 @@ const User1 = () => {
             <label for="radio4" className="btn-manual"></label>
           </ManualNavigation>
 
-          {/* <div class="slides">
-
-            
-
-            <div class="slide-item first">
-              <img src="../assets/imagens/slider-1.jpg">
-            </div>
-            <div class="slide-item">
-              <img src="../assets/imagens/slider-2.jpg">
-            </div>
-            <div class="slide-item">
-              <img src="../assets/imagens/slider-3.jpg">
-            </div>
-            <div class="slide-item">
-              <img src="../assets/imagens/slider-4.jpg">
-            </div>
-
-            {/* Navegação onde define os checked quando cada slide estiver ativo */}
-            {/* <div class="auto-navigation">
-              <div class="btn-auto1"></div>
-              <div class="btn-auto2"></div>
-              <div class="btn-auto3"></div>
-              <div class="btn-auto4"></div>
-            </div>
-
-          </div> */}
-
-          {/* Div responsável por criar os bullets de navegação dos slides
-          <div class="manual-navigation">
-            <label for="radio1" class="btn-manual"></label>
-            <label for="radio2" class="btn-manual"></label>
-            <label for="radio3" class="btn-manual"></label>
-            <label for="radio4" class="btn-manual"></label>
-          </div> */}
           </Slider>
+
+          <Project>
+           <UserSectionTitle>Projetos</UserSectionTitle>
+           <ProjectContent>
+            <ProjectTemplate 
+              template_cover={templateCover}
+            />
+            <ProjectInfo>
+              <ProjectHead>
+                <ProjectType>
+                  Projeto Destaque
+                </ProjectType>
+                <ProjectTitle>
+                  Olympus - HTML Social Network Toolkit
+                </ProjectTitle>
+                <ProjectCategory>
+                  web design
+                </ProjectCategory>
+                <ProjectLink>
+                  olympus-html-social-network-toolkit.com
+                </ProjectLink>
+              </ProjectHead>
+              <ProjectDescription>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, illo consequatur ex provident veniam et soluta ratione accusantium, earum nesciunt culpa sint tenetur illum ipsa, obcaecati natus dolore aliquam tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis itaque beatae, facere blanditiis recusandae laborum tempore quae molestias aperiam? Cumque odit ducimus consequuntur deserunt itaque quisquam nisi accusamus, expedita iusto.
+              </ProjectDescription>
+              <ProjectTags>
+                <span>Template</span>
+                <span>Web design</span>
+                <span>html</span>
+              </ProjectTags>
+            </ProjectInfo>
+           </ProjectContent>
+          </Project>
+
         </UserMainContent>
         <UserSidebar>
           Sidebar

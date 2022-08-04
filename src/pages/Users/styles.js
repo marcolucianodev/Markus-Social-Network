@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { WidgetTitle } from "../../components/Sidebar";
 
 export const Container = styled.main`
 	display: grid;
@@ -75,6 +76,7 @@ export const UserContent = styled.article`
 export const UserMainContent = styled.section`
 	display: grid;
 	grid-template-columns: 1fr;
+	gap: 3rem;
 `;
 
 
@@ -231,8 +233,67 @@ export const ManualNavigation = styled.div`
 //FIM da área do slider
 
 export const Project = styled.section`
+	width: 100%;
+	border-radius: 0.5rem;
+	background-color: #FFFFFF;
+`;
+
+export const UserSectionTitle = styled(WidgetTitle)`
+	color: red;
+`;
+
+export const ProjectContent = styled.div`
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+`;
+
+export const ProjectTemplate = styled.div`
+	background-image: url(${props => props.template_cover});
+	background-position: center;
+	background-size: cover;
+	height: 50rem;
+	width: 100%;
+`;
+
+export const ProjectInfo = styled.div`
+	width: 100%;
+	padding: 3rem;
+`;
+
+export const ProjectHead = styled.div`
 
 `;
+
+export const ProjectType = styled.a`
+
+`;
+
+export const ProjectTitle = styled.h2`
+
+`;
+
+export const ProjectCategory = styled.p`
+
+`;
+
+export const ProjectLink = styled.span`
+	cursor: pointer;
+
+	:hover {
+		text-decoration: underline;
+	}
+`;
+
+export const ProjectDescription = styled.div`
+
+`;
+
+export const ProjectTags = styled.div`
+
+`;
+
+//FIM área do project
 
 export const Skills = styled.section`
 
