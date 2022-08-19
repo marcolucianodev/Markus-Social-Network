@@ -18,6 +18,10 @@ import {
   ProjectTemplate, 
   ProjectTitle, 
   ProjectType, 
+  SkillBar, 
+  SkillBarPercent, 
+  SkillProgressBar, 
+  Skills, 
   SlideItems, 
   Slider, 
   Slides, 
@@ -160,6 +164,16 @@ const User1 = () => {
             </ProjectInfo>
            </ProjectContent>
           </Project>
+
+          <Skills>
+            <UserSectionTitle>Skills</UserSectionTitle>
+            <SkillProgressBar>
+              <SkillBar percentAnimation="82">
+                <span>PHP</span>
+              </SkillBar>
+              <SkillBarPercent>82%</SkillBarPercent>             
+            </SkillProgressBar>
+          </Skills>
 
         </UserMainContent>
         <UserSidebar>

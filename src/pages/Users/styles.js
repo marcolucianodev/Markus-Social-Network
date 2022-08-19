@@ -296,8 +296,42 @@ export const ProjectTags = styled.div`
 //FIM área do project
 
 export const Skills = styled.section`
-
+	width: 100%;
+	border-radius: 0.5rem;
+	background-color: #FFFFFF;
 `;
+
+export const SkillProgressBar = styled.div`
+	width: 100%;
+	position: relative;
+	height: 3rem;
+	overflow-x: hidden;
+`
+
+export const SkillBar = styled.div`
+	width: 82%;
+	background-color: red;
+	height: 3rem;
+	animation: skillbar .6s linear;
+
+	@keyframes skillbar {
+		0% {
+			transform: translateX(-${props => props.percentAnimation}%);
+		}
+
+		100% {
+			transform: translateX(0);
+		}
+	}
+`;
+
+export const SkillBarPercent = styled.div`
+	position: absolute;
+	right: 0;
+	top: 0;
+`;
+
+//FIM Skills area
 
 export const Portfolio = styled.section`
 
