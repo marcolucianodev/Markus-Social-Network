@@ -29,10 +29,13 @@ import {
   UserHeader, 
   UserMainContent, 
   UserMenu, 
-  UserMenuList, 
+  // UserMenuList, 
   UserSectionTitle, 
   UserSidebar 
 } from "./styles";
+
+import UserMenuList from "../../components/UserMenuList";
+
 import PublicIcon from '@mui/icons-material/Public';
 import InfoIcon from '@mui/icons-material/Info';
 import GradingIcon from '@mui/icons-material/Grading';
@@ -46,6 +49,7 @@ import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
 import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
 import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg";
 import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg"
+import { ListItemIcon } from "@mui/material";
 
 
 
@@ -55,12 +59,47 @@ const User1 = () => {
 
   const userName = user.map(user => user.name)
 
+  const itemList = [
+    {
+      nameItem: 'Visão Geral',
+      iconItem: <PublicIcon />
+    },
+    {
+      nameItem: 'Sobre',
+      iconItem: <InfoIcon />
+    },
+    {
+      nameItem: 'Atividade',
+      iconItem: <GradingIcon />
+    },
+    {
+      nameItem: 'Posts',
+      iconItem: <DynamicFeedIcon />
+    },
+    {
+      nameItem: 'Comentários',
+      iconItem: <CommentIcon />
+    },
+    {
+      nameItem: 'Amizades',
+      iconItem: <PeopleOutlineIcon />
+    },
+    {
+      nameItem: 'Grupos',
+      iconItem: <GroupsIcon />
+    },
+    {
+      nameItem: 'Avaliações',
+      iconItem: <ReviewsIcon />
+    }
+  ]
+
   return (
     <Container style={{marginTop:'70px'}}>
       <UserHeader>
         HEADER
       </UserHeader>
-      <UserMenu>
+      {/* <UserMenu>
         <UserMenuList>
           <MenuList>
             <li><PublicIcon className="user-menu-icon" /><span>Visão Geral</span></li>
@@ -73,7 +112,16 @@ const User1 = () => {
             <li><ReviewsIcon className="user-menu-icon" /><span>Avaliações</span></li>
           </MenuList>
         </UserMenuList>
-      </UserMenu>
+      </UserMenu> */}
+      
+      <UserMenuList itemList={itemList.map((item) => (
+          <>
+            <span className="user-menu-icon">{item.iconItem}</span>
+            <span>{item.nameItem}</span>
+          </>
+        ))} 
+      />
+      
       <UserContent>
         <UserMainContent>
           Página de {userName[0]}

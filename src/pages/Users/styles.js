@@ -18,49 +18,49 @@ export const UserHeader = styled.header`
 	background-color: gray;
 `
 
-export const UserMenu = styled.section`
-	background-color: #edf2f6;
-	display: flex;
-	width: 100%;
-	padding: 3.5rem;
-`
+// export const UserMenu = styled.section`
+// 	background-color: #edf2f6;
+// 	display: flex;
+// 	width: 100%;
+// 	padding: 3.5rem;
+// `
 
-export const UserMenuList = styled.nav`
-	background-color: #FFFFFF;
-	width: 100%;
-	height: auto;
-`
+// export const UserMenuList = styled.nav`
+// 	background-color: #FFFFFF;
+// 	width: 100%;
+// 	height: auto;
+// `
 
-export const MenuList = styled.ul`
-	display: flex;
-	flex-flow: wrap;
-	list-style: none;
-	width: 100%;
-	height: 100%;
-	background-color: red;
+// export const MenuList = styled.ul`
+// 	display: flex;
+// 	flex-flow: wrap;
+// 	list-style: none;
+// 	width: 100%;
+// 	height: 100%;
+// 	background-color: red;
 
-	li {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 10rem;
-		height: 10rem;
-		background-color: darkred;
-		border: 1px solid;
-		gap: 1rem;
-		cursor: pointer;
+// 	li {
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		align-items: center;
+// 		width: 10rem;
+// 		height: 10rem;
+// 		background-color: darkred;
+// 		border: 1px solid;
+// 		gap: 1rem;
+// 		cursor: pointer;
 
-		.user-menu-icon {
-			font-size: 2.5rem;
-		}
+// 		.user-menu-icon {
+// 			font-size: 2.5rem;
+// 		}
 
-		span {
-			font-size: 1.4rem;
-			font-weight: 700;
-		}
-	}
-`;
+// 		span {
+// 			font-size: 1.4rem;
+// 			font-weight: 700;
+// 		}
+// 	}
+// `;
 
 export const UserContent = styled.article`
 	display: grid;
