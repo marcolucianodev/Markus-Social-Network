@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 import { UserContext } from '../../contexts/userContext'
 
@@ -7,8 +7,6 @@ import { UserContext } from '../../contexts/userContext'
 export const AvatarMembers = () => {
 
     const { user } = useContext(UserContext);
-
-    const params = useParams();
 
     return (
         <Container>
