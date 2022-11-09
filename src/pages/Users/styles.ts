@@ -311,6 +311,7 @@ export const SkillProgressBar = styled.div`
 	position: relative;
 	height: 3rem;
 	overflow-x: hidden;
+	margin-bottom: 10px;
 `
 
 export const SkillBar = styled.div<UserAuxAttributes>`
@@ -339,16 +340,51 @@ export const SkillBarPercent = styled.div`
 //FIM Skills area
 
 export const Portfolio = styled.section`
-
+	width: 100%;
+	border-radius: 0.5rem;
+	background-color: #FFFFFF;
 `;
+
+export const PortfolioContent = styled.div`
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+`;
+
+export const PortfolioItem = styled.img<UserAuxAttributes>`
+	width: 100%;
+	height: 100%;
+`;
+
+//FIM Portólio área
 
 export const Services = styled.section`
-
+	width: 100%;
+	border-radius: 0.5rem;
+	background-color: #FFFFFF;
 `;
 
-export const Reviews = styled.section`
-
+export const ServicesContent = styled.div`
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `;
+
+export const Service = styled.div`
+	background-color: red;
+	opacity: 0.6;
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	padding: 20px;
+`;
+
+//FIM Services área
+
+// export const Reviews = styled.section`
+
+// `;
 
 //USER SIDEBAR (criar estilo aqui)
 

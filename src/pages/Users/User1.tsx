@@ -3,6 +3,9 @@ import { UserContext } from "../../contexts/userContext";
 import { 
   //AutoNavigation,
   Container, 
+  Portfolio, 
+  PortfolioContent, 
+  PortfolioItem, 
   //InputSlides, 
   //ManualNavigation, 
   //MenuList, 
@@ -18,6 +21,9 @@ import {
   ProjectTemplate, 
   ProjectTitle, 
   ProjectType, 
+  Service, 
+  Services, 
+  ServicesContent, 
   SkillBar, 
   SkillBarPercent, 
   SkillProgressBar, 
@@ -48,10 +54,12 @@ import ReviewsIcon from '@mui/icons-material/Reviews';
 // import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
 // import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
 // import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg";
-import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg"
+import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg";
+import portfolioItem1 from "../../components/_assets/img/img-testes/portf-01.jpg";
+import portfolioItem2 from "../../components/_assets/img/img-testes/portf-02.jpg"
+import portfolioItem3 from "../../components/_assets/img/img-testes/portf-03.jpg"
 // import { ListItemIcon } from "@mui/material";
 import Slider from "../../components/Slider";
-import { Teste } from "./teste";
 import { UserPropsTypes } from "../../types";
 
 
@@ -158,7 +166,83 @@ const User1 = () => {
               </SkillBar>
               <SkillBarPercent>82%</SkillBarPercent>             
             </SkillProgressBar>
+
+            <SkillProgressBar>
+              <SkillBar percentAnimation="82">
+                <span>Javascript</span>
+              </SkillBar>
+              <SkillBarPercent>82%</SkillBarPercent>
+            </SkillProgressBar>
+
+            <SkillProgressBar>
+              <SkillBar percentAnimation="82">
+                <span>CSS</span>
+              </SkillBar>
+              <SkillBarPercent>82%</SkillBarPercent>
+            </SkillProgressBar>
+
+            <SkillProgressBar>
+              <SkillBar percentAnimation="82">
+                <span>HTML</span>
+              </SkillBar>
+              <SkillBarPercent>82%</SkillBarPercent>
+            </SkillProgressBar>
+
           </Skills>
+
+          <Portfolio>
+            <UserSectionTitle>Portfólio</UserSectionTitle>
+            <PortfolioContent>
+              <div className="portfolio-box">
+                <PortfolioItem src={portfolioItem1} />
+              </div>
+              <div className="portfolio-box">
+                <PortfolioItem src={portfolioItem2} />
+              </div>
+              <div className="portfolio-box">
+                <PortfolioItem src={portfolioItem3} />
+              </div>
+            </PortfolioContent>
+          </Portfolio>
+
+          <Services>
+            <UserSectionTitle>Serviços</UserSectionTitle>
+            <ServicesContent>
+              <Service>
+                <div className="service-icon">
+                  icone
+                </div>
+                <div className="service-title">
+                  title
+                </div>
+                <div className="service description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro?
+                </div>
+              </Service>
+              <Service>
+                <div className="service-icon">
+                  icone
+                </div>
+                <div className="service-title">
+                  title
+                </div>
+                <div className="service description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro?
+                </div>
+              </Service>
+              <Service>
+                <div className="service-icon">
+                  icone
+                </div>
+                <div className="service-title">
+                  title
+                </div>
+                <div className="service description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro?
+                </div>
+              </Service>
+            </ServicesContent>
+          </Services>
 
         </UserMainContent>
         <UserSidebar>
