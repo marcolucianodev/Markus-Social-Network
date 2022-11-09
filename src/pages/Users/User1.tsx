@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../contexts/userContext";
 import { 
-  AutoNavigation,
+  //AutoNavigation,
   Container, 
-  InputSlides, 
-  ManualNavigation, 
-  MenuList, 
+  //InputSlides, 
+  //ManualNavigation, 
+  //MenuList, 
   Project, 
   ProjectCategory, 
   ProjectContent, 
-  ProjectData, 
+  //ProjectData, 
   ProjectDescription, 
   ProjectHead, 
   ProjectInfo, 
@@ -22,13 +22,13 @@ import {
   SkillBarPercent, 
   SkillProgressBar, 
   Skills, 
-  SlideItems, 
+  //SlideItems, 
   // Slider, 
-  Slides, 
+  //Slides, 
   UserContent, 
   UserHeader, 
   UserMainContent, 
-  UserMenu, 
+  //UserMenu, 
   // UserMenuList, 
   UserSectionTitle, 
   UserSidebar 
@@ -45,20 +45,22 @@ import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 
-import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
-import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
-import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg";
+// import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
+// import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
+// import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg";
 import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg"
-import { ListItemIcon } from "@mui/material";
+// import { ListItemIcon } from "@mui/material";
 import Slider from "../../components/Slider";
+import { Teste } from "./teste";
+import { UserPropsTypes } from "../../types";
 
 
 
 const User1 = () => {
 
-  const { user } = useContext(UserContext)
+  const { user }: any = useContext(UserContext)
 
-  const userName = user.map(user => user.name)
+  const userName = user.map((user: UserPropsTypes) => user.name)
 
   const itemList = [
     {
@@ -119,7 +121,7 @@ const User1 = () => {
            <UserSectionTitle>Projetos</UserSectionTitle>
            <ProjectContent>
             <ProjectTemplate 
-              template_cover={templateCover}
+              templateCover={templateCover}
             />
             <ProjectInfo>
               <ProjectHead>

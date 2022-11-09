@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 import { UserContext } from '../../contexts/userContext'
-
+import { UserPropsTypes } from "../../types";
 
 export const AvatarMembers = () => {
 
-    const { user } = useContext(UserContext);
+    const { user }: any = useContext(UserContext);
 
     return (
         <Container>
-            {user.map((user) => {
+            {user.map((user: UserPropsTypes) => {
                 return (
                     <div className="avatar-item" key={user.id}>
                         <Link to={`/user/${user.id}`} title={user.name}>

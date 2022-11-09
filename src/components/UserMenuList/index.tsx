@@ -6,13 +6,12 @@ import {
   List
 } from './styles';
 
-
-const UserMenuList = ({itemList}) => {
+const UserMenuList = ({itemList}: any) => {
   return (
     <UserMenuContainer>
       <UserMenu>
         <MenuList>
-          {itemList.map((item => <List>{item}</List>))}
+          {itemList.map(((item: any) => <List>{item}</List>))}
         </MenuList>
       </UserMenu>
     </UserMenuContainer>

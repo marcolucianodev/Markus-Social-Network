@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import { FormLogin, LoginContainer } from '../Login/styles';
 
+type SignupAttributes = {
+  gridStyle?: string,
+  rowMargin?: string,
+  fontSizeLegend?: string
+}
+
 export const SignupContainer = styled(LoginContainer)`
   margin: 15rem 0;
 
@@ -15,7 +21,7 @@ export const SignupContainer = styled(LoginContainer)`
 
 export const SignupForm = styled(FormLogin)``;
 
-export const InputRow = styled.div`
+export const InputRow = styled.div<SignupAttributes>`
   display: grid;
   grid-template-columns: ${props => props.gridStyle};
   gap: 15px;
@@ -54,7 +60,7 @@ export const GenderRadioSelect = styled.div`
   color: #515365;
 `;
 
-export const Legend = styled.legend`
+export const Legend = styled.legend<SignupAttributes>`
   display: flex;
   align-items: center;
   gap: 0.5rem;

@@ -10,23 +10,24 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import MoodIcon from '@mui/icons-material/Mood';
 import CheckIcon from '@mui/icons-material/Check';
 import StarIcon from '@mui/icons-material/Star';
+import { UserPropsTypes } from '../../types';
 
 
 
-const MembersCard = ({MemberCover, MemberProfile, UserName, UserNickName, userRate, totalRatings}) => {
+const MembersCard = ({image_cover, image_profile, name, nickname, rating, total_ratings}: UserPropsTypes) => {
     return (
         <Container>
             <div className="member-cover-image">
-              <img src={MemberCover} alt="Member Cover" />
+              <img src={image_cover} alt="Member Cover" />
             </div>
             <div className="member-profile-image">
-              <Link to="/membros"><img src={MemberProfile} alt="Member Profile" /></Link>
+              <Link to="/membros"><img src={image_profile} alt="Member Profile" /></Link>
             </div>
             <div className="member-info">
               <div className="info-user-name">
                   <Link to="/membros">
                     <span className="user-name">
-                        {UserName}
+                        {name}
                     </span>
                     <span>
                         <CheckIcon className="user-check-icon" />
@@ -34,7 +35,7 @@ const MembersCard = ({MemberCover, MemberProfile, UserName, UserNickName, userRa
                   </Link>
               </div>
               <div className="info-user-nickname">
-                  {UserNickName}
+                  {nickname}
               </div>
               <div className="info-user-badges">
                   <ul className="badges-list">
@@ -53,11 +54,11 @@ const MembersCard = ({MemberCover, MemberProfile, UserName, UserNickName, userRa
                   </div>
                   <div className="ratings">
                       <div className="user-rate">
-                        {userRate} de 5
+                        {rating} de 5
                       </div>
                       <span className="rating-separator">•</span>
                       <div className="user-total-rate">
-                        {totalRatings} classificações
+                        {total_ratings} classificações
                       </div>
                   </div>
               </div>

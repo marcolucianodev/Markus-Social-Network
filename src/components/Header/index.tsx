@@ -45,7 +45,7 @@ const Header = () => {
                 {activeMenu ? <CloseIcon className="icon-main-menu" /> : <MenuOpenIcon className="icon-main-menu" />}
             </Button>
             <SearchHeader>
-               <FormSearch />
+               <FormSearch placeholderText="Procurar pessoas ou páginas..." />
             </SearchHeader>
             <Link to="/login">
                 <LoginButton onMouseOver={handleLoginOver} onMouseOut={handleLoginOut} >

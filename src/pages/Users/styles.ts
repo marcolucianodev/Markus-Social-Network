@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { WidgetTitle } from "../../components/Sidebar";
 
+type UserAuxAttributes = {
+	templateCover?: string,
+	percentAnimation?: string
+}
+
 export const Container = styled.main`
 	display: grid;
 	grid-template-columns: 1fr;
@@ -248,8 +253,8 @@ export const ProjectContent = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 `;
 
-export const ProjectTemplate = styled.div`
-	background-image: url(${props => props.template_cover});
+export const ProjectTemplate = styled.div<UserAuxAttributes>`
+	background-image: url(${props => props.templateCover});
 	background-position: center;
 	background-size: cover;
 	height: 50rem;
@@ -308,7 +313,7 @@ export const SkillProgressBar = styled.div`
 	overflow-x: hidden;
 `
 
-export const SkillBar = styled.div`
+export const SkillBar = styled.div<UserAuxAttributes>`
 	width: 82%;
 	background-color: red;
 	height: 3rem;

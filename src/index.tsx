@@ -5,7 +5,7 @@ import App from './App';
 import { GroupProvider } from './contexts/groupContext';
 import { UserProvider } from './contexts/userContext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <UserProvider>

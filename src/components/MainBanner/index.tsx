@@ -1,7 +1,8 @@
 import React from "react";
+import { MainBannerProps } from "../../types";
 import { Container } from "./styles";
 
-const MainBanner = ({ children, titlePage, pageDescription }) => {
+const MainBanner = ({ children, titlePage, pageDescription }: MainBannerProps) => {
     return (
         <Container>
             {children}

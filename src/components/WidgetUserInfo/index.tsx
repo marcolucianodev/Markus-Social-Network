@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+type WidgetInfoProps = {
+    userStatusColor?: string,
+    marginB?: string
+}
+
 export const WidgetUserInfo = styled.div`
     display: flex;
     flex-direction: column;
@@ -12,7 +17,7 @@ export const WidgetUserInfo = styled.div`
     }
 `;
 
-export const UserStatus = styled.div`
+export const UserStatus = styled.div<WidgetInfoProps>`
     background-color: ${props => props.userStatusColor};
     padding: 0.6rem 1.2rem;
     color: #FFFFFF;
@@ -24,7 +29,7 @@ export const UserStatus = styled.div`
     cursor: pointer;
 `;
 
-export const HeadlineMembersInfo = styled.div`
+export const HeadlineMembersInfo = styled.div<WidgetInfoProps>`
     display: flex;
     padding: 2.5rem 0 0;
 

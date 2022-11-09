@@ -13,22 +13,23 @@ import { Comments } from "../Comments";
 import { Aside } from "../Aside";
 import { UserContext } from '../../contexts/userContext';
 import { GroupContext } from '../../contexts/groupContext';
+import { GroupPropsTypes, UserPropsTypes } from "../../types";
 
 
 const FeedContainer = () => {
 
-    const { user } = useContext(UserContext);
-    const { group } = useContext(GroupContext)
+    const { user }: any = useContext(UserContext);
+    const { group }: any = useContext(GroupContext)
 
     //Constantes for users data
-    const userName = user.map(user => user.name);
-    const userImageProfile = user.map(user => user.image_profile);
-    const userImageCover = user.map(user => user.image_cover);
-    const userPostImage = user.map(user => user.post_image);
+    const userName = user.map((user: UserPropsTypes) => user.name);
+    const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile);
+    const userImageCover = user.map((user: UserPropsTypes) => user.image_cover);
+    const userPostImage = user.map((user: UserPropsTypes) => user.post_image);
     //End Constantes user data
 
     //Constantes for group data
-    const groupName = group.map(group => group.name);
+    const groupName = group.map((group: GroupPropsTypes) => group.name);
     //End Constantes group data
 
     const [openSearchMobile, setOpenSearchMobile] = useState(false);
@@ -95,14 +96,19 @@ const FeedContainer = () => {
 
             <ActivityOptions className={openSearchMobile ? 'content-activity-search' : 'content-activity-search-none'}>
               <div className="content-options-mobile">
-                <FormSearch>
+                {/* <FormSearch>
                   <div className="activity-input-area">
-                    <input type="text" name="search" id="form-search" placeholder="Procurar Atividades..."/>
+                    <input 
+                      type="text" 
+                      name="search" 
+                      id="form-search" 
+                      placeholder="Procurar Atividades..."/>
                   </div>
                   <button className="search-button">
                     <SearchIcon className="icon-search"/>
                   </button>
-                </FormSearch>
+                </FormSearch> */}
+                <FormSearch placeholderText="Procurar Atividades..." />
               </div>
             </ActivityOptions>
 
@@ -113,8 +119,8 @@ const FeedContainer = () => {
                     altTitle={userName[0]}
                     userName={userName[0]} 
                     friend={userName[3]}
-                    ImgUserCover={userImageCover[3]}
-                    ImgFriendsProfile={userImageProfile[3]}
+                    imgUserCover={userImageCover[3]}
+                    imgFriendsProfile={userImageProfile[3]}
                     postDate="Ontem"
                   />
                   <UserPost 
@@ -187,8 +193,8 @@ const FeedContainer = () => {
                     imgProfile={userImageProfile[5]} 
                     userName={userName[5]}
                     friend={userName[2]} 
-                    ImgUserCover={userImageCover[2]}
-                    ImgFriendsProfile={userImageProfile[2]}
+                    imgUserCover={userImageCover[2]}
+                    imgFriendsProfile={userImageProfile[2]}
                     postDate="3 meses atrás" 
                   />
               </FeedPost>

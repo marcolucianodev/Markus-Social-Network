@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
+type ButtonProps = {
+    btnMobile?: string | boolean,
+    positionBtn?: string | boolean,
+    btnDesktop?: string,
+    bgButton?: string,
+    sizeButton?: string 
+}
 
-export const Button = styled.button`
+export const Button = styled.button<ButtonProps>`
     width: 7rem;
     height: 7rem;
     background-color: #ff5e3a;

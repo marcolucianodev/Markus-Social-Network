@@ -13,11 +13,12 @@ import { ImageUpperBanner } from "../../components/MainBanner/styles";
 import MembersUpperBanner from "../../components/_assets/img/members-upper-banner.png"
 import { PagesContainer } from "../../components/PagesContainer";
 import { UserContext } from "../../contexts/userContext";
+import { UserPropsTypes } from "../../types";
 
 
 const MembersPage = () => {
 
-    const { user } = useContext(UserContext);
+    const { user }: any = useContext(UserContext);
 
     const [activeMembers, setActiveMembers] = useState(false);
 
@@ -134,16 +135,16 @@ const MembersPage = () => {
                 </div>
                 
                 <PagesContainer>
-                    {user.map((user) => {
+                    {user.map((user: UserPropsTypes) => {
                         return (
                             <MembersCard 
                                 key={user.id}
-                                MemberCover={user.image_cover}
-                                MemberProfile={user.image_profile}
-                                UserName={user.name}
-                                UserNickName={user.nickname}
-                                userRate={user.rating}
-                                totalRatings={user.total_ratings}
+                                image_cover={user.image_cover}
+                                image_profile={user.image_profile}
+                                name={user.name}
+                                nickname={user.nickname}
+                                rating={user.rating}
+                                total_ratings={user.total_ratings}
                             />
                         )
                     })}

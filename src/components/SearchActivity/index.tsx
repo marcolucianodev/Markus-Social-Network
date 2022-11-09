@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Container, Buttom } from "../SearchActivity/styles";
+import { Container, Buttom } from "./styles";
 import PublicIcon from '@mui/icons-material/Public';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
@@ -9,7 +9,7 @@ import { UserContext } from '../../contexts/userContext';
 
 export const SearchActivity = () => {
 
-    const { user } = useContext(UserContext)
+    const { user }: any = useContext(UserContext)
 
     const [openSettings, setOpenSettings] = useState(false);
 
@@ -68,14 +68,18 @@ export const SearchActivity = () => {
                     </div>
                 </div>
                 <div className={openSearch ? 'activity-options' : 'activity-options-close'}>
-                    <FormSearch activityInput>
+                    {/* <FormSearch activityInput>
                     <div className="activity-input-area">
                         <input type="text" name="search" id="form-search" placeholder="Procurar Atividades..."/>
                     </div>
                     <button className="search-button">
                         <SearchIcon className="icon-search"/>
                     </button>
-                    </FormSearch>
+                    </FormSearch> */}
+
+                    <FormSearch 
+                        placeholderText="Procurar Atividades..."
+                    />
                 </div>
             </div>
         </Container>

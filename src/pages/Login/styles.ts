@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+type LoginHtmlAttributes = {
+  fontSize?: string,
+  inputBoxWidth?: string,
+  inputWidth?: string,
+  backgroundButton?: string
+}
+
 export const LoginContainer = styled.section`
   display: flex;
   justify-content: center;
@@ -75,7 +82,7 @@ export const FormHeadline = styled.div`
   border-bottom: 1px solid #e6ecf5;
 `;
 
-export const FormHeadlineDescription = styled.div`
+export const FormHeadlineDescription = styled.div<LoginHtmlAttributes>`
   font-weight: 500;
   color: #515365;
   font-size: ${props => props.fontSize};
@@ -115,13 +122,13 @@ export const Label = styled.label`
   }
 `;
 
-export const UserNameInputContainer = styled.div`
+export const UserNameInputContainer = styled.div<LoginHtmlAttributes>`
   width: ${props => props.inputBoxWidth};
 `;
 
 export const PasswordInputContainer = styled(UserNameInputContainer)``;
 
-export const UserNameInput = styled.input`
+export const UserNameInput = styled.input<LoginHtmlAttributes>`
   width: ${props => props.inputWidth};
   padding: 1.5rem;
   border-radius: 0.5rem;
@@ -205,7 +212,7 @@ export const FormButtomContainer = styled.div`
   gap: 1rem;
 `;
 
-export const FormButton = styled.input`
+export const FormButton = styled.input<LoginHtmlAttributes>`
   background-color: ${props => props.backgroundButton};
   border: none;
   border-radius: 0.5rem;

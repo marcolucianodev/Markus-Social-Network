@@ -9,21 +9,24 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import { AvatarMembers } from "../AvatarMembers";
 import { GroupContext } from '../../contexts/groupContext';
 import { UserContext } from '../../contexts/userContext';
-
+import { 
+  GroupPropsTypes, 
+  UserPropsTypes 
+} from "../../types";
 
 export const Aside = () => {
 
-    const { user } = useContext(UserContext);
-    const { group } = useContext(GroupContext);
+    const { user }: any = useContext(UserContext);
+    const { group }: any = useContext(GroupContext);
 
     //Constantes for users data
-    const userName = user.map(user => user.name);
-    const userImageProfile = user.map(user => user.image_profile);
+    const userName = user.map((user: UserPropsTypes) => user.name)
+    const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile);
     //End Constantes user data
 
     //Constantes for group data
-    const groupName = group.map(group => group.name);
-    const groupImage = group.map(group => group.image_group);
+    const groupName = group.map((group: GroupPropsTypes) => group.name);
+    const groupImage = group.map((group: GroupPropsTypes) => group.image_group);
     //End Constantes group data
 
     const navigate = useNavigate();
@@ -42,7 +45,7 @@ export const Aside = () => {
                 <Sidebar>
                   <WidgetTitle><PeopleAltIcon /><Link to="/membros"><span>Membros</span></Link></WidgetTitle>
                   <WidgetUserInfo>
-                    <div class="user-status-container">
+                    <div className="user-status-container">
                       <UserStatus userStatusColor="#ff5e3a">
                         <span>novo</span>
                       </UserStatus>
@@ -54,28 +57,28 @@ export const Aside = () => {
                       </UserStatus>
                     </div>
                     <MembersInfo 
-                      imgProfile={userImageProfile[0]}
-                      userName={userName[0]} 
+                      image_profile={userImageProfile[0]}
+                      name={userName[0]} 
                       postYear="2 meses atrás"
                     />
                      <MembersInfo 
-                      imgProfile={userImageProfile[1]}
-                      userName={userName[1]} 
+                      image_profile={userImageProfile[1]}
+                      name={userName[1]} 
                       postYear="3 meses atrás"
                     />     
                     <MembersInfo 
-                      imgProfile={userImageProfile[2]}
-                      userName={userName[2]}
+                      image_profile={userImageProfile[2]}
+                      name={userName[2]}
                       postYear="3 meses atrás"
                     />     
                     <MembersInfo 
-                      imgProfile={userImageProfile[3]}
-                      userName={userName[3]} 
+                      image_profile={userImageProfile[3]}
+                      name={userName[3]} 
                       postYear="1 mês atrás"
                     />    
                      <MembersInfo 
-                      imgProfile={userImageProfile[4]}
-                      userName={userName[4]} 
+                      image_profile={userImageProfile[4]}
+                      name={userName[4]} 
                       postYear="1 mês atrás"
                     />
                   </WidgetUserInfo>
@@ -84,7 +87,7 @@ export const Aside = () => {
                 <Sidebar>
                   <WidgetTitle><GroupsIcon /> <a href="/"><span>Grupos</span></a></WidgetTitle>
                   <WidgetUserInfo>
-                      <div class="user-status-container">
+                      <div className="user-status-container">
                         <UserStatus userStatusColor="#ff5e3a">
                           <span>novo</span>
                         </UserStatus>
@@ -99,22 +102,22 @@ export const Aside = () => {
                         </UserStatus>
                       </div>
                       <MembersInfo 
-                      imgProfile={groupImage[0]}
-                      userName={groupName[0]} 
+                      image_profile={groupImage[0]}
+                      name={groupName[0]} 
                       postYear="Ativo 2 meses atrás" 
-                      notdisplay
+                      notDisplay
                       />
                        <MembersInfo 
-                      imgProfile={groupImage[2]}
-                      userName={groupName[2]} 
+                      image_profile={groupImage[2]}
+                      name={groupName[2]} 
                       postYear="Ativo 3 meses atrás" 
-                      notdisplay
+                      notDisplay
                       />
                        <MembersInfo 
-                      imgProfile={groupImage[5]}
-                      userName={groupName[5]} 
+                      image_profile={groupImage[5]}
+                      name={groupName[5]} 
                       postYear="Ativo 1 mês atrás" 
-                      notdisplay
+                      notDisplay
                       />
                   </WidgetUserInfo>
                   <AsideButton onClick={handleGroupButton}>Ver todos os grupos</AsideButton>
