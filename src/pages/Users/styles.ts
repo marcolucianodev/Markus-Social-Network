@@ -27,7 +27,7 @@ export const UserHeader = styled.header`
 // 	background-color: #edf2f6;
 // 	display: flex;
 // 	width: 100%;
-// 	padding: 3.5rem;
+// 	padding: 3.5rem;.
 // `
 
 // export const UserMenuList = styled.nav`
@@ -244,7 +244,14 @@ export const Project = styled.section`
 `;
 
 export const UserSectionTitle = styled(WidgetTitle)`
-	color: red;
+	color: #515365;
+	font-size: 1.8rem;
+	padding: 2rem 3rem;
+
+	svg {
+		color: #888da8;
+		font-size: 2.8rem;
+	}
 `;
 
 export const ProjectContent = styled.div`
@@ -257,7 +264,7 @@ export const ProjectTemplate = styled.div<UserAuxAttributes>`
 	background-image: url(${props => props.templateCover});
 	background-position: center;
 	background-size: cover;
-	height: 50rem;
+	height: auto;
 	width: 100%;
 `;
 
@@ -267,35 +274,81 @@ export const ProjectInfo = styled.div`
 `;
 
 export const ProjectHead = styled.div`
-
+	display: flex;
+    flex-direction: column;
+    gap: 12px;
 `;
 
-export const ProjectType = styled.a`
-
+export const ProjectType = styled.span`
+	text-transform: uppercase;
+	background-color: #f75d52;
+	color: #FFFFFF;
+	font-weight: 900;
+	padding: 0.5rem 1.5rem;
+	width: fit-content;
+	border-radius: 0.3rem;
 `;
 
 export const ProjectTitle = styled.h2`
-
+	text-transform: uppercase;
+	color: #515365;
 `;
 
-export const ProjectCategory = styled.p`
-
+export const ProjectCategory = styled.div`
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 0.5rem;
+	font-size: 1.2rem;
+	text-transform: lowercase;
 `;
 
-export const ProjectLink = styled.span`
-	cursor: pointer;
+export const ProjectLink = styled.div`
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 0.5rem;
+	font-size: 1.2rem;
+	padding-bottom: 1rem;
 
-	:hover {
-		text-decoration: underline;
+	svg {
+		font-size: 1.8rem;
+		transform: rotate(130deg);
+	}
+
+	span {
+		cursor: pointer;
+		line-height: 1.5;
+
+		:hover {
+			text-decoration: underline;
+		}
 	}
 `;
 
 export const ProjectDescription = styled.div`
-
+	font-size: 1.7rem;
+	line-height: 1.7;
+	margin-bottom: 2rem;
 `;
 
-export const ProjectTags = styled.div`
+export const ProjectTags = styled.ul`
+	display: flex;
+	gap: 5px;
+	width: 100%;
+	list-style: none;
+`;
 
+export const ProjectTagsItems = styled.li`
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	background-color: #f2f2f2;
+	padding: 0.5rem 1.2rem;
+
+	span.hastag {
+		color: #ff7f76;
+	}
 `;
 
 //FIM área do project

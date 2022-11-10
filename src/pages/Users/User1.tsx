@@ -18,6 +18,7 @@ import {
   ProjectInfo, 
   ProjectLink, 
   ProjectTags, 
+  ProjectTagsItems, 
   ProjectTemplate, 
   ProjectTitle, 
   ProjectType, 
@@ -50,6 +51,14 @@ import CommentIcon from '@mui/icons-material/Comment';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ReviewsIcon from '@mui/icons-material/Reviews';
+
+import BackupTableIcon from '@mui/icons-material/BackupTable';
+import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
+import CloudDoneIcon from '@mui/icons-material/CloudDone';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import LinkIcon from '@mui/icons-material/Link';
 
 // import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
 // import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
@@ -126,7 +135,7 @@ const User1 = () => {
           <Slider />
 
           <Project>
-           <UserSectionTitle>Projetos</UserSectionTitle>
+           <UserSectionTitle><BackupTableIcon /> Projetos</UserSectionTitle>
            <ProjectContent>
             <ProjectTemplate 
               templateCover={templateCover}
@@ -140,26 +149,26 @@ const User1 = () => {
                   Olympus - HTML Social Network Toolkit
                 </ProjectTitle>
                 <ProjectCategory>
-                  web design
+                  <LocalOfferIcon /> Web Design
                 </ProjectCategory>
                 <ProjectLink>
-                  olympus-html-social-network-toolkit.com
+                  <LinkIcon /> <span>olympus-html-social-network-toolkit.com</span>
                 </ProjectLink>
               </ProjectHead>
               <ProjectDescription>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, illo consequatur ex provident veniam et soluta ratione accusantium, earum nesciunt culpa sint tenetur illum ipsa, obcaecati natus dolore aliquam tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis itaque beatae, facere blanditiis recusandae laborum tempore quae molestias aperiam? Cumque odit ducimus consequuntur deserunt itaque quisquam nisi accusamus, expedita iusto.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, illo consequatur ex provident veniam et soluta ratione accusantium, earum nesciunt culpa sint tenetur illum ipsa, obcaecati natus dolore aliquam tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis itaque beatae, facere blanditiis recusandae laborum tempore quae molestias aperiam? Cumque odit ducimus consequuntur deserunt itaque quisquam.
               </ProjectDescription>
               <ProjectTags>
-                <span>Template</span>
-                <span>Web design</span>
-                <span>html</span>
+                <ProjectTagsItems><span className="hastag">#</span> Templates</ProjectTagsItems>
+                <ProjectTagsItems><span className="hastag">#</span> Webdesign</ProjectTagsItems>
+                <ProjectTagsItems><span className="hastag">#</span> Html</ProjectTagsItems>
               </ProjectTags>
             </ProjectInfo>
            </ProjectContent>
           </Project>
 
           <Skills>
-            <UserSectionTitle>Skills</UserSectionTitle>
+            <UserSectionTitle><PlaylistAddCheckIcon /> Skills</UserSectionTitle>
             <SkillProgressBar>
               <SkillBar percentAnimation="82">
                 <span>PHP</span>
@@ -191,7 +200,7 @@ const User1 = () => {
           </Skills>
 
           <Portfolio>
-            <UserSectionTitle>Portfólio</UserSectionTitle>
+            <UserSectionTitle><CloudDoneIcon /> Portfólio</UserSectionTitle>
             <PortfolioContent>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem1} />
@@ -206,7 +215,7 @@ const User1 = () => {
           </Portfolio>
 
           <Services>
-            <UserSectionTitle>Serviços</UserSectionTitle>
+            <UserSectionTitle><DesignServicesIcon /> Serviços</UserSectionTitle>
             <ServicesContent>
               <Service>
                 <div className="service-icon">
