@@ -4,6 +4,9 @@ import { WidgetTitle } from "../../components/Sidebar";
 type UserAuxAttributes = {
 	templateCover?: string,
 	percentAnimation?: string
+	skillBarBg?: string,
+	skillBarWidth?: string,
+	percentColor?: boolean
 }
 
 export const Container = styled.main`
@@ -359,19 +362,44 @@ export const Skills = styled.section`
 	background-color: #FFFFFF;
 `;
 
+export const SkillProgressBarContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 2rem 3rem;
+`;
+
 export const SkillProgressBar = styled.div`
 	width: 100%;
 	position: relative;
 	height: 3rem;
 	overflow-x: hidden;
-	margin-bottom: 10px;
+	display: flex;
+	background-color: #eeeeee;
+	border-radius: 0.3rem;
 `
 
 export const SkillBar = styled.div<UserAuxAttributes>`
-	width: 82%;
-	background-color: red;
+	width: ${props => props.skillBarWidth};
+	background-color: ${props => props.skillBarBg};
 	height: 3rem;
 	animation: skillbar .6s linear;
+	border-radius: 0.3rem;
+
+	span {
+		display: block;
+		height: inherit;
+		width: max-content;
+		font-size: 1.4rem;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		padding: 15px;
+		border-radius: 0.3rem;
+		background-color: rgba(255, 255, 255, 0.2);
+		color: #FFFFFF;
+		text-transform: uppercase;
+	}
 
 	@keyframes skillbar {
 		0% {
@@ -384,10 +412,16 @@ export const SkillBar = styled.div<UserAuxAttributes>`
 	}
 `;
 
-export const SkillBarPercent = styled.div`
+export const SkillBarPercent = styled.div<UserAuxAttributes>`
 	position: absolute;
-	right: 0;
+	right: 10px;
 	top: 0;
+	display: flex;
+	align-items: center;
+	height: inherit;
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: ${props => props.percentColor ? '#FFFFFF' : '#888da8'};
 `;
 
 //FIM Skills area

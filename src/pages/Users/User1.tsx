@@ -28,6 +28,7 @@ import {
   SkillBar, 
   SkillBarPercent, 
   SkillProgressBar, 
+  SkillProgressBarContainer, 
   Skills, 
   //SlideItems, 
   // Slider, 
@@ -168,34 +169,54 @@ const User1 = () => {
           </Project>
 
           <Skills>
+
             <UserSectionTitle><PlaylistAddCheckIcon /> Skills</UserSectionTitle>
-            <SkillProgressBar>
-              <SkillBar percentAnimation="82">
-                <span>PHP</span>
-              </SkillBar>
-              <SkillBarPercent>82%</SkillBarPercent>             
-            </SkillProgressBar>
+            
+            <SkillProgressBarContainer>
+              <SkillProgressBar>
+                <SkillBar 
+                  percentAnimation="82" 
+                  skillBarBg="rgb(255, 96, 58)" 
+                  skillBarWidth="82%"
+                >
+                  <span>PHP</span>
+                </SkillBar>
+                <SkillBarPercent>82%</SkillBarPercent>             
+              </SkillProgressBar>
 
-            <SkillProgressBar>
-              <SkillBar percentAnimation="82">
-                <span>Javascript</span>
-              </SkillBar>
-              <SkillBarPercent>82%</SkillBarPercent>
-            </SkillProgressBar>
+              <SkillProgressBar>
+                <SkillBar 
+                  percentAnimation="86" 
+                  skillBarBg="rgb(42, 125, 161)" 
+                  skillBarWidth="86%"
+                >
+                  <span>Javascript</span>
+                </SkillBar>
+                <SkillBarPercent>86%</SkillBarPercent>
+              </SkillProgressBar>
 
-            <SkillProgressBar>
-              <SkillBar percentAnimation="82">
-                <span>CSS</span>
-              </SkillBar>
-              <SkillBarPercent>82%</SkillBarPercent>
-            </SkillProgressBar>
+              <SkillProgressBar>
+                <SkillBar 
+                  percentAnimation="98" 
+                  skillBarBg="rgb(255, 162, 58)" 
+                  skillBarWidth="98%"
+                >
+                  <span>CSS</span>
+                </SkillBar>
+                <SkillBarPercent percentColor>98%</SkillBarPercent>
+              </SkillProgressBar>
 
-            <SkillProgressBar>
-              <SkillBar percentAnimation="82">
-                <span>HTML</span>
-              </SkillBar>
-              <SkillBarPercent>82%</SkillBarPercent>
-            </SkillProgressBar>
+              <SkillProgressBar>
+                <SkillBar 
+                  percentAnimation="100" 
+                  skillBarBg="rgb(42, 183, 99)" 
+                  skillBarWidth="100%"
+                >
+                  <span>HTML</span>
+                </SkillBar>
+                <SkillBarPercent percentColor>100%</SkillBarPercent>
+              </SkillProgressBar>
+            </SkillProgressBarContainer>
 
           </Skills>
 
