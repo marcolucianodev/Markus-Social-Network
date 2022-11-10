@@ -59,27 +59,27 @@ export const Aside = () => {
                     <MembersInfo 
                       image_profile={userImageProfile[0]}
                       name={userName[0]} 
-                      postYear="2 meses atrás"
+                      postDate="2 meses atrás"
                     />
                      <MembersInfo 
                       image_profile={userImageProfile[1]}
                       name={userName[1]} 
-                      postYear="3 meses atrás"
+                      postDate="3 meses atrás"
                     />     
                     <MembersInfo 
                       image_profile={userImageProfile[2]}
                       name={userName[2]}
-                      postYear="3 meses atrás"
+                      postDate="3 meses atrás"
                     />     
                     <MembersInfo 
                       image_profile={userImageProfile[3]}
                       name={userName[3]} 
-                      postYear="1 mês atrás"
+                      postDate="1 mês atrás"
                     />    
                      <MembersInfo 
                       image_profile={userImageProfile[4]}
                       name={userName[4]} 
-                      postYear="1 mês atrás"
+                      postDate="1 mês atrás"
                     />
                   </WidgetUserInfo>
                   <AsideButton onClick={handleUserButton}>Ver todos os membros</AsideButton>
@@ -104,19 +104,19 @@ export const Aside = () => {
                       <MembersInfo 
                       image_profile={groupImage[0]}
                       name={groupName[0]} 
-                      postYear="Ativo 2 meses atrás" 
+                      postDate="Ativo 2 meses atrás" 
                       notDisplay
                       />
                        <MembersInfo 
                       image_profile={groupImage[2]}
                       name={groupName[2]} 
-                      postYear="Ativo 3 meses atrás" 
+                      postDate="Ativo 3 meses atrás" 
                       notDisplay
                       />
                        <MembersInfo 
                       image_profile={groupImage[5]}
                       name={groupName[5]} 
-                      postYear="Ativo 1 mês atrás" 
+                      postDate="Ativo 1 mês atrás" 
                       notDisplay
                       />
                   </WidgetUserInfo>

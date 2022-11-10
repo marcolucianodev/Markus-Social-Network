@@ -1,3 +1,4 @@
+
 export type UserPropsTypes = {
     id?: number,
     name?: string,
@@ -7,8 +8,8 @@ export type UserPropsTypes = {
     image_profile?: string,
     image_cover?: string,
     post_image?: string | boolean,
-    notDisplay?: boolean,
-    postYear?: string
+    // notDisplay?: boolean,
+    // postDate?: string
 }
 
 export type GroupPropsTypes = {
@@ -61,4 +62,11 @@ export type UserPostTypes = {
     commentsNumber: string,
     comment?: JSX.Element,
     comment2?: JSX.Element,
+}
+
+export type MembersInfoTypes = {
+    name: string,
+    image_profile: string,
+    notDisplay?: boolean,
+    postDate: string
 }

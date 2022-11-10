@@ -1,9 +1,9 @@
 import React from "react";
 import CheckIcon from '@mui/icons-material/Check';
 import { HeadlineMembersInfo } from "../WidgetUserInfo";
-import { UserPropsTypes } from "../../types";
+import { MembersInfoTypes } from "../../types";
 
-export const MembersInfo = ({name, image_profile, notDisplay, postYear}: UserPropsTypes) => {
+export const MembersInfo = ({name, image_profile, notDisplay, postDate}: MembersInfoTypes) => {
     return (
         <HeadlineMembersInfo>
             <a href="/membros">
@@ -21,7 +21,7 @@ export const MembersInfo = ({name, image_profile, notDisplay, postYear}: UserPro
                 </div>
                 <div className="second-headline">
                     <span className="activity-year">
-                        {postYear}
+                        {postDate}
                     </span>
                 </div>
             </div>
