@@ -382,7 +382,7 @@ export const SkillProgressBar = styled.div`
 export const SkillBar = styled.div<UserAuxAttributes>`
 	width: ${props => props.skillBarWidth};
 	background-color: ${props => props.skillBarBg};
-	height: 3rem;
+	height: 3.5rem;
 	animation: skillbar .6s linear;
 	border-radius: 0.3rem;
 
@@ -435,11 +435,61 @@ export const Portfolio = styled.section`
 export const PortfolioContent = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+	.portfolio-box {
+		position: relative;
+
+		.portfolio-links {
+			position: absolute;
+			bottom: 3rem;
+			right: 3rem;
+			width: inherit;
+			background: transparent;
+			display: flex;
+			justify-content: flex-end;
+			gap: 5px;
+			opacity: 0;
+			transition: 0.5s;
+		}
+
+		:hover > .portfolio-links {
+			opacity: 1;
+		}
+	}
 `;
 
 export const PortfolioItem = styled.img<UserAuxAttributes>`
 	width: 100%;
 	height: 100%;
+`;
+
+export const PortfolioItemLink = styled.span`
+	display: block;
+    padding: 10px;
+    background-color: rgba(0,0,0,.5);
+    width: max-content;
+	color: #FFFFFF;
+	border-radius: 0.5rem;
+	cursor: pointer;
+
+	svg {
+		transform: rotate(130deg);
+		font-size: 3rem;
+	}
+`;
+
+export const PortfolioItemDetail = styled.span`
+	display: block;
+    padding: 10px;
+    background-color: rgba(0,0,0,.5);
+    width: max-content;
+	color: #FFFFFF;
+	border-radius: 0.5rem;
+	cursor: pointer;
+
+	svg {
+		font-size: 3rem;
+	}
 `;
 
 //FIM Portólio área

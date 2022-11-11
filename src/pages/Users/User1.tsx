@@ -6,6 +6,8 @@ import {
   Portfolio, 
   PortfolioContent, 
   PortfolioItem, 
+  PortfolioItemDetail, 
+  PortfolioItemLink, 
   //InputSlides, 
   //ManualNavigation, 
   //MenuList, 
@@ -60,6 +62,8 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import LinkIcon from '@mui/icons-material/Link';
+
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 // import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
 // import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
@@ -225,12 +229,24 @@ const User1 = () => {
             <PortfolioContent>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem1} />
+                <div className="portfolio-links">
+                  <PortfolioItemLink><LinkIcon /></PortfolioItemLink>
+                  <PortfolioItemDetail><VisibilityIcon /></PortfolioItemDetail>
+                </div>
               </div>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem2} />
+                <div className="portfolio-links">
+                  <PortfolioItemLink><LinkIcon /></PortfolioItemLink>
+                  <PortfolioItemDetail><VisibilityIcon /></PortfolioItemDetail>
+                </div>
               </div>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem3} />
+                <div className="portfolio-links">
+                  <PortfolioItemLink><LinkIcon /></PortfolioItemLink>
+                  <PortfolioItemDetail><VisibilityIcon /></PortfolioItemDetail>
+                </div>
               </div>
             </PortfolioContent>
           </Portfolio>

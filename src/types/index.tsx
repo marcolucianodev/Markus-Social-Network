@@ -8,8 +8,6 @@ export type UserPropsTypes = {
     image_profile?: string,
     image_cover?: string,
     post_image?: string | boolean,
-    // notDisplay?: boolean,
-    // postDate?: string
 }
 
 export type GroupPropsTypes = {
