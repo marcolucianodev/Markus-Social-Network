@@ -503,11 +503,10 @@ export const Services = styled.section`
 export const ServicesContent = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	padding: 3.5rem 3.5rem 0;
 `;
 
 export const Service = styled.div`
-	background-color: red;
-	opacity: 0.6;
 	width: auto;
 	height: auto;
 	display: flex;
@@ -515,6 +514,39 @@ export const Service = styled.div`
 	align-items: center;
 	gap: 10px;
 	padding: 20px;
+
+	.service-icon {
+		padding: 35px 40px;
+		background: #edf2f6;
+		border-radius: 50%;
+		transition: all ease 0.5s;
+
+		:hover {
+			background-color: #f75d52;
+
+			> img {
+				filter: invert(99%) sepia(0%) saturate(1343%) hue-rotate(190deg) brightness(117%) contrast(100%);
+			}
+		}
+		
+		img {
+			width: 30px;
+			filter: invert(57%) sepia(18%) saturate(390%) hue-rotate(193deg) brightness(95%) contrast(91%);
+		}
+	}
+
+	.service-title {
+		font-size: 1.8rem;
+		color: #515365;
+		font-weight: 700;
+	}
+
+	.service-description {
+		font-size: 1.7rem;
+		line-height: 1.7;
+		text-align: center;
+	}	
+
 `;
 
 //FIM Services área

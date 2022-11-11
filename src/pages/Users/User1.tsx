@@ -70,8 +70,12 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 // import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg";
 import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg";
 import portfolioItem1 from "../../components/_assets/img/img-testes/portf-01.jpg";
-import portfolioItem2 from "../../components/_assets/img/img-testes/portf-02.jpg"
-import portfolioItem3 from "../../components/_assets/img/img-testes/portf-03.jpg"
+import portfolioItem2 from "../../components/_assets/img/img-testes/portf-02.jpg";
+import portfolioItem3 from "../../components/_assets/img/img-testes/portf-03.jpg";
+
+import IconService1 from "../../components/_assets/img/wordpress.png";
+import IconService2 from "../../components/_assets/img/web-development.png";
+import IconService3 from "../../components/_assets/img/settings.png";
 // import { ListItemIcon } from "@mui/material";
 import Slider from "../../components/Slider";
 import { UserPropsTypes } from "../../types";
@@ -256,34 +260,34 @@ const User1 = () => {
             <ServicesContent>
               <Service>
                 <div className="service-icon">
-                  icone
+                  <img src={IconService1} alt="Service Icon" />
                 </div>
                 <div className="service-title">
-                  title
+                  WordPress Themes
                 </div>
-                <div className="service description">
+                <div className="service-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro?
                 </div>
               </Service>
               <Service>
                 <div className="service-icon">
-                  icone
+                  <img src={IconService2} alt="Service Icon" />
                 </div>
                 <div className="service-title">
-                  title
+                  HTML Templates
                 </div>
-                <div className="service description">
+                <div className="service-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro?
                 </div>
               </Service>
               <Service>
                 <div className="service-icon">
-                  icone
+                  <img src={IconService3} alt="Service Icon" />
                 </div>
                 <div className="service-title">
-                  title
+                  Plugins Development
                 </div>
-                <div className="service description">
+                <div className="service-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro?
                 </div>
               </Service>
