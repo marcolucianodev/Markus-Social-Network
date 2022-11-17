@@ -19,7 +19,7 @@ export const MenuList = styled.ul`
 	list-style: none;
 	width: 100%;
 	height: 100%;
-	background-color: red;
+	background-color: #FFFFFF;
 `;
 
 export const List = styled.li`
@@ -29,10 +29,20 @@ export const List = styled.li`
   align-items: center;
   width: 10rem;
   height: 10rem;
-  background-color: darkred;
-  border: 1px solid;
+  border: 1px solid #e6ecf5;
+  border-left: none;
   gap: 1rem;
   cursor: pointer;
+  color: #9a9fbf;
+  transition: all ease-in 0.3s;
+
+  :hover {
+    color: #ff5e3a;
+  }
+
+  :first-child {
+    border-left: 1px solid #e6ecf5;
+  }
 
   span.user-menu-icon svg {
     font-size: 2.5rem;

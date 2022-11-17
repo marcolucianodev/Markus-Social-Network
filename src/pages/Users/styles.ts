@@ -372,11 +372,13 @@ export const SkillProgressBarContainer = styled.div`
 export const SkillProgressBar = styled.div`
 	width: 100%;
 	position: relative;
-	height: 3rem;
-	overflow-x: hidden;
+	/* height: 3rem; */
+	overflow: hidden;
 	display: flex;
 	background-color: #eeeeee;
 	border-radius: 0.3rem;
+	display: flex;
+	align-items: center;
 `
 
 export const SkillBar = styled.div<UserAuxAttributes>`
@@ -388,7 +390,7 @@ export const SkillBar = styled.div<UserAuxAttributes>`
 
 	span {
 		display: block;
-		height: inherit;
+		height: 100%;
 		width: max-content;
 		font-size: 1.4rem;
 		font-weight: 700;
@@ -418,7 +420,7 @@ export const SkillBarPercent = styled.div<UserAuxAttributes>`
 	top: 0;
 	display: flex;
 	align-items: center;
-	height: inherit;
+	height: 100%;
 	font-size: 1.3rem;
 	font-weight: 600;
 	color: ${props => props.percentColor ? '#FFFFFF' : '#888da8'};
