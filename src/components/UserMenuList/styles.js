@@ -23,7 +23,45 @@ export const MenuList = styled.ul`
 `;
 
 export const List = styled.li`
-  display: flex;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid #e6ecf5;
+    border-left: none;
+    gap: 1rem;
+    cursor: pointer;
+    color: #9a9fbf;
+    transition: all ease-in 0.3s;
+
+    :hover {
+      color: #ff5e3a;
+    }
+
+    :active {
+      border-bottom: 1px solid red;
+    }
+
+    :first-child {
+      border-left: 1px solid #e6ecf5;
+    }
+
+    span.user-menu-icon svg {
+      font-size: 2.5rem;
+    }
+
+    span {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+  }
+
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -51,6 +89,6 @@ export const List = styled.li`
   span {
     font-size: 1.4rem;
     font-weight: 700;
-  }
+  } */
 
 `;

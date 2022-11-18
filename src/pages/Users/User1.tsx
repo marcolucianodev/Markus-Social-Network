@@ -1,8 +1,11 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../contexts/userContext";
+import { Link } from "react-router-dom";
 import { 
   //AutoNavigation,
   Container, 
+  HeaderInfo, 
+  HeaderNetwork, 
   Portfolio, 
   PortfolioContent, 
   PortfolioItem, 
@@ -36,8 +39,11 @@ import {
   // Slider, 
   //Slides, 
   UserContent, 
+  UserData, 
   UserHeader, 
+  UserInfo, 
   UserMainContent, 
+  UserProfileImage, 
   //UserMenu, 
   // UserMenuList, 
   UserSectionTitle, 
@@ -80,66 +86,134 @@ import IconService3 from "../../components/_assets/img/settings.png";
 import Slider from "../../components/Slider";
 import { UserPropsTypes } from "../../types";
 
-
+import { FcApproval } from "react-icons/fc";
+import { ImLocation } from "react-icons/im";
+import { FaFacebookF, FaInstagram, FaStar, FaTwitter } from "react-icons/fa";
 
 const User1 = () => {
 
   const { user }: any = useContext(UserContext)
 
   const userName = user.map((user: UserPropsTypes) => user.name)
+  const userCover = user.map((user: UserPropsTypes) => user.image_cover)
+  const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile)
+  const userRatings = user.map((user: UserPropsTypes) => user.rating)
+  const userTotalRatings = user.map((user: UserPropsTypes) => user.total_ratings)
 
   const itemList = [
     {
       nameItem: 'Visão Geral',
+      urlMenu: '/user1',
       iconItem: <PublicIcon />
     },
     {
       nameItem: 'Sobre',
+      urlMenu: '/user2',
       iconItem: <InfoIcon />
     },
     {
       nameItem: 'Atividade',
+      urlMenu: '/user2',
       iconItem: <GradingIcon />
     },
     {
       nameItem: 'Posts',
+      urlMenu: '/user2',
       iconItem: <DynamicFeedIcon />
     },
     {
       nameItem: 'Comentários',
+      urlMenu: '/user2',
       iconItem: <CommentIcon />
     },
     {
       nameItem: 'Amizades',
+      urlMenu: '/user2',
       iconItem: <PeopleOutlineIcon />
     },
     {
       nameItem: 'Grupos',
+      urlMenu: '/user2',
       iconItem: <GroupsIcon />
     },
     {
       nameItem: 'Avaliações',
+      urlMenu: '/user2',
       iconItem: <ReviewsIcon />
     }
   ]
 
   return (
     <Container style={{marginTop:'70px'}}>
-      <UserHeader>
-        HEADER
+      <UserHeader coverHeader={userCover[0]}>
+        <HeaderInfo>
+          <UserData>
+            <UserProfileImage>
+              <img src={userImageProfile[0]} alt={userName[0]} />
+            </UserProfileImage>
+            <UserInfo>
+              <div className="name">
+                <h2>{userName[0]}</h2>
+                <span>
+                  <FcApproval size="24" />
+                </span>
+              </div>
+              <div className="user-meta">
+                <div className="user-meta-left">
+                  <ImLocation /><span>Minas Gerais/MG</span>
+                </div>
+                <div className="user-meta-right">
+                  <span>
+                    <FaStar color="yellow" />
+                    <FaStar color="yellow" />
+                    <FaStar color="yellow" />
+                    <FaStar color="yellow" />
+                    <FaStar />
+                  </span>
+                  <span className="bullet-separator">•</span>
+                  <span>{userRatings[0]} de 5</span>
+                  <span className="bullet-separator">•</span>
+                  <span>{userTotalRatings[0]} classificações</span>
+                </div>
+              </div>
+            </UserInfo>
+          </UserData>
+        </HeaderInfo>
       </UserHeader>
+      <HeaderNetwork>
+        <div className="header-network-content">
+          <div className="social-networks">
+            <FaFacebookF size="24" color="#FFFFFF" className="facebook-icon" />
+            <FaTwitter size="24" color="#FFFFFF" className="twitter-icon" />
+            <FaInstagram size="24" color="#FFFFFF" className="instagram-icon" />
+          </div>
+          <div className="user-activities">
+            <div className="posts-data">
+              <span>21</span>
+              <span>posts</span>
+            </div>
+            <div className="comments-data">
+              <span>21</span>
+              <span>comentários</span>
+            </div>
+            <div className="views-data">
+              <span>103k</span>
+              <span>vizualizações</span>
+            </div>
+          </div>
+        </div>
+      </HeaderNetwork>
       
       <UserMenuList itemList={itemList.map((item) => (
-          <>
+          <Link to={item.urlMenu}>
             <span className="user-menu-icon">{item.iconItem}</span>
             <span>{item.nameItem}</span>
-          </>
+          </Link>
         ))} 
       />
       
       <UserContent>
         <UserMainContent>
-          Página de {userName[0]}
 
           <Slider />
 

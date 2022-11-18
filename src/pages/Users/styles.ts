@@ -1,12 +1,21 @@
 import styled from "styled-components";
 import { WidgetTitle } from "../../components/Sidebar";
 
+import React, { useContext } from "react";
+import { UserContext } from "../../contexts/userContext";
+
+import { UserPropsTypes } from "../../types";
+// const { user }: any = useContext(UserContext)
+// const userCover = user.map((user: UserPropsTypes) => user.image_cover)
+
+
 type UserAuxAttributes = {
 	templateCover?: string,
 	percentAnimation?: string
 	skillBarBg?: string,
 	skillBarWidth?: string,
-	percentColor?: boolean
+	percentColor?: boolean,
+	coverHeader?: string
 }
 
 export const Container = styled.main`
@@ -18,13 +27,152 @@ export const Container = styled.main`
 
 //USER HEADER (criar estilo aqui)
 
-export const UserHeader = styled.header`
+export const UserHeader = styled.header<UserAuxAttributes>`
 	display: grid;
 	grid-template-columns: 1fr;
 	width: 100%;
-	height: auto;
-	background-color: gray;
+	height: 30rem;
+	background-image: url(${props => props.coverHeader});
+	background-position: center;
+	background-size: cover;
+	position: relative;
 `
+
+export const HeaderInfo = styled.section`
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 0 3%;
+`;
+
+export const UserData = styled.div`
+	display: flex;
+`;
+
+export const UserProfileImage = styled.div`
+	width: 16rem;
+	height: 16rem;
+	border: 6px solid transparent;
+    background: #FFF;
+    border-radius: 100%;
+	position: absolute;
+	bottom: -7.5rem;
+
+	img {
+		border-radius: 50%;
+	}
+`;
+
+export const UserInfo = styled.div`
+	padding-left: 18.5rem;
+	margin-bottom: 2rem;
+	width: 100%;
+	color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+
+	.name {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	.user-meta {
+		display: flex;
+		justify-content: space-between;
+
+		.user-meta-left {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			span {
+				font-size: 1.2rem;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+		}
+
+		.user-meta-right {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			text-transform: uppercase;
+		}
+	}
+`;
+
+export const HeaderNetwork = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 3rem 3%;
+
+	.header-network-content {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		padding-left: 18.5rem;
+	}
+
+	.social-networks {
+		display: flex;
+		gap: 2rem;
+
+		svg {
+			padding: 1rem;
+			box-sizing: content-box;
+			border-radius: 0.5rem;
+			cursor: pointer;
+			transition: all 0.2s;
+
+			:hover {
+				opacity: 0.9;
+			}
+		}
+
+		svg.facebook-icon {
+			background-color:  #2f5b9c;
+		}
+
+		svg.twitter-icon {
+			background-color: #37bff1;
+		}
+
+		svg.instagram-icon {
+			background-color: #f74881;
+		}
+	}
+
+	.user-activities {
+		display: flex;
+
+		.posts-data, .comments-data, .views-data {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+
+			span {
+				display: block;
+				padding: 0 2rem;
+				text-transform: uppercase;
+				font-size: 1.4rem;
+				color: #888da8;
+
+				:first-child {
+					font-size: 2rem;
+					font-weight: 600;
+					color: #515365;
+				}
+			}
+		}
+	}
+
+`;
 
 // export const UserMenu = styled.section`
 // 	background-color: #edf2f6;
