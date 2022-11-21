@@ -78,6 +78,10 @@ export const UserInfo = styled.div`
 		display: flex;
 		align-items: center;
 		gap: 5px;
+
+		h2 {
+			font-size: 2.2rem;
+		}
 	}
 
 	.user-meta {
@@ -123,7 +127,7 @@ export const HeaderNetwork = styled.div`
 		gap: 2rem;
 
 		svg {
-			padding: 1rem;
+			padding: 0.7rem;
 			box-sizing: content-box;
 			border-radius: 0.5rem;
 			cursor: pointer;
@@ -160,12 +164,12 @@ export const HeaderNetwork = styled.div`
 				display: block;
 				padding: 0 2rem;
 				text-transform: uppercase;
-				font-size: 1.4rem;
+				font-size: 1.2rem;
 				color: #888da8;
 
 				:first-child {
 					font-size: 2rem;
-					font-weight: 600;
+					font-weight: 500;
 					color: #515365;
 				}
 			}
@@ -396,12 +400,12 @@ export const Project = styled.section`
 
 export const UserSectionTitle = styled(WidgetTitle)`
 	color: #515365;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	padding: 2rem 3rem;
 
 	svg {
 		color: #888da8;
-		font-size: 2.8rem;
+		/* font-size: 2.8rem; */
 	}
 `;
 
@@ -462,11 +466,6 @@ export const ProjectLink = styled.div`
 	font-size: 1.2rem;
 	padding-bottom: 1rem;
 
-	svg {
-		font-size: 1.8rem;
-		transform: rotate(130deg);
-	}
-
 	span {
 		cursor: pointer;
 		line-height: 1.5;
@@ -478,8 +477,8 @@ export const ProjectLink = styled.div`
 `;
 
 export const ProjectDescription = styled.div`
-	font-size: 1.7rem;
-	line-height: 1.7;
+	font-size: 1.4rem;
+	line-height: 2.4rem;
 	margin-bottom: 2rem;
 `;
 
@@ -532,7 +531,7 @@ export const SkillProgressBar = styled.div`
 export const SkillBar = styled.div<UserAuxAttributes>`
 	width: ${props => props.skillBarWidth};
 	background-color: ${props => props.skillBarBg};
-	height: 3.5rem;
+	height: 3rem;
 	animation: skillbar .6s linear;
 	border-radius: 0.3rem;
 
@@ -584,7 +583,7 @@ export const Portfolio = styled.section`
 
 export const PortfolioContent = styled.div`
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
 	.portfolio-box {
 		position: relative;
@@ -615,31 +614,22 @@ export const PortfolioItem = styled.img<UserAuxAttributes>`
 
 export const PortfolioItemLink = styled.span`
 	display: block;
-    padding: 10px;
+    padding: 1rem;
     background-color: rgba(0,0,0,.5);
     width: max-content;
 	color: #FFFFFF;
 	border-radius: 0.5rem;
 	cursor: pointer;
-
-	svg {
-		transform: rotate(130deg);
-		font-size: 3rem;
-	}
 `;
 
 export const PortfolioItemDetail = styled.span`
 	display: block;
-    padding: 10px;
+    padding: 1rem;
     background-color: rgba(0,0,0,.5);
     width: max-content;
 	color: #FFFFFF;
 	border-radius: 0.5rem;
 	cursor: pointer;
-
-	svg {
-		font-size: 3rem;
-	}
 `;
 
 //FIM Portólio área
@@ -652,7 +642,7 @@ export const Services = styled.section`
 
 export const ServicesContent = styled.div`
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	padding: 3.5rem 3.5rem 0;
 `;
 
@@ -666,7 +656,7 @@ export const Service = styled.div`
 	padding: 20px;
 
 	.service-icon {
-		padding: 35px 40px;
+		padding: 2.5rem 3rem;
 		background: #edf2f6;
 		border-radius: 50%;
 		transition: all ease 0.5s;
@@ -674,26 +664,21 @@ export const Service = styled.div`
 		:hover {
 			background-color: #f75d52;
 
-			> img {
-				filter: invert(99%) sepia(0%) saturate(1343%) hue-rotate(190deg) brightness(117%) contrast(100%);
+			> svg {
+				color: var(--white-text-color);
 			}
-		}
-		
-		img {
-			width: 30px;
-			filter: invert(57%) sepia(18%) saturate(390%) hue-rotate(193deg) brightness(95%) contrast(91%);
 		}
 	}
 
 	.service-title {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 		color: #515365;
 		font-weight: 700;
 	}
 
 	.service-description {
-		font-size: 1.7rem;
-		line-height: 1.7;
+		font-size: 1.3rem;
+		line-height: 2.4rem;
 		text-align: center;
 	}	
 

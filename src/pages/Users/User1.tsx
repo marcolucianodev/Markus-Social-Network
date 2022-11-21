@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { UserContext } from "../../contexts/userContext";
 import { Link } from "react-router-dom";
 import { 
-  //AutoNavigation,
   Container, 
   HeaderInfo, 
   HeaderNetwork, 
@@ -11,13 +10,9 @@ import {
   PortfolioItem, 
   PortfolioItemDetail, 
   PortfolioItemLink, 
-  //InputSlides, 
-  //ManualNavigation, 
-  //MenuList, 
   Project, 
   ProjectCategory, 
   ProjectContent, 
-  //ProjectData, 
   ProjectDescription, 
   ProjectHead, 
   ProjectInfo, 
@@ -35,17 +30,12 @@ import {
   SkillProgressBar, 
   SkillProgressBarContainer, 
   Skills, 
-  //SlideItems, 
-  // Slider, 
-  //Slides, 
   UserContent, 
   UserData, 
   UserHeader, 
   UserInfo, 
   UserMainContent, 
   UserProfileImage, 
-  //UserMenu, 
-  // UserMenuList, 
   UserSectionTitle, 
   UserSidebar 
 } from "./styles";
@@ -61,34 +51,32 @@ import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 
-import BackupTableIcon from '@mui/icons-material/BackupTable';
-import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
-import CloudDoneIcon from '@mui/icons-material/CloudDone';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import LinkIcon from '@mui/icons-material/Link';
-
-import VisibilityIcon from '@mui/icons-material/Visibility';
-
-// import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
-// import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
-// import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg";
 import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg";
 import portfolioItem1 from "../../components/_assets/img/img-testes/portf-01.jpg";
 import portfolioItem2 from "../../components/_assets/img/img-testes/portf-02.jpg";
 import portfolioItem3 from "../../components/_assets/img/img-testes/portf-03.jpg";
 
-import IconService1 from "../../components/_assets/img/wordpress.png";
-import IconService2 from "../../components/_assets/img/web-development.png";
-import IconService3 from "../../components/_assets/img/settings.png";
-// import { ListItemIcon } from "@mui/material";
 import Slider from "../../components/Slider";
 import { UserPropsTypes } from "../../types";
 
 import { FcApproval } from "react-icons/fc";
 import { ImLocation } from "react-icons/im";
-import { FaFacebookF, FaInstagram, FaStar, FaTwitter } from "react-icons/fa";
+import { 
+  FaFacebookF, 
+  FaInstagram, 
+  FaStar, 
+  FaTwitter, 
+  FaLink, 
+  FaEye,
+  FaTags,
+  FaWordpressSimple, 
+  FaFileCode,
+  FaSlidersH,
+  FaWrench,
+  FaCloud,
+  FaTasks,
+  FaFolderOpen,
+} from "react-icons/fa";
 
 const User1 = () => {
 
@@ -160,15 +148,15 @@ const User1 = () => {
               </div>
               <div className="user-meta">
                 <div className="user-meta-left">
-                  <ImLocation /><span>Minas Gerais/MG</span>
+                  <ImLocation size="16" /><span>Minas Gerais/MG</span>
                 </div>
                 <div className="user-meta-right">
                   <span>
-                    <FaStar color="yellow" />
-                    <FaStar color="yellow" />
-                    <FaStar color="yellow" />
-                    <FaStar color="yellow" />
-                    <FaStar />
+                    <FaStar color="yellow" size="18" />
+                    <FaStar color="yellow" size="18" />
+                    <FaStar color="yellow" size="18" />
+                    <FaStar color="yellow" size="18" />
+                    <FaStar size="18" />
                   </span>
                   <span className="bullet-separator">•</span>
                   <span>{userRatings[0]} de 5</span>
@@ -183,9 +171,9 @@ const User1 = () => {
       <HeaderNetwork>
         <div className="header-network-content">
           <div className="social-networks">
-            <FaFacebookF size="24" color="#FFFFFF" className="facebook-icon" />
-            <FaTwitter size="24" color="#FFFFFF" className="twitter-icon" />
-            <FaInstagram size="24" color="#FFFFFF" className="instagram-icon" />
+            <FaFacebookF size="20" color="#FFFFFF" className="facebook-icon" />
+            <FaTwitter size="20" color="#FFFFFF" className="twitter-icon" />
+            <FaInstagram size="20" color="#FFFFFF" className="instagram-icon" />
           </div>
           <div className="user-activities">
             <div className="posts-data">
@@ -218,7 +206,7 @@ const User1 = () => {
           <Slider />
 
           <Project>
-           <UserSectionTitle><BackupTableIcon /> Projetos</UserSectionTitle>
+           <UserSectionTitle><FaFolderOpen /> Projetos</UserSectionTitle>
            <ProjectContent>
             <ProjectTemplate 
               templateCover={templateCover}
@@ -232,10 +220,10 @@ const User1 = () => {
                   Olympus - HTML Social Network Toolkit
                 </ProjectTitle>
                 <ProjectCategory>
-                  <LocalOfferIcon /> Web Design
+                  <FaTags /> Web Design
                 </ProjectCategory>
                 <ProjectLink>
-                  <LinkIcon /> <span>olympus-html-social-network-toolkit.com</span>
+                  <FaLink /> <span>olympus-html-social-network-toolkit.com</span>
                 </ProjectLink>
               </ProjectHead>
               <ProjectDescription>
@@ -252,7 +240,7 @@ const User1 = () => {
 
           <Skills>
 
-            <UserSectionTitle><PlaylistAddCheckIcon /> Skills</UserSectionTitle>
+            <UserSectionTitle><FaTasks /> Skills</UserSectionTitle>
             
             <SkillProgressBarContainer>
               <SkillProgressBar>
@@ -303,38 +291,38 @@ const User1 = () => {
           </Skills>
 
           <Portfolio>
-            <UserSectionTitle><CloudDoneIcon /> Portfólio</UserSectionTitle>
+            <UserSectionTitle><FaCloud /> Portfólio</UserSectionTitle>
             <PortfolioContent>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem1} />
                 <div className="portfolio-links">
-                  <PortfolioItemLink><LinkIcon /></PortfolioItemLink>
-                  <PortfolioItemDetail><VisibilityIcon /></PortfolioItemDetail>
+                  <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
+                  <PortfolioItemDetail><FaEye size="18" /></PortfolioItemDetail>
                 </div>
               </div>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem2} />
                 <div className="portfolio-links">
-                  <PortfolioItemLink><LinkIcon /></PortfolioItemLink>
-                  <PortfolioItemDetail><VisibilityIcon /></PortfolioItemDetail>
+                  <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
+                  <PortfolioItemDetail><FaEye size="18" /></PortfolioItemDetail>
                 </div>
               </div>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem3} />
                 <div className="portfolio-links">
-                  <PortfolioItemLink><LinkIcon /></PortfolioItemLink>
-                  <PortfolioItemDetail><VisibilityIcon /></PortfolioItemDetail>
+                  <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
+                  <PortfolioItemDetail><FaEye size="18" /> </PortfolioItemDetail>
                 </div>
               </div>
             </PortfolioContent>
           </Portfolio>
 
           <Services>
-            <UserSectionTitle><DesignServicesIcon /> Serviços</UserSectionTitle>
+            <UserSectionTitle><FaWrench /> Serviços</UserSectionTitle>
             <ServicesContent>
               <Service>
                 <div className="service-icon">
-                  <img src={IconService1} alt="Service Icon" />
+                  <FaWordpressSimple size="26" />
                 </div>
                 <div className="service-title">
                   WordPress Themes
@@ -345,7 +333,7 @@ const User1 = () => {
               </Service>
               <Service>
                 <div className="service-icon">
-                  <img src={IconService2} alt="Service Icon" />
+                  <FaFileCode size="26" />
                 </div>
                 <div className="service-title">
                   HTML Templates
@@ -356,7 +344,7 @@ const User1 = () => {
               </Service>
               <Service>
                 <div className="service-icon">
-                  <img src={IconService3} alt="Service Icon" />
+                  <FaSlidersH size="26" />
                 </div>
                 <div className="service-title">
                   Plugins Development
