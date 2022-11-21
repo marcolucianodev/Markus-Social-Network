@@ -5,7 +5,7 @@ export const ActivityOptions = styled.div`
     flex-direction: column;
     width: 100%;
     height: auto;
-    background-color: #edf2f6;
+    background-color: var(--background-content);
     padding: 3.5rem 3.5rem 0;
     position: relative;
 
