@@ -6,7 +6,7 @@ export const  HeaderContainer = styled.section`
     justify-content: space-between;
      width: 100%;
      height: 7rem;
-     background-color: #3f4257;
+     background-color: var(--secondary-color);
      position: fixed;
      width: calc(100% - 17rem);
      z-index: 2;
