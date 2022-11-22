@@ -590,8 +590,8 @@ export const PortfolioContent = styled.div`
 
 		.portfolio-links {
 			position: absolute;
-			bottom: 3rem;
-			right: 3rem;
+			bottom: 2rem;
+			right: 2rem;
 			width: inherit;
 			background: transparent;
 			display: flex;
@@ -613,20 +613,26 @@ export const PortfolioItem = styled.img<UserAuxAttributes>`
 `;
 
 export const PortfolioItemLink = styled.span`
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
     padding: 1rem;
     background-color: rgba(0,0,0,.5);
     width: max-content;
+	height: max-content;
 	color: #FFFFFF;
 	border-radius: 0.5rem;
 	cursor: pointer;
 `;
 
 export const PortfolioItemDetail = styled.span`
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
     padding: 1rem;
     background-color: rgba(0,0,0,.5);
     width: max-content;
+	height: max-content;
 	color: #FFFFFF;
 	border-radius: 0.5rem;
 	cursor: pointer;
