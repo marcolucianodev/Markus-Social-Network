@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UserContext } from "../../contexts/userContext";
 import { Link } from "react-router-dom";
 import { 
@@ -56,11 +56,16 @@ import portfolioItem1 from "../../components/_assets/img/img-testes/portf-01.jpg
 import portfolioItem2 from "../../components/_assets/img/img-testes/portf-02.jpg";
 import portfolioItem3 from "../../components/_assets/img/img-testes/portf-03.jpg";
 
+import portfolioImage1 from "../../components/_assets/img/img-testes/portfolio-image01.jpg";
+import portfolioImage2 from "../../components/_assets/img/img-testes/portfolio-image02.jpg";
+import portfolioImage3 from "../../components/_assets/img/img-testes/portfolio-image03.jpg";
+
 import Slider from "../../components/Slider";
 import { UserPropsTypes } from "../../types";
 
 import { FcApproval } from "react-icons/fc";
 import { ImLocation } from "react-icons/im";
+import { IoClose } from "react-icons/io5";
 import { 
   FaFacebookF, 
   FaInstagram, 
@@ -77,8 +82,12 @@ import {
   FaTasks,
   FaFolderOpen,
 } from "react-icons/fa";
+import Modal from "../../components/Modal";
+import { PortfolioDetails } from "../../components/Modal/styles";
 
 const User1 = () => {
+
+  const [openModal, setOpenModal] = useState(false);
 
   const { user }: any = useContext(UserContext)
 
@@ -87,6 +96,10 @@ const User1 = () => {
   const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile)
   const userRatings = user.map((user: UserPropsTypes) => user.rating)
   const userTotalRatings = user.map((user: UserPropsTypes) => user.total_ratings)
+
+  const handleModal = () => {
+    setOpenModal(!openModal)
+  }
 
   const itemList = [
     {
@@ -297,21 +310,54 @@ const User1 = () => {
                 <PortfolioItem src={portfolioItem1} />
                 <div className="portfolio-links">
                   <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
-                  <PortfolioItemDetail><FaEye size="18" /></PortfolioItemDetail>
+                  <PortfolioItemDetail onClick={handleModal}><FaEye size="18" /></PortfolioItemDetail>
+                  {openModal && 
+                    <Modal>
+                      <PortfolioDetails>
+                        <img src={portfolioImage1} />
+                        <div className="portfolio-description">
+                          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                          <IoClose size="20" onClick={handleModal} />
+                        </div>
+                      </PortfolioDetails>
+                    </Modal>
+                  }
                 </div>
               </div>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem2} />
                 <div className="portfolio-links">
                   <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
-                  <PortfolioItemDetail><FaEye size="18" /></PortfolioItemDetail>
+                  <PortfolioItemDetail onClick={handleModal}><FaEye size="18" /></PortfolioItemDetail>
+                  {openModal && 
+                    <Modal>
+                      <PortfolioDetails>
+                        <img src={portfolioImage2} />
+                        <div className="portfolio-description">
+                          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                          <IoClose size="20" onClick={handleModal} />
+                        </div>
+                      </PortfolioDetails>
+                    </Modal>
+                  }
                 </div>
               </div>
               <div className="portfolio-box">
                 <PortfolioItem src={portfolioItem3} />
                 <div className="portfolio-links">
                   <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
-                  <PortfolioItemDetail><FaEye size="18" /> </PortfolioItemDetail>
+                  <PortfolioItemDetail onClick={handleModal}><FaEye size="18" /> </PortfolioItemDetail>
+                  {openModal && 
+                    <Modal>
+                      <PortfolioDetails>
+                        <img src={portfolioImage3} />
+                        <div className="portfolio-description">
+                          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                          <IoClose size="20" onClick={handleModal} />
+                        </div>
+                      </PortfolioDetails>
+                    </Modal>
+                  }
                 </div>
               </div>
             </PortfolioContent>
