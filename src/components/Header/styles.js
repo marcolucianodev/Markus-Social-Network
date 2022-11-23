@@ -12,7 +12,7 @@ export const  HeaderContainer = styled.section`
      z-index: 2;
 
      .icon-login {
-         color: #FFFFFF;
+         color: var(--white-text-color);
      }
 
      @media (max-width: 768px) {

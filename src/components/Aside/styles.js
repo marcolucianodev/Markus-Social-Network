@@ -20,13 +20,13 @@ export const AsideButton = styled(Button)`
     border-radius: 0.5rem;
     padding: 1rem;
     margin-top: 2rem;
-    border: 0.1rem solid #ff5e3a;
-    background-color: #FFFFFF;
-    color: #515365;
+    border: 0.1rem solid var(--main-color);
+    background-color: var(--white-background);
+    color: var(--title-color);
     transition: all 0.3s;
 
     :hover {
-        background-color: #ff5e3a;
-        color: #FFFFFF;
+        background-color: var(--main-color);
+        color: var(--white-text-color);
     }
 `;

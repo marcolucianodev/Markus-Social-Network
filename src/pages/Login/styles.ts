@@ -34,7 +34,7 @@ export const Logo = styled.div`
     gap: 1rem;
     
     &:hover {
-      color: #515365;
+      color: var(--title-color);
     }
   }
 
@@ -79,12 +79,12 @@ export const FormHeadline = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem;
-  border-bottom: 1px solid #e6ecf5;
+  border-bottom: 1px solid var(--border-light-white);
 `;
 
 export const FormHeadlineDescription = styled.div<LoginHtmlAttributes>`
   font-weight: 500;
-  color: #515365;
+  color: var(--title-color);
   font-size: ${props => props.fontSize};
 `;
 
@@ -104,7 +104,7 @@ export const Label = styled.label`
   width: 100%;
 
   .visibility-password-icon-login {
-    color: #888da8;
+    color: var(--text-color);
     position: absolute;
     right: 1rem;
     top: -0.5rem;
@@ -113,7 +113,7 @@ export const Label = styled.label`
   }
 
   .visibility-password-icon-signup {
-    color: #888da8;
+    color: var(--text-color);
     position: absolute;
     right: 1rem;
     top: 1.3rem;
@@ -132,12 +132,12 @@ export const UserNameInput = styled.input<LoginHtmlAttributes>`
   width: ${props => props.inputWidth};
   padding: 1.5rem;
   border-radius: 0.5rem;
-  border: 1px solid #e6ecf5;
+  border: 1px solid var(--border-light-white);
   outline: none;
   transition: all ease 0.5s;
 
   &:focus {
-    border-color: #ff5e3a;
+    border-color: var(--main-color);
   }
 `;
 
@@ -158,7 +158,7 @@ export const LoginRemember = styled.div`
     cursor: pointer;
     user-select: none;
     line-height: 2.5rem;
-    color: #515365;
+    color: var(--title-color);
 
     input {
       position: absolute;
@@ -168,7 +168,7 @@ export const LoginRemember = styled.div`
       width: 0;
 
       &:checked ~ .checkmark {
-        background-color: #ff5e3a;
+        background-color: var(--main-color);
         transition: 0.5s;
       }
 
@@ -183,7 +183,7 @@ export const LoginRemember = styled.div`
       left: 0;
       height: 2.5rem;
       width: 2.5rem;
-      border: 1px solid #e6ecf5;
+      border: 1px solid var(--border-light-white);
       border-radius: 0.3rem;
 
       &:after {
@@ -194,7 +194,7 @@ export const LoginRemember = styled.div`
         top: 0.4rem;
         width: 0.5rem;
         height: 1rem;
-        border: solid white;
+        border: solid var(--border-light-white);
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -220,7 +220,7 @@ export const FormButton = styled.input<LoginHtmlAttributes>`
   padding: 1.5rem;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #FFFFFF;
+  color: var(--white-text-color);
   cursor: pointer;
   transition: 0.4s;
 
@@ -242,10 +242,10 @@ export const FormFooterInfo = styled.footer`
     text-align: center;
     border-radius: 0.5rem;
     font-size: 1.4rem;
-    border: 1px solid #e6ecf5;
+    border: 1px solid var(--border-light-white);
 
     span a {
-      color: #38a9ff;
+      color: var(--main-blue);
       font-weight: bold;
     }
   }

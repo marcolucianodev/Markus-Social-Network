@@ -7,11 +7,11 @@ export const Container = styled.footer`
     align-items: center;
     padding: 3%;
     gap: 2rem;
-    background-color: #FFFFFF;
-    color: #888da8;
+    background-color: var(--white-background);
+    color: var(--text-color);
 
     a.link-logo-footer:first-child:hover {
-        color: #515365;
+        color: var(--title-color);
     }
 
     .footer-logo {

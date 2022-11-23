@@ -1,18 +1,16 @@
 import styled from "styled-components";
 import banner from "../_assets/img/banner-background.jpg";
-// import banner from "../_assets/img/background-social-network.jpg";
-
 
 export const Container = styled.section`
     width: 100%;
     height: 50rem;
-    background-color: #eeeeee;
+    background-color: var(--main-background-content);
     background-image: url(${banner});
     background-position: center;
     background-size: cover;
     padding: 3rem 3rem 0;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--white-text-color);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -46,17 +44,6 @@ export const Container = styled.section`
         font-weight: 300;
     }
 
-    /* .img-up-banner-area {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-
-        img {
-            width: inherit;
-        }
-    } */
-
     @media (max-width: 351px) {
         p {
             margin: 1rem 0;
@@ -74,12 +61,6 @@ export const Container = styled.section`
     @media (max-width: 768px) {
         margin-top: 0;
     }
-
-    /* @media (min-width: 1200px) {
-            .img-up-banner-area img {
-                width: auto;
-            }
-        } */
 `;
 
 export const MaskBanner = styled.div `
@@ -90,7 +71,7 @@ export const MaskBanner = styled.div `
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: ${props => props.maskBg ?'blue':'darkmagenta'};
+    background: ${props => props.maskBg ?'var(--main-maskBanner)':'var(--group-maskBanner)'};
     z-index: -1;
     opacity: 0.4;
 `;

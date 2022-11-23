@@ -20,7 +20,7 @@ export const WidgetUserInfo = styled.div`
 export const UserStatus = styled.div<WidgetInfoProps>`
     background-color: ${props => props.userStatusColor};
     padding: 0.6rem 1.2rem;
-    color: #FFFFFF;
+    color: var(--white-text-color);
     margin-right: 1rem;
     border-radius: 3px;
     font-weight: 600;
@@ -59,10 +59,10 @@ export const HeadlineMembersInfo = styled.div<WidgetInfoProps>`
                 display: inline-flex;
                 margin-right: 0.5rem;
                 font-weight: 700;
-                color: #515365;
+                color: var(--title-color);
 
                 :hover {
-                    color: #ff5e3a;
+                    color: var(--main-color);
                 }
             }
         }
@@ -71,8 +71,8 @@ export const HeadlineMembersInfo = styled.div<WidgetInfoProps>`
             font-size: 1.8rem;
             font-weight: 600;
             margin-left: 0.4rem;
-            background-color: #08ddc1;
-            color: #FFFFFF;
+            background-color: var(--ligth-blue);
+            color: var(--white-text-color);
             border-radius: 50%;
             padding: 2px;
             
@@ -83,12 +83,12 @@ export const HeadlineMembersInfo = styled.div<WidgetInfoProps>`
         display: flex;
         align-items: center;
         gap: 1rem;
-        color: #515365;
+        color: var(--title-color);
         
 
         span.activity-year {
             font-size: 1rem;
-            color: #888da8;
+            color: var(--text-color);
             text-transform: uppercase;
             font-weight: 500;
         }

@@ -6,10 +6,10 @@ export const Container = styled.section`
     justify-content: space-between;
     width: 100%;
     height: 7.8rem;
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    color: #515365;
+    color: var(--title-color);
     position: relative;
 
     .activity-buttons {
@@ -22,7 +22,7 @@ export const Container = styled.section`
         display: flex;
         flex-direction: column;
         position: absolute;
-        background: #f6f6f6;
+        background: var(--activityOptions-background);
         top: 8.5rem;
         width: 50%;
         right: 0;
@@ -47,11 +47,11 @@ export const Container = styled.section`
     }
 
     .filter-box {
-        background: #38a9ff;
+        background: var(--main-blue);
         padding: 1.5rem;
         font-size: 1.3rem;
         text-align: center;
-        color: #FFFFFF;
+        color: var(--white-text-color);
         border-radius: 3px;
         margin-bottom: 1rem;
     }
@@ -65,13 +65,13 @@ export const Container = styled.section`
     .activity-select-headline {
         width: 100%;
         text-align: center;
-        background-color: #FFFFFF;
-        color: #888da8;
+        background-color: var(--white-background);
+        color: var(--text-color);
         padding: 0.7rem;
         border-radius: 3px;
         font-size: 1.4rem;
         cursor: pointer;
-        border: 1px solid #e6ecf5;
+        border: 1px solid var(--border-light-white);
         display: flex;
         align-items: center;
 
@@ -101,8 +101,8 @@ export const Container = styled.section`
         width: 100%;
         list-style: none;
         border-radius: 3px;
-        background-color: #FFFFFF;
-        color: #888da8;
+        background-color: var(--white-background);
+        color: var(--text-color);
         position: absolute;
         opacity: 1;
         top: 5rem;
@@ -139,7 +139,7 @@ export const Container = styled.section`
     }
 
     ul.activity-select-options li:hover {
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
     }
 
     .display-menbers-number {
@@ -148,7 +148,7 @@ export const Container = styled.section`
         gap: 1rem;
 
         span {
-            color: #515365;
+            color: var(--title-color);
             font-weight: 600;
             font-size: 1.3rem;
         }
@@ -166,7 +166,7 @@ export const Buttom = styled(Button)`
     border-radius: 3px;
     width: 4.2rem;
     height: 4.2rem;
-    color: #FFFFFF;
+    color: var(--white-text-color);
 
     svg {
         font-size: ${props => props.sizeButton};

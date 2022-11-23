@@ -58,12 +58,12 @@ const ResetPassword = () => {
               <FormButton 
                 type="submit" 
                 value="Redefinir Senha"
-                backgroundButton="#45b3e4"
+                backgroundButton="var(--ligth-blue)"
                 />
               <FormButton 
                 type="submit" 
                 value="Entrar"
-                backgroundButton="#8fce46"
+                backgroundButton="var(--ligth-green)"
                 />
             </FormButtomContainer>
           </form>

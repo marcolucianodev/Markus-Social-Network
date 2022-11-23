@@ -92,7 +92,7 @@ const Login = () => {
               <FormButton 
                 type="submit" 
                 value="Login"
-                backgroundButton="#ff5e3a"
+                backgroundButton="var(--main-color)"
               />
             </FormButtomContainer>
           </form>

@@ -6,8 +6,8 @@ export const Container = styled.section`
     width: 100%;
     height: 7rem;
     padding: 10px;
-    background-color: #FFFFFF;
-    color: #515365;
+    background-color: var(--white-background);
+    color: var(--title-color);
     top: 0;
     position: relative;
     top: 7rem;

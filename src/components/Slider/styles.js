@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const SliderContainer = styled.section`
 	margin: 0 auto;
-  width: 800px;
+  width: 80rem;
 	width: 100%;
-  height: 250px;
+  height: 25rem;
   overflow: hidden;
 	position: relative;
 	border-radius: 0.5rem;
@@ -12,7 +12,7 @@ export const SliderContainer = styled.section`
 
 export const Slides = styled.div`
 	width: 400%;
-  height: 250px;
+  height: 25rem;
   display: flex;
 
 	input {
@@ -36,7 +36,7 @@ export const Slides = styled.div`
 	}
 
 	#radio1:checked ~ .first {
-		background-color: #FFFFFF;
+		background-color: var(--white-background);
 	}
 `;
 
@@ -61,23 +61,23 @@ export const SlideImage = styled.img`
 export const AutoNavigation = styled.div`
 	display: flex;
   justify-content: center;
-  width: 800px;
+  width: 80rem;
   width: 100%;
 	position: absolute;
-  margin-top: 360px;
+  margin-top: 36rem;
 `;
 
 export const AutoButton = styled.div`
   border: 2px solid red;
-  padding: 5px;
-  border-radius: 10px;
+  padding: .5rem;
+  border-radius: 1rem;
 
   :not(:last-child) {
-    margin-right: 30px;
+    margin-right: 3rem;
   }
 
   :checked {
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
   }
 `;
 
@@ -85,19 +85,19 @@ export const ManualNavigation = styled.div`
 	position: absolute;
   display: flex;
   justify-content: center;
-  margin-top: -40px;
+  margin-top: -4rem;
 	left: 50%;
 	right: 50%;
 `
 
 export const Label = styled.label`
-  border: 2px solid #fff;
-  padding: 5px;
-  border-radius: 10px;
+  border: 2px solid var(--border-light-white);
+  padding: .5rem;
+  border-radius: 1rem;
   cursor: pointer;
 
   :not(:last-child){
-    margin-right: 30px;
+    margin-right: 3rem;
   }
 
   :hover {

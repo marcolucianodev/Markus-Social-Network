@@ -7,7 +7,7 @@ export const ModalContainer = styled.section`
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--modal-background);
     z-index: 5;
 
     display: flex;

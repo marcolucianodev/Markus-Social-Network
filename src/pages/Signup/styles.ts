@@ -28,13 +28,13 @@ export const InputRow = styled.div<SignupAttributes>`
   margin-top: ${props => props.rowMargin};
 `;
 
-export const SelectContainer = styled.div`
-  background-color: red;
-`;
+// export const SelectContainer = styled.div`
+//   background-color: red;
+// `;
 
 export const Select = styled.select`
   padding: 1.4rem;
-  border: 1px solid #e6ecf5;
+  border: 1px solid var(--border-light-white);
   outline: none;
   background-color: transparent;
   -webkit-appearance: none;
@@ -44,7 +44,7 @@ export const Select = styled.select`
   background-size: 1.4rem;
   padding-right: 2rem;
   font-size: 1.5rem;
-  color: #515365;
+  color: var(--title-color);
   border-radius: 0.5rem;
 `;
 
@@ -56,8 +56,8 @@ export const GenderRadioSelect = styled.div`
   padding: 1.5rem;
   font-size: 1.5rem;
   border-radius: 0.5rem;
-  border: 1px solid #e6ecf5;
-  color: #515365;
+  border: 1px solid var(--border-light-white);
+  color: var(--title-color);
 `;
 
 export const Legend = styled.legend<SignupAttributes>`
@@ -65,6 +65,6 @@ export const Legend = styled.legend<SignupAttributes>`
   align-items: center;
   gap: 0.5rem;
   margin: 1.8rem 0 0.5rem;
-  color: #515365;
+  color: var(--title-color);
   font-size: ${props => props.fontSizeLegend};
 `;

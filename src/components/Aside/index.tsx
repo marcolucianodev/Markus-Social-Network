@@ -46,13 +46,13 @@ export const Aside = () => {
                   <WidgetTitle><PeopleAltIcon /><Link to="/membros"><span>Membros</span></Link></WidgetTitle>
                   <WidgetUserInfo>
                     <div className="user-status-container">
-                      <UserStatus userStatusColor="#ff5e3a">
+                      <UserStatus userStatusColor="var(--main-color)">
                         <span>novo</span>
                       </UserStatus>
-                      <UserStatus userStatusColor="#38a9ff">
+                      <UserStatus userStatusColor="var(--main-blue)">
                         <span>ativo</span>
                       </UserStatus>
-                      <UserStatus userStatusColor="#7c5ac2">
+                      <UserStatus userStatusColor="var(--main-purple)">
                         <span>popular</span>
                       </UserStatus>
                     </div>
@@ -88,16 +88,16 @@ export const Aside = () => {
                   <WidgetTitle><GroupsIcon /> <a href="/"><span>Grupos</span></a></WidgetTitle>
                   <WidgetUserInfo>
                       <div className="user-status-container">
-                        <UserStatus userStatusColor="#ff5e3a">
+                        <UserStatus userStatusColor="var(--main-color)">
                           <span>novo</span>
                         </UserStatus>
-                        <UserStatus userStatusColor="#38a9ff">
+                        <UserStatus userStatusColor="var(--main-blue)">
                           <span>ativo</span>
                         </UserStatus>
-                        <UserStatus userStatusColor="#7c5ac2">
+                        <UserStatus userStatusColor="var(--main-purple)">
                           <span>popular</span>
                         </UserStatus>
-                        <UserStatus userStatusColor="#08ddc1">
+                        <UserStatus userStatusColor="var(--ligth-blue)">
                           <span>alfabético</span>
                         </UserStatus>
                       </div>

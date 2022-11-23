@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Sidebar = styled.div`
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
     display: flex;
     flex-direction: column;
     border-radius: 3px;
@@ -21,12 +21,12 @@ export const WidgetTitle = styled.h3`
     }
 
     a span {
-        color: #515365;
+        color: var(--title-color);
         font-weight: 500;
         transition: all 0.3s;
 
         :hover {
-            color: #ff5e3a;
+            color: var(--main-color);
         }
     }
 `;

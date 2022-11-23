@@ -5,7 +5,7 @@ export const CommentsContainer = styled.div `
     flex-direction: column;
     width: 100%;
     padding: 2rem;
-    border-top: 1px solid #e6ecf5;
+    border-top: 1px solid var(--border-light-white);
 
      .comment-headline {
        display: flex;
@@ -47,12 +47,12 @@ export const CommentsContainer = styled.div `
        }
 
        .comment-date a {
-           color: #515365;
+           color: var(--title-color);
            font-size: 1.2rem;
            font-weight: 700;
 
            :hover {
-                    color: #ff5e3a;
+                    color: var(--main-color);
                 }
        }
 

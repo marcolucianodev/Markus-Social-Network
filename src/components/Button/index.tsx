@@ -11,7 +11,7 @@ type ButtonProps = {
 export const Button = styled.button<ButtonProps>`
     width: 7rem;
     height: 7rem;
-    background-color: #ff5e3a;
+    background-color: var(--main-color);
     border: none;
     display: ${props => props.btnMobile ? 'none' : 'flex'};
     justify-content: center;
@@ -20,13 +20,13 @@ export const Button = styled.button<ButtonProps>`
     position: ${props => props.positionBtn ? 'fixed' : 'static'};
 
     .icon-main-menu {
-        color: #FFFFFF;
+        color: var(--white-text-color);
         font-size: 4rem;
     }
 
     span.show-login-ballon {
-        background-color: #3f4257;
-        color: #FFFFFF;
+        background-color: var(--secondary-color);
+        color: var(--white-text-color);
         text-transform: uppercase;
         font-size: 1rem;
         padding: 5px 12px;
@@ -51,12 +51,12 @@ export const Button = styled.button<ButtonProps>`
         bottom: -0.1rem;
         border-top: 12px solid transparent;
         border-bottom: 12px solid transparent;
-        border-left: 12px solid #3f4257;
+        border-left: 12px solid var(--secondary-color);
         border-radius: 50%;
     }
 
     span.hide-login-ballon {
-        background-color: #3f4257;
+        background-color: var(--secondary-color);
         text-transform: uppercase;
         font-size: 1rem;
         padding: 5px 12px;
@@ -74,7 +74,7 @@ export const Button = styled.button<ButtonProps>`
 `;
 
 export const LoginButton = styled(Button)`
-    background-color: #ff5e3a;
+    background-color: var(--main-color);
 
     .icon-login {
         font-size: 2.5rem;

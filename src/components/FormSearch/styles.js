@@ -7,7 +7,7 @@ export const Container = styled.form`
     width: 100%;
     padding: ${props => props.activityInput ? '10px' : '15px'};
     border-radius: ${props => props.activityInput ? '30px' : '0px'};
-    background-color: ${props => props.activityInput ? '#FFFFFF' : 'trasparent'};
+    background-color: ${props => props.activityInput ? 'var(--white-background)' : 'trasparent'};
 
     .input-area {
         width: 100%;
@@ -22,11 +22,11 @@ export const Container = styled.form`
         background-color: transparent;
         outline: none;
         border: none;
-        color: #9a9fbf;
+        color: var(--input-search-color);
         padding-right: 1.3rem;
         width: 100%;
         ::placeholder {
-            color: #9a9fbf;
+            color: var(--input-search-color);
         }
     }
 
@@ -39,7 +39,7 @@ export const Container = styled.form`
     }
 
     .icon-search {
-        color: #9a9fbf;
+        color: var(--input-search-color);
         font-size: 3rem;
     }
 `;

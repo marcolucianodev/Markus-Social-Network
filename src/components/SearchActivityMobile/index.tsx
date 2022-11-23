@@ -12,12 +12,12 @@ export const SearchActivityMobile = styled(Container)`
 `
 
 export const BoxActivityMobile = styled(Button)`
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
     border-radius: 3px;
     width: 33.33%;
     flex-direction: column;
     gap: 2rem;
-    color: #9a9fbf;
+    color: var(--input-search-color);
     padding: 5rem;
     font-weight: 700;
     cursor: pointer;

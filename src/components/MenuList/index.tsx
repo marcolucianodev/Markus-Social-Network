@@ -31,11 +31,11 @@ export const MenuList = styled.nav`
 
     .menu-icons {
         font-size: 3rem;
-        color: #888da8;
+        color: var(--text-color);
         transition: all 0.4s;
 
         :hover {
-            color: #ff5e3a;
+            color: var(--main-color);
         }
     }
 
@@ -46,7 +46,7 @@ export const MenuList = styled.nav`
         padding-left: 2rem;
         padding-bottom: 2rem;
         width: 17rem;
-        background-color: #FFFFFF;
+        background-color: var(--white-background);
         transition: all 0.5s;
         height: 100%;
 

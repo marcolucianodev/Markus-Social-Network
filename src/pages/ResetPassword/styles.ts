@@ -24,6 +24,6 @@ export const DescriptionResetPassword = styled.div`
   span {
     font-size: 1.4rem;
     line-height: 2;
-    color: #515365;
+    color: var(--title-color);
   }
 `;

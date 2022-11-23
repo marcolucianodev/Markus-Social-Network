@@ -4,10 +4,11 @@ const GlobalStyle = createGlobalStyle`
 
     :root {
 
-        //Colors variables
+        //variables colors
         --main-color: #ff5e3a;
         --secondary-color: #3f4257;
-        --background-content: #edf2f6;
+        --main-background-content: #edf2f6;
+        --activityOptions-background: #f6f6f6;
         --main-blue: #38a9ff;
         --main-purple: #7c5ac2;
         --main-pink: #f76697;
@@ -16,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
         --ligth-green: #8fce46;
         --title-color: #515365;
         --text-color: #888da8;
+        --white-background: #FFFFFF;
         --white-text-color: #FFFFFF;
         --search-button-color: #f75d52;
         --facebookBG: #2f5b9c;
@@ -25,6 +27,14 @@ const GlobalStyle = createGlobalStyle`
         --js-skill-color: rgb(255,162,58);
         --css-skill-color: rgb(42,125,161);
         --html-skill-color: rgb(42,183,99);
+        --border-light-white: #e6ecf5;
+        --input-search-color: #9a9fbf;
+        --input-search-background: #494c62;
+        --main-markBanner: blue;
+        --group-maskBanner: darkmagenta;
+        --modal-background: rgba(0, 0, 0, 0.8);
+        --bg-dark-opaciy-5: rgba(0,0,0,.5);
+        --bg-light-opacity-2: rgba(255, 255, 255, 0.2);
     }
 
     * {
@@ -35,7 +45,6 @@ const GlobalStyle = createGlobalStyle`
 
     html {
         font-size: 62.5% !important;
-        //font-size: 80%;
     }
 
     body {
@@ -47,11 +56,11 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
-        color: #515365;
+        color: var(--title-color);
         transition: all 0.3s;
 
         :hover {
-            color: #ff5e3a;
+            color: var(--main-color);
         }
     }
 
@@ -59,8 +68,8 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.8rem !important;
         font-weight: 600;
         margin-left: 0.4rem;
-        background-color: #08ddc1;
-        color: #FFFFFF;
+        background-color: var(--ligth-blue);
+        color: var(--white-text-color);
         border-radius: 50%;
         padding: 2px;
     }

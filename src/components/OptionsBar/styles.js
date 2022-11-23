@@ -6,10 +6,10 @@ export const OptionsBar = styled.div`
     align-items: center;
     width: 100%;
     height: 7.8rem;
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    color: #515365;
+    color: var(--title-color);
     position: relative;
 
     @media (min-width: 769px) and (max-width: 999px) {
@@ -29,18 +29,18 @@ export const OptionsBar = styled.div`
         gap: 1rem;
 
         span {
-            color: #515365;
+            color: var(--title-color);
             font-weight: 600;
             font-size: 1.3rem;
 
             &:hover {
-                color: #ff5e3a;
+                color: var(--main-color);
             }
         }
 
         .options_bar-number {
             font-weight: 900;
-            color: #ff5e3a;
+            color: var(--main-color);
         }
 
     }
@@ -65,8 +65,8 @@ export const OptionsBar = styled.div`
             font-size: 1rem;
 
             @media (max-width: 768px) {
-                background-color: #f75d52;
-                color: #FFFFFF;
+                background-color: var(--search-button-color);
+                color: var(--white-text-color);
                 margin-bottom: 1rem;
                 padding: 1rem;
                 font-size: 1.2rem;
@@ -77,7 +77,7 @@ export const OptionsBar = styled.div`
         .options_bar-select {
             display: flex;
             flex: 2;
-            border: 1px solid #e6ecf5;
+            border: 1px solid var(--border-light-white);
             padding: 0.7rem;
             border-radius: 0.3rem;
             cursor: pointer;
@@ -135,8 +135,8 @@ export const OptionsBar = styled.div`
             top: 3.8rem;
             left: 0;
             width: 100%;
-            border: 1px solid #e6ecf5;
-            background-color: #FFFFFF;
+            border: 1px solid var(--border-light-white);
+            background-color: var(--white-background);
             opacity: 1;
             transition: all ease 0.5s;
 
@@ -145,7 +145,7 @@ export const OptionsBar = styled.div`
                 font-size: 1.2rem;
 
                 &:hover {
-                    background-color: #edf2f6;
+                    background-color: var(--main-background-content);
                 } 
             }
         }
@@ -156,8 +156,8 @@ export const OptionsBar = styled.div`
             top: 3.8rem;
             left: 0;
             width: 100%;
-            border: 1px solid #e6ecf5;
-            background-color: #FFFFFF;
+            border: 1px solid var(--border-light-white);
+            background-color: var(--white-background);
             opacity: 0;
             transition: all ease 0.5s;
 
@@ -192,16 +192,16 @@ export const OptionsBar = styled.div`
             }
 
             input[type= "text"]{
-                border: 1px solid #e6ecf5;
+                border: 1px solid var(--border-light-white);
                 outline: none;
                 width: 100%;
-                color: #515365;
+                color: var(--title-color);
             }
 
             input[type= "submit"] {
                 border: none;
-                background-color: #f75d52;
-                color: #FFFFFF;
+                background-color: var(--search-button-color);
+                color: var(--white-text-color);
                 cursor: pointer;
 
                 @media (max-width: 768px) {

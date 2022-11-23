@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +29,7 @@ export const Container = styled.div`
             width: 9.2rem;
             height: 9.2rem;
             border-radius: 100%;
-            border: 4px solid #FFFFFF;
+            border: 4px solid var(--border-light-white);
         }
     }
 
@@ -54,11 +54,11 @@ export const Container = styled.div`
             span.user-name {
                 margin-right: 0.5rem;
                 font-weight: 700;
-                color: #515365;
+                color: var(--title-color);
                 transition: 0.5s;
 
                 &:hover {
-                    color: #ff5e3a;
+                    color: var(--main-color);
                 }
             }
         }
@@ -148,23 +148,23 @@ export const Container = styled.div`
                 box-sizing: content-box;
                 padding: 0.5rem;
                 border-radius: 0.3rem;
-                color: #FFFFFF;
+                color: var(--white-text-color);
             }
 
             .statistics-user-post-icon {
-                background-color: #ff5e3a;
+                background-color: var(--main-color);
             }
 
             .statistics-user-comment-icon {
-                background-color: #38a9ff;
+                background-color: var(--main-blue);
             }
 
             .statistics-user-views-icon {
-                background-color: #7c5ac2;
+                background-color: var(--main-purple);
             }
 
             .statistics-user-friendship-icon {
-                background-color: #f76697;
+                background-color: var(--main-pink);
             }
         }
     }

@@ -9,15 +9,15 @@ export const Container = styled.section`
         width: 100%;
         height: auto;
         padding: 3.5rem;
-        background-color: #edf2f6;
-        color: #888da8;
+        background-color: var(--main-background-content);
+        color: var(--text-color);
     }
 
     .feed-content-search-activity, .feed-content-search-activity-mobile {
         display: flex;
         width: 100%;
         height: auto;
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
         padding: 3.5rem 3.5rem 0;
     }
 
@@ -25,7 +25,7 @@ export const Container = styled.section`
         display: flex;
         width: 100%;
         height: auto;
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
         padding: 3.5rem 3.5rem 0;
 
         @media (min-width: 769px) {
@@ -37,7 +37,7 @@ export const Container = styled.section`
         display: none;
         width: 100%;
         height: auto;
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
         padding: 3.5rem 3.5rem 0;
     }
 
@@ -45,7 +45,7 @@ export const Container = styled.section`
         display: flex;
         width: 100%;
         height: auto;
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
         padding: 3.5rem 3.5rem 0;
 
         @media (min-width: 769px) {
@@ -57,7 +57,7 @@ export const Container = styled.section`
         display: none;
         width: 100%;
         height: auto;
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
         padding: 3.5rem 3.5rem 0;
     }
 
@@ -65,7 +65,7 @@ export const Container = styled.section`
         display: flex;
         width: 100%;
         height: auto;
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
         padding: 3.5rem 3.5rem 0;
 
         @media (min-width: 769px) {
@@ -77,23 +77,23 @@ export const Container = styled.section`
         display: none;
         width: 100%;
         height: auto;
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
         padding: 3.5rem 3.5rem 0;
     }
     
     .content-options-mobile {
         width: 100%;
-        background-color: #FFFFFF;
+        background-color: var(--white-background);
         padding: 1.5rem;
         border-radius: 0.5rem;
     }
 
     .filter-box {
-        background: #38a9ff;
+        background: var(--main-blue);
         padding: 1.5rem;
         font-size: 1.3rem;
         text-align: center;
-        color: #FFFFFF;
+        color: var(--white-text-color);
         border-radius: 0.3rem;
         margin-bottom: 1rem;
     }
@@ -107,13 +107,13 @@ export const Container = styled.section`
     .activity-select-headline {
         width: 100%;
         text-align: center;
-        background-color: #FFFFFF;
-        color: #888da8;
+        background-color: var(--white-background);
+        color: var(--text-color);
         padding: 0.7rem;
         border-radius: 3px;
         font-size: 1.4rem;
         cursor: pointer;
-        border: 1px solid #e6ecf5;
+        border: 1px solid var(--border-light-white);
         display: flex;
         align-items: center;
 
@@ -143,8 +143,8 @@ export const Container = styled.section`
         width: 100%;
         list-style: none;
         border-radius: 0.3rem;
-        background-color: #FFFFFF;
-        color: #888da8;
+        background-color: var(--white-background);
+        color: var(--text-color);
         position: absolute;
         opacity: 1;
         top: 5rem;
@@ -181,17 +181,17 @@ export const Container = styled.section`
     }
 
     ul.activity-select-options li:hover {
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
     }
 
     .display-menbers-number {
         display: flex;
         align-items: center;
         gap: 1rem;
-        color: #515365;
+        color: var(--title-color);
 
         span {
-            color: #515365;
+            color: var(--title-color);
             font-weight: 600;
             font-size: 1.3rem;
         }

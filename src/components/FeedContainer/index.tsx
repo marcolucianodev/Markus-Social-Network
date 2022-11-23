@@ -96,18 +96,6 @@ const FeedContainer = () => {
 
             <ActivityOptions className={openSearchMobile ? 'content-activity-search' : 'content-activity-search-none'}>
               <div className="content-options-mobile">
-                {/* <FormSearch>
-                  <div className="activity-input-area">
-                    <input 
-                      type="text" 
-                      name="search" 
-                      id="form-search" 
-                      placeholder="Procurar Atividades..."/>
-                  </div>
-                  <button className="search-button">
-                    <SearchIcon className="icon-search"/>
-                  </button>
-                </FormSearch> */}
                 <FormSearch placeholderText="Procurar Atividades..." />
               </div>
             </ActivityOptions>

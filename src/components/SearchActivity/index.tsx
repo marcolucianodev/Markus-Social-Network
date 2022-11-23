@@ -38,10 +38,10 @@ export const SearchActivity = () => {
                 <span className="number-of-members">{user.length}</span>
             </div>
             <div className="activity-buttons">
-                <Buttom bgButton="#7c5ac2"  sizeButton="2.5rem" onClick={openActivitySettings}>
+                <Buttom bgButton="var(--main-purple)"  sizeButton="2.5rem" onClick={openActivitySettings}>
                     <TuneIcon />
                 </Buttom>
-                <Buttom bgButton="#38a9ff" sizeButton="2.5rem" onClick={openActivitySearch}>
+                <Buttom bgButton="var(--main-blue)" sizeButton="2.5rem" onClick={openActivitySearch}>
                     <SearchIcon />
                 </Buttom>
                 {/*Activity Buttons Options*/}

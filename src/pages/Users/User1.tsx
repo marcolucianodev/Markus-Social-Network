@@ -165,10 +165,10 @@ const User1 = () => {
                 </div>
                 <div className="user-meta-right">
                   <span>
-                    <FaStar color="yellow" size="18" />
-                    <FaStar color="yellow" size="18" />
-                    <FaStar color="yellow" size="18" />
-                    <FaStar color="yellow" size="18" />
+                    <FaStar color="var(--main-yellow)" size="18" />
+                    <FaStar color="var(--main-yellow)" size="18" />
+                    <FaStar color="var(--main-yellow)" size="18" />
+                    <FaStar color="var(--main-yellow)" size="18" />
                     <FaStar size="18" />
                   </span>
                   <span className="bullet-separator">•</span>
@@ -184,9 +184,9 @@ const User1 = () => {
       <HeaderNetwork>
         <div className="header-network-content">
           <div className="social-networks">
-            <FaFacebookF size="20" color="#FFFFFF" className="facebook-icon" />
-            <FaTwitter size="20" color="#FFFFFF" className="twitter-icon" />
-            <FaInstagram size="20" color="#FFFFFF" className="instagram-icon" />
+            <FaFacebookF size="20" color="var(--white-text-color)" className="facebook-icon" />
+            <FaTwitter size="20" color="var(--white-text-color)" className="twitter-icon" />
+            <FaInstagram size="20" color="var(--white-text-color)" className="instagram-icon" />
           </div>
           <div className="user-activities">
             <div className="posts-data">
@@ -259,7 +259,7 @@ const User1 = () => {
               <SkillProgressBar>
                 <SkillBar 
                   percentAnimation="82" 
-                  skillBarBg="rgb(255, 96, 58)" 
+                  skillBarBg="var(--php-skill-color)" 
                   skillBarWidth="82%"
                 >
                   <span>PHP</span>
@@ -270,7 +270,7 @@ const User1 = () => {
               <SkillProgressBar>
                 <SkillBar 
                   percentAnimation="86" 
-                  skillBarBg="rgb(42, 125, 161)" 
+                  skillBarBg="var(--js-skill-color)" 
                   skillBarWidth="86%"
                 >
                   <span>Javascript</span>
@@ -281,7 +281,7 @@ const User1 = () => {
               <SkillProgressBar>
                 <SkillBar 
                   percentAnimation="98" 
-                  skillBarBg="rgb(255, 162, 58)" 
+                  skillBarBg="var(--css-skill-color)" 
                   skillBarWidth="98%"
                 >
                   <span>CSS</span>
@@ -292,7 +292,7 @@ const User1 = () => {
               <SkillProgressBar>
                 <SkillBar 
                   percentAnimation="100" 
-                  skillBarBg="rgb(42, 183, 99)" 
+                  skillBarBg="var(--html-skill-color)" 
                   skillBarWidth="100%"
                 >
                   <span>HTML</span>

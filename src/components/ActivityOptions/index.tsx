@@ -10,7 +10,7 @@ export const ActivityOptions = styled.div`
     position: relative;
 
     .content-options-mobile {
-        background-color: #FFFFFF;
+        background-color: var(--white-background);
         padding: 1.5rem;
         border-radius: 0.5rem;
     }
@@ -18,7 +18,7 @@ export const ActivityOptions = styled.div`
     .activity-options-mobile {
         display: flex;
         flex-direction: column;
-        background: #f6f6f6;
+        background: var(--activityOptions-background);
         top: 8.5rem;
         width: 30%;
         right: 0;
@@ -43,11 +43,11 @@ export const ActivityOptions = styled.div`
     }
 
     .filter-box {
-        background: #38a9ff;
+        background: var(--main-blue);
         padding: 1.5rem;
         font-size: 1.3rem;
         text-align: center;
-        color: #FFFFFF;
+        color: var(--white-text-color);
         border-radius: 3px;
         margin-bottom: 1rem;
     }
@@ -61,13 +61,13 @@ export const ActivityOptions = styled.div`
     .activity-select-headline {
         width: 100%;
         text-align: center;
-        background-color: #FFFFFF;
-        color: #888da8;
+        background-color: var(--white-background);
+        color: var(--text-color);
         padding: 0.7rem;
         border-radius: 3px;
         font-size: 1.4rem;
         cursor: pointer;
-        border: 1px solid #e6ecf5;
+        border: 1px solid var(--border-light-white);
         display: flex;
         align-items: center;
 
@@ -97,8 +97,8 @@ export const ActivityOptions = styled.div`
         width: 100%;
         list-style: none;
         border-radius: 3px;
-        background-color: #FFFFFF;
-        color: #888da8;
+        background-color: var(--white-background);
+        color: var(--text-color);
         position: absolute;
         opacity: 1;
         top: 5rem;
@@ -134,17 +134,17 @@ export const ActivityOptions = styled.div`
     }
 
     ul.activity-select-options li:hover {
-        background-color: #edf2f6;
+        background-color: var(--main-background-content);
     }
 
     .display-menbers-number {
         display: flex;
         align-items: center;
         gap: 1rem;
-        color: #515365;
+        color: var(--title-color);
 
         span {
-            color: #515365;
+            color: var(--title-color);
             font-weight: 600;
             font-size: 1.3rem;
         }

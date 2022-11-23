@@ -149,7 +149,7 @@ const Signup = () => {
               <FormButton 
                 type="submit" 
                 value="Inscrever"
-                backgroundButton="#ff5e3a"
+                backgroundButton="var(--main-color)"
               />
             </FormButtomContainer>
           </form>

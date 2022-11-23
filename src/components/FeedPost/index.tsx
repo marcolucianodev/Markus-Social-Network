@@ -7,7 +7,7 @@ export const FeedPost = styled.section`
 
 export const FeedUserContent = styled.section`
     display: flex;
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
     width: 100%;
     height: auto;
     padding: 2rem;
@@ -47,10 +47,10 @@ export const UserHeadline = styled.div `
                 display: inline-flex;
                 margin-right: 0.5rem;
                 font-weight: 700;
-                color: #515365;
+                color: var(--title-color);
 
                 :hover {
-                    color: #ff5e3a;
+                    color: var(--main-color);
                 }
             }
         }
@@ -59,8 +59,8 @@ export const UserHeadline = styled.div `
             font-size: 1.8rem;
             font-weight: 600;
             margin-left: 0.4rem;
-            background-color: #08ddc1;
-            color: #FFFFFF;
+            background-color: var(--ligth-blue);
+            color: var(--white-text-color);
             border-radius: 50%;
             padding: 2px;
         }
@@ -71,17 +71,17 @@ export const UserHeadline = styled.div `
         align-items: center;
         gap: 1rem;
         font-weight: 600;
-        color: #515365;
+        color: var(--title-color);
         
 
         span.activity-year {
             font-size: 1.2rem;
 
             a {
-                color: #515365;
+                color: var(--title-color);
 
                 :hover {
-                    color: #ff5e3a;
+                    color: var(--main-color);
                 }
             }
 
@@ -122,16 +122,16 @@ export const UserInfo = styled.div `
     display: flex;
     width: 100%;
     padding-bottom: 3%;
-    border-left: 1px solid #e6ecf5;
-    border-right: 1px solid #e6ecf5;
-    border-bottom: 1px solid #e6ecf5;
+    border-left: 1px solid var(--border-light-white);
+    border-right: 1px solid var(--border-light-white);
+    border-bottom: 1px solid var(--border-light-white);
     border-radius: 5px;
 
     img {
         display: flex;
         margin-top: -9rem;
         margin-left: 3rem;
-        background-color: #FFFFFF;
+        background-color: var(--white-background);
         padding: 0.8rem;
         border-radius: 3px;
     }
@@ -144,12 +144,12 @@ export const UserInfo = styled.div `
         margin-top: 1rem;
 
         span.user-friend a {
-            color: #515365;
+            color: var(--title-color);
             font-weight: 700;
             font-size: 1.5rem;
 
                 :hover {
-                    color: #ff5e3a;
+                    color: var(--main-color);
                 }
         }
 
@@ -190,7 +190,7 @@ export const PostArea = styled.div `
 `;
 
 export const PostText = styled.div `
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
     width: 100%;
     padding: 2rem 2rem 4rem 2rem;
     font-size: 1.4rem;
@@ -232,7 +232,7 @@ export const ActivityAreaPost = styled.div `
     }
 
     img {
-        border: 3px solid #FFFFFF;
+        border: 3px solid var(--white-text-colo);
         border-radius: 50%;
         margin-left: -0.5rem;
         width: 3rem;

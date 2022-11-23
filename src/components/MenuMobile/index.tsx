@@ -4,7 +4,7 @@ export const MenuMobile = styled.nav`
     display: block;
     width: 17rem;
     height: auto;
-    background-color: #FFFFFF;
+    background-color: var(--white-background);
     transition: all 0.5s;
 
     &.open-menu-mobile {
@@ -39,7 +39,7 @@ export const MenuMobile = styled.nav`
         display: flex;
         align-items: center;
         gap: 1.4rem;
-        color: #888da8;
+        color: var(--text-color);
     }
 
     ul.list-menu li a span {

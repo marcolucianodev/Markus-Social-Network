@@ -39,7 +39,7 @@ export const Container = styled.section`
         }
 
         a:hover {
-            color: #515365;
+            color: var(--title-color);
         }
     }
 

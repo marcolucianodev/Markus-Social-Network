@@ -7,8 +7,8 @@ export const MainPagesContainer = styled.section`
     width: 100%;
     height: auto;
     padding: 3.5rem;
-    background-color: #edf2f6;
-    color: #888da8;
+    background-color: var(--main-background-content);
+    color: var(--text-color);
     
     .activity-members-mobile {
         @media (min-width: 769px) {

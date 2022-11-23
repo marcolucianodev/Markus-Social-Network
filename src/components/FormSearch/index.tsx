@@ -9,13 +9,6 @@ type FormSearchTypes = {
 const FormSearch = ({placeholderText}: FormSearchTypes) => {
     return (
         <Container>
-            {/* <div className="input-area">
-                <input type="text" name="search" id="form-search" placeholder="Procurar pessoas ou páginas..."/>
-            </div>
-            <button className="search-button">
-                <SearchIcon className="icon-search"/>
-            </button> */}
-
             <div className="input-area">
                 <input 
                     type="text"

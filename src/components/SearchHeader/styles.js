@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     width: 35%;
-    background-color: #494c62;
+    background-color: var(--input-search-background);
 
     @media (max-width: 768px) {
         width: calc(100% - 14rem);
