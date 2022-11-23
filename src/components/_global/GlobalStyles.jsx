@@ -23,10 +23,10 @@ const GlobalStyle = createGlobalStyle`
         --facebookBG: #2f5b9c;
         --instagranBG: #f74881;
         --twitterBG: #37bff1;
-        --php-skill-color: rgb(255,96,58);
-        --js-skill-color: rgb(255,162,58);
-        --css-skill-color: rgb(42,125,161);
-        --html-skill-color: rgb(42,183,99);
+        --first-skill-color: rgb(255,96,58);
+        --second-skill-color: rgb(42,125,161);
+        --third-skill-color: rgb(255,162,58);
+        --fourth-skill-color: rgb(42,183,99);
         --border-light-white: #e6ecf5;
         --input-search-color: #9a9fbf;
         --input-search-background: #494c62;

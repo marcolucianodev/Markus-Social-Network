@@ -259,7 +259,7 @@ const User1 = () => {
               <SkillProgressBar>
                 <SkillBar 
                   percentAnimation="82" 
-                  skillBarBg="var(--php-skill-color)" 
+                  skillBarBg="var(--first-skill-color)" 
                   skillBarWidth="82%"
                 >
                   <span>PHP</span>
@@ -270,7 +270,7 @@ const User1 = () => {
               <SkillProgressBar>
                 <SkillBar 
                   percentAnimation="86" 
-                  skillBarBg="var(--js-skill-color)" 
+                  skillBarBg="var(--second-skill-color)" 
                   skillBarWidth="86%"
                 >
                   <span>Javascript</span>
@@ -281,7 +281,7 @@ const User1 = () => {
               <SkillProgressBar>
                 <SkillBar 
                   percentAnimation="98" 
-                  skillBarBg="var(--css-skill-color)" 
+                  skillBarBg="var(--third-skill-color)" 
                   skillBarWidth="98%"
                 >
                   <span>CSS</span>
@@ -292,7 +292,7 @@ const User1 = () => {
               <SkillProgressBar>
                 <SkillBar 
                   percentAnimation="100" 
-                  skillBarBg="var(--html-skill-color)" 
+                  skillBarBg="var(--fourth-skill-color)" 
                   skillBarWidth="100%"
                 >
                   <span>HTML</span>
