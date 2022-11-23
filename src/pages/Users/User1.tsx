@@ -37,11 +37,13 @@ import {
   UserMainContent, 
   UserProfileImage, 
   UserSectionTitle, 
-  UserSidebar 
+  UserSidebar, 
+  UserSidebarContent
 } from "./styles";
 
 import UserMenuList from "../../components/UserMenuList";
 
+//menu icons
 import PublicIcon from '@mui/icons-material/Public';
 import InfoIcon from '@mui/icons-material/Info';
 import GradingIcon from '@mui/icons-material/Grading';
@@ -50,6 +52,10 @@ import CommentIcon from '@mui/icons-material/Comment';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ReviewsIcon from '@mui/icons-material/Reviews';
+
+//sidebar icons
+import PersonIcon from '@mui/icons-material/Person';
+import MultipleStopIcon from '@mui/icons-material/MultipleStop';
 
 import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg";
 import portfolioItem1 from "../../components/_assets/img/img-testes/portf-01.jpg";
@@ -84,6 +90,7 @@ import {
 } from "react-icons/fa";
 import Modal from "../../components/Modal";
 import { PortfolioDetails } from "../../components/Modal/styles";
+import { Sidebar, WidgetTitle } from "../../components/Sidebar";
 
 const User1 = () => {
 
@@ -404,7 +411,28 @@ const User1 = () => {
 
         </UserMainContent>
         <UserSidebar>
-          Sidebar
+          <Sidebar>
+            <WidgetTitle><PersonIcon /> <span>Sobre mim</span></WidgetTitle>
+            <UserSidebarContent>
+              <div className="aboutme-user-image">
+                <img src={userImageProfile[0]} alt={userName[0]} />
+              </div>
+              <h2 className="aboutme-username">{userName[0]}</h2>
+              <p className="aboutme-user-job">developer</p>
+              <div className="divider"></div>
+              <p className="aboutme-description">
+                We are a team of developers impassioned about creating quality and distinguished HTML and WordPress templates.
+                Our goal is to combine professional code, preeminent design and user-friendly admin interface in each product. With more than 5 years of experience and about 20 products behind and more than 11k customers, we are full of ideas and energy for new projects and we know how to surprise you.
+              </p>
+            </UserSidebarContent>
+          </Sidebar>
+
+          <Sidebar>
+            <WidgetTitle><MultipleStopIcon /> <span>Contatos</span></WidgetTitle>
+            <UserSidebarContent>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, quaerat? Distinctio reprehenderit alias quam quisquam. Dolor eaque excepturi atque ipsam sapiente unde architecto numquam quisquam doloribus enim suscipit, commodi odit.</p>
+            </UserSidebarContent>
+          </Sidebar>
         </UserSidebar>
       </UserContent>
     </Container>

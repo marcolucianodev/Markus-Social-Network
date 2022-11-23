@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { WidgetTitle } from "../../components/Sidebar";
+import { WidgetUserInfo } from "../../components/WidgetUserInfo";
 
 type UserAuxAttributes = {
 	templateCover?: string,
@@ -485,4 +486,45 @@ export const Service = styled.div`
 export const UserSidebar = styled.aside`
 		display: grid;
 		grid-template-columns: 1fr;
-`
+		gap: 3rem;
+		width: 100%;
+		height: 100vh;
+`;
+
+export const UserSidebarContent = styled(WidgetUserInfo)`
+
+	.aboutme-user-image {
+		display: flex;
+		justify-content: center;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	h2.aboutme-username {
+		text-align: center;
+		padding: 2rem 1rem 0.5rem;
+		color: var(--title-color);
+		font-size: 2rem;
+	}
+
+	p.aboutme-user-job {
+		text-align: center;
+		font-size: 1.6rem;
+	}
+
+	.divider {
+		width: 5rem;
+		height: 0.4rem;
+		background: var(--main-blue);
+		margin: 2rem auto;
+	}
+
+	p.aboutme-description {
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		text-align: center;
+	}
+
+`;

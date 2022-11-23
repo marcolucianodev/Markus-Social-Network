@@ -20,13 +20,7 @@ export const WidgetTitle = styled.h3`
         font-size: 2rem;
     }
 
-    a span {
+    span {
         color: var(--title-color);
-        font-weight: 500;
-        transition: all 0.3s;
-
-        :hover {
-            color: var(--main-color);
-        }
     }
 `;
