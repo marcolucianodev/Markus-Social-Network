@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
         --white-text-color: #FFFFFF;
         --search-button-color: #f75d52;
         --facebookBG: #2f5b9c;
-        --instagranBG: #f74881;
+        --instagramBG: #f74881;
         --twitterBG: #37bff1;
         --first-skill-color: rgb(255,96,58);
         --second-skill-color: rgb(42,125,161);

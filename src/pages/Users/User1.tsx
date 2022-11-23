@@ -428,9 +428,19 @@ const User1 = () => {
           </Sidebar>
 
           <Sidebar>
-            <WidgetTitle><MultipleStopIcon /> <span>Contatos</span></WidgetTitle>
+            <WidgetTitle><MultipleStopIcon /> <span>Redes Sociais</span></WidgetTitle>
             <UserSidebarContent>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, quaerat? Distinctio reprehenderit alias quam quisquam. Dolor eaque excepturi atque ipsam sapiente unde architecto numquam quisquam doloribus enim suscipit, commodi odit.</p>
+              <div className="social-media-boxes">
+                <div className="facebook-box">
+                  <FaFacebookF size="18" /> <span>Facebook</span>
+                </div>
+                <div className="twitter-box">
+                  <FaTwitter size="18" /> <span>Twitter</span>
+                </div>
+                <div className="instagram-box">
+                  <FaInstagram size="18" /> <span>Instagram</span>
+                </div>
+              </div>
             </UserSidebarContent>
           </Sidebar>
         </UserSidebar>

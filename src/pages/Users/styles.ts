@@ -135,7 +135,7 @@ export const HeaderNetwork = styled.div`
 		}
 
 		svg.instagram-icon {
-			background-color: var(--instagranBG);
+			background-color: var(--instagramBG);
 		}
 	}
 
@@ -526,5 +526,47 @@ export const UserSidebarContent = styled(WidgetUserInfo)`
 		line-height: 2.4rem;
 		text-align: center;
 	}
+
+	.social-media-boxes {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		width: 100%;
+	}
+
+	.facebook-box,
+	.twitter-box,
+	.instagram-box {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		padding: 1.5rem;
+		color: var(--white-text-color);
+		border-radius: .2rem;
+		transition: .3s;
+
+		span {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+
+		:hover {
+			opacity: 0.9;
+		}
+	}
+
+	.facebook-box {
+		background-color: var(--facebookBG);
+	}
+
+	.twitter-box {
+		background-color: var(--twitterBG);
+	}
+
+	.instagram-box {
+		background-color: var(--instagramBG);
+	}
+
 
 `;
