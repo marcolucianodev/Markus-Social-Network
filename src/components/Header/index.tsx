@@ -56,15 +56,15 @@ const Header = () => {
             <MenuMobile className={activeMenu ? 'open-menu-mobile' : 'close-menu-mobile'}>
                 <ul className="list-menu">
                     <li><Link to="/"><FeedIcon className="menu-icons" /><span>Feed</span></Link></li>
-                    <li><a href="/"><GradingIcon className="menu-icons" /><span>Atividade</span></a></li>
+                    <li><Link to="/"><GradingIcon className="menu-icons" /><span>Atividade</span></Link></li>
                     <li><Link to="/membros"><PeopleAltIcon className="menu-icons" /><span>Membros</span></Link></li>
                     <li><Link to="/grupos"><GroupsIcon className="menu-icons" /><span>Grupos</span></Link></li>
-                    <li><a href="/"><PhotoLibraryIcon className="menu-icons" /><span>Fotos</span></a></li>
-                    <li><a href="/"><HeadphonesIcon className="menu-icons" /><span>Músicas</span></a></li>
-                    <li><a href="/"><VideoLibraryIcon className="menu-icons" /><span>Vídeos</span></a></li>
-                    <li><a href="/"><EventNoteIcon className="menu-icons" /><span>Eventos</span></a></li>
-                    <li><a href="/"><ForumIcon className="menu-icons" /><span>Fórum</span></a></li>
-                    <li><a href="/"><ShoppingBagIcon className="menu-icons" /><span>Loja</span></a></li>
+                    <li><Link to="/"><PhotoLibraryIcon className="menu-icons" /><span>Fotos</span></Link></li>
+                    <li><Link to="/"><HeadphonesIcon className="menu-icons" /><span>Músicas</span></Link></li>
+                    <li><Link to="/"><VideoLibraryIcon className="menu-icons" /><span>Vídeos</span></Link></li>
+                    <li><Link to="/"><EventNoteIcon className="menu-icons" /><span>Eventos</span></Link></li>
+                    <li><Link to="/"><ForumIcon className="menu-icons" /><span>Fórum</span></Link></li>
+                    <li><Link to="/"><ShoppingBagIcon className="menu-icons" /><span>Loja</span></Link></li>
                 </ul>
             </MenuMobile>
         </HeaderContainer>

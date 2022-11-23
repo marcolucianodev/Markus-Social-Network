@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { Container } from "./styles";
 import  Logo  from "../_assets/img/logo.png";
 
 export const FixedHeader = () => {
     return (
         <Container>
-            <a href="/">
+            <Link to="/">
                 <div className="logo">
                     <img src={Logo} alt="Logo Markus" />
                     <div className="title-box">
@@ -17,7 +19,7 @@ export const FixedHeader = () => {
                         </div>
                     </div>
                 </div>
-            </a>
+            </Link>
         </Container>
     );
 }

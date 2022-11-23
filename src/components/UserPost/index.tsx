@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { FeedUserContent, PostArea, PostText, PostCover, UserHeadline, ActivityAreaPost } from "../FeedPost";
 import CheckIcon from '@mui/icons-material/Check';
 import PublicIcon from '@mui/icons-material/Public';
@@ -30,20 +32,20 @@ export const UserPost = ({
                     <div className="first-headline">
                         <p>
                             <span className="user-name">
-                                <a href="/membros">{userName}
+                                <Link to="/membros">{userName}
                                     <span><CheckIcon className="user-check-icon" /></span>
-                                </a>
+                                </Link>
                             </span>
                             postou no grupo &nbsp;
                             <span className="group-name">
-                                <a href="/">{groupName}</a>
+                                <Link to="/">{groupName}</Link>
                             </span>
                         </p>
                     </div>
                     <div className="second-headline">
                         <PublicIcon className="second-headline-icon" />
                         <span className="activity-year">
-                            <a href="/">{postDate}</a>
+                            {postDate}
                         </span>
                     </div>
                 </div>
@@ -59,9 +61,9 @@ export const UserPost = ({
             <ActivityAreaPost>
                 <div className="activity-area-liked">
                     <div>
-                        <a href="/membros"><img src={imgLikedUser1} alt="" /></a>
-                        <a href="/membros"><img src={imgLikedUser2} alt="" /></a>
-                        <a href="/membros"><img src={imgLikedUser3} alt="" /></a>
+                        <Link to="/membros"><img src={imgLikedUser1} alt="" /></Link>
+                        <Link to="/membros"><img src={imgLikedUser2} alt="" /></Link>
+                        <Link to="/membros"><img src={imgLikedUser3} alt="" /></Link>
                     </div>
                     <div>
                         <span>

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { Container } from "./styles";
 import  Logo  from "../_assets/img/logo.png";
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -11,7 +13,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 export const Footer = () => {
     return (
         <Container>
-            <a href="/" className="link-logo-footer">
+            <Link to="/" className="link-logo-footer">
                 <div className="footer-logo">
                     <img src={Logo} alt="Logo Markus" />
                     <div className="title-box">
@@ -23,26 +25,26 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </a>
+            </Link>
           <div className="footer-description">
             <p>Conecte-se com amigos e o mundo ao seu redor no Markus Social Network.</p>
           </div>
           <div className="footer-social-icons">
-            <a href="/">
+            <Link to="/">
               <FacebookIcon />
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/">
               <TwitterIcon />
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/">
               <PinterestIcon />
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/">
               <YouTubeIcon />
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/">
               <InstagramIcon />
-            </a>
+            </Link>
           </div>
         </Container>
     )

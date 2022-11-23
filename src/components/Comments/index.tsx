@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { CommentsContainer} from "./styles";
 import CheckIcon from '@mui/icons-material/Check';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -10,15 +12,15 @@ export const Comments = ({userImg, userName, postDate, textComment}: CommentsTyp
             <div className="comment-box">
                 <div className="comment-headline">
                     <div className="user-comment-headline-info">
-                        <a href="/membros"><img src={userImg} alt="User Post Img" /></a>
+                        <Link to="/membros"><img src={userImg} alt="User Post Img" /></Link>
                         <span className="post-user-data">
-                            <a href="/membros"><span>{userName}</span></a>
+                            <Link to="/membros"><span>{userName}</span></Link>
                             <span><CheckIcon className="user-check-icon" /></span>
                         </span>
                     </div>
                     <div className="comment-date">
                         <AccessTimeIcon className="acess-time-icon" />
-                        <a href="/"><span>{postDate}</span></a>
+                        <span>{postDate}</span>
                     </div>
                 </div>
                 <div className="comment-text">

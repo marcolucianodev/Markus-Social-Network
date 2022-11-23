@@ -68,15 +68,6 @@ export const SearchActivity = () => {
                     </div>
                 </div>
                 <div className={openSearch ? 'activity-options' : 'activity-options-close'}>
-                    {/* <FormSearch activityInput>
-                    <div className="activity-input-area">
-                        <input type="text" name="search" id="form-search" placeholder="Procurar Atividades..."/>
-                    </div>
-                    <button className="search-button">
-                        <SearchIcon className="icon-search"/>
-                    </button>
-                    </FormSearch> */}
-
                     <FormSearch 
                         placeholderText="Procurar Atividades..."
                     />

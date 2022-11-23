@@ -46,14 +46,10 @@ export const CommentsContainer = styled.div `
             font-size: 1.7rem;
        }
 
-       .comment-date a {
+       .comment-date {
            color: var(--title-color);
            font-size: 1.2rem;
            font-weight: 700;
-
-           :hover {
-                    color: var(--main-color);
-                }
        }
 
     }
