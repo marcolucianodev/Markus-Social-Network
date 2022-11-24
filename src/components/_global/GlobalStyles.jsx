@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import dottedImage from "../_assets/img/dotted-bg.png"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -35,6 +36,16 @@ const GlobalStyle = createGlobalStyle`
         --modal-background: rgba(0, 0, 0, 0.8);
         --bg-dark-opaciy-5: rgba(0,0,0,.5);
         --bg-light-opacity-2: rgba(255, 255, 255, 0.2);
+        --bg-light-opacity-3: rgba(255, 255, 255, 0.3);
+
+        //gradient colors
+        --email-gradient-bg: linear-gradient(to left,#888da8,#08ddc1);
+        --address-gradient-bg: linear-gradient(to left,#888da8,#38a9ff);
+        --website-gradient-bg: linear-gradient(to left,#888da8,#7c5ac2);
+        --phone-gradient-bg: linear-gradient(to left,#888da8,#514A9D);
+
+        //variables backgrounds image
+        --bg-dotted: url(${dottedImage});
     }
 
     * {

@@ -3,6 +3,7 @@ import { UserContext } from "../../contexts/userContext";
 import { GroupContext } from "../../contexts/groupContext";
 import { Link } from "react-router-dom";
 import { 
+  ContactsBox,
   Container, 
   HeaderInfo, 
   HeaderNetwork, 
@@ -31,6 +32,7 @@ import {
   SkillProgressBar, 
   SkillProgressBarContainer, 
   Skills, 
+  UserContacts, 
   UserContent, 
   UserData, 
   UserHeader, 
@@ -88,6 +90,9 @@ import {
   FaCloud,
   FaTasks,
   FaFolderOpen,
+  FaEnvelope,
+  FaRegAddressCard,
+  FaPhone,
 } from "react-icons/fa";
 import Modal from "../../components/Modal";
 import { PortfolioDetails } from "../../components/Modal/styles";
@@ -505,6 +510,85 @@ const User1 = () => {
               />
             </UserSidebarContent>
           </Sidebar>
+
+          <UserContacts>
+            <ContactsBox contactsBg="var(--bg-dotted), var(--email-gradient-bg)">
+              <div className="left">
+                e-mail
+              </div>
+              <div className="right">
+                <FaEnvelope size="20" />
+                <p className="get-link">info@carlos.net</p>
+              </div>
+            </ContactsBox>
+
+            <ContactsBox contactsBg="var(--bg-dotted), var(--address-gradient-bg)">
+              <div className="left">
+                endereço
+              </div>
+              <div className="right">
+                <FaRegAddressCard size="20" />
+                <p>Minas Gerais</p>
+              </div>
+            </ContactsBox>
+
+            <ContactsBox contactsBg="var(--bg-dotted), var(--website-gradient-bg)">
+              <div className="left">
+                website
+              </div>
+              <div className="right">
+                <FaLink size="20" />
+                <p className="get-link">http://crumina.net</p>
+              </div>
+            </ContactsBox>
+
+            <ContactsBox contactsBg="var(--bg-dotted), var(--phone-gradient-bg)">
+              <div className="left">
+                telefone
+              </div>
+              <div className="right">
+                <FaPhone size="20" />
+                <p>(00)99999-9999</p>
+              </div>
+            </ContactsBox>
+
+            {/* <div className="user-email">
+              <div className="left">
+                e-mail
+              </div>
+              <div className="right">
+                <FaEnvelope size="20" />
+                <p className="get-link">info@carlos.net</p>
+              </div>
+            </div>
+            <div className="user-address">
+              <div className="left">
+                endereço
+              </div>
+              <div className="right">
+                <FaRegAddressCard size="20" />
+                <p>Minas Gerais</p>
+              </div>
+            </div>
+            <div className="user-website">
+              <div className="left">
+                website
+              </div>
+              <div className="right">
+                <FaLink size="20" />
+                <p className="get-link">http://crumina.net</p>
+              </div>
+            </div>
+            <div className="user-phone">
+              <div className="left">
+                telefone
+              </div>
+              <div className="right">
+                <FaPhone size="20" />
+                <p>(00)99999-9999</p>
+              </div>
+            </div> */}
+          </UserContacts>
 
         </UserSidebar>
       </UserContent>

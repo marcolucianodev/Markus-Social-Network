@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { WidgetTitle } from "../../components/Sidebar";
+import { Sidebar, WidgetTitle } from "../../components/Sidebar";
 import { WidgetUserInfo } from "../../components/WidgetUserInfo";
 
 type UserAuxAttributes = {
@@ -8,7 +8,8 @@ type UserAuxAttributes = {
 	skillBarBg?: string,
 	skillBarWidth?: string,
 	percentColor?: boolean,
-	coverHeader?: string
+	coverHeader?: string,
+	contactsBg?: string
 }
 
 export const Container = styled.main`
@@ -488,7 +489,7 @@ export const UserSidebar = styled.aside`
 		grid-template-columns: 1fr;
 		gap: 3rem;
 		width: 100%;
-		height: 100vh;
+		/* height: 100vh; */
 `;
 
 export const UserSidebarContent = styled(WidgetUserInfo)`
@@ -567,6 +568,46 @@ export const UserSidebarContent = styled(WidgetUserInfo)`
 	.instagram-box {
 		background-color: var(--instagramBG);
 	}
+`;
 
+export const UserContacts = styled(Sidebar)`
+	padding: 0;
+	color: var(--white-text-color);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1.5rem;
+`;
 
+export const ContactsBox = styled.div<UserAuxAttributes>`
+	display: flex;
+	background: ${props => props.contactsBg};
+	padding: 1.5rem;
+	border-radius: .5rem;
+
+	.left {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+	.right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 2rem;
+		font-size: 1.4rem;
+		width: 100%;
+
+		svg {
+			background-color: var(--bg-light-opacity-3);
+			box-sizing: content-box;
+			padding: .5rem .7rem;
+			border-radius: .5rem;
+		}
+		
+		.get-link {
+			cursor: pointer;
+		}
+	}
 `;
