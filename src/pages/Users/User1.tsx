@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../contexts/userContext";
+import { GroupContext } from "../../contexts/groupContext";
 import { Link } from "react-router-dom";
 import { 
   Container, 
@@ -67,7 +68,7 @@ import portfolioImage2 from "../../components/_assets/img/img-testes/portfolio-i
 import portfolioImage3 from "../../components/_assets/img/img-testes/portfolio-image03.jpg";
 
 import Slider from "../../components/Slider";
-import { UserPropsTypes } from "../../types";
+import { GroupPropsTypes, UserPropsTypes } from "../../types";
 
 import { FcApproval } from "react-icons/fc";
 import { ImLocation } from "react-icons/im";
@@ -91,18 +92,28 @@ import {
 import Modal from "../../components/Modal";
 import { PortfolioDetails } from "../../components/Modal/styles";
 import { Sidebar, WidgetTitle } from "../../components/Sidebar";
+import { MembersInfo } from "../../components/MembersInfo";
+import { GroupsInfo } from "../../components/GroupsInfo";
 
 const User1 = () => {
 
   const [openModal, setOpenModal] = useState(false);
 
-  const { user }: any = useContext(UserContext)
+  const { user }: any = useContext(UserContext);
+  const { group }: any = useContext(GroupContext);
 
-  const userName = user.map((user: UserPropsTypes) => user.name)
-  const userCover = user.map((user: UserPropsTypes) => user.image_cover)
-  const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile)
-  const userRatings = user.map((user: UserPropsTypes) => user.rating)
-  const userTotalRatings = user.map((user: UserPropsTypes) => user.total_ratings)
+  //user properties
+  const userName = user.map((user: UserPropsTypes) => user.name);
+  const userCover = user.map((user: UserPropsTypes) => user.image_cover);
+  const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile);
+  const userRatings = user.map((user: UserPropsTypes) => user.rating);
+  const userTotalRatings = user.map((user: UserPropsTypes) => user.total_ratings);
+  const userNickname = user.map((user: UserPropsTypes) => user.nickname);
+
+  //group properties
+  const groupName = group.map((group: GroupPropsTypes) => group.name);
+  const groupStatus = group.map((group: GroupPropsTypes) => group.group_type);
+  const groupImage = group.map((group: GroupPropsTypes) => group.image_group);
 
   const handleModal = () => {
     setOpenModal(!openModal)
@@ -443,6 +454,58 @@ const User1 = () => {
               </div>
             </UserSidebarContent>
           </Sidebar>
+
+          <Sidebar>
+            <WidgetTitle><PeopleOutlineIcon /> <span>Amigos</span></WidgetTitle>
+            <UserSidebarContent>
+              <MembersInfo 
+                image_profile={userImageProfile[3]}
+                name={userName[3]} 
+                hasNick
+                nickname={userNickname[3]}
+              />
+              <MembersInfo 
+                image_profile={userImageProfile[2]}
+                name={userName[2]} 
+                hasNick
+                nickname={userNickname[2]}
+              />
+              <MembersInfo 
+                image_profile={userImageProfile[1]}
+                name={userName[1]} 
+                hasNick
+                nickname={userNickname[1]}
+              />
+              <MembersInfo 
+                image_profile={userImageProfile[4]}
+                name={userName[4]} 
+                hasNick
+                nickname={userNickname[4]}
+              /> 
+            </UserSidebarContent>
+          </Sidebar>
+
+          <Sidebar>
+            <WidgetTitle><GroupsIcon /> <span>Grupos</span></WidgetTitle>
+            <UserSidebarContent>
+              <GroupsInfo 
+                group_name={groupName[3]}
+                image_group={groupImage[3]}
+                status_group={groupStatus[3]}
+              />
+              <GroupsInfo 
+                group_name={groupName[0]}
+                image_group={groupImage[0]}
+                status_group={groupStatus[0]}
+              />
+              <GroupsInfo 
+                group_name={groupName[1]}
+                image_group={groupImage[1]}
+                status_group={groupStatus[1]}
+              />
+            </UserSidebarContent>
+          </Sidebar>
+
         </UserSidebar>
       </UserContent>
     </Container>

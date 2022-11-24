@@ -5,7 +5,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import { HeadlineMembersInfo } from "../WidgetUserInfo";
 import { MembersInfoTypes } from "../../types";
 
-export const MembersInfo = ({name, image_profile, notDisplay, postDate}: MembersInfoTypes) => {
+export const MembersInfo = ({name, image_profile, notDisplay, postDate, hasNick, nickname}: MembersInfoTypes) => {
     return (
         <HeadlineMembersInfo>
             <Link to="/membros">
@@ -22,9 +22,11 @@ export const MembersInfo = ({name, image_profile, notDisplay, postDate}: Members
                     </p>
                 </div>
                 <div className="second-headline">
-                    <span className="activity-year">
-                        {postDate}
-                    </span>
+                    {hasNick ?
+                    <span className="nickname">{nickname}</span> 
+                    :
+                    <span className="activity-year">{postDate}</span>
+                    }
                 </div>
             </div>
         </HeadlineMembersInfo> 

@@ -66,5 +66,13 @@ export type MembersInfoTypes = {
     name: string,
     image_profile: string,
     notDisplay?: boolean,
-    postDate: string
+    postDate?: string,
+    nickname?: string,
+    hasNick?: boolean
+}
+
+export type GroupsInfoTypes = {
+    image_group: string,
+    group_name: string,
+    status_group: string
 }
