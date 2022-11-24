@@ -93,16 +93,20 @@ import {
   FaEnvelope,
   FaRegAddressCard,
   FaPhone,
+  FaTimes,
+  FaBars,
 } from "react-icons/fa";
 import Modal from "../../components/Modal";
 import { PortfolioDetails } from "../../components/Modal/styles";
 import { Sidebar, WidgetTitle } from "../../components/Sidebar";
 import { MembersInfo } from "../../components/MembersInfo";
 import { GroupsInfo } from "../../components/GroupsInfo";
+import { UserMenuListMobile, UserMenuMobile } from "../../components/UserMenuList/styles";
 
 const User1 = () => {
 
   const [openModal, setOpenModal] = useState(false);
+  const [openMenu, setOpenMenu] = useState(true);
 
   const { user }: any = useContext(UserContext);
   const { group }: any = useContext(GroupContext);
@@ -124,43 +128,55 @@ const User1 = () => {
     setOpenModal(!openModal)
   }
 
+  const handleActiveMenu = () => {
+    setOpenMenu(!openMenu)
+  }
+
   const itemList = [
     {
+      id: 1,
       nameItem: 'Visão Geral',
       urlMenu: '/user1',
       iconItem: <PublicIcon />
     },
     {
+      id: 2,
       nameItem: 'Sobre',
       urlMenu: '/user2',
       iconItem: <InfoIcon />
     },
     {
+      id: 3,
       nameItem: 'Atividade',
       urlMenu: '/user2',
       iconItem: <GradingIcon />
     },
     {
+      id: 4,
       nameItem: 'Posts',
       urlMenu: '/user2',
       iconItem: <DynamicFeedIcon />
     },
     {
+      id: 5,
       nameItem: 'Comentários',
       urlMenu: '/user2',
       iconItem: <CommentIcon />
     },
     {
+      id: 6,
       nameItem: 'Amizades',
       urlMenu: '/user2',
       iconItem: <PeopleOutlineIcon />
     },
     {
+      id: 7,
       nameItem: 'Grupos',
       urlMenu: '/user2',
       iconItem: <GroupsIcon />
     },
     {
+      id: 8,
       nameItem: 'Avaliações',
       urlMenu: '/user2',
       iconItem: <ReviewsIcon />
@@ -194,10 +210,12 @@ const User1 = () => {
                     <FaStar color="var(--main-yellow)" size="18" />
                     <FaStar size="18" />
                   </span>
-                  <span className="bullet-separator">•</span>
-                  <span>{userRatings[0]} de 5</span>
-                  <span className="bullet-separator">•</span>
-                  <span>{userTotalRatings[0]} classificações</span>
+                  <span className="bullet-separator first-bullet">•</span>
+                  <div className="ratings-info">
+                    <span>{userRatings[0]} de 5</span>
+                    <span className="bullet-separator">•</span>
+                    <span>{userTotalRatings[0]} classificações</span>
+                  </div>
                 </div>
               </div>
             </UserInfo>
@@ -235,6 +253,22 @@ const User1 = () => {
           </Link>
         ))} 
       />
+
+      <UserMenuListMobile>
+        <UserMenuMobile>
+          <span className="close-user-menu-mobile">{openMenu ? <FaBars size="24" onClick={handleActiveMenu} /> : <FaTimes  size="24" onClick={handleActiveMenu} />}</span>
+          <ul className={openMenu ? "user-menu-list-closed" : "user-menu-list"}>
+            {itemList.map((item) => (
+                <li key={item.id}>
+                  <Link to={item.urlMenu}>
+                    <span className="user-menu-icon">{item.iconItem}</span>
+                    <span>{item.nameItem}</span>
+                  </Link>
+                </li>
+            ))}
+          </ul>
+        </UserMenuMobile>
+      </UserMenuListMobile>
       
       <UserContent>
         <UserMainContent>
@@ -551,43 +585,6 @@ const User1 = () => {
                 <p>(00)99999-9999</p>
               </div>
             </ContactsBox>
-
-            {/* <div className="user-email">
-              <div className="left">
-                e-mail
-              </div>
-              <div className="right">
-                <FaEnvelope size="20" />
-                <p className="get-link">info@carlos.net</p>
-              </div>
-            </div>
-            <div className="user-address">
-              <div className="left">
-                endereço
-              </div>
-              <div className="right">
-                <FaRegAddressCard size="20" />
-                <p>Minas Gerais</p>
-              </div>
-            </div>
-            <div className="user-website">
-              <div className="left">
-                website
-              </div>
-              <div className="right">
-                <FaLink size="20" />
-                <p className="get-link">http://crumina.net</p>
-              </div>
-            </div>
-            <div className="user-phone">
-              <div className="left">
-                telefone
-              </div>
-              <div className="right">
-                <FaPhone size="20" />
-                <p>(00)99999-9999</p>
-              </div>
-            </div> */}
           </UserContacts>
 
         </UserSidebar>

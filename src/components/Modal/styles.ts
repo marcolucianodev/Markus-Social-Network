@@ -20,6 +20,10 @@ export const PortfolioDetails = styled.div`
 
     img {
         max-height: 50rem;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
     }
     
     .portfolio-description {
@@ -35,5 +39,9 @@ export const PortfolioDetails = styled.div`
         svg {
             cursor: pointer;
         }
+    }
+
+    @media(max-width: 768px) {
+        max-width: 90%;
     }
 `;

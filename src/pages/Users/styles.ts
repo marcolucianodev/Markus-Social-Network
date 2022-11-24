@@ -16,6 +16,10 @@ export const Container = styled.main`
 	display: grid;
 	grid-template-columns: 1fr;
 	width: 100%;
+
+	@media(max-width: 768px) {
+		margin-top: 0 !important;
+	}
 `
 export const UserHeader = styled.header<UserAuxAttributes>`
 	display: grid;
@@ -34,10 +38,27 @@ export const HeaderInfo = styled.section`
 	bottom: 0;
 	width: 100%;
 	padding: 0 3%;
+
+	@media(max-width: 768px) {
+		bottom: auto;
+		right: auto;
+		left: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: inherit;
+		padding: 1.5rem 0;
+	}
 `;
 
 export const UserData = styled.div`
 	display: flex;
+
+	@media(max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
 `;
 
 export const UserProfileImage = styled.div`
@@ -51,6 +72,17 @@ export const UserProfileImage = styled.div`
 
 	img {
 		border-radius: 50%;
+
+		@media(max-width: 768px) {
+			width: 12.4rem;
+		}
+	}
+
+	@media(max-width: 768px) {
+		position: static;
+		width: 13rem;
+		height: 13rem;
+		border: 3px solid transparent;
 	}
 `;
 
@@ -62,6 +94,11 @@ export const UserInfo = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 1.2rem;
+
+	@media(max-width: 768px) {
+		align-items: center;
+		padding-left: 0px;
+	}
 
 	.name {
 		display: flex;
@@ -87,6 +124,10 @@ export const UserInfo = styled.div`
 				font-weight: 600;
 				text-transform: uppercase;
 			}
+
+			@media(max-width: 768px) {
+				order: 2;
+			}
 		}
 
 		.user-meta-right {
@@ -94,8 +135,29 @@ export const UserInfo = styled.div`
 			align-items: center;
 			gap: 0.5rem;
 			text-transform: uppercase;
+
+			.ratings-info {
+				display: flex;
+				gap: .5rem;
+			}
+
+			@media(max-width: 768px) {
+				flex-direction: column;
+				order: 1;
+
+				span.bullet-separator.first-bullet {
+					display: none;
+				}
+			}
+		}
+
+		@media(max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
 		}
 	}
+
 `;
 
 export const HeaderNetwork = styled.div`
@@ -103,12 +165,20 @@ export const HeaderNetwork = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 3rem 3%;
-
+	
 	.header-network-content {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
 		padding-left: 18.5rem;
+
+		@media(max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+			align-items: center;
+			padding-left: 0;
+			gap: 2.5rem;
+		}
 	}
 
 	.social-networks {
@@ -176,6 +246,10 @@ export const UserContent = styled.article`
 	background-color: var(--main-background-content);
 	color: var(--text-color);
 	gap: 3rem;
+
+	@media(max-width: 800px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
 export const UserMainContent = styled.section`
@@ -204,6 +278,10 @@ export const ProjectContent = styled.div`
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+
+	@media(max-width: 768px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
 export const ProjectTemplate = styled.div<UserAuxAttributes>`
@@ -212,6 +290,10 @@ export const ProjectTemplate = styled.div<UserAuxAttributes>`
 	background-size: cover;
 	height: auto;
 	width: 100%;
+
+	@media(max-width: 768px) {
+		height: 30rem;
+	}
 `;
 
 export const ProjectInfo = styled.div`
@@ -440,6 +522,10 @@ export const ServicesContent = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	padding: 3.5rem 3.5rem 0;
+
+	@media(max-width: 768px) {
+		grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+	}
 `;
 
 export const Service = styled.div`
@@ -533,6 +619,11 @@ export const UserSidebarContent = styled(WidgetUserInfo)`
 		flex-direction: column;
 		gap: 1rem;
 		width: 100%;
+
+		@media(max-width: 768px) {
+			width: 50%;
+			margin: 0 auto;
+		}
 	}
 
 	.facebook-box,
@@ -577,6 +668,7 @@ export const UserContacts = styled(Sidebar)`
 	flex-direction: column;
 	width: 100%;
 	gap: 1.5rem;
+	background-color: transparent;
 `;
 
 export const ContactsBox = styled.div<UserAuxAttributes>`
