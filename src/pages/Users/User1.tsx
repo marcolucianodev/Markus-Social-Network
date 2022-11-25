@@ -44,21 +44,11 @@ import {
   UserSidebarContent
 } from "./styles";
 
-import UserMenuList from "../../components/UserMenuList";
-
-//menu icons
-import PublicIcon from '@mui/icons-material/Public';
-import InfoIcon from '@mui/icons-material/Info';
-import GradingIcon from '@mui/icons-material/Grading';
-import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
-import CommentIcon from '@mui/icons-material/Comment';
-import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
-import GroupsIcon from '@mui/icons-material/Groups';
-import ReviewsIcon from '@mui/icons-material/Reviews';
-
 //sidebar icons
 import PersonIcon from '@mui/icons-material/Person';
 import MultipleStopIcon from '@mui/icons-material/MultipleStop';
+import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg";
 import portfolioItem1 from "../../components/_assets/img/img-testes/portf-01.jpg";
@@ -101,7 +91,9 @@ import { PortfolioDetails } from "../../components/Modal/styles";
 import { Sidebar, WidgetTitle } from "../../components/Sidebar";
 import { MembersInfo } from "../../components/MembersInfo";
 import { GroupsInfo } from "../../components/GroupsInfo";
-import { UserMenuListMobile, UserMenuMobile } from "../../components/UserMenuList/styles";
+import { List, MenuList, UserMenu, UserMenuContainer, UserMenuListMobile, UserMenuMobile } from "../../components/UserMenuList/styles";
+
+import { menuItem } from "../../config/menuItem";
 
 const User1 = () => {
 
@@ -131,57 +123,6 @@ const User1 = () => {
   const handleActiveMenu = () => {
     setOpenMenu(!openMenu)
   }
-
-  const itemList = [
-    {
-      id: 1,
-      nameItem: 'Visão Geral',
-      urlMenu: '/user1',
-      iconItem: <PublicIcon />
-    },
-    {
-      id: 2,
-      nameItem: 'Sobre',
-      urlMenu: '/user2',
-      iconItem: <InfoIcon />
-    },
-    {
-      id: 3,
-      nameItem: 'Atividade',
-      urlMenu: '/user2',
-      iconItem: <GradingIcon />
-    },
-    {
-      id: 4,
-      nameItem: 'Posts',
-      urlMenu: '/user2',
-      iconItem: <DynamicFeedIcon />
-    },
-    {
-      id: 5,
-      nameItem: 'Comentários',
-      urlMenu: '/user2',
-      iconItem: <CommentIcon />
-    },
-    {
-      id: 6,
-      nameItem: 'Amizades',
-      urlMenu: '/user2',
-      iconItem: <PeopleOutlineIcon />
-    },
-    {
-      id: 7,
-      nameItem: 'Grupos',
-      urlMenu: '/user2',
-      iconItem: <GroupsIcon />
-    },
-    {
-      id: 8,
-      nameItem: 'Avaliações',
-      urlMenu: '/user2',
-      iconItem: <ReviewsIcon />
-    }
-  ]
 
   return (
     <Container style={{marginTop:'70px'}}>
@@ -246,25 +187,34 @@ const User1 = () => {
         </div>
       </HeaderNetwork>
       
-      <UserMenuList itemList={itemList.map((item) => (
-          <Link to={item.urlMenu}>
-            <span className="user-menu-icon">{item.iconItem}</span>
-            <span>{item.nameItem}</span>
-          </Link>
-        ))} 
-      />
+      <UserMenuContainer>
+        <UserMenu>
+          <MenuList>
+            {menuItem.map((item) => (
+              <List  key={item.id}>
+                <Link to={item.urlMenu}>
+                  <span className="user-menu-icon">{item.iconItem}</span>
+                  <span>{item.nameItem}</span>
+                </Link>
+              </List>
+            ))}
+          </MenuList>
+        </UserMenu>
+      </UserMenuContainer>
+
+      {/* Menu Mobile */}
 
       <UserMenuListMobile>
         <UserMenuMobile>
           <span className="close-user-menu-mobile">{openMenu ? <FaBars size="24" onClick={handleActiveMenu} /> : <FaTimes  size="24" onClick={handleActiveMenu} />}</span>
           <ul className={openMenu ? "user-menu-list-closed" : "user-menu-list"}>
-            {itemList.map((item) => (
-                <li key={item.id}>
-                  <Link to={item.urlMenu}>
-                    <span className="user-menu-icon">{item.iconItem}</span>
-                    <span>{item.nameItem}</span>
-                  </Link>
-                </li>
+            {menuItem.map((item) => (
+              <li key={item.id}>
+                <Link to={item.urlMenu}>
+                  <span className="user-menu-icon">{item.iconItem}</span>
+                  <span>{item.nameItem}</span>
+                </Link>
+              </li>
             ))}
           </ul>
         </UserMenuMobile>

@@ -114,10 +114,6 @@ export const UserMenuMobile = styled(UserMenu)`
           color: var(--main-color);
         }
 
-        :first-child {
-          border-left: 1px solid var(--border-light-white);
-        }
-
         span.user-menu-icon svg {
           font-size: 2.5rem;
         }
