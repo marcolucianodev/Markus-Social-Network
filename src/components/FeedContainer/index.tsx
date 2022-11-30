@@ -21,16 +21,17 @@ const FeedContainer = () => {
     const { user }: any = useContext(UserContext);
     const { group }: any = useContext(GroupContext)
 
-    //Constantes for users data
+    //Constants for users data
+    const userId = user.map((user: UserPropsTypes) => user.id)
     const userName = user.map((user: UserPropsTypes) => user.name);
-    const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile);
-    const userImageCover = user.map((user: UserPropsTypes) => user.image_cover);
-    const userPostImage = user.map((user: UserPropsTypes) => user.post_image);
-    //End Constantes user data
+    const userImageProfile = user.map((user: UserPropsTypes) => user.images.profile);
+    const userImageCover = user.map((user: UserPropsTypes) => user.images.cover);
+    const userPostImage = user.map((user: UserPropsTypes) => user.images.post_image);
+    //End Constants user data
 
-    //Constantes for group data
+    //Constants for group data
     const groupName = group.map((group: GroupPropsTypes) => group.name);
-    //End Constantes group data
+    //End Constants group data
 
     const [openSearchMobile, setOpenSearchMobile] = useState(false);
 
@@ -103,15 +104,18 @@ const FeedContainer = () => {
             <div className="feed-content-container">
               <FeedPost>
                   <NewFriendNotice 
+                    userId={userId[0]}
                     imgProfile={userImageProfile[0]} 
                     altTitle={userName[0]}
-                    userName={userName[0]} 
+                    userName={userName[0]}
+                    friendId={userId[3]} 
                     friend={userName[3]}
                     imgUserCover={userImageCover[3]}
                     imgFriendsProfile={userImageProfile[3]}
                     postDate="Ontem"
                   />
                   <UserPost 
+                    userId={userId[2]}
                     imgProfile={userImageProfile[2]} 
                     userName={userName[2]} 
                     groupName={groupName[0]}
@@ -120,15 +124,20 @@ const FeedContainer = () => {
                     imgLikedUser1={userImageProfile[0]}
                     imgLikedUser2={userImageProfile[1]}
                     imgLikedUser3={userImageProfile[6]} 
+                    userLiked1={userId[0]}
+                    userLiked2={userId[1]}
+                    userLiked3={userId[6]}
                     postDate="10 dias atrás"
                     commentsNumber="2 comentários"
                     comment={<Comments 
+                      id={userId[0]}
                       userImg={userImageProfile[0]} 
                       userName={userName[0]} 
                       postDate="8 dias atrás" 
                       textComment="Muito lindo 😍"  
                     />}
                     comment2={<Comments 
+                      id={userId[6]}
                       userImg={userImageProfile[6]} 
                       userName={userName[6]} 
                       postDate="5 dias atrás" 
@@ -136,6 +145,7 @@ const FeedContainer = () => {
                     />}
                   />
                   <UserPost 
+                    userId={userId[4]}
                     imgProfile={userImageProfile[4]}
                     userName={userName[4]} 
                     groupName={groupName[5]}
@@ -144,15 +154,20 @@ const FeedContainer = () => {
                     imgLikedUser1={userImageProfile[3]}
                     imgLikedUser2={userImageProfile[2]}
                     imgLikedUser3={userImageProfile[6]} 
+                    userLiked1={userId[3]}
+                    userLiked2={userId[2]}
+                    userLiked3={userId[6]}
                     postDate="1 mês atrás"
                     commentsNumber="2 comentários"
                     comment={<Comments 
+                      id={userId[2]}
                       userImg={userImageProfile[2]} 
                       userName={userName[2]} 
                       postDate="1 mês atrás" 
                       textComment="Melhor série!!!"  
                     />}
                     comment2={<Comments 
+                      id={userId[1]}
                       userImg={userImageProfile[1]} 
                       userName={userName[1]} 
                       postDate="20 dias atrás" 
@@ -160,6 +175,7 @@ const FeedContainer = () => {
                     />}
                   />
                   <UserPost 
+                    userId={userId[6]}
                     imgProfile={userImageProfile[6]}
                     userName={userName[6]} 
                     groupName={groupName[2]}
@@ -168,9 +184,13 @@ const FeedContainer = () => {
                     imgLikedUser1={userImageProfile[3]}
                     imgLikedUser2={userImageProfile[5]}
                     imgLikedUser3={userImageProfile[0]} 
+                    userLiked1={userId[3]}
+                    userLiked2={userId[5]}
+                    userLiked3={userId[0]}
                     postDate="3 meses atrás"
                     commentsNumber="1 comentário"
                     comment={<Comments 
+                      id={userId[5]}
                       userImg={userImageProfile[5]} 
                       userName={userName[5]} 
                       postDate="3 meses atrás" 
@@ -178,8 +198,10 @@ const FeedContainer = () => {
                     />}
                   />
                   <NewFriendNotice 
+                    userId={userId[5]}
                     imgProfile={userImageProfile[5]} 
                     userName={userName[5]}
+                    friendId={userId[2]}
                     friend={userName[2]} 
                     imgUserCover={userImageCover[2]}
                     imgFriendsProfile={userImageProfile[2]}

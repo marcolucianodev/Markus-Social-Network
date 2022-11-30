@@ -20,19 +20,23 @@ export const UserPost = ({
     imgProfile,
     postDate,
     textPost,
-    userName
+    userName,
+    userId,
+    userLiked1,
+    userLiked2,
+    userLiked3
 }: UserPostTypes) => {
     return (
         <FeedUserContent className="posted-notice-container">
             <UserHeadline>
                 <div className="user-headline-image">
-                    <img src={imgProfile} alt="Img Profile" />
+                    <Link to={`/users/${userId}`}><img src={imgProfile} alt="Img Profile" /></Link>
                 </div>
                 <div className="user-headline-info">
                     <div className="first-headline">
                         <p>
                             <span className="user-name">
-                                <Link to="/membros">{userName}
+                                <Link to={`/users/${userId}`}>{userName}
                                     <span><CheckIcon className="user-check-icon" /></span>
                                 </Link>
                             </span>
@@ -61,9 +65,9 @@ export const UserPost = ({
             <ActivityAreaPost>
                 <div className="activity-area-liked">
                     <div>
-                        <Link to="/membros"><img src={imgLikedUser1} alt="" /></Link>
-                        <Link to="/membros"><img src={imgLikedUser2} alt="" /></Link>
-                        <Link to="/membros"><img src={imgLikedUser3} alt="" /></Link>
+                        <Link to={`/users/${userLiked1}`}><img src={imgLikedUser1} alt="" /></Link>
+                        <Link to={`/users/${userLiked2}`}><img src={imgLikedUser2} alt="" /></Link>
+                        <Link to={`/users/${userLiked3}`}><img src={imgLikedUser3} alt="" /></Link>
                     </div>
                     <div>
                         <span>

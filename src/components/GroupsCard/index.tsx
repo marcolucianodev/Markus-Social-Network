@@ -8,7 +8,14 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import LockIcon from '@mui/icons-material/Lock';
 import { GroupPropsTypes } from "../../types";
 
-const GroupsCard = ({image_cover, image_group, name, group_type, isPrivate, id}: GroupPropsTypes) => {
+const GroupsCard = ({
+  image_cover, 
+  imageGroup, 
+  name, 
+  group_type, 
+  isPrivate, 
+  id
+}: GroupPropsTypes) => {
 
   return (
     <Container key={id}>
@@ -16,7 +23,7 @@ const GroupsCard = ({image_cover, image_group, name, group_type, isPrivate, id}:
         <img src={image_cover} alt="Group Cover" />
       </div>
       <div className="group-profile-image">
-        <Link to="/grupos"><img src={image_group} alt="Group Profile" /></Link>
+        <Link to="/grupos"><img src={imageGroup} alt="Group Profile" /></Link>
       </div>
       <div className="group-info">
         <div className="info-group-name">

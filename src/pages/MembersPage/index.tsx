@@ -138,13 +138,14 @@ const MembersPage = () => {
                     {user.map((user: UserPropsTypes) => {
                         return (
                             <MembersCard 
+                                id={user.id}
                                 key={user.id}
-                                image_cover={user.image_cover}
-                                image_profile={user.image_profile}
+                                image_cover={user.images.cover}
+                                image_profile={user.images.profile}
                                 name={user.name}
                                 nickname={user.nickname}
-                                rating={user.rating}
-                                total_ratings={user.total_ratings}
+                                rating={user.classification.rating}
+                                total_ratings={user.classification.totalRatings}
                             />
                         )
                     })}

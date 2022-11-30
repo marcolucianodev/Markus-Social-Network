@@ -24,7 +24,7 @@ import {
   ProjectTemplate, 
   ProjectTitle, 
   ProjectType, 
-  Service, 
+  // Service, 
   Services, 
   ServicesContent, 
   SkillBar, 
@@ -104,6 +104,7 @@ const User1 = () => {
   const { group }: any = useContext(GroupContext);
 
   //user properties
+  const userId = user.map((user: UserPropsTypes) => user.id);
   const userName = user.map((user: UserPropsTypes) => user.name);
   const userCover = user.map((user: UserPropsTypes) => user.image_cover);
   const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile);
@@ -114,7 +115,7 @@ const User1 = () => {
   //group properties
   const groupName = group.map((group: GroupPropsTypes) => group.name);
   const groupStatus = group.map((group: GroupPropsTypes) => group.group_type);
-  const groupImage = group.map((group: GroupPropsTypes) => group.image_group);
+  const groupImage = group.map((group: GroupPropsTypes) => group.imageGroup);
 
   const handleModal = () => {
     setOpenModal(!openModal)
@@ -223,7 +224,11 @@ const User1 = () => {
       <UserContent>
         <UserMainContent>
 
-          <Slider />
+          <Slider
+            imgSlider1="xxx"
+            imgSlider2="xxx2"
+            imgSlider3="xxx3"
+          />
 
           <Project>
            <UserSectionTitle><FaFolderOpen /> Projetos</UserSectionTitle>
@@ -373,7 +378,7 @@ const User1 = () => {
           <Services>
             <UserSectionTitle><FaWrench /> Serviços</UserSectionTitle>
             <ServicesContent>
-              <Service>
+              {/* <Service>
                 <div className="service-icon">
                   <FaWordpressSimple size="26" />
                 </div>
@@ -405,7 +410,7 @@ const User1 = () => {
                 <div className="service-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro?
                 </div>
-              </Service>
+              </Service> */}
             </ServicesContent>
           </Services>
 
@@ -448,24 +453,28 @@ const User1 = () => {
             <WidgetTitle><PeopleOutlineIcon /> <span>Amigos</span></WidgetTitle>
             <UserSidebarContent>
               <MembersInfo 
+                id={userId[3]}
                 image_profile={userImageProfile[3]}
                 name={userName[3]} 
                 hasNick
                 nickname={userNickname[3]}
               />
               <MembersInfo 
+                id={userId[2]}
                 image_profile={userImageProfile[2]}
                 name={userName[2]} 
                 hasNick
                 nickname={userNickname[2]}
               />
               <MembersInfo 
+                id={userId[1]}
                 image_profile={userImageProfile[1]}
                 name={userName[1]} 
                 hasNick
                 nickname={userNickname[1]}
               />
               <MembersInfo 
+                id={userId[4]}
                 image_profile={userImageProfile[4]}
                 name={userName[4]} 
                 hasNick

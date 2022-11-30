@@ -12,9 +12,10 @@ import {
 import imgSlider1 from "../../components/_assets/img/img-testes/slider-1.jpg"
 import imgSlider2 from "../../components/_assets/img/img-testes/slider-2.jpg"
 import imgSlider3 from "../../components/_assets/img/img-testes/slider-3.jpg";
+import { SliderTypes } from "../../types";
 
 
-const Slider = () => {
+const Slider = ({imgSlider1, imgSlider2, imgSlider3}: SliderTypes) => {
   return (
     <SliderContainer>
 

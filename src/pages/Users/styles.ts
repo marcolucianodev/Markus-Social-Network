@@ -424,7 +424,8 @@ export const SkillBar = styled.div<UserAuxAttributes>`
 
 	@keyframes skillbar {
 		0% {
-			transform: translateX(-${props => props.percentAnimation}%);
+			/* transform: translateX(-${props => props.percentAnimation}%); */
+			transform: translateX(-100%);
 		}
 
 		100% {
@@ -528,43 +529,43 @@ export const ServicesContent = styled.div`
 	}
 `;
 
-export const Service = styled.div`
-	width: auto;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10px;
-	padding: 20px;
+// export const Service = styled.div`
+// 	width: auto;
+// 	height: auto;
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	gap: 10px;
+// 	padding: 20px;
 
-	.service-icon {
-		padding: 2.5rem 3rem;
-		background: var(--main-background-content);
-		border-radius: 50%;
-		transition: all ease 0.5s;
+// 	.service-icon {
+// 		padding: 2.5rem 3rem;
+// 		background: var(--main-background-content);
+// 		border-radius: 50%;
+// 		transition: all ease 0.5s;
 
-		:hover {
-			background-color: var(--search-button-color);
+// 		:hover {
+// 			background-color: var(--search-button-color);
 
-			> svg {
-				color: var(--white-text-color);
-			}
-		}
-	}
+// 			> svg {
+// 				color: var(--white-text-color);
+// 			}
+// 		}
+// 	}
 
-	.service-title {
-		font-size: 1.5rem;
-		color: var(--title-color);
-		font-weight: 700;
-	}
+// 	.service-title {
+// 		font-size: 1.5rem;
+// 		color: var(--title-color);
+// 		font-weight: 700;
+// 	}
 
-	.service-description {
-		font-size: 1.3rem;
-		line-height: 2.4rem;
-		text-align: center;
-	}	
+// 	.service-description {
+// 		font-size: 1.3rem;
+// 		line-height: 2.4rem;
+// 		text-align: center;
+// 	}	
 
-`;
+// `;
 
 //FIM Services área
 

@@ -8,22 +8,26 @@ export type UserPropsTypes = {
     image_profile?: string,
     image_cover?: string,
     post_image?: string | boolean,
+
+    images?: any,
+    classification?: any
 }
 
 export type GroupPropsTypes = {
     id: number,
     name: string,
-    image_group: string,
+    imageGroup: string,
     group_type: string,
     image_cover: string,
     isPrivate: boolean
 }
 
 export type CommentsTypes = {
+    id?: number,
     userImg: string,
     postDate: string,
     userName: string,
-    textComment: string
+    textComment: string,
 }
 
 export type CounterViewsTypes = {
@@ -38,6 +42,8 @@ export type MainBannerProps = {
 }
 
 export type NewFriendNoticeProps = {
+    userId?: number,
+    friendId?: number,
     imgProfile: string,
     userName: string,
     imgUserCover: string,
@@ -48,6 +54,7 @@ export type NewFriendNoticeProps = {
 }
 
 export type UserPostTypes = {
+    userId?: number,
     imgProfile: string,
     userName: string,
     groupName: string,
@@ -60,9 +67,13 @@ export type UserPostTypes = {
     commentsNumber: string,
     comment?: JSX.Element,
     comment2?: JSX.Element,
+    userLiked1?: number,
+    userLiked2?: number,
+    userLiked3?: number
 }
 
 export type MembersInfoTypes = {
+    id: number,
     name: string,
     image_profile: string,
     notDisplay?: boolean,
@@ -75,4 +86,10 @@ export type GroupsInfoTypes = {
     image_group: string,
     group_name: string,
     status_group: string
+}
+
+export type SliderTypes = {
+    imgSlider1: string,
+    imgSlider2: string,
+    imgSlider3: string
 }

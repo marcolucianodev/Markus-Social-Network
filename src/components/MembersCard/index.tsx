@@ -14,18 +14,18 @@ import { UserPropsTypes } from '../../types';
 
 
 
-const MembersCard = ({image_cover, image_profile, name, nickname, rating, total_ratings}: UserPropsTypes) => {
+const MembersCard = ({id, image_cover, image_profile, name, nickname, rating, total_ratings}: UserPropsTypes) => {
     return (
         <Container>
             <div className="member-cover-image">
               <img src={image_cover} alt="Member Cover" />
             </div>
             <div className="member-profile-image">
-              <Link to="/membros"><img src={image_profile} alt="Member Profile" /></Link>
+              <Link to={`/users/${id}`}><img src={image_profile} alt="Member Profile" /></Link>
             </div>
             <div className="member-info">
               <div className="info-user-name">
-                  <Link to="/membros">
+                  <Link to={`/users/${id}`}>
                     <span className="user-name">
                         {name}
                     </span>

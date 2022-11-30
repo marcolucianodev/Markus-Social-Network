@@ -1,21 +1,36 @@
 import React, { createContext, useEffect, useState } from "react";
-import axios from "axios";
+import api_url from "../config/config";
 
 export const GroupContext = createContext([]);
 
 export const GroupProvider = ({children}) => {
 
-  const path_json = '/fake_API/data.json'
 
   const [group, setGroup] = useState([])
 
-  useEffect(() => {
-    const getGroup = async () => {
-      const response = await axios.get(path_json);
-      setGroup(response.data.group)
+  // const path_json = '/fake_API/data.json'
+
+  // useEffect(() => {
+  //   const getGroup = async () => {
+  //     const response = await axios.get(path_json);
+  //     setGroup(response.data.group)
+  //   }
+  //   getGroup();
+  // }, []);
+
+  const getGroups = async () => {
+    try {
+      const response = await api_url.get("/groups");
+      const data = response.data
+      setGroup(data)
+    } catch (error) {
+      console.log(error)
     }
-    getGroup();
-  }, []);
+  }
+
+  useEffect(() => {
+    getGroups();
+  })
 
   return (
     <GroupContext.Provider value={{group}}>

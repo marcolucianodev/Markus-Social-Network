@@ -6,11 +6,21 @@ import PublicIcon from '@mui/icons-material/Public';
 import CheckIcon from '@mui/icons-material/Check';
 import { NewFriendNoticeProps } from "../../types";
 
-export const NewFriendNotice = ({altTitle, friend, imgFriendsProfile, postDate, imgProfile, imgUserCover, userName}: NewFriendNoticeProps) => {
+export const NewFriendNotice = ({
+    userId, 
+    friendId, 
+    altTitle, 
+    friend, 
+    imgFriendsProfile, 
+    postDate, 
+    imgProfile, 
+    imgUserCover, 
+    userName
+}: NewFriendNoticeProps) => {
     return (
         <FeedUserContent>
             <UserHeadline>
-                <Link to="/membros">
+                <Link to={`/users/${userId}`}>
                     <div className="user-headline-image">
                         <img src={imgProfile} alt={`Usuário ${altTitle}`} />
                     </div>
@@ -19,11 +29,11 @@ export const NewFriendNotice = ({altTitle, friend, imgFriendsProfile, postDate, 
                     <div className="first-headline">
                         <p>
                             <span className="user-name">
-                                <Link to="/membros">{userName} <span><CheckIcon className="user-check-icon" /></span></Link>
+                                <Link to={`/users/${userId}`}>{userName} <span><CheckIcon className="user-check-icon" /></span></Link>
                             </span>
                              e &nbsp;
                             <span className="user-friend">
-                                <Link to="/membros">{friend}
+                                <Link to={`/users/${friendId}`}>{friend}
                                 <span><CheckIcon className="user-check-icon" /></span>
                                 </Link>
                             </span>
@@ -33,7 +43,7 @@ export const NewFriendNotice = ({altTitle, friend, imgFriendsProfile, postDate, 
                     <div className="second-headline">
                         <PublicIcon className="second-headline-icon" />
                         <span className="activity-year">
-                            <Link to="/">{postDate}</Link>
+                            {postDate}
                         </span>
                     </div>
                 </div>
@@ -43,11 +53,11 @@ export const NewFriendNotice = ({altTitle, friend, imgFriendsProfile, postDate, 
             </UserCover>
             <UserInfo>
                     <div className="user-friends-profile">
-                        <Link to="/membros"><img src={imgFriendsProfile} alt="Img Friends Profile" /></Link>
+                        <Link to={`/users/${friendId}`}><img src={imgFriendsProfile} alt="Img Friends Profile" /></Link>
                     </div>
                     <div className="user-friend-headline">
                         <span className="user-friend">
-                            <Link to="/membros">{friend}</Link>
+                            <Link to={`/users/${friendId}`}>{friend}</Link>
                         </span>
                         <span className="nickname">
                             @{friend}

@@ -20,13 +20,17 @@ export const Aside = () => {
     const { group }: any = useContext(GroupContext);
 
     //Constantes for users data
-    const userName = user.map((user: UserPropsTypes) => user.name)
-    const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile);
+    const userId = user.map((user: UserPropsTypes) => user.id)
+    const userName = user.map((user: UserPropsTypes) => user.name)    
+    const userImageProfile = user.map((user: UserPropsTypes) => (
+      user.images.profile
+    ))
     //End Constantes user data
 
     //Constantes for group data
+    const groupId = group.map((group: GroupPropsTypes) => group.id)
     const groupName = group.map((group: GroupPropsTypes) => group.name);
-    const groupImage = group.map((group: GroupPropsTypes) => group.image_group);
+    const groupImage = group.map((group: GroupPropsTypes) => group.imageGroup);
     //End Constantes group data
 
     const navigate = useNavigate();
@@ -57,26 +61,31 @@ export const Aside = () => {
                       </UserStatus>
                     </div>
                     <MembersInfo 
+                      id={userId}
                       image_profile={userImageProfile[0]}
                       name={userName[0]} 
                       postDate="2 meses atrás"
                     />
                      <MembersInfo 
+                      id={userId[1]}
                       image_profile={userImageProfile[1]}
                       name={userName[1]} 
                       postDate="3 meses atrás"
                     />     
                     <MembersInfo 
+                      id={userId[2]}
                       image_profile={userImageProfile[2]}
                       name={userName[2]}
                       postDate="3 meses atrás"
                     />     
                     <MembersInfo 
+                      id={userId[3]}
                       image_profile={userImageProfile[3]}
                       name={userName[3]} 
                       postDate="1 mês atrás"
                     />    
                      <MembersInfo 
+                      id={userId[4]}
                       image_profile={userImageProfile[4]}
                       name={userName[4]} 
                       postDate="1 mês atrás"
@@ -102,22 +111,25 @@ export const Aside = () => {
                         </UserStatus>
                       </div>
                       <MembersInfo 
-                      image_profile={groupImage[0]}
-                      name={groupName[0]} 
-                      postDate="Ativo 2 meses atrás" 
-                      notDisplay
+                        id={groupId[0]}
+                        image_profile={groupImage[0]}
+                        name={groupName[0]} 
+                        postDate="Ativo 2 meses atrás" 
+                        notDisplay
                       />
                        <MembersInfo 
-                      image_profile={groupImage[2]}
-                      name={groupName[2]} 
-                      postDate="Ativo 3 meses atrás" 
-                      notDisplay
+                        id={groupId[2]}
+                        image_profile={groupImage[2]}
+                        name={groupName[2]} 
+                        postDate="Ativo 3 meses atrás" 
+                        notDisplay
                       />
                        <MembersInfo 
-                      image_profile={groupImage[5]}
-                      name={groupName[5]} 
-                      postDate="Ativo 1 mês atrás" 
-                      notDisplay
+                        id={groupId[5]}
+                        image_profile={groupImage[5]}
+                        name={groupName[5]} 
+                        postDate="Ativo 1 mês atrás" 
+                        notDisplay
                       />
                   </WidgetUserInfo>
                   <AsideButton onClick={handleGroupButton}>Ver todos os grupos</AsideButton>

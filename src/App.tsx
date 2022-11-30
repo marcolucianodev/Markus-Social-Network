@@ -19,7 +19,6 @@ const App = () => {
           <MainRoutes />
           <Footer />
         </MainContainer>
-
       <GlobalStyle />
     </div>
   );

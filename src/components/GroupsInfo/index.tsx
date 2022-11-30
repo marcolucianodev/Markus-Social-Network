@@ -6,7 +6,11 @@ import { HeadlineGroupInfo } from "./styles";
 import PublicIcon from '@mui/icons-material/Public';
 import { GroupsInfoTypes } from "../../types";
 
-export const GroupsInfo = ({image_group, group_name, status_group}: GroupsInfoTypes) => {
+export const GroupsInfo = ({
+    image_group, 
+    group_name, 
+    status_group
+}: GroupsInfoTypes) => {
     return (
         <HeadlineGroupInfo>
             <Link to="/grupos">

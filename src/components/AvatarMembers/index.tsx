@@ -13,8 +13,8 @@ export const AvatarMembers = () => {
             {user.map((user: UserPropsTypes) => {
                 return (
                     <div className="avatar-item" key={user.id}>
-                        <Link to={`/user/${user.id}`} title={user.name}>
-                            <img src={user.image_profile} alt={user.name} />
+                        <Link to={`/users/${user.id}`} title={user.name}>
+                            <img src={user.images.profile} alt={user.name} />
                         </Link>
                     </div>
                 )
