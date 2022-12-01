@@ -8,7 +8,7 @@
       "address": "Minas Gerais/MG",
       "website": "http://carlos.net",
       "phone": "(01)99999-9999",
-      "job": "developer",
+      "job": "Developer",
       "textAbout": "We are a team of developers impassioned about creating quality and distinguished HTML and WordPress templates. Our goal is to combine professional code, preeminent design and user-friendly admin interface in each product. With more than 5 years of experience and about 20 products behind and more than 11k customers, we are full of ideas and energy for new projects and we know how to surprise you.",
       "classification": {
         "rating": "4.6",
@@ -19,45 +19,45 @@
         "totComments": 21,
         "totViews": "103K"
       },
-      "services": {
-        "serv1": {
+      "services": [
+        {
           "servTitle": "Temas WordPress",
           "servDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro.",
           "servIcon": "/fake_API/images/users-images/user-id-1/servIcon-1.png"
         },
-        "serv2": {
+        {
           "servTitle": "Templates HTML",
           "servDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro.",
           "servIcon": "/fake_API/images/users-images/user-id-1/servIcon-2.png"
         },
-        "serv3": {
+        {
           "servTitle": "Desenvolvimento de Plugins",
           "servDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro.",
           "servIcon": "/fake_API/images/users-images/user-id-1/servIcon-3.png"
         }
-      },
-      "friendship": {
-        "friend1": {
-          "name": "Thalles",
-          "nickname": "@thalles",
-          "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
-        },
-        "friend2": {
-          "name": "Michelle",
-          "nickname": "@michelle",
-          "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg"
-        },
-        "friend3": {
-          "name": "Daniel",
-          "nickname": "@daniel",
-          "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
-        },
-        "friend4": {
-          "name": "Cíntia",
-          "nickname": "@cintia",
-          "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
-        }
-      },
+      ],
+      "friendship": [
+          {
+            "name": "Thalles",
+            "nickname": "@thalles",
+            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
+          },
+          {
+            "name": "Michelle",
+            "nickname": "@michelle",
+            "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg"
+          },
+          {
+            "name": "Daniel",
+            "nickname": "@daniel",
+            "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
+          },
+          {
+            "name": "Cíntia",
+            "nickname": "@cintia",
+            "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
+          }
+      ],
       "activeGroups": {
         "group1": {
           "name": "Portal de Músicas",
@@ -84,18 +84,20 @@
       "images": {
         "profile": "/fake_API/images/users-images/user-id-1/user-1.jpg",
         "cover": "/fake_API/images/users-images/user-id-1/user-cover-1.jpg",
-        "portfolio": {
-          "portfolioCover": {
-            "portfCover1": "/fake_API/images/users-images/user-id-1/portfolio-1.jpg",
-            "portfCover2": "/fake_API/images/users-images/user-id-1/portfolio-2.jpg",
-            "portfCover3": "/fake_API/images/users-images/user-id-1/portfolio-3.jpg"
+        "portfolio": [
+          {
+            "cover": "/fake_API/images/users-images/user-id-1/portfolio-1.jpg",
+            "detail": "/fake_API/images/users-images/user-id-1/portfolio-detail-1.jpg"
           },
-          "portfolioDetail": {
-            "portfDetail1": "/fake_API/images/users-images/user-id-1/portfolio-detail-1.jpg",
-            "portfDetail2": "/fake_API/images/users-images/user-id-1/portfolio-detail-2.jpg",
-            "portfDetail3": "/fake_API/images/users-images/user-id-1/portfolio-detail-3.jpg"
+          {
+            "cover": "/fake_API/images/users-images/user-id-1/portfolio-2.jpg",
+            "detail": "/fake_API/images/users-images/user-id-1/portfolio-detail-2.jpg"
+          },
+          {
+            "cover": "/fake_API/images/users-images/user-id-1/portfolio-3.jpg",
+            "detail": "/fake_API/images/users-images/user-id-1/portfolio-detail-3.jpg"
           }
-        },
+        ],
         "slider": {
           "sliderImage1": "/fake_API/images/users-images/user-id-1/slider-1.jpg",
           "sliderImage2": "/fake_API/images/users-images/user-id-1/slider-2.jpg",
@@ -130,7 +132,7 @@
       "address": "Rio de Janeiro/RJ",
       "website": "http://daniel.net",
       "phone": "(02)99999-9999",
-      "job": "developer",
+      "job": "Developer",
       "textAbout": "We are a team of developers impassioned about creating quality and distinguished HTML and WordPress templates. Our goal is to combine professional code, preeminent design and user-friendly admin interface in each product. With more than 5 years of experience and about 20 products behind and more than 11k customers, we are full of ideas and energy for new projects and we know how to surprise you.",
       "classification": {
         "rating": "4.5",
@@ -141,40 +143,40 @@
         "totComments": 0,
         "totViews": "34.7K"
       },
-      "services": {
-        "serv1": {
+      "services": [
+        {
           "servTitle": "E-commerces",
           "servDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro.",
           "servIcon": "/fake_API/images/users-images/user-id-2/servIcon-1.png"
         },
-        "serv2": {
+        {
           "servTitle": "Landing Pages",
           "servDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro.",
           "servIcon": "/fake_API/images/users-images/user-id-2/servIcon-2.png"
         },
-        "serv3": {
+        {
           "servTitle": "Sistemas Web",
           "servDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus autem saepe, eaque officia animi laudantium beatae necessitatibus eius quae sint, distinctio consectetur fuga alias, optio nostrum quas atque tempora porro.",
           "servIcon": "/fake_API/images/users-images/user-id-2/servIcon-3.png"
         }
-      },
-      "friendship": {
-        "friend1": {
+      ],
+      "friendship": [
+        {
           "name": "Carlos",
           "nickname": "@carlos",
           "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg"
         },
-        "friend2": {
+        {
           "name": "Antônio",
           "nickname": "@antonio",
           "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg"
         },
-        "friend3": {
+        {
           "name": "Cíntia",
           "nickname": "@cintia",
           "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
         }
-      },
+      ],
       "activeGroups": {
         "group1": {
           "name": "Idéias de Web Design",
@@ -201,18 +203,20 @@
       "images": {
         "profile": "/fake_API/images/users-images/user-id-2/user-2.jpg",
         "cover": "/fake_API/images/users-images/user-id-2/user-cover-2.jpeg",
-        "portfolio": {
-          "portfolioCover": {
-            "portfCover1": "/fake_API/images/users-images/user-id-2/portfolio-1.png",
-            "portfCover2": "/fake_API/images/users-images/user-id-2/portfolio-2.jpg",
-            "portfCover3": "/fake_API/images/users-images/user-id-2/portfolio-3.jpg"
+        "portfolio": [
+          {
+            "cover": "/fake_API/images/users-images/user-id-2/portfolio-1.png",
+            "detail": "/fake_API/images/users-images/user-id-2/portfolio-detail-1.jpg"
           },
-          "portfolioDetail": {
-            "portfDetail1": "/fake_API/images/users-images/user-id-2/portfolio-detail-1.jpg",
-            "portfDetail2": "/fake_API/images/users-images/user-id-2/portfolio-detail-2.jpg",
-            "portfDetail3": "/fake_API/images/users-images/user-id-2/portfolio-detail-3.jpg"
+          {
+            "cover": "/fake_API/images/users-images/user-id-2/portfolio-2.jpg",
+            "detail": "/fake_API/images/users-images/user-id-2/portfolio-detail-2.jpg"
+          },
+          {
+            "cover": "/fake_API/images/users-images/user-id-2/portfolio-3.jpg",
+            "detail": "/fake_API/images/users-images/user-id-2/portfolio-detail-3.jpg"
           }
-        },
+        ],
         "slider": {
           "sliderImage1": "/fake_API/images/users-images/user-id-2/slider-1.jpg",
           "sliderImage2": "/fake_API/images/users-images/user-id-2/slider-2.jpg",
@@ -258,45 +262,45 @@
         "totComments": 2,
         "totViews": "48.6K"
       },
-      "services": {
-        "serv1": {
+      "services": [
+        {
           "servTitle": "Designer UI/UX",
           "servDesc": "Integer cursus dui eget auctor pellentesque malesuada.",
           "servIcon": "/fake_API/images/users-images/user-id-3/servIcon-1.png"
         },
-        "serv2": {
+        {
           "servTitle": "Livros Ilustrados",
           "servDesc": "Sed in mi pretium neque pulvinar malesuada. Nulla facilisi.",
           "servIcon": "/fake_API/images/users-images/user-id-3/servIcon-2.png"
         },
-        "serv3": {
+        {
           "servTitle": "Designer de Logotipos",
           "servDesc": "Aliquam a elit vitae lacus pharetra fermentum in ut ligula sodales nibh.",
           "servIcon": "/fake_API/images/users-images/user-id-3/servIcon-3.png"
         }
-      },
-      "friendship": {
-        "friend1": {
+      ],
+      "friendship": [
+        {
           "name": "Thalles",
           "nickname": "@thalles",
           "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
         },
-        "friend2": {
+        {
           "name": "Carlos",
           "nickname": "@carlos",
           "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg"
         },
-        "friend3": {
+        {
           "name": "Antônio",
           "nickname": "@antonio",
           "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg"
         },
-        "friend4": {
+        {
           "name": "Ricardo",
           "nickname": "@ricardo",
           "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg"
         }
-      },
+      ],
       "activeGroups": {
         "group1": {
           "name": "Portal de Músicas",
@@ -323,18 +327,20 @@
       "images": {
         "profile": "/fake_API/images/users-images/user-id-3/user-3.jpg",
         "cover": "/fake_API/images/users-images/user-id-3/user-cover-3.png",
-        "portfolio": {
-          "portfolioCover": {
-            "portfCover1": "/fake_API/images/users-images/user-id-3/portfolio-1.jpg",
-            "portfCover2": "/fake_API/images/users-images/user-id-3/portfolio-2.jpg",
-            "portfCover3": "/fake_API/images/users-images/user-id-3/portfolio-3.jpg"
+        "portfolio": [
+          {
+            "cover": "/fake_API/images/users-images/user-id-3/portfolio-1.jpg",
+            "detail": "/fake_API/images/users-images/user-id-3/portfolio-detail-1.jpg"
           },
-          "portfolioDetail": {
-            "portfDetail1": "/fake_API/images/users-images/user-id-3/portfolio-detail-1.jpg",
-            "portfDetail2": "/fake_API/images/users-images/user-id-3/portfolio-detail-2.jpg",
-            "portfDetail3": "/fake_API/images/users-images/user-id-3/portfolio-detail-3.jpg"
+          {
+            "cover": "/fake_API/images/users-images/user-id-3/portfolio-2.jpg",
+            "detail": "/fake_API/images/users-images/user-id-3/portfolio-detail-2.jpg"
+          },
+          {
+            "cover": "/fake_API/images/users-images/user-id-3/portfolio-3.jpg",
+            "detail": "/fake_API/images/users-images/user-id-3/portfolio-detail-3.jpg"
           }
-        },
+        ],
         "slider": {
           "sliderImage1": "/fake_API/images/users-images/user-id-3/slider-1.jpg",
           "sliderImage2": "/fake_API/images/users-images/user-id-3/slider-2.jpg",
@@ -380,45 +386,45 @@
         "totComments": 0,
         "totViews": "48.6K"
       },
-      "services": {
-        "serv1": {
+      "services": [
+        {
           "servTitle": "Landing Pages",
           "servDesc": "Aenean consectetur ac quam et fringilla. Curabitur at vehicula massa.",
           "servIcon": "/fake_API/images/users-images/user-id-4/servIcon-1.png"
         },
-        "serv2": {
+        {
           "servTitle": "Design de Logotipo",
           "servDesc": "Etiam convallis, diam vitae vulputate feugiat, mi dolor aliquet augue, in egestas justo magna a neque.",
           "servIcon": "/fake_API/images/users-images/user-id-4/servIcon-2.png"
         },
-        "serv3": {
+        {
           "servTitle": "Web Designer",
           "servDesc": "Nulla commodo velit at velit interdum accumsan. Curabitur mi nisi, ultrices a accumsan a, scelerisque a velit.",
           "servIcon": "/fake_API/images/users-images/user-id-4/servIcon-3.png"
         }
-      },
-      "friendship": {
-        "friend1": {
+      ],
+      "friendship": [
+        {
           "name": "Carlos",
           "nickname": "@carlos",
           "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg"
         },
-        "friend2": {
+        {
           "name": "Antônio",
           "nickname": "@antonio",
           "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg"
         },
-        "friend3": {
+        {
           "name": "Ricardo",
           "nickname": "@ricardo",
           "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg"
         },
-        "friend4": {
+        {
           "name": "Cíntia",
           "nickname": "@cintia",
           "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
         }
-      },
+      ],
       "activeGroups": {
         "group1": {
           "name": "Portal de Músicas",
@@ -445,18 +451,20 @@
       "images": {
         "profile": "/fake_API/images/users-images/user-id-4/user-4.jpg",
         "cover": "/fake_API/images/users-images/user-id-4/user-cover-4.jpg",
-        "portfolio": {
-          "portfolioCover": {
-            "portfCover1": "/fake_API/images/users-images/user-id-4/portfolio-1.jpg",
-            "portfCover2": "/fake_API/images/users-images/user-id-4/portfolio-2.jpg",
-            "portfCover3": "/fake_API/images/users-images/user-id-4/portfolio-3.jpg"
+        "portfolio": [
+          {
+            "cover": "/fake_API/images/users-images/user-id-4/portfolio-1.jpg",
+            "detail": "/fake_API/images/users-images/user-id-4/portfolio-detail-1.jpg"
           },
-          "portfolioDetail": {
-            "portfDetail1": "/fake_API/images/users-images/user-id-4/portfolio-detail-1.jpg",
-            "portfDetail2": "/fake_API/images/users-images/user-id-4/portfolio-detail-2.jpg",
-            "portfDetail3": "/fake_API/images/users-images/user-id-4/portfolio-detail-3.jpg"
+          {
+            "cover": "/fake_API/images/users-images/user-id-4/portfolio-2.jpg",
+            "detail": "/fake_API/images/users-images/user-id-4/portfolio-detail-2.jpg"
+          },
+          {
+            "cover": "/fake_API/images/users-images/user-id-4/portfolio-3.jpg",
+            "detail": "/fake_API/images/users-images/user-id-4/portfolio-detail-3.jpg"
           }
-        },
+        ],
         "slider": {
           "sliderImage1": "/fake_API/images/users-images/user-id-4/slider-1.jpg",
           "sliderImage2": "/fake_API/images/users-images/user-id-4/slider-2.jpg",
@@ -502,50 +510,50 @@
         "totComments": 25,
         "totViews": "55.2K"
       },
-      "services": {
-        "serv1": {
+      "services": [
+        {
           "servTitle": "Fotografia de Alimentos",
           "servDesc": "Morbi dignissim nunc gravida vulputate luctus.",
           "servIcon": "/fake_API/images/users-images/user-id-5/servIcon-1.png"
         },
-        "serv2": {
+        {
           "servTitle": "Fotografia de Produtos",
           "servDesc": "Praesent pretium mauris ac lorem egestas, vel pretium.",
           "servIcon": "/fake_API/images/users-images/user-id-5/servIcon-2.png"
         },
-        "serv3": {
+        {
           "servTitle": "Fotografia de Casamentos",
           "servDesc": "Sed vitae augue vel quam mattis bibendum.",
           "servIcon": "/fake_API/images/users-images/user-id-5/servIcon-3.png"
         }
-      },
-      "friendship": {
-        "friend1": {
+      ],
+      "friendship": [
+        {
           "name": "Antônio",
           "nickname": "@antonio",
           "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg"
         },
-        "friend2": {
+        {
           "name": "Thalles",
           "nickname": "@thalles",
           "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
         },
-        "friend3": {
+        {
           "name": "Ricardo",
           "nickname": "@ricardo",
           "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg"
         },
-        "friend4": {
+        {
           "name": "Carlos",
           "nickname": "@carlos",
           "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg"
         },
-        "friend5": {
+        {
           "name": "Daniel",
           "nickname": "@daniel",
           "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
         }
-      },
+      ],
       "activeGroups": {
         "group1": {
           "name": "Rotas de Trilhas",
@@ -572,18 +580,20 @@
       "images": {
         "profile": "/fake_API/images/users-images/user-id-5/user-5.jpg",
         "cover": "/fake_API/images/users-images/user-id-5/user-cover-5.jpg",
-        "portfolio": {
-          "portfolioCover": {
-            "portfCover1": "/fake_API/images/users-images/user-id-5/portfolio-1.jpg",
-            "portfCover2": "/fake_API/images/users-images/user-id-5/portfolio-2.jpg",
-            "portfCover3": "/fake_API/images/users-images/user-id-5/portfolio-3.jpg"
+        "portfolio": [
+          {
+            "cover": "/fake_API/images/users-images/user-id-5/portfolio-1.jpg",
+            "detail": "/fake_API/images/users-images/user-id-5/portfolio-detail-1.jpg"
           },
-          "portfolioDetail": {
-            "portfDetail1": "/fake_API/images/users-images/user-id-5/portfolio-detail-1.jpg",
-            "portfDetail2": "/fake_API/images/users-images/user-id-5/portfolio-detail-2.jpg",
-            "portfDetail3": "/fake_API/images/users-images/user-id-5/portfolio-detail-3.jpg"
+          {
+            "cover": "/fake_API/images/users-images/user-id-5/portfolio-2.jpg",
+            "detail": "/fake_API/images/users-images/user-id-5/portfolio-detail-2.jpg"
+          },
+          {
+            "cover": "/fake_API/images/users-images/user-id-5/portfolio-3.jpg",
+            "detail": "/fake_API/images/users-images/user-id-5/portfolio-detail-3.jpg"
           }
-        },
+        ],
         "slider": {
           "sliderImage1": "/fake_API/images/users-images/user-id-5/slider-1.jpg",
           "sliderImage2": "/fake_API/images/users-images/user-id-5/slider-2.jpeg",
@@ -629,45 +639,45 @@
         "totComments": 8,
         "totViews": "46.3K"
       },
-      "services": {
-        "serv1": {
+      "services": [
+        {
           "servTitle": "Mockups e Esboços de Design",
           "servDesc": "Ut sollicitudin blandit elit, ut fringilla massa suscipit a. Sed in consequat purus. Nullam ut egestas purus. Mauris posuere odio sit amet justo tincidunt, et faucibus justo ultrices",
           "servIcon": "/fake_API/images/users-images/user-id-6/servIcon-1.png"
         },
-        "serv2": {
+        {
           "servTitle": "Design de Landing Pages",
           "servDesc": "Curabitur pretium sodales lorem eget cursus. Nulla commodo velit at velit interdum accumsan. Curabitur mi nisi, ultrices a accumsan a, scelerisque a velit. Sed erat leo, commodo id ultrices in, venenatis at felis.",
           "servIcon": "/fake_API/images/users-images/user-id-6/servIcon-2.png"
         },
-        "serv3": {
+        {
           "servTitle": "Web Designer",
           "servDesc": "Duis nibh lacus, efficitur vel nisi et, ultrices malesuada lacus. Vivamus vitae pulvinar nisi. Nulla fringilla nisl sit amet ligula tincidunt, sit amet semper tortor gravida.",
           "servIcon": "/fake_API/images/users-images/user-id-6/servIcon-3.png"
         }
-      },
-      "friendship": {
-        "friend1": {
+      ],
+      "friendship": [
+        {
           "name": "Cíntia",
           "nickname": "@cintia",
           "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
         },
-        "friend2": {
+        {
           "name": "Thalles",
           "nickname": "@thalles",
           "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
         },
-        "friend3": {
+        {
           "name": "Daniel",
           "nickname": "@daniel",
           "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
         },
-        "friend4": {
+        {
           "name": "Michelle",
           "nickname": "@michelle",
           "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg"
         }
-      },
+      ],
       "activeGroups": {
         "group1": {
           "name": "Rotas de Trilhas",
@@ -684,18 +694,20 @@
       "images": {
         "profile": "/fake_API/images/users-images/user-id-6/user-6.jpg",
         "cover": "/fake_API/images/users-images/user-id-6/user-cover-6.jpeg",
-        "portfolio": {
-          "portfolioCover": {
-            "portfCover1": "/fake_API/images/users-images/user-id-6/portfolio-1.jpg",
-            "portfCover2": "/fake_API/images/users-images/user-id-6/portfolio-2.jpg",
-            "portfCover3": "/fake_API/images/users-images/user-id-6/portfolio-3.jpg"
+        "portfolio": [
+          {
+            "cover": "/fake_API/images/users-images/user-id-6/portfolio-1.jpg",
+            "detail": "/fake_API/images/users-images/user-id-6/portfolio-detail-1.jpg"
           },
-          "portfolioDetail": {
-            "portfDetail1": "/fake_API/images/users-images/user-id-6/portfolio-detail-1.jpg",
-            "portfDetail2": "/fake_API/images/users-images/user-id-6/portfolio-detail-2.jpg",
-            "portfDetail3": "/fake_API/images/users-images/user-id-6/portfolio-detail-3.jpg"
+          {
+            "cover": "/fake_API/images/users-images/user-id-6/portfolio-2.jpg",
+            "detail": "/fake_API/images/users-images/user-id-6/portfolio-detail-2.jpg"
+          },
+          {
+            "cover": "/fake_API/images/users-images/user-id-6/portfolio-3.jpg",
+            "detail": "/fake_API/images/users-images/user-id-6/portfolio-detail-3.jpg"
           }
-        },
+        ],
         "slider": {
           "sliderImage1": "/fake_API/images/users-images/user-id-6/slider-1.jpg",
           "sliderImage2": "/fake_API/images/users-images/user-id-6/slider-2.jpeg",
@@ -741,40 +753,40 @@
         "totComments": 12,
         "totViews": "40.4K"
       },
-      "services": {
-        "serv1": {
+      "services": [
+        {
           "servTitle": "Retrato",
           "servDesc": "Sed vitae augue vel quam mattis bibendum.",
           "servIcon": "/fake_API/images/users-images/user-id-7/servIcon-1.png"
         },
-        "serv2": {
+        {
           "servTitle": "Grafite",
           "servDesc": "Donec rhoncus est ipsum, vitae venenatis turpis.",
           "servIcon": "/fake_API/images/users-images/user-id-7/servIcon-2.png"
         },
-        "serv3": {
+        {
           "servTitle": "Pedidos Personalizados",
           "servDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "servIcon": "/fake_API/images/users-images/user-id-7/servIcon-3.png"
         }
-      },
-      "friendship": {
-        "friend1": {
+      ],
+      "friendship": [
+        {
           "name": "Michelle",
           "nickname": "@michelle",
           "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg"
         },
-        "friend2": {
+        {
           "name": "Thalles",
           "nickname": "@thalles",
           "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
         },
-        "friend3": {
+        {
           "name": "Daniel",
           "nickname": "@daniel",
           "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
         }
-      },
+      ],
       "activeGroups": {
         "group1": {
           "name": "Portal de Músicas",
@@ -801,18 +813,20 @@
       "images": {
         "profile": "/fake_API/images/users-images/user-id-7/user-7.jpg",
         "cover": "/fake_API/images/users-images/user-id-7/user-cover-7.jpeg",
-        "portfolio": {
-          "portfolioCover": {
-            "portfCover1": "/fake_API/images/users-images/user-id-7/portfolio-1.jpg",
-            "portfCover2": "/fake_API/images/users-images/user-id-7/portfolio-2.jpg",
-            "portfCover3": "/fake_API/images/users-images/user-id-7/portfolio-3.jpg"
+        "portfolio": [
+          {
+            "cover": "/fake_API/images/users-images/user-id-7/portfolio-1.jpg",
+            "detail": "/fake_API/images/users-images/user-id-7/portfolio-detail-1.jpg"
           },
-          "portfolioDetail": {
-            "portfDetail1": "/fake_API/images/users-images/user-id-7/portfolio-detail-1.jpg",
-            "portfDetail2": "/fake_API/images/users-images/user-id-7/portfolio-detail-2.jpg",
-            "portfDetail3": "/fake_API/images/users-images/user-id-7/portfolio-detail-3.jpg"
+          {
+            "cover": "/fake_API/images/users-images/user-id-7/portfolio-2.jpg",
+            "detail": "/fake_API/images/users-images/user-id-7/portfolio-detail-2.jpg"
+          },
+          {
+            "cover": "/fake_API/images/users-images/user-id-7/portfolio-3.jpg",
+            "detail": "/fake_API/images/users-images/user-id-7/portfolio-detail-3.jpg"
           }
-        },
+        ],
         "slider": {
           "sliderImage1": "/fake_API/images/users-images/user-id-7/slider-1.jpg",
           "sliderImage2": "/fake_API/images/users-images/user-id-7/slider-2.jpg",

@@ -10,7 +10,7 @@ export const MembersInfo = ({id, name, image_profile, notDisplay, postDate, hasN
         <HeadlineMembersInfo>
             <Link to={`/users/${id}`}>
                 <div className="user-headline-image">
-                    <img src={image_profile} alt="Img Profile" />
+                    <img src={image_profile} alt={name} />
                 </div>
             </Link>
             <div className="user-headline-info">

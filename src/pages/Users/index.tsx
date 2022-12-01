@@ -110,83 +110,6 @@ const User1 = () => {
   const { user }: any = useContext(UserContext);
   const { group }: any = useContext(GroupContext);
 
-
-const getUsers = async () => {
-    try {
-        const response = await api_url.get(`/users/${id}`)
-        const data = response.data
-
-        const {name, nickname, images, classification, address, activity, project, skills, services} = data;
-
-        const userList: any = {
-            id,
-            name,
-            nickname,
-            imageProfile: images.profile,
-            imageCover: images.cover,
-            rating: classification.rating,
-            totalRatings: classification.totalRatings,
-            address,
-            totPost: activity.totPosts,
-            totComments: activity.totComments,
-            totViews: activity.totViews,
-            slider1: images.slider.sliderImage1,
-            slider2: images.slider.sliderImage2,
-            slider3: images.slider.sliderImage3,
-            featuredProject: project.projectImage,
-            projectName: project.projectName,
-            projectUrl: project.projectUrl,
-            projectDesc: project.projectDesc,
-            skill1Name: skills.skill1.nameSkill,
-            skill2Name: skills.skill2.nameSkill,
-            skill3Name: skills.skill3.nameSkill,
-            skill4Name: skills.skill4.nameSkill,
-            skill1Percent: skills.skill1.percentSkill,
-            skill2Percent: skills.skill2.percentSkill,
-            skill3Percent: skills.skill3.percentSkill,
-            skill4Percent: skills.skill4.percentSkill,
-            portfCover1: images.portfolio.portfolioCover.portfCover1,
-            portfCover2: images.portfolio.portfolioCover.portfCover2,
-            portfCover3: images.portfolio.portfolioCover.portfCover3,
-            portfDetail1: images.portfolio.portfolioDetail.portfDetail1,
-            portfDetail2: images.portfolio.portfolioDetail.portfDetail2,
-            portfDetail3: images.portfolio.portfolioDetail.portfDetail3,
-            serviceTitle1: services.serv1.servTitle,
-            serviceTitle2: services.serv2.servTitle,
-            serviceTitle3: services.serv3.servTitle,
-            serviceDesc1: services.serv1.servDesc,
-            serviceDesc2: services.serv2.servDesc,
-            serviceDesc3: services.serv3.servDesc,
-            serviceIcon1: services.serv1.servIcon,
-            serviceIcon2: services.serv2.servIcon,
-            serviceIcon3: services.serv3.servIcon
-        }
-
-        setUserList(userList)
-
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-  useEffect(() => {
-    getUsers();
-  }, [id])
-
-  //user properties
-  const userId = user.map((user: UserPropsTypes) => user.id);
-  const userName = user.map((user: UserPropsTypes) => user.name);
-  const userCover = user.map((user: UserPropsTypes) => user.image_cover);
-  const userImageProfile = user.map((user: UserPropsTypes) => user.image_profile);
-  const userRatings = user.map((user: UserPropsTypes) => user.rating);
-  const userTotalRatings = user.map((user: UserPropsTypes) => user.total_ratings);
-  const userNickname = user.map((user: UserPropsTypes) => user.nickname);
-
-  //group properties
-  const groupName = group.map((group: GroupPropsTypes) => group.name);
-  const groupStatus = group.map((group: GroupPropsTypes) => group.group_type);
-  const groupImage = group.map((group: GroupPropsTypes) => group.imageGroup);
-
   const handleModal = () => {
     setOpenModal(!openModal)
   }
@@ -194,6 +117,137 @@ const getUsers = async () => {
   const handleActiveMenu = () => {
     setOpenMenu(!openMenu)
   }
+
+  const getUsers = async () => {
+      try {
+          const response = await api_url.get(`/users/${id}`)
+          const data = response.data
+
+          const {name, nickname, images, classification, address, activity, project, skills, services, job, email, website, phone, textAbout, friendship} = data;
+
+          const userList: any = {
+              id,
+              name,
+              nickname,
+              address,
+              job,
+              email,
+              website,
+              phone,
+              textAbout,
+              imageProfile: images.profile,
+              imageCover: images.cover,
+              rating: classification.rating,
+              totalRatings: classification.totalRatings,
+              totPost: activity.totPosts,
+              totComments: activity.totComments,
+              totViews: activity.totViews,
+              slider1: images.slider.sliderImage1,
+              slider2: images.slider.sliderImage2,
+              slider3: images.slider.sliderImage3,
+              featuredProject: project.projectImage,
+              projectName: project.projectName,
+              projectUrl: project.projectUrl,
+              projectDesc: project.projectDesc,
+              skill1Name: skills.skill1.nameSkill,
+              skill2Name: skills.skill2.nameSkill,
+              skill3Name: skills.skill3.nameSkill,
+              skill4Name: skills.skill4.nameSkill,
+              skill1Percent: skills.skill1.percentSkill,
+              skill2Percent: skills.skill2.percentSkill,
+              skill3Percent: skills.skill3.percentSkill,
+              skill4Percent: skills.skill4.percentSkill,
+              // portfCover1: images.portfolio.portfolioCover.portfCover1,
+              // portfCover2: images.portfolio.portfolioCover.portfCover2,
+              // portfCover3: images.portfolio.portfolioCover.portfCover3,
+              // portfDetail1: images.portfolio.portfolioDetail.portfDetail1,
+              // portfDetail2: images.portfolio.portfolioDetail.portfDetail2,
+              // portfDetail3: images.portfolio.portfolioDetail.portfDetail3,
+              // serviceTitle1: services.serv1.servTitle,
+              // serviceTitle2: services.serv2.servTitle,
+              // serviceTitle3: services.serv3.servTitle,
+              // serviceDesc1: services.serv1.servDesc,
+              // serviceDesc2: services.serv2.servDesc,
+              // serviceDesc3: services.serv3.servDesc,
+              // serviceIcon1: services.serv1.servIcon,
+              // serviceIcon2: services.serv2.servIcon,
+              // serviceIcon3: services.serv3.servIcon,            
+
+              portfolio: images.portfolio.map((item: any) => item),
+
+              services: services.map((item: any) => item),
+
+              friendship: friendship.map((item: any) => item),
+          }
+
+          console.log(userList.portfolio)
+
+          setUserList(userList)
+
+      } catch (error) {
+          console.log(error)
+      }
+  }
+
+  //Return of portfolioImages data
+  const portfolioData = []
+  for(let i in userList.portfolio) {
+    portfolioData.push(
+      <div className="portfolio-box">
+        <PortfolioItem src={userList.portfolio[i].cover} />
+        <div className="portfolio-links">
+          <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
+          <PortfolioItemDetail onClick={handleModal}><FaEye size="18" /></PortfolioItemDetail>
+          {openModal && 
+            <Modal>
+              <PortfolioDetails>
+                <img src={userList.portfolio[i].detail} />
+                <div className="portfolio-description">
+                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                  <IoClose size="20" onClick={handleModal} />
+                </div>
+              </PortfolioDetails>
+            </Modal>
+          }
+        </div>
+      </div>
+    )
+  }
+
+  //Return of services data
+  let servicesData = []
+  for(let i in userList.services) {
+    servicesData.push(
+      <UserService 
+        serviceIcon={userList.services[i].servIcon}
+        serviceTitle={userList.services[i].servTitle}
+        serviceDescription={userList.services[i].servDesc}
+      />
+    )
+  }
+
+  //Return of friends data
+  let friendsData = []
+  for(let i in userList.friendship) {
+    friendsData.push(
+      <MembersInfo 
+        id={userList.id}
+        image_profile={userList.friendship[i].imageProfile}
+        name={userList.friendship[i].name} 
+        hasNick
+        nickname={userList.friendship[i].nickname}
+      />
+    )  
+  }
+
+  useEffect(() => {
+    getUsers();
+  }, [id])
+
+  //group properties
+  const groupName = group.map((group: GroupPropsTypes) => group.name);
+  const groupStatus = group.map((group: GroupPropsTypes) => group.group_type);
+  const groupImage = group.map((group: GroupPropsTypes) => group.imageGroup);
 
   return (
     <Container style={{marginTop:'70px'}}>
@@ -388,126 +442,14 @@ const getUsers = async () => {
           <Portfolio>
             <UserSectionTitle><FaCloud /> Portfólio</UserSectionTitle>
             <PortfolioContent>
-              <div className="portfolio-box">
-                <PortfolioItem src={userList.portfCover1} />
-                <div className="portfolio-links">
-                  <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
-                  <PortfolioItemDetail onClick={handleModal}><FaEye size="18" /></PortfolioItemDetail>
-                  {openModal && 
-                    <Modal>
-                      <PortfolioDetails>
-                        <img src={userList.portfDetail1} />
-                        <div className="portfolio-description">
-                          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                          <IoClose size="20" onClick={handleModal} />
-                        </div>
-                      </PortfolioDetails>
-                    </Modal>
-                  }
-                </div>
-              </div>
-              <div className="portfolio-box">
-                <PortfolioItem src={userList.portfCover2} />
-                <div className="portfolio-links">
-                  <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
-                  <PortfolioItemDetail onClick={handleModal}><FaEye size="18" /></PortfolioItemDetail>
-                  {openModal && 
-                    <Modal>
-                      <PortfolioDetails>
-                        <img src={userList.portfDetail2} />
-                        <div className="portfolio-description">
-                          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                          <IoClose size="20" onClick={handleModal} />
-                        </div>
-                      </PortfolioDetails>
-                    </Modal>
-                  }
-                </div>
-              </div>
-              <div className="portfolio-box">
-                <PortfolioItem src={userList.portfCover3} />
-                <div className="portfolio-links">
-                  <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
-                  <PortfolioItemDetail onClick={handleModal}><FaEye size="18" /> </PortfolioItemDetail>
-                  {openModal && 
-                    <Modal>
-                      <PortfolioDetails>
-                        <img src={userList.portfDetail3} />
-                        <div className="portfolio-description">
-                          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                          <IoClose size="20" onClick={handleModal} />
-                        </div>
-                      </PortfolioDetails>
-                    </Modal>
-                  }
-                </div>
-              </div>
+              {portfolioData}
             </PortfolioContent>
           </Portfolio>
 
           <Services>
             <UserSectionTitle><FaWrench /> Serviços</UserSectionTitle>
             <ServicesContent>
-              {/* <Service>
-                <div className="service-icon">
-                  <FaWordpressSimple size="26" />
-                </div>
-                <div className="service-title">
-                  {userList.serviceTitle1}
-                </div>
-                <div className="service-description">
-                  {userList.serviceDesc1}
-                </div>
-              </Service>
-              <Service>
-                <div className="service-icon">
-                  <FaFileCode size="26" />
-                </div>
-                <div className="service-title">
-                  {userList.serviceTitle2}
-                </div>
-                <div className="service-description">
-                  {userList.serviceDesc2}
-                </div>
-              </Service>
-              <Service>
-                <div className="service-icon">
-                  <FaSlidersH size="26" />
-                </div>
-                <div className="service-title">
-                  {userList.serviceTitle3}
-                </div>
-                <div className="service-description">
-                  {userList.serviceDesc3}
-                </div>
-              </Service> */}
-
-              {/* {user.map((user: any) => (
-                <UserService 
-                  serviceIcon={user.services.servIcon}
-                  serviceTitle={user.services.serv1.servTitle}
-                  serviceDescription={user.services.serv1.servDesc}
-                />
-              ))} */}
-
-              <UserService 
-                // serviceIcon={<FaWordpressSimple size="26" />}
-                serviceIcon={userList.serviceIcon1}
-                serviceTitle={userList.serviceTitle1}
-                serviceDescription={userList.serviceDesc1}
-              />
-              <UserService 
-                // serviceIcon={<FaWordpressSimple size="26" />}
-                serviceIcon={userList.serviceIcon2}
-                serviceTitle={userList.serviceTitle2}
-                serviceDescription={userList.serviceDesc2}
-              />
-              <UserService 
-                // serviceIcon={<FaWordpressSimple size="26" />}
-                serviceIcon={userList.serviceIcon3}
-                serviceTitle={userList.serviceTitle3}
-                serviceDescription={userList.serviceDesc3}
-              />
+              {servicesData}
             </ServicesContent>
           </Services>
 
@@ -517,15 +459,12 @@ const getUsers = async () => {
             <WidgetTitle><PersonIcon /> <span>Sobre mim</span></WidgetTitle>
             <UserSidebarContent>
               <div className="aboutme-user-image">
-                <img src={userList.image_profile} alt={userList.name} />
+                <img src={userList.imageProfile} alt={userList.name} />
               </div>
               <h2 className="aboutme-username">{userList.name}</h2>
-              <p className="aboutme-user-job">developer</p>
+              <p className="aboutme-user-job">{userList.job}</p>
               <div className="divider"></div>
-              <p className="aboutme-description">
-                We are a team of developers impassioned about creating quality and distinguished HTML and WordPress templates.
-                Our goal is to combine professional code, preeminent design and user-friendly admin interface in each product. With more than 5 years of experience and about 20 products behind and more than 11k customers, we are full of ideas and energy for new projects and we know how to surprise you.
-              </p>
+              <p className="aboutme-description">{userList.textAbout}</p>
             </UserSidebarContent>
           </Sidebar>
 
@@ -548,35 +487,8 @@ const getUsers = async () => {
 
           <Sidebar>
             <WidgetTitle><PeopleOutlineIcon /> <span>Amigos</span></WidgetTitle>
-            <UserSidebarContent>
-              <MembersInfo 
-                id={userId[3]}
-                image_profile={userImageProfile[3]}
-                name={userName[3]} 
-                hasNick
-                nickname={userNickname[3]}
-              />
-              <MembersInfo 
-                id={userId[2]}
-                image_profile={userImageProfile[2]}
-                name={userName[2]} 
-                hasNick
-                nickname={userNickname[2]}
-              />
-              <MembersInfo 
-                id={userId[1]}
-                image_profile={userImageProfile[1]}
-                name={userName[1]} 
-                hasNick
-                nickname={userNickname[1]}
-              />
-              <MembersInfo 
-                id={userId[4]}
-                image_profile={userImageProfile[4]}
-                name={userName[4]} 
-                hasNick
-                nickname={userNickname[4]}
-              /> 
+            <UserSidebarContent>              
+              {friendsData}
             </UserSidebarContent>
           </Sidebar>
 
