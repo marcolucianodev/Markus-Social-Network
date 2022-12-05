@@ -139,10 +139,10 @@ export const GroupsPage = () => {
                 return (
                     <GroupsCard 
                         id={group.id}
-                        image_cover={group.image_cover}
+                        imageCover={group.imageCover}
                         imageGroup={group.imageGroup}
                         name={group.name}
-                        group_type={group.group_type}
+                        groupType={group.groupType}
                         isPrivate={group.isPrivate}
                     />
                 )

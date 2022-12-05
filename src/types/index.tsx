@@ -17,8 +17,8 @@ export type GroupPropsTypes = {
     id: number,
     name: string,
     imageGroup: string,
-    group_type: string,
-    image_cover: string,
+    groupType: string,
+    imageCover: string,
     isPrivate: boolean
 }
 
@@ -85,7 +85,8 @@ export type MembersInfoTypes = {
 export type GroupsInfoTypes = {
     image_group: string,
     group_name: string,
-    status_group: string
+    status_group: string,
+    key: string
 }
 
 export type SliderTypes = {

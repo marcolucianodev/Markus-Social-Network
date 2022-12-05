@@ -7,7 +7,7 @@ import {
 } from "./styles";
 
 type UserServiceTypes = {
-    // serviceIcon: JSX.Element,
+    key: string,
     serviceIcon: string,
     serviceTitle: string,
     serviceDescription: string

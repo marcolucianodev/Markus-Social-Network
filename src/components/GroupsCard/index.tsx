@@ -9,10 +9,10 @@ import LockIcon from '@mui/icons-material/Lock';
 import { GroupPropsTypes } from "../../types";
 
 const GroupsCard = ({
-  image_cover, 
+  imageCover, 
   imageGroup, 
   name, 
-  group_type, 
+  groupType, 
   isPrivate, 
   id
 }: GroupPropsTypes) => {
@@ -20,7 +20,7 @@ const GroupsCard = ({
   return (
     <Container key={id}>
       <div className="group-cover-image">
-        <img src={image_cover} alt="Group Cover" />
+        <img src={imageCover} alt="Group Cover" />
       </div>
       <div className="group-profile-image">
         <Link to="/grupos"><img src={imageGroup} alt="Group Profile" /></Link>
@@ -34,7 +34,7 @@ const GroupsCard = ({
             </Link>
         </div>
         <div className="info-group-specification">
-            <span><PublicIcon className="group-specification-icon"/></span>{group_type} {isPrivate === true ? <LockIcon className="lock-group-icon"/> : ''}
+            <span><PublicIcon className="group-specification-icon"/></span>{groupType} {isPrivate === true ? <LockIcon className="lock-group-icon"/> : ''}
         </div>
       </div>
       <div className="group-statistics">

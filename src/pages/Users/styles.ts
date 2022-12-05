@@ -30,6 +30,17 @@ export const UserHeader = styled.header<UserAuxAttributes>`
 	background-position: center;
 	background-size: cover;
 	position: relative;
+
+	.user-header-mask {
+		position: absolute;
+		width: inherit;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #000;
+		opacity: 0.5;
+	}
 `
 export const HeaderInfo = styled.section`
 	position: absolute;
@@ -353,6 +364,7 @@ export const ProjectDescription = styled.div`
 	font-size: 1.4rem;
 	line-height: 2.4rem;
 	margin-bottom: 2rem;
+	margin-top: 1rem;
 `;
 
 export const ProjectTags = styled.ul`
@@ -363,7 +375,6 @@ export const ProjectTags = styled.ul`
 `;
 
 export const ProjectTagsItems = styled.li`
-	font-size: 1.2rem;
 	text-transform: uppercase;
 	font-weight: 500;
 	background-color: var(--main-background-content);

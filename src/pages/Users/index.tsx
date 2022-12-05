@@ -1,6 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../contexts/userContext";
-import { GroupContext } from "../../contexts/groupContext";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { 
   ContactsBox,
@@ -24,7 +22,6 @@ import {
   ProjectTemplate, 
   ProjectTitle, 
   ProjectType, 
-  // Service, 
   Services, 
   ServicesContent, 
   SkillBar, 
@@ -50,15 +47,6 @@ import MultipleStopIcon from '@mui/icons-material/MultipleStop';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import GroupsIcon from '@mui/icons-material/Groups';
 
-// import templateCover from "../../components/_assets/img/img-testes/featured-project.jpg";
-// import portfolioItem1 from "../../components/_assets/img/img-testes/portf-01.jpg";
-// import portfolioItem2 from "../../components/_assets/img/img-testes/portf-02.jpg";
-// import portfolioItem3 from "../../components/_assets/img/img-testes/portf-03.jpg";
-
-// import portfolioImage1 from "../../components/_assets/img/img-testes/portfolio-image01.jpg";
-// import portfolioImage2 from "../../components/_assets/img/img-testes/portfolio-image02.jpg";
-// import portfolioImage3 from "../../components/_assets/img/img-testes/portfolio-image03.jpg";
-
 import Slider from "../../components/Slider";
 import { GroupPropsTypes, UserPropsTypes } from "../../types";
 
@@ -73,9 +61,6 @@ import {
   FaLink, 
   FaEye,
   FaTags,
-  // FaWordpressSimple, 
-  // FaFileCode,
-  // FaSlidersH,
   FaWrench,
   FaCloud,
   FaTasks,
@@ -98,7 +83,7 @@ import { menuItem } from "../../config/menuItem";
 import api_url from "../../config/config";
 import UserService from "../../components/UserService";
 
-const User1 = () => {
+const Users = () => {
 
   const { id } = useParams();
 
@@ -106,9 +91,6 @@ const User1 = () => {
 
   const [openModal, setOpenModal] = useState(false);
   const [openMenu, setOpenMenu] = useState(true);
-
-  const { user }: any = useContext(UserContext);
-  const { group }: any = useContext(GroupContext);
 
   const handleModal = () => {
     setOpenModal(!openModal)
@@ -123,7 +105,7 @@ const User1 = () => {
           const response = await api_url.get(`/users/${id}`)
           const data = response.data
 
-          const {name, nickname, images, classification, address, activity, project, skills, services, job, email, website, phone, textAbout, friendship} = data;
+          const {name, nickname, images, classification, address, activity, project, skills, services, job, email, website, phone, textAbout, friendship, activeGroups} = data;
 
           const userList: any = {
               id,
@@ -142,45 +124,19 @@ const User1 = () => {
               totPost: activity.totPosts,
               totComments: activity.totComments,
               totViews: activity.totViews,
-              slider1: images.slider.sliderImage1,
-              slider2: images.slider.sliderImage2,
-              slider3: images.slider.sliderImage3,
               featuredProject: project.projectImage,
               projectName: project.projectName,
               projectUrl: project.projectUrl,
               projectDesc: project.projectDesc,
-              skill1Name: skills.skill1.nameSkill,
-              skill2Name: skills.skill2.nameSkill,
-              skill3Name: skills.skill3.nameSkill,
-              skill4Name: skills.skill4.nameSkill,
-              skill1Percent: skills.skill1.percentSkill,
-              skill2Percent: skills.skill2.percentSkill,
-              skill3Percent: skills.skill3.percentSkill,
-              skill4Percent: skills.skill4.percentSkill,
-              // portfCover1: images.portfolio.portfolioCover.portfCover1,
-              // portfCover2: images.portfolio.portfolioCover.portfCover2,
-              // portfCover3: images.portfolio.portfolioCover.portfCover3,
-              // portfDetail1: images.portfolio.portfolioDetail.portfDetail1,
-              // portfDetail2: images.portfolio.portfolioDetail.portfDetail2,
-              // portfDetail3: images.portfolio.portfolioDetail.portfDetail3,
-              // serviceTitle1: services.serv1.servTitle,
-              // serviceTitle2: services.serv2.servTitle,
-              // serviceTitle3: services.serv3.servTitle,
-              // serviceDesc1: services.serv1.servDesc,
-              // serviceDesc2: services.serv2.servDesc,
-              // serviceDesc3: services.serv3.servDesc,
-              // serviceIcon1: services.serv1.servIcon,
-              // serviceIcon2: services.serv2.servIcon,
-              // serviceIcon3: services.serv3.servIcon,            
-
+              projectCategory: project.projectCategory,
+              projectTags: project.projectTags,
+              sliders: images.slider.map((item: any) => item),
+              skills: skills.map((item: any) => item),
               portfolio: images.portfolio.map((item: any) => item),
-
               services: services.map((item: any) => item),
-
               friendship: friendship.map((item: any) => item),
+              groups: activeGroups.map((item: any) => item)
           }
-
-          console.log(userList.portfolio)
 
           setUserList(userList)
 
@@ -188,19 +144,69 @@ const User1 = () => {
           console.log(error)
       }
   }
+  
+  //Function that define color of skills bar
+  const skillColor = (colorValue: any) => {
+    if(colorValue === userList.skills[0]) {
+      return "var(--first-skill-color)"
+    } else if (colorValue === userList.skills[1]) {
+      return "var(--second-skill-color)"
+    } else if (colorValue === userList.skills[2]) {
+      return "var(--third-skill-color)"
+    } else {
+      return "var(--fourth-skill-color)"
+    }
+  }
 
-  //Return of portfolioImages data
-  const portfolioData = []
+  // slider data
+  let sliderData = []
+  for(let i in userList.sliders) {
+    sliderData.push(
+      userList.sliders[i].imageSlider    )
+  }
+
+  //portfolio tags data
+  let projectTagsData = [];
+  for(let i in userList.projectTags) {
+    projectTagsData.push(
+      <ProjectTagsItems id={userList.id}>
+        <span className="hastag">#</span> {userList.projectTags[i]}
+      </ProjectTagsItems>
+    )
+  }
+
+  //skills data
+  let skillsData = [];
+  for(let i in userList.skills) {
+    skillsData.push(
+      <SkillProgressBar key={userList.skills[i].id}>
+        <SkillBar 
+          skillBarBg={skillColor(userList.skills[i])} 
+          skillBarWidth={`${userList.skills[i].percentage}%`}
+        >
+          <span>{userList.skills[i].name}</span>
+        </SkillBar>
+        <SkillBarPercent>
+          {userList.skills[i].percentage}%
+        </SkillBarPercent>             
+      </SkillProgressBar>
+    )
+  }
+
+  //portfolio Images data
+  let portfolioData = []
   for(let i in userList.portfolio) {
     portfolioData.push(
-      <div className="portfolio-box">
-        <PortfolioItem src={userList.portfolio[i].cover} />
+      <div className="portfolio-box" key={userList.portfolio[i].id}>
+        <PortfolioItem src={userList.portfolio[i].cover} id={userList.id} />
         <div className="portfolio-links">
           <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
-          <PortfolioItemDetail onClick={handleModal}><FaEye size="18" /></PortfolioItemDetail>
+          <PortfolioItemDetail onClick={handleModal}>
+            <FaEye size="18" />
+          </PortfolioItemDetail>
           {openModal && 
             <Modal>
-              <PortfolioDetails>
+              <PortfolioDetails id={userList.id}>
                 <img src={userList.portfolio[i].detail} />
                 <div className="portfolio-description">
                   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -214,11 +220,12 @@ const User1 = () => {
     )
   }
 
-  //Return of services data
+  //services data
   let servicesData = []
   for(let i in userList.services) {
     servicesData.push(
       <UserService 
+        key={userList.services[i].id}
         serviceIcon={userList.services[i].servIcon}
         serviceTitle={userList.services[i].servTitle}
         serviceDescription={userList.services[i].servDesc}
@@ -226,7 +233,7 @@ const User1 = () => {
     )
   }
 
-  //Return of friends data
+  //friends data
   let friendsData = []
   for(let i in userList.friendship) {
     friendsData.push(
@@ -240,18 +247,28 @@ const User1 = () => {
     )  
   }
 
+  //groups data
+  let activesGroupsData = []
+  for(let i in userList.groups) {
+    activesGroupsData.push(
+      <GroupsInfo 
+        key={userList.groups[i].name}
+        group_name={userList.groups[i].name}
+        image_group={userList.groups[i].imageGroup}
+        status_group={userList.groups[i].type}
+      />
+    )
+  }
+
   useEffect(() => {
     getUsers();
   }, [id])
 
-  //group properties
-  const groupName = group.map((group: GroupPropsTypes) => group.name);
-  const groupStatus = group.map((group: GroupPropsTypes) => group.group_type);
-  const groupImage = group.map((group: GroupPropsTypes) => group.imageGroup);
 
   return (
     <Container style={{marginTop:'70px'}}>
       <UserHeader coverHeader={userList.imageCover}>
+        <div className="user-header-mask"></div>
         <HeaderInfo>
           <UserData>
             <UserProfileImage>
@@ -349,9 +366,9 @@ const User1 = () => {
         <UserMainContent>
 
           <Slider
-            imgSlider1={userList.slider1}
-            imgSlider2={userList.slider2}
-            imgSlider3={userList.slider3}
+            imgSlider1={sliderData[0]}
+            imgSlider2={sliderData[1]}
+            imgSlider3={sliderData[2]}
           />
 
           <Project>
@@ -369,19 +386,19 @@ const User1 = () => {
                   {userList.projectName}
                 </ProjectTitle>
                 <ProjectCategory>
-                  <FaTags /> Web Design
+                  <FaTags /> {userList.projectCategory}
                 </ProjectCategory>
-                <ProjectLink>
-                  <FaLink /> <span>{userList.projectUrl}</span>
-                </ProjectLink>
+                {userList.projectUrl &&
+                  <ProjectLink>
+                    <FaLink /> <span>{userList.projectUrl}</span>
+                  </ProjectLink>
+                }
               </ProjectHead>
               <ProjectDescription>
                 {userList.projectDesc}
               </ProjectDescription>
               <ProjectTags>
-                <ProjectTagsItems><span className="hastag">#</span> Templates</ProjectTagsItems>
-                <ProjectTagsItems><span className="hastag">#</span> Webdesign</ProjectTagsItems>
-                <ProjectTagsItems><span className="hastag">#</span> Html</ProjectTagsItems>
+                {projectTagsData}
               </ProjectTags>
             </ProjectInfo>
            </ProjectContent>
@@ -392,49 +409,7 @@ const User1 = () => {
             <UserSectionTitle><FaTasks /> Skills</UserSectionTitle>
             
             <SkillProgressBarContainer>
-              <SkillProgressBar>
-                <SkillBar 
-                  // percentAnimation={userList.skill1Percent} 
-                  skillBarBg="var(--first-skill-color)" 
-                  skillBarWidth={`${userList.skill1Percent}%`}
-                >
-                  <span>{userList.skill1Name}</span>
-                </SkillBar>
-                <SkillBarPercent>{userList.skill1Percent}%</SkillBarPercent>             
-              </SkillProgressBar>
-
-              <SkillProgressBar>
-                <SkillBar 
-                  // percentAnimation={userList.skill2Percent} 
-                  skillBarBg="var(--second-skill-color)" 
-                  skillBarWidth={`${userList.skill2Percent}%`}
-                >
-                  <span>{userList.skill2Name}</span>
-                </SkillBar>
-                <SkillBarPercent>{userList.skill2Percent}%</SkillBarPercent>
-              </SkillProgressBar>
-
-              <SkillProgressBar>
-                <SkillBar 
-                  // percentAnimation={userList.skill3Percent} 
-                  skillBarBg="var(--third-skill-color)" 
-                  skillBarWidth={`${userList.skill3Percent}%`}
-                >
-                  <span>{userList.skill3Name}</span>
-                </SkillBar>
-                <SkillBarPercent percentColor>{userList.skill3Percent}%</SkillBarPercent>
-              </SkillProgressBar>
-
-              <SkillProgressBar>
-                <SkillBar 
-                  // percentAnimation={userList.skill4Percent} 
-                  skillBarBg="var(--fourth-skill-color)" 
-                  skillBarWidth={`${userList.skill4Percent}%`}
-                >
-                  <span>{userList.skill4Name}</span>
-                </SkillBar>
-                <SkillBarPercent percentColor>{userList.skill4Percent}%</SkillBarPercent>
-              </SkillProgressBar>
+              {skillsData}
             </SkillProgressBarContainer>
 
           </Skills>
@@ -495,21 +470,7 @@ const User1 = () => {
           <Sidebar>
             <WidgetTitle><GroupsIcon /> <span>Grupos</span></WidgetTitle>
             <UserSidebarContent>
-              <GroupsInfo 
-                group_name={groupName[3]}
-                image_group={groupImage[3]}
-                status_group={groupStatus[3]}
-              />
-              <GroupsInfo 
-                group_name={groupName[0]}
-                image_group={groupImage[0]}
-                status_group={groupStatus[0]}
-              />
-              <GroupsInfo 
-                group_name={groupName[1]}
-                image_group={groupImage[1]}
-                status_group={groupStatus[1]}
-              />
+              {activesGroupsData}
             </UserSidebarContent>
           </Sidebar>
 
@@ -520,7 +481,7 @@ const User1 = () => {
               </div>
               <div className="right">
                 <FaEnvelope size="20" />
-                <p className="get-link">info@carlos.net</p>
+                <p className="get-link">{userList.email}</p>
               </div>
             </ContactsBox>
 
@@ -530,7 +491,7 @@ const User1 = () => {
               </div>
               <div className="right">
                 <FaRegAddressCard size="20" />
-                <p>Minas Gerais</p>
+                <p>{userList.address}</p>
               </div>
             </ContactsBox>
 
@@ -540,7 +501,7 @@ const User1 = () => {
               </div>
               <div className="right">
                 <FaLink size="20" />
-                <p className="get-link">http://crumina.net</p>
+                <p className="get-link">{userList.website}</p>
               </div>
             </ContactsBox>
 
@@ -550,7 +511,7 @@ const User1 = () => {
               </div>
               <div className="right">
                 <FaPhone size="20" />
-                <p>(00)99999-9999</p>
+                <p>{userList.phone}</p>
               </div>
             </ContactsBox>
           </UserContacts>
@@ -561,4 +522,4 @@ const User1 = () => {
   )
 }
 
-export default User1;
+export default Users;
