@@ -87,6 +87,7 @@ import UserService from "../../components/UserService";
 import axios from "axios";
 import { UserContext } from "../../contexts/userContext";
 import Header from "./Header";
+import Network from "./Network";
 
 type UserProps = {
   id: any
@@ -305,6 +306,17 @@ const Users = () => {
     )
   }
 
+  const netWorkData = []
+  for(let i in user) {
+    netWorkData.push(
+      <Network 
+        totalComments={user[i].activity.totPosts}
+        totalPost={user[i].activity.totComments}
+        totalViews={user[i].activity.totViews}
+      />
+    )
+  }
+
   const userData = []
   for(let i in user) {
     userData.push(
@@ -321,6 +333,8 @@ const Users = () => {
       </div> */}
 
       {headerData[id]}
+
+      {netWorkData[id]}
 
       {/* <UserHeader coverHeader={userList.imageCover}>
         <div className="user-header-mask"></div>
