@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { 
   ContactsBox,
@@ -83,9 +83,20 @@ import { menuItem } from "../../config/menuItem";
 import api_url from "../../config/config";
 import UserService from "../../components/UserService";
 
+
+import axios from "axios";
+import { UserContext } from "../../contexts/userContext";
+import Header from "./Header";
+
+type UserProps = {
+  id: any
+}
+
 const Users = () => {
 
-  const { id } = useParams();
+  const { id }: any = useParams();
+
+  const { user }: any = useContext(UserContext);
 
   const [userList, setUserList] = useState<any>([])
 
@@ -100,174 +111,218 @@ const Users = () => {
     setOpenMenu(!openMenu)
   }
 
-  const getUsers = async () => {
-      try {
-          const response = await api_url.get(`/users/${id}`)
-          const data = response.data
+  // const getUsers = async () => {
+  //     try {
+  //         const response = await api_url.get(`/users/${id}`)
+  //         const data = response.data
 
-          const {name, nickname, images, classification, address, activity, project, skills, services, job, email, website, phone, textAbout, friendship, activeGroups} = data;
+  //         const {name, nickname, images, classification, address, activity, project, skills, services, job, email, website, phone, textAbout, friendship, activeGroups} = data;
 
-          const userList: any = {
-              id,
-              name,
-              nickname,
-              address,
-              job,
-              email,
-              website,
-              phone,
-              textAbout,
-              imageProfile: images.profile,
-              imageCover: images.cover,
-              rating: classification.rating,
-              totalRatings: classification.totalRatings,
-              totPost: activity.totPosts,
-              totComments: activity.totComments,
-              totViews: activity.totViews,
-              featuredProject: project.projectImage,
-              projectName: project.projectName,
-              projectUrl: project.projectUrl,
-              projectDesc: project.projectDesc,
-              projectCategory: project.projectCategory,
-              projectTags: project.projectTags,
-              sliders: images.slider.map((item: any) => item),
-              skills: skills.map((item: any) => item),
-              portfolio: images.portfolio.map((item: any) => item),
-              services: services.map((item: any) => item),
-              friendship: friendship.map((item: any) => item),
-              groups: activeGroups.map((item: any) => item)
-          }
+  //         const userList: any = {
+  //             id,
+  //             name,
+  //             nickname,
+  //             address,
+  //             job,
+  //             email,
+  //             website,
+  //             phone,
+  //             textAbout,
+  //             imageProfile: images.profile,
+  //             imageCover: images.cover,
+  //             rating: classification.rating,
+  //             totalRatings: classification.totalRatings,
+  //             totPost: activity.totPosts,
+  //             totComments: activity.totComments,
+  //             totViews: activity.totViews,
+  //             featuredProject: project.projectImage,
+  //             projectName: project.projectName,
+  //             projectUrl: project.projectUrl,
+  //             projectDesc: project.projectDesc,
+  //             projectCategory: project.projectCategory,
+  //             projectTags: project.projectTags,
+  //             sliders: images.slider.map((item: any) => item),
+  //             skills: skills.map((item: any) => item),
+  //             portfolio: images.portfolio.map((item: any) => item),
+  //             services: services.map((item: any) => item),
+  //             friendship: friendship.map((item: any) => item),
+  //             groups: activeGroups.map((item: any) => item)
+  //         }
 
-          setUserList(userList)
+  //         setUserList(userList)
 
-      } catch (error) {
-          console.log(error)
-      }
-  }
+  //     } catch (error) {
+  //         console.log(error)
+  //     }
+  // }
   
   //Function that define color of skills bar
-  const skillColor = (colorValue: any) => {
-    if(colorValue === userList.skills[0]) {
-      return "var(--first-skill-color)"
-    } else if (colorValue === userList.skills[1]) {
-      return "var(--second-skill-color)"
-    } else if (colorValue === userList.skills[2]) {
-      return "var(--third-skill-color)"
-    } else {
-      return "var(--fourth-skill-color)"
-    }
-  }
+  // const skillColor = (colorValue: any) => {
+  //   if(colorValue === userList.skills[0]) {
+  //     return "var(--first-skill-color)"
+  //   } else if (colorValue === userList.skills[1]) {
+  //     return "var(--second-skill-color)"
+  //   } else if (colorValue === userList.skills[2]) {
+  //     return "var(--third-skill-color)"
+  //   } else {
+  //     return "var(--fourth-skill-color)"
+  //   }
+  // }
 
   // slider data
-  let sliderData = []
-  for(let i in userList.sliders) {
-    sliderData.push(
-      userList.sliders[i].imageSlider    )
-  }
+  // let sliderData = []
+  // for(let i in userList.sliders) {
+  //   sliderData.push(
+  //     userList.sliders[i].imageSlider    )
+  // }
 
   //portfolio tags data
-  let projectTagsData = [];
-  for(let i in userList.projectTags) {
-    projectTagsData.push(
-      <ProjectTagsItems id={userList.id}>
-        <span className="hastag">#</span> {userList.projectTags[i]}
-      </ProjectTagsItems>
-    )
-  }
+  // let projectTagsData = [];
+  // for(let i in userList.projectTags) {
+  //   projectTagsData.push(
+  //     <ProjectTagsItems id={userList.id}>
+  //       <span className="hastag">#</span> {userList.projectTags[i]}
+  //     </ProjectTagsItems>
+  //   )
+  // }
 
   //skills data
-  let skillsData = [];
-  for(let i in userList.skills) {
-    skillsData.push(
-      <SkillProgressBar key={userList.skills[i].id}>
-        <SkillBar 
-          skillBarBg={skillColor(userList.skills[i])} 
-          skillBarWidth={`${userList.skills[i].percentage}%`}
-        >
-          <span>{userList.skills[i].name}</span>
-        </SkillBar>
-        <SkillBarPercent>
-          {userList.skills[i].percentage}%
-        </SkillBarPercent>             
-      </SkillProgressBar>
-    )
-  }
+  // let skillsData = [];
+  // for(let i in userList.skills) {
+  //   skillsData.push(
+  //     <SkillProgressBar key={userList.skills[i].id}>
+  //       <SkillBar 
+  //         skillBarBg={skillColor(userList.skills[i])} 
+  //         skillBarWidth={`${userList.skills[i].percentage}%`}
+  //       >
+  //         <span>{userList.skills[i].name}</span>
+  //       </SkillBar>
+  //       <SkillBarPercent>
+  //         {userList.skills[i].percentage}%
+  //       </SkillBarPercent>             
+  //     </SkillProgressBar>
+  //   )
+  // }
 
   //portfolio Images data
-  let portfolioData = []
-  for(let i in userList.portfolio) {
-    portfolioData.push(
-      <div className="portfolio-box" key={userList.portfolio[i].id}>
-        <PortfolioItem src={userList.portfolio[i].cover} id={userList.id} />
-        <div className="portfolio-links">
-          <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
-          <PortfolioItemDetail onClick={handleModal}>
-            <FaEye size="18" />
-          </PortfolioItemDetail>
-          {openModal && 
-            <Modal>
-              <PortfolioDetails id={userList.id}>
-                <img src={userList.portfolio[i].detail} />
-                <div className="portfolio-description">
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                  <IoClose size="20" onClick={handleModal} />
-                </div>
-              </PortfolioDetails>
-            </Modal>
-          }
-        </div>
-      </div>
-    )
-  }
+  // let portfolioData = []
+  // for(let i in userList.portfolio) {
+  //   portfolioData.push(
+  //     <div className="portfolio-box" key={userList.portfolio[i].id}>
+  //       <PortfolioItem src={userList.portfolio[i].cover} id={userList.id} />
+  //       <div className="portfolio-links">
+  //         <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
+  //         <PortfolioItemDetail onClick={handleModal}>
+  //           <FaEye size="18" />
+  //         </PortfolioItemDetail>
+  //         {openModal && 
+  //           <Modal>
+  //             <PortfolioDetails id={userList.id}>
+  //               <img src={userList.portfolio[i].detail} />
+  //               <div className="portfolio-description">
+  //                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+  //                 <IoClose size="20" onClick={handleModal} />
+  //               </div>
+  //             </PortfolioDetails>
+  //           </Modal>
+  //         }
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   //services data
-  let servicesData = []
-  for(let i in userList.services) {
-    servicesData.push(
-      <UserService 
-        key={userList.services[i].id}
-        serviceIcon={userList.services[i].servIcon}
-        serviceTitle={userList.services[i].servTitle}
-        serviceDescription={userList.services[i].servDesc}
-      />
-    )
-  }
+  // let servicesData = []
+  // for(let i in userList.services) {
+  //   servicesData.push(
+  //     <UserService 
+  //       key={userList.services[i].id}
+  //       serviceIcon={userList.services[i].servIcon}
+  //       serviceTitle={userList.services[i].servTitle}
+  //       serviceDescription={userList.services[i].servDesc}
+  //     />
+  //   )
+  // }
 
   //friends data
-  let friendsData = []
-  for(let i in userList.friendship) {
-    friendsData.push(
-      <MembersInfo 
-        id={userList.id}
-        image_profile={userList.friendship[i].imageProfile}
-        name={userList.friendship[i].name} 
-        hasNick
-        nickname={userList.friendship[i].nickname}
-      />
-    )  
-  }
+  // let friendsData = []
+  // for(let i in userList.friendship) {
+  //   friendsData.push(
+  //     <MembersInfo 
+  //       id={userList.id}
+  //       image_profile={userList.friendship[i].imageProfile}
+  //       name={userList.friendship[i].name} 
+  //       hasNick
+  //       nickname={userList.friendship[i].nickname}
+  //     />
+  //   )  
+  // }
 
   //groups data
-  let activesGroupsData = []
-  for(let i in userList.groups) {
-    activesGroupsData.push(
-      <GroupsInfo 
-        key={userList.groups[i].name}
-        group_name={userList.groups[i].name}
-        image_group={userList.groups[i].imageGroup}
-        status_group={userList.groups[i].type}
+  // let activesGroupsData = []
+  // for(let i in userList.groups) {
+  //   activesGroupsData.push(
+  //     <GroupsInfo 
+  //       key={userList.groups[i].name}
+  //       group_name={userList.groups[i].name}
+  //       image_group={userList.groups[i].imageGroup}
+  //       status_group={userList.groups[i].type}
+  //     />
+  //   )
+  // }
+
+  // useEffect(() => {
+  //   getUsers();
+  // }, [id])
+
+  // const getUsers = async () => {
+  //   try {
+  //     const response = await axios.get("/fake_API/db.json");
+  //     const data = response.data.users
+
+  //     setUserList(data)
+  //     console.log(userList)
+      
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+
+  // const userName = userList.map((user: any) => user.name)
+  // console.log(userName)
+
+  const headerData = []
+  for(let i in user) {
+    headerData.push(
+      <Header 
+        imageProfile={user[i].images.profile}
+        name={user[i].name}
+        address={user[i].address}
+        rating={user[i].classification.rating}
+        totalRatings={user[i].classification.totalRatings}
+        imageCover={user[i].images.cover}
       />
     )
   }
 
-  useEffect(() => {
-    getUsers();
-  }, [id])
-
+  const userData = []
+  for(let i in user) {
+    userData.push(
+      user[i].name
+    )
+  }
+  console.log(userData)
 
   return (
     <Container style={{marginTop:'70px'}}>
-      <UserHeader coverHeader={userList.imageCover}>
+
+      {/* <div style={{width:"100%", height:"300px", backgroundColor:"gray", color:"#FFF"}}>
+        <h2>{userData[id]}</h2>
+      </div> */}
+
+      {headerData[id]}
+
+      {/* <UserHeader coverHeader={userList.imageCover}>
         <div className="user-header-mask"></div>
         <HeaderInfo>
           <UserData>
@@ -277,6 +332,7 @@ const Users = () => {
             <UserInfo>
               <div className="name">
                 <h2>{userList.name}</h2>
+                <h2>{user[id].name}</h2>
                 <span>
                   <FcApproval size="24" />
                 </span>
@@ -304,8 +360,9 @@ const Users = () => {
             </UserInfo>
           </UserData>
         </HeaderInfo>
-      </UserHeader>
-      <HeaderNetwork>
+      </UserHeader> */}
+
+      {/* <HeaderNetwork>
         <div className="header-network-content">
           <div className="social-networks">
             <FaFacebookF size="20" color="var(--white-text-color)" className="facebook-icon" />
@@ -327,9 +384,9 @@ const Users = () => {
             </div>
           </div>
         </div>
-      </HeaderNetwork>
+      </HeaderNetwork> */}
       
-      <UserMenuContainer>
+      {/* <UserMenuContainer>
         <UserMenu>
           <MenuList>
             {menuItem.map((item) => (
@@ -342,11 +399,11 @@ const Users = () => {
             ))}
           </MenuList>
         </UserMenu>
-      </UserMenuContainer>
+      </UserMenuContainer> */}
 
       {/* Menu Mobile */}
 
-      <UserMenuListMobile>
+      {/* <UserMenuListMobile>
         <UserMenuMobile>
           <span className="close-user-menu-mobile">{openMenu ? <FaBars size="24" onClick={handleActiveMenu} /> : <FaTimes  size="24" onClick={handleActiveMenu} />}</span>
           <ul className={openMenu ? "user-menu-list-closed" : "user-menu-list"}>
@@ -360,9 +417,9 @@ const Users = () => {
             ))}
           </ul>
         </UserMenuMobile>
-      </UserMenuListMobile>
+      </UserMenuListMobile> */}
       
-      <UserContent>
+      {/* <UserContent>
         <UserMainContent>
 
           <Slider
@@ -517,7 +574,7 @@ const Users = () => {
           </UserContacts>
 
         </UserSidebar>
-      </UserContent>
+      </UserContent> */}
     </Container>
   )
 }
