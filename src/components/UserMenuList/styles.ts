@@ -76,6 +76,7 @@ export const UserMenuMobile = styled(UserMenu)`
   flex-direction: column;
   gap: 2rem;
   padding: 3rem;
+  align-items: center;
 
   .close-user-menu-mobile {
     cursor: pointer;

@@ -400,7 +400,7 @@ const Users = () => {
         </div>
       </HeaderNetwork> */}
       
-      {/* <UserMenuContainer>
+      <UserMenuContainer>
         <UserMenu>
           <MenuList>
             {menuItem.map((item) => (
@@ -413,11 +413,11 @@ const Users = () => {
             ))}
           </MenuList>
         </UserMenu>
-      </UserMenuContainer> */}
+      </UserMenuContainer>
 
       {/* Menu Mobile */}
 
-      {/* <UserMenuListMobile>
+      <UserMenuListMobile>
         <UserMenuMobile>
           <span className="close-user-menu-mobile">{openMenu ? <FaBars size="24" onClick={handleActiveMenu} /> : <FaTimes  size="24" onClick={handleActiveMenu} />}</span>
           <ul className={openMenu ? "user-menu-list-closed" : "user-menu-list"}>
@@ -431,7 +431,7 @@ const Users = () => {
             ))}
           </ul>
         </UserMenuMobile>
-      </UserMenuListMobile> */}
+      </UserMenuListMobile>
       
       {/* <UserContent>
         <UserMainContent>
