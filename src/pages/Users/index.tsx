@@ -47,7 +47,7 @@ import MultipleStopIcon from '@mui/icons-material/MultipleStop';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import GroupsIcon from '@mui/icons-material/Groups';
 
-import Slider from "../../components/Slider";
+// import Slider from "../../components/Slider";
 import { GroupPropsTypes, UserPropsTypes } from "../../types";
 
 import { FcApproval } from "react-icons/fc";
@@ -90,6 +90,7 @@ import Header from "./Header";
 import Network from "./Network";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Slider from "./Slider";
 
 type UserProps = {
   id: any
@@ -437,14 +438,12 @@ const Users = () => {
 
       <UserContent>
         <UserMainContent>
-              {/* <Slider 
-                imgSlider1={sliders[id]}
-                imgSlider2={sliders[id]}
-                imgSlider3={sliders[id]}
-              /> */}
-             <Projects />
 
-            <Skills />
+          <Slider />
+
+          <Projects />
+
+          <Skills />
 
         </UserMainContent>
       </UserContent>
