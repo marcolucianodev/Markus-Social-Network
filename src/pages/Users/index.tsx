@@ -28,7 +28,7 @@ import {
   SkillBarPercent, 
   SkillProgressBar, 
   SkillProgressBarContainer, 
-  Skills, 
+  // Skills, 
   UserContacts, 
   UserContent, 
   UserData, 
@@ -89,6 +89,7 @@ import { UserContext } from "../../contexts/userContext";
 import Header from "./Header";
 import Network from "./Network";
 import Projects from "./Projects";
+import Skills from "./Skills";
 
 type UserProps = {
   id: any
@@ -318,9 +319,17 @@ const Users = () => {
   //   )
   // }
 
-  const sliders = user.map((item: any) => item.images.slider)
+  // const sliders = user.map((item: any) => item.images.slider)
 
-  //slider data
+  //   let sliderData = []
+  //   for(let i in sliders) {
+  //     sliderData.push(
+  //       sliders[i]
+  //     )
+  //   }
+  //   console.log(sliderData[id])
+  //   console.log(sliders.map((item: any) => item))
+
 
   return (
     <Container style={{marginTop:'70px'}}>
@@ -429,11 +438,14 @@ const Users = () => {
       <UserContent>
         <UserMainContent>
               {/* <Slider 
-                imgSlider1={sliderData[0]}
-                imgSlider2={sliderData[1]}
-                imgSlider3={sliderData[2]}
+                imgSlider1={sliders[id]}
+                imgSlider2={sliders[id]}
+                imgSlider3={sliders[id]}
               /> */}
              <Projects />
+
+            <Skills />
+
         </UserMainContent>
       </UserContent>
       

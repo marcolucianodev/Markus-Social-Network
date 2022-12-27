@@ -387,7 +387,7 @@ export const ProjectTagsItems = styled.li`
 
 //FIM área do project
 
-export const Skills = styled.section`
+export const SkillsContainer = styled.section`
 	width: 100%;
 	border-radius: 0.5rem;
 	background-color: var(--white-background);
