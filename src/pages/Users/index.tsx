@@ -88,6 +88,7 @@ import axios from "axios";
 import { UserContext } from "../../contexts/userContext";
 import Header from "./Header";
 import Network from "./Network";
+import Projects from "./Projects";
 
 type UserProps = {
   id: any
@@ -292,49 +293,41 @@ const Users = () => {
   // const userName = userList.map((user: any) => user.name)
   // console.log(userName)
 
-  const headerData = []
-  for(let i in user) {
-    headerData.push(
-      <Header 
-        imageProfile={user[i].images.profile}
-        name={user[i].name}
-        address={user[i].address}
-        rating={user[i].classification.rating}
-        totalRatings={user[i].classification.totalRatings}
-        imageCover={user[i].images.cover}
-      />
-    )
-  }
+  // const headerData = []
+  // for(let i in user) {
+  //   headerData.push(
+  //     <Header 
+  //       imageProfile={user[i].images.profile}
+  //       name={user[i].name}
+  //       address={user[i].address}
+  //       rating={user[i].classification.rating}
+  //       totalRatings={user[i].classification.totalRatings}
+  //       imageCover={user[i].images.cover}
+  //     />
+  //   )
+  // }
 
-  const netWorkData = []
-  for(let i in user) {
-    netWorkData.push(
-      <Network 
-        totalComments={user[i].activity.totPosts}
-        totalPost={user[i].activity.totComments}
-        totalViews={user[i].activity.totViews}
-      />
-    )
-  }
+  // const netWorkData = []
+  // for(let i in user) {
+  //   netWorkData.push(
+  //     <Network 
+  //       totalComments={user[i].activity.totPosts}
+  //       totalPost={user[i].activity.totComments}
+  //       totalViews={user[i].activity.totViews}
+  //     />
+  //   )
+  // }
 
-  const userData = []
-  for(let i in user) {
-    userData.push(
-      user[i].name
-    )
-  }
-  console.log(userData)
+  const sliders = user.map((item: any) => item.images.slider)
+
+  //slider data
 
   return (
     <Container style={{marginTop:'70px'}}>
 
-      {/* <div style={{width:"100%", height:"300px", backgroundColor:"gray", color:"#FFF"}}>
-        <h2>{userData[id]}</h2>
-      </div> */}
+      <Header />
 
-      {headerData[id]}
-
-      {netWorkData[id]}
+      <Network />
 
       {/* <UserHeader coverHeader={userList.imageCover}>
         <div className="user-header-mask"></div>
@@ -432,6 +425,17 @@ const Users = () => {
           </ul>
         </UserMenuMobile>
       </UserMenuListMobile>
+
+      <UserContent>
+        <UserMainContent>
+              {/* <Slider 
+                imgSlider1={sliderData[0]}
+                imgSlider2={sliderData[1]}
+                imgSlider3={sliderData[2]}
+              /> */}
+             <Projects />
+        </UserMainContent>
+      </UserContent>
       
       {/* <UserContent>
         <UserMainContent>

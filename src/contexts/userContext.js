@@ -16,7 +16,6 @@ export const UserProvider = ({children}) => {
     const getUser = async () => {
       const response = await axios.get(path_json);
       setUser(response.data.users)
-      console.log(response.data.users)
     }
     getUser();
   }, [])
