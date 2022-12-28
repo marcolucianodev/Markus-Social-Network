@@ -5,7 +5,7 @@ import {
   Container, 
   HeaderInfo, 
   HeaderNetwork, 
-  Portfolio, 
+  // Portfolio, 
   PortfolioContent, 
   PortfolioItem, 
   PortfolioItemDetail, 
@@ -91,6 +91,7 @@ import Network from "./Network";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Slider from "./Slider";
+import Portfolio from "./Portfolio";
 
 type UserProps = {
   id: any
@@ -338,71 +339,8 @@ const Users = () => {
       <Header />
 
       <Network />
-
-      {/* <UserHeader coverHeader={userList.imageCover}>
-        <div className="user-header-mask"></div>
-        <HeaderInfo>
-          <UserData>
-            <UserProfileImage>
-              <img src={userList.imageProfile} alt={userList.name} />
-            </UserProfileImage>
-            <UserInfo>
-              <div className="name">
-                <h2>{userList.name}</h2>
-                <h2>{user[id].name}</h2>
-                <span>
-                  <FcApproval size="24" />
-                </span>
-              </div>
-              <div className="user-meta">
-                <div className="user-meta-left">
-                  <ImLocation size="16" /><span>{userList.address}</span>
-                </div>
-                <div className="user-meta-right">
-                  <span>
-                    <FaStar color="var(--main-yellow)" size="18" />
-                    <FaStar color="var(--main-yellow)" size="18" />
-                    <FaStar color="var(--main-yellow)" size="18" />
-                    <FaStar color="var(--main-yellow)" size="18" />
-                    <FaStar size="18" />
-                  </span>
-                  <span className="bullet-separator first-bullet">•</span>
-                  <div className="ratings-info">
-                    <span>{userList.rating} de 5</span>
-                    <span className="bullet-separator">•</span>
-                    <span>{userList.totalRatings} classificações</span>
-                  </div>
-                </div>
-              </div>
-            </UserInfo>
-          </UserData>
-        </HeaderInfo>
-      </UserHeader> */}
-
-      {/* <HeaderNetwork>
-        <div className="header-network-content">
-          <div className="social-networks">
-            <FaFacebookF size="20" color="var(--white-text-color)" className="facebook-icon" />
-            <FaTwitter size="20" color="var(--white-text-color)" className="twitter-icon" />
-            <FaInstagram size="20" color="var(--white-text-color)" className="instagram-icon" />
-          </div>
-          <div className="user-activities">
-            <div className="posts-data">
-              <span>{userList.totPost}</span>
-              <span>posts</span>
-            </div>
-            <div className="comments-data">
-              <span>{userList.totComments}</span>
-              <span>comentários</span>
-            </div>
-            <div className="views-data">
-              <span>{userList.totViews}</span>
-              <span>vizualizações</span>
-            </div>
-          </div>
-        </div>
-      </HeaderNetwork> */}
       
+      {/* Menu */}
       <UserMenuContainer>
         <UserMenu>
           <MenuList>
@@ -419,7 +357,6 @@ const Users = () => {
       </UserMenuContainer>
 
       {/* Menu Mobile */}
-
       <UserMenuListMobile>
         <UserMenuMobile>
           <span className="close-user-menu-mobile">{openMenu ? <FaBars size="24" onClick={handleActiveMenu} /> : <FaTimes  size="24" onClick={handleActiveMenu} />}</span>
@@ -445,60 +382,16 @@ const Users = () => {
 
           <Skills />
 
+          <Portfolio
+            openModal={handleModal}
+            modalIsActive={openModal}
+          />
+
         </UserMainContent>
       </UserContent>
       
       {/* <UserContent>
         <UserMainContent>
-
-          <Slider
-            imgSlider1={sliderData[0]}
-            imgSlider2={sliderData[1]}
-            imgSlider3={sliderData[2]}
-          />
-
-          <Project>
-           <UserSectionTitle><FaFolderOpen /> Projetos</UserSectionTitle>
-           <ProjectContent>
-            <ProjectTemplate 
-              templateCover={userList.featuredProject}
-            />
-            <ProjectInfo>
-              <ProjectHead>
-                <ProjectType>
-                  Projeto Destaque
-                </ProjectType>
-                <ProjectTitle>
-                  {userList.projectName}
-                </ProjectTitle>
-                <ProjectCategory>
-                  <FaTags /> {userList.projectCategory}
-                </ProjectCategory>
-                {userList.projectUrl &&
-                  <ProjectLink>
-                    <FaLink /> <span>{userList.projectUrl}</span>
-                  </ProjectLink>
-                }
-              </ProjectHead>
-              <ProjectDescription>
-                {userList.projectDesc}
-              </ProjectDescription>
-              <ProjectTags>
-                {projectTagsData}
-              </ProjectTags>
-            </ProjectInfo>
-           </ProjectContent>
-          </Project>
-
-          <Skills>
-
-            <UserSectionTitle><FaTasks /> Skills</UserSectionTitle>
-            
-            <SkillProgressBarContainer>
-              {skillsData}
-            </SkillProgressBarContainer>
-
-          </Skills>
 
           <Portfolio>
             <UserSectionTitle><FaCloud /> Portfólio</UserSectionTitle>

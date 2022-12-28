@@ -568,7 +568,7 @@ export const SkillBarPercent = styled.div<UserAuxAttributes>`
 
 //FIM Skills area
 
-export const Portfolio = styled.section`
+export const PortfolioContainer = styled.section`
 	width: 100%;
 	border-radius: 0.5rem;
 	background-color: var(--white-background);
