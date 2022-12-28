@@ -1,6 +1,6 @@
 
 export type UserPropsTypes = {
-    id?: number,
+    id?: number | any,
     name?: string,
     nickname?: string,
     rating?: string,
@@ -23,7 +23,7 @@ export type GroupPropsTypes = {
 }
 
 export type CommentsTypes = {
-    id?: number,
+    id?: number | any,
     userImg: string,
     postDate: string,
     userName: string,
@@ -42,8 +42,8 @@ export type MainBannerProps = {
 }
 
 export type NewFriendNoticeProps = {
-    userId?: number,
-    friendId?: number,
+    userId?: number | any,
+    friendId?: number | any,
     imgProfile: string,
     userName: string,
     imgUserCover: string,
@@ -54,7 +54,7 @@ export type NewFriendNoticeProps = {
 }
 
 export type UserPostTypes = {
-    userId?: number,
+    userId?: number | any,
     imgProfile: string,
     userName: string,
     groupName: string,
@@ -67,13 +67,13 @@ export type UserPostTypes = {
     commentsNumber: string,
     comment?: JSX.Element,
     comment2?: JSX.Element,
-    userLiked1?: number,
-    userLiked2?: number,
-    userLiked3?: number
+    userLiked1?: number | any,
+    userLiked2?: number | any,
+    userLiked3?: number | any
 }
 
 export type MembersInfoTypes = {
-    id?: number,
+    id?: number | any,
     name: string,
     image_profile: string,
     notDisplay?: boolean,

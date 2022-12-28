@@ -17,7 +17,7 @@ const MainRoutes = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/redefinir-senha" element={<ResetPassword />} />
-        <Route path="/users/:id" element={<Users />}/>
+        <Route path="/membros/:id" element={<Users />}/>
       </Routes>
   )
 }

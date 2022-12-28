@@ -8,7 +8,7 @@ import { MembersInfoTypes } from "../../types";
 export const MembersInfo = ({id, name, image_profile, notDisplay, postDate, hasNick, nickname}: MembersInfoTypes) => {
     return (
         <HeadlineMembersInfo>
-            <Link to={`/users/${id}`}>
+            <Link to={`/membros/${id - 1}`}>
                 <div className="user-headline-image">
                     <img src={image_profile} alt={name} />
                 </div>
@@ -17,7 +17,7 @@ export const MembersInfo = ({id, name, image_profile, notDisplay, postDate, hasN
                 <div className="first-headline">
                     <p>
                         <span className="user-name">
-                            <Link to={`/users/${id}`}>{name} <span className="icon">{!notDisplay && <CheckIcon className="user-check-icon" />}</span></Link>
+                            <Link to={`/membros/${id - 1}`}>{name} <span className="icon">{!notDisplay && <CheckIcon className="user-check-icon" />}</span></Link>
                         </span>
                     </p>
                 </div>

@@ -18,9 +18,9 @@ export const Comments = ({
             <div className="comment-box">
                 <div className="comment-headline">
                     <div className="user-comment-headline-info">
-                        <Link to={`/users/${id}`}><img src={userImg} alt="User Post Img" /></Link>
+                        <Link to={`/membros/${id - 1}`}><img src={userImg} alt="User Post Img" /></Link>
                         <span className="post-user-data">
-                            <Link to={`/users/${id}`}><span>{userName}</span></Link>
+                            <Link to={`/membros/${id - 1}`}><span>{userName}</span></Link>
                             <span><CheckIcon className="user-check-icon" /></span>
                         </span>
                     </div>

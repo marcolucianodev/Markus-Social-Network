@@ -20,7 +20,7 @@ export const NewFriendNotice = ({
     return (
         <FeedUserContent>
             <UserHeadline>
-                <Link to={`/users/${userId}`}>
+                <Link to={`/membros/${userId - 1}`}>
                     <div className="user-headline-image">
                         <img src={imgProfile} alt={`Usuário ${altTitle}`} />
                     </div>
@@ -29,11 +29,11 @@ export const NewFriendNotice = ({
                     <div className="first-headline">
                         <p>
                             <span className="user-name">
-                                <Link to={`/users/${userId}`}>{userName} <span><CheckIcon className="user-check-icon" /></span></Link>
+                                <Link to={`/membros/${userId - 1}`}>{userName} <span><CheckIcon className="user-check-icon" /></span></Link>
                             </span>
                              e &nbsp;
                             <span className="user-friend">
-                                <Link to={`/users/${friendId}`}>{friend}
+                                <Link to={`/membros/${friendId - 1}`}>{friend}
                                 <span><CheckIcon className="user-check-icon" /></span>
                                 </Link>
                             </span>
@@ -53,11 +53,11 @@ export const NewFriendNotice = ({
             </UserCover>
             <UserInfo>
                     <div className="user-friends-profile">
-                        <Link to={`/users/${friendId}`}><img src={imgFriendsProfile} alt="Img Friends Profile" /></Link>
+                        <Link to={`/membros/${friendId - 1}`}><img src={imgFriendsProfile} alt="Img Friends Profile" /></Link>
                     </div>
                     <div className="user-friend-headline">
                         <span className="user-friend">
-                            <Link to={`/users/${friendId}`}>{friend}</Link>
+                            <Link to={`/membros/${friendId - 1}`}>{friend}</Link>
                         </span>
                         <span className="nickname">
                             @{friend}

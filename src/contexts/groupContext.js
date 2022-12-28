@@ -16,6 +16,7 @@ export const GroupProvider = ({children}) => {
     const getGroup = async () => {
       const response = await axios.get(path_json);
       setGroup(response.data.group)
+      console.log(response.data.group)
     }
     getGroup();
   }, []);
