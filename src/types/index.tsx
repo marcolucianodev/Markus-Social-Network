@@ -73,7 +73,7 @@ export type UserPostTypes = {
 }
 
 export type MembersInfoTypes = {
-    id: number,
+    id?: number,
     name: string,
     image_profile: string,
     notDisplay?: boolean,

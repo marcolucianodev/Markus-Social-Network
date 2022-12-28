@@ -18,7 +18,6 @@ const Services = () => {
         const response = await axios.get(url)
         const data = response.data.users.map((item: any) => item.services)
         setService(data[id])
-        console.log(data[id])
     }
 
     useEffect(() => {

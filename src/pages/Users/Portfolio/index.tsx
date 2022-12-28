@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { PortfolioContainer, PortfolioContent, PortfolioItem, PortfolioItemDetail, PortfolioItemLink, UserSectionTitle } from "../styles";
+import { 
+    PortfolioContainer, 
+    PortfolioContent, 
+    PortfolioItem, 
+    PortfolioItemDetail, 
+    PortfolioItemLink, 
+    UserSectionTitle 
+} from "../styles";
 
 import { FaCloud, FaLink, FaEye } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
