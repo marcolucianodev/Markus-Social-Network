@@ -22,7 +22,7 @@ import {
   ProjectTemplate, 
   ProjectTitle, 
   ProjectType, 
-  Services, 
+  // Services, 
   ServicesContent, 
   SkillBar, 
   SkillBarPercent, 
@@ -92,6 +92,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import Slider from "./Slider";
 import Portfolio from "./Portfolio";
+import Services from "./Services";
 
 type UserProps = {
   id: any
@@ -387,27 +388,13 @@ const Users = () => {
             modalIsActive={openModal}
           />
 
+          <Services />
+
         </UserMainContent>
       </UserContent>
       
       {/* <UserContent>
-        <UserMainContent>
-
-          <Portfolio>
-            <UserSectionTitle><FaCloud /> Portfólio</UserSectionTitle>
-            <PortfolioContent>
-              {portfolioData}
-            </PortfolioContent>
-          </Portfolio>
-
-          <Services>
-            <UserSectionTitle><FaWrench /> Serviços</UserSectionTitle>
-            <ServicesContent>
-              {servicesData}
-            </ServicesContent>
-          </Services>
-
-        </UserMainContent>
+      
         <UserSidebar>
           <Sidebar>
             <WidgetTitle><PersonIcon /> <span>Sobre mim</span></WidgetTitle>

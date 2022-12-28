@@ -633,7 +633,7 @@ export const PortfolioItemDetail = styled.span`
 
 //FIM Portólio área
 
-export const Services = styled.section`
+export const ServicesContainer = styled.section`
 	width: 100%;
 	border-radius: 0.5rem;
 	background-color: var(--white-background);

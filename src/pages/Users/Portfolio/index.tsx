@@ -25,7 +25,6 @@ const Portfolio = ({openModal, modalIsActive}: PortfolioProps) => {
         const response = await axios.get(url)
         const data = response.data.users.map((item: any) => item.images.portfolio)
         setPortfolio(data[id])
-        console.log(data[id])
     }
 
     useEffect(() => {
@@ -37,7 +36,7 @@ const Portfolio = ({openModal, modalIsActive}: PortfolioProps) => {
             <UserSectionTitle><FaCloud /> Portfólio</UserSectionTitle>
             <PortfolioContent>
                 {portfolio.map((item: any) => (
-                    <div className="portfolio-box">
+                    <div className="portfolio-box" key={item.id}>
                         <PortfolioItem src={item.cover} />
                         <div className="portfolio-links">
                             <PortfolioItemLink><FaLink size="18" /></PortfolioItemLink>
