@@ -8,6 +8,7 @@ import Signup from "./pages/Signup";
 import ResetPassword from "./pages/ResetPassword";
 import Users from "./pages/Users";
 import ComingSoon from "./pages/ComingSoon";
+import NotFound from "./pages/NotFound";
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
         <Route path="/redefinir-senha" element={<ResetPassword />} />
         <Route path="/membros/:id" element={<Users />}/>
         <Route path="/pagina-em-construcao" element={<ComingSoon />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
   )
 }

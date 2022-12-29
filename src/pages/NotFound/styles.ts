@@ -10,24 +10,26 @@ export const Container = styled.article`
     padding: 7rem 2rem;
 
     img {
-        max-width: 80%;
+        max-width: 30rem;
     }
 
     h1 {
-        font-size: 5rem;
-        text-align: center;
-        padding: 2rem;
+        font-size: 3rem;
         color: var(--title-color);
+        margin: 2rem 0;
+        text-align: center;
     }
 
-    button {
-        padding: 1rem 2rem;
+    p {
+        color: var(--title-color);
         font-size: 1.6rem;
-        font-weight: 700;
-        color: var(--white-text-color);
-        background-color: var(--main-color);
-        border: none;
-        border-radius: .5rem;
-        cursor: pointer;
+        text-align: center;
     }
+
+    a {
+        margin: 2rem 0 0;
+        font-size: 1.4rem;
+        text-decoration: underline;
+    }
+
 `;
