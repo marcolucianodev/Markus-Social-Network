@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Container, AsideButton } from "./styles";
 import { Sidebar, WidgetTitle } from "../Sidebar";
 import { WidgetUserInfo, UserStatus } from "../WidgetUserInfo";
@@ -13,6 +13,7 @@ import {
   GroupPropsTypes, 
   UserPropsTypes 
 } from "../../types";
+import { GroupsInfo } from "../GroupsInfo";
 
 export const Aside = () => {
 
@@ -31,6 +32,7 @@ export const Aside = () => {
     const groupId = group.map((group: GroupPropsTypes) => group.id)
     const groupName = group.map((group: GroupPropsTypes) => group.name);
     const groupImage = group.map((group: GroupPropsTypes) => group.imageGroup);
+    const groupStatus = group.map((group: GroupPropsTypes) => group.groupType);
     //End Constantes group data
 
     const navigate = useNavigate();
@@ -110,26 +112,23 @@ export const Aside = () => {
                           <span>alfabético</span>
                         </UserStatus>
                       </div>
-                      <MembersInfo 
-                        id={groupId[0]}
-                        image_profile={groupImage[0]}
-                        name={groupName[0]} 
-                        postDate="Ativo 2 meses atrás" 
-                        notDisplay
+                      <GroupsInfo 
+                        key={groupId[0]}
+                        group_name={groupName[0]}
+                        image_group={groupImage[0]}
+                        status_group={groupStatus[0]}
                       />
-                       <MembersInfo 
-                        id={groupId[2]}
-                        image_profile={groupImage[2]}
-                        name={groupName[2]} 
-                        postDate="Ativo 3 meses atrás" 
-                        notDisplay
+                      <GroupsInfo 
+                        key={groupId[1]}
+                        group_name={groupName[1]}
+                        image_group={groupImage[1]}
+                        status_group={groupStatus[1]}
                       />
-                       <MembersInfo 
-                        id={groupId[5]}
-                        image_profile={groupImage[5]}
-                        name={groupName[5]} 
-                        postDate="Ativo 1 mês atrás" 
-                        notDisplay
+                      <GroupsInfo 
+                        key={groupId[5]}
+                        group_name={groupName[5]}
+                        image_group={groupImage[5]}
+                        status_group={groupStatus[5]}
                       />
                   </WidgetUserInfo>
                   <AsideButton onClick={handleGroupButton}>Ver todos os grupos</AsideButton>

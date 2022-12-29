@@ -8,7 +8,6 @@ export type UserPropsTypes = {
     image_profile?: string,
     image_cover?: string,
     post_image?: string | boolean,
-
     images?: any,
     classification?: any
 }
@@ -19,7 +18,7 @@ export type GroupPropsTypes = {
     imageGroup: string,
     groupType: string,
     imageCover: string,
-    isPrivate: boolean
+    isPrivate: boolean,
 }
 
 export type CommentsTypes = {

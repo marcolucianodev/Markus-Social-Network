@@ -12,6 +12,12 @@ type UserAuxAttributes = {
 	contactsBg?: string
 }
 
+type FriendsProps = {
+    userStatusColor?: string,
+    marginB?: string
+}
+
+
 export const Container = styled.main`
 	display: grid;
 	grid-template-columns: 1fr;
@@ -741,6 +747,73 @@ export const UserSidebarContent = styled(WidgetUserInfo)`
 	.instagram-box {
 		background-color: var(--instagramBG);
 	}
+`;
+
+export const UserFriendsContent = styled.div<FriendsProps>`
+	display: flex;
+    padding: 2.5rem 0 0;
+
+    .user-headline-image img {
+        border-radius: 50%;
+        width: 5rem;
+    }
+
+    .user-headline-info {
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .first-headline {
+        display: flex;
+        align-items: center;
+        margin-bottom: ${props => props.marginB};
+
+        p {
+            display: inline-flex;
+
+            a {
+                display: inline-flex;
+                margin-right: 0.5rem;
+                font-weight: 700;
+                color: var(--title-color);
+
+                :hover {
+                    color: var(--main-color);
+                }
+            }
+        }
+
+        .user-check-icon {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-left: 0.4rem;
+            background-color: var(--ligth-blue);
+            color: var(--white-text-color);
+            border-radius: 50%;
+            padding: 2px;
+            
+        }
+    }
+
+    .second-headline {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--title-color);
+        
+
+        span.activity-year,
+        span.nickname {
+            font-size: 1rem;
+            color: var(--text-color);
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
 `;
 
 export const UserContacts = styled(Sidebar)`

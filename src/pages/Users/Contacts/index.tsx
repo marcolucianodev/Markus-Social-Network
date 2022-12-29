@@ -21,7 +21,7 @@ const Contacts = () => {
 
     useEffect(() => {
         getContactData();
-    }, [id])
+    }, [])
 
     return (
         <UserContacts>

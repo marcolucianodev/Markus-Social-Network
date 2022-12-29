@@ -27,7 +27,7 @@ const Header = () => {
 
     useEffect(() => {
         getHeaderData();
-    }, [id])
+    }, [])
 
     return (
         <UserHeader coverHeader={headerImage.cover}>

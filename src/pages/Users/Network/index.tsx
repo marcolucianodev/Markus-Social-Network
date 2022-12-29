@@ -25,7 +25,7 @@ const Network = () => {
 
     useEffect(() => {
         getNewtworkData();
-    }, [id])
+    }, [])
 
     return (
         <HeaderNetwork>

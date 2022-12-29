@@ -10,13 +10,12 @@ export const GroupProvider = ({children}) => {
 
   const [group, setGroup] = useState([])
 
-  const path_json = '/fake_API/data.json'
+  const path_json = '/fake_API/db.json'
 
   useEffect(() => {
     const getGroup = async () => {
       const response = await axios.get(path_json);
-      setGroup(response.data.group)
-      console.log(response.data.group)
+      setGroup(response.data.groups)
     }
     getGroup();
   }, []);

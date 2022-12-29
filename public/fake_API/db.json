@@ -43,22 +43,26 @@
             {
               "name": "Thalles",
               "nickname": "@thalles",
-              "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
+              "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg",
+              "url": "/membros/3"
             },
             {
               "name": "Michelle",
               "nickname": "@michelle",
-              "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg"
+              "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg",
+              "url": "/membros/2"
             },
             {
               "name": "Daniel",
               "nickname": "@daniel",
-              "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
+              "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg",
+              "url": "/membros/1"
             },
             {
               "name": "Cíntia",
               "nickname": "@cintia",
-              "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
+              "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg",
+              "url": "/membros/4"
             }
         ],
         "activeGroups": [
@@ -190,17 +194,20 @@
           {
             "name": "Carlos",
             "nickname": "@carlos",
-            "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg",
+            "url": "/membros/0"
           },
           {
             "name": "Antônio",
             "nickname": "@antonio",
-            "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg",
+            "url": "/membros/5"
           },
           {
             "name": "Cíntia",
             "nickname": "@cintia",
-            "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg",
+            "url": "/membros/4"
           }
         ],
         "activeGroups": [
@@ -332,22 +339,26 @@
           {
             "name": "Thalles",
             "nickname": "@thalles",
-            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg",
+            "url": "/membros/3"
           },
           {
             "name": "Carlos",
             "nickname": "@carlos",
-            "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg",
+            "url": "/membros/0"
           },
           {
             "name": "Antônio",
             "nickname": "@antonio",
-            "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg",
+            "url": "/membros/5"
           },
           {
             "name": "Ricardo",
             "nickname": "@ricardo",
-            "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg",
+            "slugId": 7
           }
         ],
         "activeGroups": [
@@ -479,22 +490,26 @@
           {
             "name": "Carlos",
             "nickname": "@carlos",
-            "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg",
+            "url": "/membros/0"
           },
           {
             "name": "Antônio",
             "nickname": "@antonio",
-            "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg",
+            "url": "/membros/5"
           },
           {
             "name": "Ricardo",
             "nickname": "@ricardo",
-            "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg",
+            "url": "/membros/6"
           },
           {
             "name": "Cíntia",
             "nickname": "@cintia",
-            "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg",
+            "url": "/membros/4"
           }
         ],
         "activeGroups": [
@@ -626,27 +641,32 @@
           {
             "name": "Antônio",
             "nickname": "@antonio",
-            "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-6/user-6.jpg",
+            "url": "/membros/5"
           },
           {
             "name": "Thalles",
             "nickname": "@thalles",
-            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg",
+            "url": "/membros/3"
           },
           {
             "name": "Ricardo",
             "nickname": "@ricardo",
-            "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg",
+            "slugId": 7
           },
           {
             "name": "Carlos",
             "nickname": "@carlos",
-            "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-1/user-1.jpg",
+            "url": "/membros/0"
           },
           {
             "name": "Daniel",
             "nickname": "@daniel",
-            "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg",
+            "url": "/membros/1"
           }
         ],
         "activeGroups": [
@@ -778,22 +798,26 @@
           {
             "name": "Cíntia",
             "nickname": "@cintia",
-            "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-5/user-5.jpg",
+            "url": "/membros/4"
           },
           {
             "name": "Thalles",
             "nickname": "@thalles",
-            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg",
+            "url": "/membros/3"
           },
           {
             "name": "Daniel",
             "nickname": "@daniel",
-            "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg",
+            "url": "/membros/1"
           },
           {
             "name": "Michelle",
             "nickname": "@michelle",
-            "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg",
+            "url": "/membros/3"
           }
         ],
         "activeGroups": [
@@ -915,17 +939,20 @@
           {
             "name": "Michelle",
             "nickname": "@michelle",
-            "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-3/user-3.jpg",
+            "url": "/membros/2"
           },
           {
             "name": "Thalles",
             "nickname": "@thalles",
-            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-4/user-4.jpg",
+            "url": "/membros/3"
           },
           {
             "name": "Daniel",
             "nickname": "@daniel",
-            "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg"
+            "imageProfile": "/fake_API/images/users-images/user-id-2/user-2.jpg",
+            "url": "/membros/1"
           }
         ],
         "activeGroups": [

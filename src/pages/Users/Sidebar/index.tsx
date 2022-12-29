@@ -5,13 +5,13 @@ import PersonIcon from '@mui/icons-material/Person';
 import MultipleStopIcon from '@mui/icons-material/MultipleStop';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import GroupsIcon from '@mui/icons-material/Groups';
+import CheckIcon from '@mui/icons-material/Check';
 
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
-import { UserSidebar, UserSidebarContent } from "../styles";
+import { UserFriendsContent, UserSidebar, UserSidebarContent } from "../styles";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { MembersInfo } from "../../../components/MembersInfo";
 import { GroupsInfo } from "../../../components/GroupsInfo";
 import Contacts from "../Contacts";
 
@@ -74,13 +74,28 @@ const SidebarUser = () => {
                 <WidgetTitle><PeopleOutlineIcon /> <span>Amigos</span></WidgetTitle>
                 <UserSidebarContent>
                     {friends.map((item: any) => (
-                        <MembersInfo 
-                            key={item.name}
-                            image_profile={item.imageProfile}
-                            name={item.name} 
-                            hasNick
-                            nickname={item.nickname}
-                        />
+                        <UserFriendsContent key={item.name}>
+                            <a href={item.url}>
+                                <div className="user-headline-image">
+                                    <img src={item.imageProfile} alt={item.name} />
+                                </div>
+                            </a>
+                            <div className="user-headline-info">
+                                <div className="first-headline">
+                                    <p>
+                                        <span className="user-name">
+                                            <a href={item.url}>
+                                                {item.name} 
+                                                <span className="icon"><CheckIcon className="user-check-icon" /></span>
+                                            </a>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div className="second-headline">
+                                    <span className="nickname">{item.nickname}</span> 
+                                </div>
+                            </div>
+                        </UserFriendsContent>
                     ))}
                 </UserSidebarContent>
             </Sidebar>

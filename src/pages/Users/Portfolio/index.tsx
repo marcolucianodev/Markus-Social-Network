@@ -36,7 +36,7 @@ const Portfolio = ({openModal, modalIsActive}: PortfolioProps) => {
 
     useEffect(() => {
         getPortfolio();
-    }, id)
+    }, [])
 
     return (
         <PortfolioContainer>

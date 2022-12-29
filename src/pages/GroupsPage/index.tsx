@@ -13,7 +13,6 @@ import CounterViews from "../../components/CounterViews";
 import { PagesContainer } from "../../components/PagesContainer";
 import GroupsCard from "../../components/GroupsCard";
 import { GroupContext } from "../../contexts/groupContext";
-import { GroupPropsTypes } from "../../types";
 
 
 
@@ -135,7 +134,7 @@ export const GroupsPage = () => {
         </div>
 
         <PagesContainer>
-            {group.map((group: GroupPropsTypes) => {
+            {group.map((group: any) => {
                 return (
                     <GroupsCard 
                         id={group.id}
@@ -143,7 +142,8 @@ export const GroupsPage = () => {
                         imageGroup={group.imageGroup}
                         name={group.name}
                         groupType={group.groupType}
-                        isPrivate={group.isPrivate}
+                        isPrivate={group.private}
+                        key={group.id}
                     />
                 )
             })}
