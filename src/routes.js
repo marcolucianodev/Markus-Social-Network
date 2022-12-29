@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ResetPassword from "./pages/ResetPassword";
 import Users from "./pages/Users";
+import ComingSoon from "./pages/ComingSoon";
 
 const MainRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const MainRoutes = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/redefinir-senha" element={<ResetPassword />} />
         <Route path="/membros/:id" element={<Users />}/>
+        <Route path="/pagina-em-construcao" element={<ComingSoon />} />
       </Routes>
   )
 }

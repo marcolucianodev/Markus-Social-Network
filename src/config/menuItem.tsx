@@ -9,54 +9,53 @@ import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 
-
 export const menuItem = [
     {
       id: 1,
       nameItem: 'Visão Geral',
-      urlMenu: '/user1',
+      urlMenu: `#`,
       iconItem: <PublicIcon />
     },
     {
       id: 2,
       nameItem: 'Sobre',
-      urlMenu: '/user2',
+      urlMenu: '/pagina-em-construcao',
       iconItem: <InfoIcon />
     },
     {
       id: 3,
       nameItem: 'Atividade',
-      urlMenu: '/user2',
+      urlMenu: '/pagina-em-construcao',
       iconItem: <GradingIcon />
     },
     {
       id: 4,
       nameItem: 'Posts',
-      urlMenu: '/user2',
+      urlMenu: '/pagina-em-construcao',
       iconItem: <DynamicFeedIcon />
     },
     {
       id: 5,
       nameItem: 'Comentários',
-      urlMenu: '/user2',
+      urlMenu: '/pagina-em-construcao',
       iconItem: <CommentIcon />
     },
     {
       id: 6,
       nameItem: 'Amizades',
-      urlMenu: '/user2',
+      urlMenu: '/pagina-em-construcao',
       iconItem: <PeopleOutlineIcon />
     },
     {
       id: 7,
       nameItem: 'Grupos',
-      urlMenu: '/user2',
+      urlMenu: '/pagina-em-construcao',
       iconItem: <GroupsIcon />
     },
     {
       id: 8,
       nameItem: 'Avaliações',
-      urlMenu: '/user2',
+      urlMenu: '/pagina-em-construcao',
       iconItem: <ReviewsIcon />
     }
   ]

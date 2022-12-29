@@ -11,7 +11,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import GroupsIcon from '@mui/icons-material/Groups';
 import FeedIcon from '@mui/icons-material/Feed';
-import GradingIcon from '@mui/icons-material/Grading';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import HeadphonesIcon from '@mui/icons-material/Headphones';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
@@ -56,15 +55,14 @@ const Header = () => {
             <MenuMobile className={activeMenu ? 'open-menu-mobile' : 'close-menu-mobile'}>
                 <ul className="list-menu">
                     <li><Link to="/"><FeedIcon className="menu-icons" /><span>Feed</span></Link></li>
-                    <li><Link to="/"><GradingIcon className="menu-icons" /><span>Atividade</span></Link></li>
                     <li><Link to="/membros"><PeopleAltIcon className="menu-icons" /><span>Membros</span></Link></li>
                     <li><Link to="/grupos"><GroupsIcon className="menu-icons" /><span>Grupos</span></Link></li>
-                    <li><Link to="/"><PhotoLibraryIcon className="menu-icons" /><span>Fotos</span></Link></li>
-                    <li><Link to="/"><HeadphonesIcon className="menu-icons" /><span>Músicas</span></Link></li>
-                    <li><Link to="/"><VideoLibraryIcon className="menu-icons" /><span>Vídeos</span></Link></li>
-                    <li><Link to="/"><EventNoteIcon className="menu-icons" /><span>Eventos</span></Link></li>
-                    <li><Link to="/"><ForumIcon className="menu-icons" /><span>Fórum</span></Link></li>
-                    <li><Link to="/"><ShoppingBagIcon className="menu-icons" /><span>Loja</span></Link></li>
+                    <li><Link to="/pagina-em-construcao"><PhotoLibraryIcon className="menu-icons" /><span>Fotos</span></Link></li>
+                    <li><Link to="/pagina-em-construcao"><HeadphonesIcon className="menu-icons" /><span>Músicas</span></Link></li>
+                    <li><Link to="/pagina-em-construcao"><VideoLibraryIcon className="menu-icons" /><span>Vídeos</span></Link></li>
+                    <li><Link to="/pagina-em-construcao"><EventNoteIcon className="menu-icons" /><span>Eventos</span></Link></li>
+                    <li><Link to="/pagina-em-construcao"><ForumIcon className="menu-icons" /><span>Fórum</span></Link></li>
+                    <li><Link to="/pagina-em-construcao"><ShoppingBagIcon className="menu-icons" /><span>Loja</span></Link></li>
                 </ul>
             </MenuMobile>
         </HeaderContainer>
