@@ -11,6 +11,7 @@ import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
 const MainRoutes = () => {
+
   return (
       <Routes>
         <Route path="/" element={<Feed /> } />

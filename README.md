@@ -10,13 +10,13 @@ Projeto front-end de uma rede social desenvolvido com React, Typescript, Styled-
 
 Nesse projeto (EM ANDAMENTO) está sendo desenvolvido a interface de uma aplicação de uma rede social, onde contém página de feed de usuários, páginas de perfil, grupos, fotos, eventos, fórum e demais funcionalidades que compõe uma rede social.
 
-Esse projeto pessoal foi inspirado como base em template wordpress do site Theme Forest, junto com algumas ideias pessoais.
+Esse projeto foi tirado como base de UX e inspirado no template Olympkus, que é um dos diversos templates para wordpress no site Themeforest.
 
-Todas as rotas estão sendo desenvolvidas com React Router Dom.
+Inicialmente este projeto foi um grande desafio, pois foi iniciado sem typescript e posteriormente foi adicionado o typescript no projeto, tendo que refatorar alguns dos componentes. 
 
-Este projeto está sendo um desafio interessante, pois inicialmente foi iniciando sem o typescript e posteriormente foi adicionado o typescript no projeto, tendo que refatorar algumas partes. Os estados da aplicação estão sendo gerenciados utilizando o Context API. E também foi criado uma API Fake em um arquivo json com os dados da integração para Usuários e Grupos.
+Ultilizo o Context API para gerenciamento de estados. E também foi criado uma API Fake em um arquivo json (db.json), que retorna os dados dos usuários e dos grupos, sendo esses dados sendo consumidos com o Axios.
 
-Logo mais o projeto estará 100% finalizado, e todas implementações de novas features estarão em produção.
+Algumas páginas ainda estão em desenvolvimento, e logo mais o projeto estará 100% finalizado, e todas implementações das funcionalidades e novas features estarão em produção.
 
 [Link do Projeto Online](https://markus-social-network.netlify.app/)
 
@@ -50,6 +50,7 @@ As seguintes ferramentas foram usadas no desenvolvimento do projeto:
 - [React](https://pt-br.reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Styled-components](https://styled-components.com/)
-- [React-Router-Dom](https://v5.reactrouter.com/web/guides/quick-start)
+- [React Router Dom](https://v5.reactrouter.com/web/guides/quick-start)
 - [MUI](https://mui.com/material-ui/material-icons/)
 - [Axios](https://axios-http.com/docs/intro)
+- [React Icons](https://react-icons.github.io/react-icons/)
