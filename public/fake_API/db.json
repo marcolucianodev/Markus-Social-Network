@@ -358,7 +358,7 @@
             "name": "Ricardo",
             "nickname": "@ricardo",
             "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg",
-            "slugId": 7
+            "url": "/membros/6"
           }
         ],
         "activeGroups": [
@@ -654,7 +654,7 @@
             "name": "Ricardo",
             "nickname": "@ricardo",
             "imageProfile": "/fake_API/images/users-images/user-id-7/user-7.jpg",
-            "slugId": 7
+            "url": "/membros/6"
           },
           {
             "name": "Carlos",
