@@ -19,7 +19,7 @@ import {
 } from "./styles";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import LogoImage from "../../components/_assets/img/logo.png"
+import LogoImage from "../../components/_assets/img/logo.png";
 
 const Login = () => {
 

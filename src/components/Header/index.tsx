@@ -17,7 +17,8 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import ForumIcon from '@mui/icons-material/Forum';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-
+import Modal from "../Modal";
+import Login from "../Login";
 
 const Header = () => {
 
@@ -25,6 +26,7 @@ const Header = () => {
 
     const [showLoginOver, setShowLoginOver] = useState(false);
 
+    const [login, setLogin] = useState(true);
 
     const openMenu = () => {
         setActiveMenu(!activeMenu)
@@ -40,6 +42,11 @@ const Header = () => {
 
     return (
         <HeaderContainer>
+            {login &&
+                <Modal>
+                    <Login />
+                </Modal>
+            }
             <Button onClick={openMenu} btnMobile btnDesktop="block">
                 {activeMenu ? <CloseIcon className="icon-main-menu" /> : <MenuOpenIcon className="icon-main-menu" />}
             </Button>
@@ -47,7 +54,7 @@ const Header = () => {
                <FormSearch placeholderText="Procurar pessoas ou páginas..." />
             </SearchHeader>
             <Link to="/login">
-                <LoginButton onMouseOver={handleLoginOver} onMouseOut={handleLoginOut} >
+                <LoginButton onMouseOver={handleLoginOver} onMouseOut={handleLoginOut} onClick={() => setLogin(!login)}>
                     <LoginIcon className="icon-login" />
                     <span className={showLoginOver ?'show-login-ballon':'hide-login-ballon'}>Login / Registrar</span>
                 </LoginButton>
