@@ -15,53 +15,31 @@ export const LoginContainer = styled.section`
     width: 100%;
     height: 100vh;
     margin: 15rem 0;
-`;
 
-export const Logo = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
+    .close {
+      min-width: 50rem;
+      color: #FFF;
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
 
-  a {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    
-    &:hover {
-      color: var(--title-color);
+      @media (max-width: 600px) {
+        min-width: 92%;
+        margin: 0 1rem;
+      }
     }
-  }
-
-  img {
-    height: 8rem;
-  }
-
-  .title-box {
-    text-transform: uppercase;
-  }
-
-  .title-logo h2 {
-    font-size: 2.8rem;
-  }
-
-  .desc-logo h3 {
-    font-weight: 300;
-    font-size: 1.88rem;
-  }
 `;
 
 export const FormLogin = styled.div`
   display: flex;
   flex-direction: column;
-  background: rgba( 255, 255, 255, 0.35 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 13.5px );
   -webkit-backdrop-filter: blur( 13.5px );
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   min-width: 50rem;
   border-radius: 0.5rem;
+  background-color: var(--white-background);
 
   @media (max-width: 600px) {
     min-width: 60%;
@@ -146,31 +124,31 @@ export const LoginRemember = styled.div`
   width: 100%;
   padding: 1rem 0;
 
-.remember-credentials label {
-    display: block;
-    position: relative;
-    padding-left: 3.5rem;
-    cursor: pointer;
-    user-select: none;
-    line-height: 2.5rem;
-    color: var(--title-color);
-
-    input {
-      position: absolute;
-      opacity: 0;
+  .remember-credentials label {
+      display: block;
+      position: relative;
+      padding-left: 3.5rem;
       cursor: pointer;
-      height: 0;
-      width: 0;
+      user-select: none;
+      line-height: 2.5rem;
+      color: var(--title-color);
 
-      &:checked ~ .checkmark {
-        background-color: var(--main-color);
-        transition: 0.5s;
-      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
 
-      &:checked ~ .checkmark:after {
-        display: block;
+        &:checked ~ .checkmark {
+          background-color: var(--main-color);
+          transition: 0.5s;
+        }
+
+        &:checked ~ .checkmark:after {
+          display: block;
+        }
       }
-    }
 
     .checkmark {
       position: absolute;
@@ -196,6 +174,12 @@ export const LoginRemember = styled.div`
         transform: rotate(45deg);
       }
     }
+  }
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
   }
 `;
 

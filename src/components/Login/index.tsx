@@ -10,20 +10,23 @@ import {
     Label, 
     LoginContainer, 
     LoginRemember, 
-    Logo, 
     PasswordInput, 
     PasswordInputContainer, 
     UserNameInput, 
     UserNameInputContainer
 } from "./styles";
-import LogoImage from "../_assets/img/logo.png"
 import { Link } from "react-router-dom";
 
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
+import { IoClose } from "react-icons/io5";
 
-const Login = () => {
+type LoginProps = {
+    closeModal: () => void
+}
+
+const Login = ({closeModal}: LoginProps) => {
 
     const [ showPassword, setShowPassword] = useState(false);
 
@@ -33,19 +36,9 @@ const Login = () => {
 
     return (
         <LoginContainer>
-            <Logo>
-                <Link to="/" className="logo-login-link">
-                    <img src={LogoImage} alt="Logo Markus Social Network" />
-                    <div className="title-box">
-                        <div className="title-logo">
-                            <h2>Markus</h2>
-                        </div>
-                        <div className="desc-logo">
-                            <h3>Social Network</h3>
-                        </div>
-                    </div>
-                </Link>
-            </Logo>
+            <div className="close">
+                <IoClose size={36} onClick={closeModal} />
+            </div>
             <FormLogin>
                 <FormHeadline>
                     <FormHeadlineDescription fontSize="1.4rem">

@@ -26,7 +26,7 @@ const Header = () => {
 
     const [showLoginOver, setShowLoginOver] = useState(false);
 
-    const [login, setLogin] = useState(true);
+    const [login, setLogin] = useState(false);
 
     const openMenu = () => {
         setActiveMenu(!activeMenu)
@@ -44,7 +44,7 @@ const Header = () => {
         <HeaderContainer>
             {login &&
                 <Modal>
-                    <Login />
+                    <Login closeModal={() => setLogin(!login)} />
                 </Modal>
             }
             <Button onClick={openMenu} btnMobile btnDesktop="block">
