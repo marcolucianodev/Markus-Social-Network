@@ -26,7 +26,6 @@ import {
 } from "../../components/Login/styles";
 import { useNavigate } from "react-router-dom";
 
-
 const Signup = () => {
 
   const [ showPassword, setShowPassword] = useState(false);
@@ -57,6 +56,22 @@ const Signup = () => {
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword)
+  }
+
+  //Função que retorna os dias no mês
+  const days = []
+  for(let i = 1; i <= 31; i++) {
+    days.push(i)
+  }
+
+  //Array com os mêses do ano
+  const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+
+  //Função que retorna os anos
+  const currentDate = new Date().getFullYear()
+  const years = [];
+  for(let i = 1910; i <= currentDate; i++) {
+    years.push(i)
   }
 
   return (
@@ -127,13 +142,19 @@ const Signup = () => {
               <Legend fontSizeLegend="1.1rem">Data de Nascimento <CalendarMonthIcon /></Legend> 
               <InputRow gridStyle="repeat(auto-fit, minmax(100px,1fr))">
                 <Select>
-                  <option value="21">1</option>
+                  {days.map((item) => (
+                    <option value={item} key={item}>{item}</option>
+                  ))}
                 </Select>
                 <Select>
-                  <option value="Dezembro">Dezembro</option>
+                  {months.map(item => (
+                    <option value={item} key={item}>{item}</option>
+                  ))}
                 </Select>
                 <Select>
-                  <option value="2022">2022</option>
+                  {years.map(item => (
+                    <option value={item} key={item}>{item}</option>
+                  ))}
                 </Select>
               </InputRow>
               <Legend fontSizeLegend="1.1rem">Gênero <PeopleAltIcon /></Legend>
