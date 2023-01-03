@@ -12,6 +12,7 @@ type SignupAttributes = {
 
 export const SignupContainer = styled(LoginContainer)`
   margin: 15rem 0;
+  /* align-items: inherit; */
 
   @media (min-width: 601px) and (max-width: 768px){
     margin: 7rem 0;
@@ -19,6 +20,7 @@ export const SignupContainer = styled(LoginContainer)`
 
   @media (max-width: 511px) {
     margin: 20rem 0;
+    align-items: stretch;
   }
 `;
 
