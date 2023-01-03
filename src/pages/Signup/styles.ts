@@ -33,10 +33,6 @@ export const InputRow = styled.div<SignupAttributes>`
   margin-top: ${props => props.rowMargin};
 `;
 
-// export const SelectContainer = styled.div`
-//   background-color: red;
-// `;
-
 export const Select = styled.select`
   padding: 1.4rem;
   border: 1px solid var(--border-light-white);
