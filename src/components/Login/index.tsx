@@ -81,7 +81,7 @@ const Login = ({closeModal}: LoginProps) => {
                                 </Label>
                             </div>
                             <div className="forgot-password">
-                                <Link to="/redefinir-senha">Esqueci minha senha</Link>
+                                <Link to="/redefinir-senha" onClick={closeModal}>Esqueci minha senha</Link>
                             </div>
                         </LoginRemember>
                         <FormButtomContainer>
@@ -94,7 +94,7 @@ const Login = ({closeModal}: LoginProps) => {
                     </form>
                 </FormContainer>
                 <FormFooterInfo>
-                    <p>Não tem uma conta? <span><Link to="/signup">Inscreva-se</Link></span></p>
+                    <p>Não tem uma conta? <span><Link to="/signup" onClick={closeModal}>Inscreva-se</Link></span></p>
                 </FormFooterInfo>
             </FormLogin>
         </LoginContainer>

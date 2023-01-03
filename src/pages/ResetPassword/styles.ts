@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { FormContainer, FormLogin, LoginContainer } from "../Login/styles";
+import { 
+  FormContainer,
+  FormLogin,
+  LoginContainer 
+} from "../../components/Login/styles";
 
 export const ResetPasswordContainer = styled(LoginContainer)`
   margin: 15rem 0;

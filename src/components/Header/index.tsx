@@ -53,12 +53,10 @@ const Header = () => {
             <SearchHeader>
                <FormSearch placeholderText="Procurar pessoas ou páginas..." />
             </SearchHeader>
-            <Link to="/login">
-                <LoginButton onMouseOver={handleLoginOver} onMouseOut={handleLoginOut} onClick={() => setLogin(!login)}>
-                    <LoginIcon className="icon-login" />
-                    <span className={showLoginOver ?'show-login-ballon':'hide-login-ballon'}>Login / Registrar</span>
-                </LoginButton>
-            </Link>
+            <LoginButton onMouseOver={handleLoginOver} onMouseOut={handleLoginOut} onClick={() => setLogin(!login)}>
+                <LoginIcon className="icon-login" />
+                <span className={showLoginOver ?'show-login-ballon':'hide-login-ballon'}>Login / Registrar</span>
+            </LoginButton>
             <MenuMobile className={activeMenu ? 'open-menu-mobile' : 'close-menu-mobile'}>
                 <ul className="list-menu">
                     <li><Link to="/"><FeedIcon className="menu-icons" /><span>Feed</span></Link></li>

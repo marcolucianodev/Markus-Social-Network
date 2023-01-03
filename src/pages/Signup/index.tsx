@@ -1,17 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { 
-  FormContainer, 
-  FormHeadline, 
-  FormHeadlineDescription, 
-  Logo, 
-  UserNameInput, 
-  UserNameInputContainer,
-  PasswordInput,
-  Label,
-  FormButtomContainer,
-  FormButton
-} from "../Login/styles";
 import { 
   InputRow,
   SignupContainer, 
@@ -21,16 +8,52 @@ import {
   GenderRadioSelect,
   Legend
 } from "./styles";
-import LogoImage from "../../components/_assets/img/logo.png";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import Logo from "../../components/Logo";
+import { 
+  FormButtomContainer,
+  FormButton,
+  FormContainer,
+  FormHeadline, 
+  FormHeadlineDescription, 
+  Label, 
+  PasswordInput, 
+  UserNameInput, 
+  UserNameInputContainer,
+} from "../../components/Login/styles";
+import { useNavigate } from "react-router-dom";
 
 
 const Signup = () => {
 
   const [ showPassword, setShowPassword] = useState(false);
+
+  const [ name, setName ] = useState("");
+  const [ surname, setSurname ] = useState("");
+  const [ phoneOrEmail, setPhoneOrEmail ] = useState("");
+  const [ password, setPassword ] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSignupRedirect = (e: React.FormEvent<HTMLInputElement>) => {
+    e.preventDefault()
+    if(name !== "" && surname !== "" && phoneOrEmail !== "" && password !== "") {
+      if(phoneOrEmail !== "") {
+        let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        if(!regex.test(phoneOrEmail)){
+          alert("E-mail digitado não é válido")
+        } else {
+          alert("Cadastro realizado com sucesso!")
+          navigate("/");
+        }
+      }
+    } else {
+      alert("Preencha os dados corretamente!")
+    }
+  }
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword)
@@ -38,19 +61,7 @@ const Signup = () => {
 
   return (
     <SignupContainer>
-      <Logo>
-        <Link to="/">
-          <img src={LogoImage} alt="Logo Markus Social Network" />
-          <div className="title-box">
-            <div className="title-logo">
-                <h2>Markus</h2>
-            </div>
-            <div className="desc-logo">
-                <h3>Social Network</h3>
-            </div>
-          </div>
-        </Link>
-      </Logo>
+      <Logo />
       <SignupForm>
         <FormHeadline>
           <FormHeadlineDescription fontSize="2rem">
@@ -69,6 +80,8 @@ const Signup = () => {
                     placeholder="Nome"
                     inputWidth="100%"
                     autoComplete="none"
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
+                    value={name}
                   />
                 </Label>
                 <Label htmlFor="surname">
@@ -79,6 +92,8 @@ const Signup = () => {
                     placeholder="Sobrenome"
                     inputWidth="100%"
                     autoComplete="none"
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSurname(e.target.value)}
+                    value={surname}
                   />
                 </Label>
               </InputRow>
@@ -91,6 +106,8 @@ const Signup = () => {
                     placeholder="Telefone ou E-mail"
                     inputWidth="100%"
                     autoComplete="none"
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhoneOrEmail(e.target.value)}
+                    value={phoneOrEmail}
                   />
                 </Label>
                 <Label htmlFor="password">
@@ -101,6 +118,8 @@ const Signup = () => {
                     placeholder="Senha" 
                     inputWidth="100%"
                     autoComplete="none"
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+                    value={password}
                   />
                   {showPassword ? <VisibilityOffIcon className="visibility-password-icon-signup" onClick={handleShowPassword} /> :  <VisibilityIcon className="visibility-password-icon-signup" onClick={handleShowPassword} />}
                 </Label>
@@ -150,6 +169,7 @@ const Signup = () => {
                 type="submit" 
                 value="Inscrever"
                 backgroundButton="var(--main-color)"
+                onClick={handleSignupRedirect}
               />
             </FormButtomContainer>
           </form>

@@ -1,5 +1,8 @@
 import styled from 'styled-components';
-import { FormLogin, LoginContainer } from '../Login/styles';
+import { 
+  FormLogin,
+  LoginContainer
+} from "../../components/Login/styles"
 
 type SignupAttributes = {
   gridStyle?: string,

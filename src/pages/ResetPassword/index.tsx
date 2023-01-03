@@ -1,39 +1,49 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import {
-  Logo,
-  FormHeadline, 
-  FormHeadlineDescription,
-  UserNameInputContainer,
-  UserNameInput,
-  FormButtomContainer,
-  FormButton
-} from "../Login/styles";
+import React, { useState } from "react";
 import { 
   DescriptionResetPassword, 
   ResetPasswordContainer, 
   ResetPasswordForm, 
   ResetPasswordFormContainer
 } from "./styles";
-import LogoImage from "../../components/_assets/img/logo.png";
 import { Legend } from "../Signup/styles";
+import Logo from "../../components/Logo";
+import { 
+  FormButtomContainer, 
+  FormButton, 
+  FormHeadline, 
+  FormHeadlineDescription, 
+  UserNameInput, 
+  UserNameInputContainer 
+} from "../../components/Login/styles";
+import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
+
+  const [ email, setEmail ] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleInputReset = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value)
+  }
+
+  const resetPasswordMessage = () => {
+    if(email !== "") {
+      let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      
+      if(!regex.test(email)) {
+        alert("E-mail digitado não é válido")
+      } else {
+        alert("Foi enviado no seu e-mail, o link para redefinir sua senha.")
+        navigate("/")
+      }
+    }
+  }
+  
+
   return (
     <ResetPasswordContainer>
-      <Logo>
-        <Link to="/">
-          <img src={LogoImage} alt="Logo Markus Social Network" />
-          <div className="title-box">
-            <div className="title-logo">
-                <h2>Markus</h2>
-            </div>
-            <div className="desc-logo">
-                <h3>Social Network</h3>
-            </div>
-          </div>
-        </Link>
-      </Logo>
+      <Logo />
       <ResetPasswordForm>
         <FormHeadline>
           <FormHeadlineDescription fontSize="2rem">
@@ -48,10 +58,13 @@ const ResetPassword = () => {
             <UserNameInputContainer>
             <Legend fontSizeLegend="1.4rem">E-mail</Legend>
               <UserNameInput 
-              type="email"
-              name="email"
-              id="email"
-              inputWidth="100%"
+                type="email"
+                name="email"
+                id="email"
+                inputWidth="100%"
+                required
+                onChange={handleInputReset}
+                value={email}
               />
             </UserNameInputContainer>
             <FormButtomContainer>
@@ -59,12 +72,8 @@ const ResetPassword = () => {
                 type="submit" 
                 value="Redefinir Senha"
                 backgroundButton="var(--ligth-blue)"
-                />
-              <FormButton 
-                type="submit" 
-                value="Entrar"
-                backgroundButton="var(--ligth-green)"
-                />
+                onClick={resetPasswordMessage}
+              />
             </FormButtomContainer>
           </form>
         </ResetPasswordFormContainer>
