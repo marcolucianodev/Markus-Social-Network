@@ -76,7 +76,6 @@ const Signup = () => {
 
   return (
     <SignupContainer>
-      <Logo />
       <SignupForm>
         <FormHeadline>
           <FormHeadlineDescription fontSize="2rem">

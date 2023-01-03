@@ -11,15 +11,14 @@ type SignupAttributes = {
 }
 
 export const SignupContainer = styled(LoginContainer)`
-  margin: 15rem 0;
-  /* align-items: inherit; */
+  /* margin: 15rem 0; */
 
-  @media (min-width: 601px) and (max-width: 768px){
+  /* @media (min-width: 601px) and (max-width: 768px){
     margin: 7rem 0;
-  }
+  } */
 
   @media (max-width: 511px) {
-    margin: 20rem 0;
+    /* margin: 20rem 0; */
     align-items: stretch;
   }
 `;
